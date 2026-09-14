@@ -400,19 +400,30 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #3</th></tr>
-  <tr><td>Nombre</td><td> name </td></tr>
-  <tr><td>Apellidos</td><td> apellido </td></tr>
-  <tr><td>Edad</td><td>  </td></tr>
-  <tr><td>Distrito</td><td> distrito </td></tr>
+  <tr><td>Nombre</td><td> Marco Teodoro </td></tr>
+  <tr><td>Apellidos</td><td> Palomino Sánchez </td></tr>
+  <tr><td>Edad</td><td> 27 </td></tr>
+  <tr><td>Distrito</td><td> Andahuaylas - Apurímac </td></tr>
   <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
   <tr><td>Duración de la entrevista</td><td> min</td></tr>
-  <tr><td>Resumen</td><td>  .<br><br>
-  <b>Comportamiento y necesidades:</b>
-  .<br><br>
-  <b>Tecnología, marcas y canales:</b>
-  .</td></tr>
+  <tr><td>Resumen</td><td>El entrevistado es Marco Teodoro Palomino Sánchez, un joven agricultor y gestor técnico de 27 años residente en Andahuaylas, Apurímac, que coadministra junto a su familia parcelas dedicadas exclusivamente al cultivo de papa en San Jerónimo y Kishuará. Durante la entrevista, señala que enfrentan pérdidas financieras severas causadas por heladas y plagas como la rancha, las cuales calcula rigurosamente mediante el registro digital de insumos, semillas y jornales para determinar el costo exacto por kilo. Manifiesta que busca defender el valor de sus sacos de papa apoyándose en costos reales y precios de referencia del mercado mayorista para negociar de manera equitativa frente a los acopiadores, financiándose mediante crédito agrícola formal.<br><br>
+<b>Comportamiento y necesidades:</b>
+<ul>
+<li><b>Gestión y control de costos:</b> Coadministra las parcelas de papa llevando un registro digital de fertilizantes, semillas certificadas y jornales para calcular el costo real de producción por kilo y evitar ventas a pérdida.</li>
+<li><b>Negociación y financiamiento:</b> Consulta precios de referencia del Mercado Mayorista en Lima por internet/WhatsApp; se financia mediante crédito agrícola formal (Cajas Municipales, Agrobanco) o reinversión propia para no depender de acopiadores.</li>
+<li><b>Soporte técnico y prevención:</b> Requiere alertas climáticas tempranas (heladas) y monitoreo satelital de humedad y salud foliar (índice NDVI) para prevenir plagas como la rancha sin inversión en hardware costoso.</li>
+<li><b>Registro fuera de línea:</b> Necesita registrar labores e insumos en campo sin depender de conectividad continua a internet, sincronizando la información al retornar a Andahuaylas.</li>
+</ul><br>
+<b>Tecnología, marcas y canales:</b>
+<ul>
+<li><b>Dispositivos habituales:</b> Teléfono inteligente de gama media (Xiaomi Redmi Note) valorando el rendimiento de la batería para jornadas en campo.</li>
+<li><b>Canales actuales:</b> WhatsApp para coordinaciones comerciales con fletes y acopiadores, banca móvil (Yape, BCP), redes sociales (Facebook) y aplicaciones meteorológicas.</li>
+<li><b>Conectividad:</b> Cobertura móvil inestable o nula en las parcelas de Kishuará (caídas a 3G o zonas sin cobertura), dependiendo de la sincronización nocturna al retornar a la ciudad.</li>
+<li><b>Disposición tecnológica:</b> Alta apertura para adoptar la plataforma móvil y actuar como puente tecnológico generacional para capacitar y apoyar a sus familiares mayores.</li>
+</ul>
+</td></tr>
 </table>
 
 **Segmento 2:  Productores organizados y directivos de cooperativas agrícolas**
