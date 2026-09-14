@@ -44,7 +44,31 @@ Esta combinación y jerarquía tipográfica permite mantener una experiencia de 
 </p>
 
 **Colors**
+La paleta cromática de SumaqAgro constituye la base visual de todo el ecosistema digital (abarcando tanto el sitio público de la Landing Page como los paneles y módulos operativos de la Web Application). Ha sido diseñada para transmitir una identidad que equilibra la naturaleza agrícola con la tecnología de precisión, garantizando consistencia estética, legibilidad y altos estándares de accesibilidad visual (a11y) en todos los flujos de interacción.
 
+La distribución cromática se organiza en las siguientes categorías funcionales:
+
+*   **Colores principales – Verdes (Primary Colors):**
+    Representan el vigor vegetal, la productividad del suelo y la conexión directa con el entorno rural.
+    *   **Dark / Forest Green (`#233413` y `#395620`):** Utilizados para textos de máxima jerarquía y alto contraste (H1, H2), fondos de bloques destacados en la Landing Page, y barras superiores o encabezados estructurales dentro del dashboard de la aplicación web.
+    *   **Base Green (`#7CBA45` y `#659938`):** Constituyen el color de acción primario. Se emplean en botones de llamada a la acción principales (CTAs como "Registrar mi Parcela" o "Guardar Registro"), estados interactivos activos, botones de confirmación, badges de balance positivo y acentos destacados de la interfaz.
+    *   **Light Green (`#DAECCB` y `#F2F8EC`):** Destinados a fondos de tarjetas informativas (cards), paneles secundarios, contenedores de métricas en dashboards, chips de estado óptimo y áreas de trabajo que requieran un descanso visual sin perder la identidad de marca.
+
+*   **Colores secundarios – Turquesas y Celestes (Secondary Colors):**
+    Simbolizan el componente tecnológico, el monitoreo satelital, los recursos hídricos y el procesamiento analítico de datos.
+    *   **Dark Teal (`#031416` y `#09373E`):** Aplicados en elementos que exigen profundidad visual y sobriedad técnica, tales como el footer de la plataforma, el menú lateral persistente (sidebar) de la Web Application, bordes de separación de alta jerarquía y tablas de datos densas.
+    *   **Base Cyan (`#20C6DF` y `#1AA2B7`):** Empleados como acento analítico y tecnológico en iconos satelitales, hipervínculos, botones secundarios tipo outline, capas vectoriales de mapas multiespectrales (NDVI/NDWI) y visualización gráfica de series temporales o reportes financieros.
+
+*   **Colores de acento y estados del sistema (System Feedback & States):**
+    Diseñados para comunicar avisos operativos, validaciones y condiciones agronómicas en tiempo real:
+    *   **Warning (`#FFF838`):** Reservado para alertas preventivas del sistema, advertencias climáticas (como riesgo moderado de heladas), chips de atención requerida y campos de formulario que demanden revisión por parte del usuario.
+    *   **Error (`#913636`):** Empleado en situaciones críticas que requieren intervención inmediata, tales como notificaciones de estrés hídrico severo, detección de umbrales fitosanitarios por plagas, alertas de saldo en pérdida en el motor de costos y mensajes de error en validación de entradas.
+
+El empleo riguroso y homogéneo de estos parámetros cromáticos asegura una experiencia de usuario cohesionada entre la presentación pública del producto y su uso operativo diario, facilitando el reconocimiento instantáneo de jerarquías, estados agronómicos y acciones clave en cualquier pantalla.
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/color-pallete.png" alt="color-pallete" width="600px" height="auto"/>
+</p>
 
 
 
