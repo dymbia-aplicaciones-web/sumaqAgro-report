@@ -36,14 +36,16 @@ Se utiliza en bloques de lectura, etiquetas, botones, formularios y componentes 
 - **Botones y llamadas a la acción (Button Text / CTA):** Inter SemiBold, 16 px.
 - **Etiquetas de formularios o elementos de interfaz (Labels):** Inter Medium, 14 px.
 
-Esta combinación y jerarquía tipográfica permite mantener una experiencia de usuario consistente, altamente accesible, clara y profesional a través de los distintos dispositivos y secciones de la plataforma.
-
 <p align="center">
   <img src="../assets/img/chapter-IV/typography-poppins.png" alt="typography-poppins" width="600px" height="auto"/>
   <img src="../assets/img/chapter-IV/typography-inter.png" alt="typography-inter" width="600px" height="auto"/>
 </p>
 
+Esta combinación y jerarquía tipográfica permite mantener una experiencia de usuario consistente, altamente accesible, clara y profesional a través de los distintos dispositivos y secciones de la plataforma.
+
+
 **Colors**
+
 La paleta cromática de SumaqAgro constituye la base visual de todo el ecosistema digital (abarcando tanto el sitio público de la Landing Page como los paneles y módulos operativos de la Web Application). Ha sido diseñada para transmitir una identidad que equilibra la naturaleza agrícola con la tecnología de precisión, garantizando consistencia estética, legibilidad y altos estándares de accesibilidad visual (a11y) en todos los flujos de interacción.
 
 La distribución cromática se organiza en las siguientes categorías funcionales:
@@ -64,16 +66,26 @@ La distribución cromática se organiza en las siguientes categorías funcionale
     *   **Warning (`#FFF838`):** Reservado para alertas preventivas del sistema, advertencias climáticas (como riesgo moderado de heladas), chips de atención requerida y campos de formulario que demanden revisión por parte del usuario.
     *   **Error (`#913636`):** Empleado en situaciones críticas que requieren intervención inmediata, tales como notificaciones de estrés hídrico severo, detección de umbrales fitosanitarios por plagas, alertas de saldo en pérdida en el motor de costos y mensajes de error en validación de entradas.
 
-El empleo riguroso y homogéneo de estos parámetros cromáticos asegura una experiencia de usuario cohesionada entre la presentación pública del producto y su uso operativo diario, facilitando el reconocimiento instantáneo de jerarquías, estados agronómicos y acciones clave en cualquier pantalla.
-
 <p align="center">
   <img src="../assets/img/chapter-IV/color-pallete.png" alt="color-pallete" width="600px" height="auto"/>
 </p>
+
+El empleo riguroso y homogéneo de estos parámetros cromáticos asegura una experiencia de usuario cohesionada entre la presentación pública del producto y su uso operativo diario, facilitando el reconocimiento instantáneo de jerarquías, estados agronómicos y acciones clave en cualquier pantalla.
 
 
 
 **Spacing**
 
+SumaqAgro utiliza un sistema de espaciado basado en múltiplos de 8 px, permitiendo mantener una interfaz ordenada, consistente y fácil de adaptar a diferentes tamaños de pantalla[cite: 1]. Este sistema se aplica en márgenes, paddings, separación entre componentes y distribución de contenido[cite: 1].
+
+*   **4 px – Extra Small (XS):** Separaciones mínimas entre elementos relacionados, como iconos y texto.
+*   **8 px – Small (S):** Espaciado interno pequeño, utilizado en botones, etiquetas y elementos compactos.
+*   **16 px – Medium (M):** Espaciado estándar entre textos, campos de formulario y elementos dentro de una tarjeta.
+*   **24 px – Large (L):** Separación entre grupos de contenido, tarjetas o bloques relacionados.
+*   **32 px – Extra Large (XL):** Espaciado entre secciones internas o componentes principales.
+*   **48 px – 2XL:** Utilizado para separar bloques importantes dentro de una misma sección.
+*   **64 px – 3XL:** Recomendado para la separación vertical entre secciones principales de la página.
+*   **80 px – 4XL:** Puede utilizarse en secciones amplias como Hero, Features o Call to Action en versión Desktop.
 
 
 **Tono de Comunicación**
