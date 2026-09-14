@@ -13,7 +13,7 @@ El logo principal de **SumaqAgro**, un nombre que evoca la unión entre la natur
 <br>
 
 <p align="center">
-  <img src="../assets/img/chapter-IV/sumaqagro-logo.png" alt="SumaqAgro-Logo" width="350px" height="auto"/>
+  <img src="../assets/img/chapter-IV/logo-sumaqagro.png" alt="SumaqAgro-Logo" width="350px" height="auto"/>
 </p>
 
 **Typography**
@@ -38,9 +38,19 @@ Se utiliza en bloques de lectura, etiquetas, botones, formularios y componentes 
 
 Esta combinación y jerarquía tipográfica permite mantener una experiencia de usuario consistente, altamente accesible, clara y profesional a través de los distintos dispositivos y secciones de la plataforma.
 
+<p align="center">
+  <img src="../assets/img/chapter-IV/typography-poppins.png" alt="typography-poppins" width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/typography-inter.png" alt="typography-inter" width="600px" height="auto"/>
+</p>
+
 **Colors**
 
+
+
+
 **Spacing**
+
+
 
 **Tono de Comunicación**
 
