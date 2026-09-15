@@ -94,9 +94,9 @@ La tabla siguiente muestra el Product Backlog de **SumaqAgro** ordenado conforme
 
 En la parte superior se listan los elementos de alcance público orientados al visitante para el despliegue del Landing Page en el Sprint 1; a continuación, se priorizan las funcionalidades operativas del núcleo del sistema para el productor agrícola, directivos de cooperativa y asesores técnicos; y en seguida, las historias técnicas de infraestructura API RESTful y seguridad backend en Spring Boot. La columna de identificadores utiliza las nomenclaturas `US` (User Story) y `TS` (Technical Story) según la convención establecida en la sección 3.1.
 
-> *(Insertar aquí la captura de pantalla del tablero del Product Backlog en Trello)*
+![Jira Product Backlog](../assets/img/chapter-III/jira-product-backlog.png)
 
-**Enlace al Tablero del Product Backlog (Trello):** [https://trello.com/b/dymbia-sumaqagro-backlog](https://trello.com/b/dymbia-sumaqagro-backlog)
+**Enlace al Tablero del Product Backlog (Jira):** [Tablero Jira - SumaqAgro](https://sumaq-agro.atlassian.net/jira/software/c/projects/DSB/boards/2/backlog?epics=visible)
 
 | Orden | Identificador | Título | Descripción | Story Points |
 | :---: | :---: | :--- | :--- | :---: |
