@@ -4,16 +4,16 @@
 
 Las Historias de Usuario (US) e Historias Técnicas (TS) de SumaqAgro siguen la estructura ágil «Como [actor], quiero [funcionalidad], para [beneficio]», equivalente al patrón ágil en inglés As a..., I want..., so that... (el documento se redacta en español; los identificadores US, TS y EPIC se mantienen en la convención del proyecto). Cada historia se valida mediante criterios de aceptación BDD en formato Gherkin (Dado que... / Cuando... / Entonces...). La especificación abarca los roles de visitante (landing page), productor agrícola (monitoreo GPS y costos), directivo de cooperativa (certificación de calidad), asesor agrónomo (asistencia técnica) y desarrollador (API RESTful en Spring Boot), cubriendo desde la captación pública hasta la operación agrícola y trazabilidad comercial.
 
-### Resumen de Épicas y Bounded Contexts
+### Resumen de Épicas
 
-| Epic<br>ID | Nombre de la<br>Épica | Bounded Context<br>Asociado | Descripción / Alcance |
-| :---: | :--- | :--- | :--- |
-| **EPIC-<br>01** | Experiencia Web en<br>la Landing Page | Landing Page &<br>Public Onboarding<br>Context | Sitio web público de la startup, propuesta de valor, equipo fundador, video demo, soluciones, planes de suscripción (Semilla, Cooperativa Pro, Asesor Técnico), selector de idioma (ES/EN), testimonios e impacto, y políticas legales. |
-| **EPIC-<br>02** | Monitoreo Satelital<br>de Cultivos | Satellite Crop<br>Monitoring<br>Context | Delimitación GPS de parcelas, generación de mapas multiespectrales NDVI, índice de humedad NDWI, alertas tempranas de estrés vegetal y panel consolidado para asesores agrónomos. |
-| **EPIC-<br>03** | Gestión de Costos<br>y Finanzas<br>Agrícolas | Cost Accounting<br>& Financial<br>Context | Registro de insumos, pesticidas, fletes, jornales, cálculo automático de punto de equilibrio por saco/quintal, resumen por hectárea y exportación de reportes financieros. |
-| **EPIC-<br>04** | Evaluación de<br>Calidad y<br>Certificación Digital | Quality Scoring &<br>Certification<br>Context | Clasificación por calibres de papa, protocolo de catación SCA para taza de café, generación de certificado digital PDF con firma de origen y código QR de validación pública. |
-| **EPIC-<br>05** | Asistencia y<br>Prescripción<br>Agronómica | Agronomic<br>Advisory Context | Diagnóstico fitosanitario remoto con evidencia fotográfica, emisión de recetas agronómicas digitales, calendario de visitas de campo y alertas regionales preventivas. |
-| **EPIC-<br>06** | Infraestructura<br>Core y Servicios<br>RESTful | Core Infrastructure<br>& Backend<br>Context | Technical Stories para la API RESTful en Spring Boot, integración con API de AgroMonitoring, autenticación JWT, generador de PDF/QR y persistencia offline diferida. |
+| Epic<br>ID | Nombre de la<br>Épica | Descripción / Alcance |
+| :---: | :--- |  :--- |
+| **EPIC-<br>01** | Experiencia Web en<br>la Landing Page | Sitio web público de la startup, propuesta de valor, equipo fundador, video demo, soluciones, planes de suscripción (Semilla, Cooperativa Pro, Asesor Técnico), selector de idioma (ES/EN), testimonios e impacto, y políticas legales. |
+| **EPIC-<br>02** | Monitoreo Satelital<br>de Cultivos | Delimitación GPS de parcelas, generación de mapas multiespectrales NDVI, índice de humedad NDWI, alertas tempranas de estrés vegetal y panel consolidado para asesores agrónomos. |
+| **EPIC-<br>03** | Gestión de Costos<br>y Finanzas<br>Agrícolas  | Registro de insumos, pesticidas, fletes, jornales, cálculo automático de punto de equilibrio por saco/quintal, resumen por hectárea y exportación de reportes financieros. |
+| **EPIC-<br>04** | Evaluación de<br>Calidad y<br>Certificación Digital | Clasificación por calibres de papa, protocolo de catación SCA para taza de café, generación de certificado digital PDF con firma de origen y código QR de validación pública. |
+| **EPIC-<br>05** | Asistencia y<br>Prescripción<br>Agronómica | Diagnóstico fitosanitario remoto con evidencia fotográfica, emisión de recetas agronómicas digitales, calendario de visitas de campo y alertas regionales preventivas. |
+| **EPIC-<br>06** | Infraestructura<br>Core y Servicios<br>RESTful  | Technical Stories para la API RESTful en Spring Boot, integración con API de AgroMonitoring, autenticación JWT, generador de PDF/QR y persistencia offline diferida. |
 
 ### Tabla Matriz de User Stories
 
