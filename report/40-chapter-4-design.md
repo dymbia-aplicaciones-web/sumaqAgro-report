@@ -27,7 +27,6 @@
 En esta sección se traslada la comprensión del negocio obtenida en el Big Picture Event Storming hacia el diseño de arquitectura de software guiado por el dominio (Domain-Driven Design - DDD) y el modelo de abstracción y comunicación visual C4 Model en sus niveles de Contexto, Contenedores y Componentes. A través de esta aproximación arquitectónica, se divide el espacio del problema en Bounded Contexts independientes y de bajo acoplamiento, estableciendo sus agregados transaccionales (Aggregates), comandos, eventos de dominio, modelos de consulta (Read Models) y políticas de automatización reactivas. Asimismo, se formaliza la topología técnica y modular de la solución distribuida, articulando la aplicación web de cara al usuario, el servicio de backend RESTful en Spring Boot, la base de datos relacional y las interfaces de integración con servicios externos.
 
 ---
-
 ### 4.6.1. Design-Level Event Storming
 El equipo llevó a cabo una sesión sincrónica de trabajo colaborativo en Miro siguiendo las pautas metodológicas de la guía Design-Level EventStorming (<https://bit.ly/dles-guide>). La dinámica se enfocó en profundizar y refinar el modelo general del dominio de las cadenas de café de especialidad y papa andina, definiendo las reglas de invariante transaccional y la mecánica de ejecución del sistema.
 
@@ -122,26 +121,30 @@ La orquestación entre los contextos delimitados se rige por políticas eventual
 * **P8:** `Whenever BreakevenPriceCalculated Then SetBaseSettlementPrice`
 
 ### 4.6.2. Software Architecture Context Diagram
-El Diagrama de Contexto del Sistema (Nivel 1 de C4 Model) define el alcance de la solución y muestra a la plataforma **SumaqAgro** en el centro de su ecosistema operativo, delimitando sus interacciones con los distintos roles de usuario y las plataformas externas de terceros.
 
-![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](../assets/img/c4/c4-system-context-diagram.png)
+En este apartado se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
 
-**Descripción de Actores y Sistemas del Contexto:**
-* **Actores Humanos:**
-    * *Productor Agrícola:* Conduce parcelas, consulta mapas de vigor foliar y registra costos operativos de campaña en campo.
-    * *Directivo de Cooperativa:* Supervisa la evolución de lotes asociados, analiza márgenes financieros y formaliza los certificados de calidad de cosecha para exportación.
-    * *Asesor Técnico de Campo:* Prioriza visitas agronómicas presenciales y emite prescripciones fitosanitarias asistidas por telemetría.
-    * *Comprador Mayorista:* Escanea el código QR público para auditar procedencia y emite posturas de compra comercial.
-* **Sistemas Externos de Terceros:**
-    * *Sentinel-2 Open Access API (ESA):* Fuente externa de telemetría óptica de observación terrestre que suministra periódicamente las bandas espectrales requeridas para computar índices NDVI y NDWI sin infraestructura física de sensores.
-    * *SENAMHI Weather API:* Servicio meteorológico nacional que provee pronósticos y alertas tempranas de heladas meteorológicas y sequías estacionales.
-    * *Twilio SMS / WhatsApp Gateway:* Pasarela de mensajería para el despacho de avisos fitosanitarios y agroclimáticos hacia agricultores ubicados en zonas con baja penetración de conectividad móvil.
-    * *Stripe / Niubiz Payment Gateway:* Pasarela de procesamiento de pagos electrónicos utilizada para liquidar los cobros recurrentes de planes de suscripción para cooperativas y extensionistas.
-    * *MIDAGRI PPA API:* Servicio gubernamental utilizado para cotejar la condición formal del agricultor en el Padrón de Productores Agrarios.
-    * *Public QR Verification Gateway:* Portal web público que expone la vista técnica no repudiable de acreditación de origen y calidad de cosecha.
+![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](../assets/img/c4/c4-system-context-diagram.svg)
+
+#### Explicación del Diagrama de Contexto
+
+El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distribuida orientada a la agricultura de precisión, el cálculo de costos operativos de campo y la certificación de calidad para las cadenas de café de especialidad y papa andina. A su alrededor se articulan las siguientes interacciones:
+
+##### 1. Actores y Usuarios del Dominio
+* **Agricultural Producer (Productor Agrícola):** Agricultor que accede mediante navegadores web o dispositivos móviles para registrar la delimitación geográfica de sus parcelas, monitorear el vigor foliar satelital (NDVI/NDWI) y registrar sus compras de insumos, jornales y fletes en la bitácora de costos.
+* **Cooperative Manager (Directivo de Cooperativa):** Usuario administrativo que utiliza la plataforma desde terminales de escritorio para auditar el volumen de acopio de los socios, monitorear los balances financieros por hectárea y aprobar formalmente la emisión de los certificados de calidad de cosecha.
+* **Technical Field Advisor (Asesor Técnico de Campo):** Ingeniero agrónomo que hace seguimiento a las alertas satelitales tempranas de estrés hídrico o plagas para priorizar sus visitas presenciales en parcelas críticas, emitiendo recetas agronómicas y dosis correctivas desde la aplicación.
+* **Wholesale Buyer (Comprador Mayorista / Exportador):** Usuario comercial que interactúa con la plataforma de forma abierta y sin necesidad de credenciales, escaneando el código QR público de los sacos o lotes para verificar en línea la procedencia geográfica, la variedad botánica y el perfil de calidad certificado.
+
+##### 2. Sistemas Externos e Integraciones
+* **Sentinel-2 Open Access API (ESA):** Proveedor satelital que suministra de manera periódica baldosas ópticas multiespectrales. El sistema consume este servicio vía peticiones HTTPS/JSON para computar los índices biofísicos de reflectancia vegetal sin depender de sensores IoT instalados en campo.
+* **SENAMHI Weather API:** Servicio meteorológico nacional consultado por HTTPS/JSON para sincronizar pronósticos climáticos y emitir advertencias tempranas ante eventos de heladas meteorológicas o sequías estacionales en los valles productivos.
+* **Twilio SMS / WhatsApp Gateway:** Pasarela de mensajería externa utilizada por SumaqAgro para remitir notificaciones prioritarias y alertas agroclimáticas urgentes a productores ubicados en zonas rurales con baja cobertura móvil de datos.
+* **Stripe / Niubiz Payment Gateway:** Pasarela de procesamiento de pagos electrónicos integrada mediante API REST (HTTPS/JSON) para la gestión y cobro transaccional de los planes de suscripción de cooperativas agrarias y asesores técnicos.
+* **MIDAGRI PPA API:** Servicio gubernamental del Padrón de Productores Agrarios consumido mediante HTTPS/JSON para validar la titularidad catastral de predios y la condición formal de los socios agrícolas.
+* **Public QR Verification Gateway:** Punto de acceso web público y liviano que resuelve las peticiones de validación iniciadas por los compradores mayoristas al escanear los códigos QR, certificando la autenticidad e inmutabilidad del lote evaluado.
 
 ---
-
 ### 4.6.3. Software Architecture Container Diagrams
 El Diagrama de Contenedores (Nivel 2 de C4 Model) detalla la topología técnica del sistema, evidenciando las cuatro unidades de ejecución y despliegue independientes que componen la solución, sus responsabilidades asignadas y los protocolos de red utilizados para su interoperabilidad.
 
