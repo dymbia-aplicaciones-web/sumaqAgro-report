@@ -123,6 +123,95 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 ![Structurizr](../assets/img/chapter-V/img-structurizr.png)
 
 ### 5.1.2. Source Code Management
+
+Para garantizar la integridad del código fuente, el trabajo colaborativo eficiente y la trazabilidad inmutable del desarrollo de **SumaqAgro**, el equipo utiliza **Git** como sistema de control de versiones distribuido, alojado de forma centralizada en la plataforma **GitHub**.
+
+A continuación, se especifican la estructura de la organización en GitHub, las URLs de los repositorios de cada producto digital, el flujo de trabajo con **GitFlow**, el esquema de versionado semántico (**Semantic Versioning**) y el estándar de mensajes mediante **Conventional Commits**.
+
+---
+
+### 1. Organización y Repositorios en GitHub
+
+Todos los componentes de software y la documentación del proyecto están agrupados bajo una organización pública en GitHub. Se ha asignado un repositorio independiente para cada producto digital de la solución, incluyendo las suites de pruebas unitarias e integración en el caso de los servicios web:
+
+* **Organización Oficial en GitHub:**
+
+
+* **Repositorio del Landing Page (Sitio Web Estático):**
+
+
+* **Repositorio de Web Services (RESTful API backend):**  
+
+
+* **Repositorio de Frontend Web Application:**  
+
+
+* **Repositorio del Informe del Proyecto (Project Report):**  
+
+
+*(Imagen proximo)*
+
+---
+
+### 2. Estrategia de Ramificación - GitFlow Workflow
+
+El equipo ha adoptado **GitFlow** como modelo y flujo de trabajo estructurado para la gestión de ramas (*branches*). Este enfoque garantiza la separación entre el código estable listo para producción y el desarrollo activo de nuevas funcionalidades.
+
+#### Ramas Principales (*Main Branches*)
+1. `main` **(Producción):**  
+   Contiene exclusivamente código de producción estable y libre de errores. Cada confirmación en esta rama representa un despliegue oficial (*release*) firmado con una etiqueta de versión semántica (*tag*).
+2. `develop` **(Integración / Staging):**  
+   Sirve como la rama principal de integración continua. Agrupa los avances terminados y revisados de las distintas funcionalidades antes de ser empaquetados para una nueva versión de producción.
+
+#### Ramas de Soporte (*Supporting Branches*)
+* **Ramas de Funcionalidad (`feature/*`):**  
+  Se crean exclusivamente a partir de `develop` para construir un módulo, historia de usuario o componente específico. Una vez completada y revisada la funcionalidad, se integra de regreso a `develop` mediante un *Pull Request*.
+* **Ramas de Preparación de Lanzamiento (`release/*`):**  
+  Se derivan de `develop` cuando las historias de un Sprint están listas para producción. Permiten realizar ajustes menores de configuración, documentación y pruebas finales sin congelar el desarrollo activo en `develop`. Al finalizar, se fusiona hacia `main` y `develop`.
+* **Ramas de Corrección Urgente (`hotfix/*`):**  
+  Se crean directamente a partir de `main` para solucionar fallos críticos detectados en el entorno de producción en vivo. Una vez corregido el problema, la rama se integra tanto a `main` como a `develop` para mantener la sincronización.
+
+---
+
+### 3. Convenciones para el Nombrado de Ramas
+
+Para mantener una nomenclatura consistente y trazable entre los tableros de gestión y los repositorios de GitHub, se han definido las siguientes reglas estandarizadas:
+
+* **Feature branches:** `feature/<numero-tarea>-<descripcion-corta>`  
+  *Ejemplo:* `feature/10-satellite-ndvi-map`
+* **Release branches:** `release/v<version-semantica>`  
+  *Ejemplo:* `release/v1.0.0`
+* **Hotfix branches:** `hotfix/<numero-incidencia>-<descripcion-corta>`  
+  *Ejemplo:* `hotfix/401-jwt-expired-token`
+
+---
+
+### 4. Versionado Semántico (Semantic Versioning 2.0.0)
+
+Para el etiquetado (*tagging*) de lanzamientos oficiales en la rama `main`, el proyecto adopta la norma **Semantic Versioning 2.0.0**, utilizando el formato estructurado **`MAJOR.MINOR.PATCH`**:
+
+* **MAJOR (Incremento de versión mayor):** Cambios incompatibles en la API RESTful o reestructuraciones arquitectónicas mayores. *(Ejemplo: `v1.0.0` → `v2.0.0`)*
+* **MINOR (Incremento de versión menor):** Adición de nuevas historias de usuario o módulos funcionales compatibles con las versiones anteriores. *(Ejemplo: `v1.0.0` → `v1.1.0`)*
+* **PATCH (Incremento de parche):** Correcciones de errores (*bug fixes*) o parches de seguridad menores retrocompatibles. *(Ejemplo: `v1.0.1` → `v1.0.2`)*
+
+---
+
+### 5. Estándar de Mensajes de Commit - Conventional Commits
+
+El equipo aplica estrictamente la especificación **Conventional Commits** para la redacción de mensajes de confirmación de cambios (*commits*). La sintaxis adoptada sigue la estructura:
+
+`tipo(alcance): descripción corta en presente e imperativo`
+
+#### Tipos de Commits Permitidos (`type`):
+* `feat`: Nueva funcionalidad implementada para el usuario final.
+* `fix`: Corrección de un fallo o error en el código.
+* `docs`: Modificaciones exclusivas en documentación (archivos Markdown, comentarios, Swagger).
+* `style`: Cambios de formato, identación o reglas de estilo CSS/HTML sin alterar la lógica.
+* `refactor`: Reestructuración de código que no corrige errores ni añade características.
+* `test`: Adición o corrección de pruebas unitarias o de integración.
+* `chore`: Tareas de mantenimiento, actualización de dependencias o scripts de compilación.
+
+
 ### 5.1.3. Source Code Style Guide & Conventions
 ### 5.1.4. Software Deployment Configuration
 
