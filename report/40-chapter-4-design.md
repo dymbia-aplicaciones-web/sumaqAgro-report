@@ -146,16 +146,33 @@ El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distrib
 
 ---
 ### 4.6.3. Software Architecture Container Diagrams
-El Diagrama de Contenedores (Nivel 2 de C4 Model) detalla la topología técnica del sistema, evidenciando las cuatro unidades de ejecución y despliegue independientes que componen la solución, sus responsabilidades asignadas y los protocolos de red utilizados para su interoperabilidad.
 
-![C4 Model - Diagrama de Contenedores (Nivel 2)](../assets/img/c4/c4-container-diagram.png)
+En esta sección se presenta y describe el Diagrama de Contenedores (Nivel 2 del modelo C4) de la plataforma **SumaqAgro**, el cual profundiza en la frontera del sistema para exponer su arquitectura técnica distribuida. Este diagrama muestra las unidades de despliegue y ejecución independientes que componen la solución, la distribución de responsabilidades entre ellas, las principales decisiones de tecnología adoptadas y los protocolos de red empleados para la comunicación interna y con sistemas externos. El modelado fue estructurado y generado formalmente mediante la especificación DSL de la herramienta **Structurizr**.
 
-**Asignación de Responsabilidades y Decisiones Tecnológicas:**
-* **Landing Page Container:** Sitio web estático desarrollado con HTML5, CSS3 y JavaScript vanilla, desplegado sobre una plataforma de hosting estático en la nube. Diseñado con una estructura ligera para garantizar un rendimiento óptimo sobre conexiones móviles rurales (redes 3G/4G). Presenta la propuesta de valor institucional, los planes de suscripción comercial y canaliza los prospectos de venta hacia la API mediante llamadas asíncronas HTTPS/JSON.
-* **Web Application Container (Single Page Application - SPA):** Desarrollada sobre Angular 18, TypeScript y la biblioteca Angular Material. Provee interfaces adaptativas para el monitoreo de mapas multiespectrales, configuración de parcelas y bitácora contable. Integra mecanismos de caché local mediante Service Workers e IndexedDB, permitiendo registrar compras, jornales y labores en modo desconectado (offline-first) mientras el usuario se encuentra dentro de parcelas sin cobertura, sincronizando los datos automáticamente al volver a la ciudad.
-* **RESTful API Backend Container:** Servidor de aplicaciones distribuido implementado en Java 21 con Spring Boot 3.x (Spring MVC, Spring Security y Spring Data JPA). Concentra la lógica de negocio basada en DDD para los 7 Bounded Contexts identificados. Implementa filtros de autenticación y autorización mediante Tokens JWT, realiza los cálculos del punto de equilibrio financiero, consume las APIs externas satelitales mediante adaptadores HTTP desacoplados y expone endpoints REST documentados bajo la especificación OpenAPI 3.0 / Swagger UI.
-* **Database Engine Container:** Motor de base de datos relacional MySQL 8.0 que almacena el modelo de datos físico normalizado de los Bounded Contexts. Soporta relaciones con integridad referencial, índices espaciales para el almacenamiento de geometrías de parcelas y transacciones ACID bajo comunicación JDBC por el puerto TCP 3306.
+![C4 Model - Diagrama de Contenedores (Nivel 2)](../assets/img/c4/c4-container-diagram.svg)
 
+#### Asignación de Responsabilidades y Decisiones Tecnológicas
+
+La topología de ejecución del sistema está conformada por cuatro contenedores independientes:
+
+* **Landing Page Container:**
+  Sitio web público estático desarrollado con HTML5, CSS3 y JavaScript vanilla, alojado en un servicio cloud de distribución estática. Diseñado con una carga ligera para garantizar un rendimiento óptimo en terminales móviles bajo redes rurales 3G/4G. Su propósito es exponer la propuesta de valor del producto, presentar los planes de suscripción comercial (Semilla, Cooperativa Pro y Asesor Técnico) y canalizar prospectos comerciales hacia el backend mediante llamadas asíncronas HTTPS/JSON.
+
+* **Web Application Container (Single Page Application - SPA):**
+  Aplicación web cliente desarrollada sobre el framework Angular 18, utilizando TypeScript y la biblioteca Angular Material. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de jornales, compras e insumos en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un comprador escanea el código QR impreso.
+
+* **RESTful API Backend Container:**
+  Servidor de aplicaciones distribuido implementado en Java 21 utilizando el framework Spring Boot 3.x (Spring MVC, Spring Security y Spring Data JPA). Representa el núcleo transaccional del sistema y aloja la lógica de negocio basada en DDD para los 7 Bounded Contexts identificados. Sus responsabilidades abarcan la emisión y validación de tokens criptográficos JWT para el control de accesos, el cómputo de las matrices financieras de costo unitario y punto de equilibrio rural, el procesamiento de reflectancia satelital desacoplado y la exposición de endpoints documentados formalmente bajo OpenAPI 3.0 (Swagger UI).
+
+* **Database Engine Container:**
+  Motor relacional MySQL 8.0 configurado como la unidad de persistencia de datos. Almacena las tablas normalizadas del dominio asegurando transacciones atómicas bajo el estándar ACID, soporte de integridad referencial mediante claves foráneas y compatibilidad con tipos de datos espaciales para el resguardo de las geometrías perimetrales de las parcelas agrícolas.
+
+#### Protocolos de Interoperabilidad y Comunicación
+
+* **Acceso de Usuarios:** Los usuarios finales interactúan con los contenedores web (*Landing Page* y *Web Application*) mediante peticiones seguras sobre el protocolo HTTPS.
+* **Cliente Web a Backend:** La Single Page Application consume la lógica de negocio y envía datos locales sincronizados mediante llamadas asíncronas RESTful sobre HTTPS, transmitiendo datos estructurados en formato JSON protegidos con tokens de autorización Bearer JWT.
+* **Backend a Base de Datos:** Las operaciones transaccionales y de persistencia de los agregados se ejecutan directamente a través de una conexión TCP protegida sobre el puerto 3306 mediante el controlador JDBC de MySQL.
+* **Backend a Servicios Externos:** Las consultas salientes hacia Sentinel-2 API, SENAMHI Weather API, Twilio Gateway, Stripe/Niubiz y MIDAGRI PPA se realizan mediante clientes HTTP desacoplados bajo peticiones seguras HTTPS/JSON.
 ---
 
 ### 4.6.4. Software Architecture Components Diagrams
