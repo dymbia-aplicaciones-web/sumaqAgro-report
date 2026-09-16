@@ -31,7 +31,30 @@ En esta sección se traslada la comprensión del negocio obtenida en el Big Pict
 ### 4.6.1. Design-Level Event Storming
 El equipo llevó a cabo una sesión sincrónica de trabajo colaborativo en Miro siguiendo las pautas metodológicas de la guía Design-Level EventStorming (<https://bit.ly/dles-guide>). La dinámica se enfocó en profundizar y refinar el modelo general del dominio de las cadenas de café de especialidad y papa andina, definiendo las reglas de invariante transaccional y la mecánica de ejecución del sistema.
 
-A partir del análisis de las responsabilidades operativas y los subdominios sugeridos para arquitecturas SaaS, se formalizaron 7 Bounded Contexts, integrando en cada uno su respectivo Agregado con sus Comandos (azul), Eventos de Dominio (naranja), Modelos de Lectura (verde), Sistemas Externos (rojo) y Políticas de Automatización (morado):
+#### Proceso y Actividades Realizadas en el Taller
+
+Durante la dinámica colaborativa, el equipo ejecutó las siguientes actividades de modelado:
+
+* **Presentación y encuadre del dominio objetivo:** Revisión de las fronteras preliminares identificadas en la fase Big Picture para acotar los flujos de alta criticidad del negocio y delimitar el Core Domain de la plataforma SaaS.
+* **Refinamiento de eventos de dominio (Domain Events - Naranja):** Formalización de los hechos inmutables de negocio ocurridos en cada fase operativa, expresados estrictamente en tiempo pasado participio.
+* **Incorporación de desencadenantes (Commands - Azul y Policies - Morado):** Asociación de las intenciones operativas formuladas en imperativo con sus respectivos ejecutores (actores o eventos previos). Se establecieron políticas reactivas bajo la convención *Whenever [Domain Event] Then [Command]* para orquestar la consistencia eventual entre distintos contextos.
+* **Integración de proyecciones y actores (Read Models - Verde):** Identificación de las vistas de datos, reportes y tableros que los usuarios requieren para tomar decisiones antes de ejecutar un comando.
+* **Mapeo de sistemas externos (External Systems - Rosa):** Identificación de pasarelas y servicios satelitales o gubernamentales ajenos a la solución que interactúan como emisores o receptores de datos.
+* **Definición de reglas de negocio e invariantes (Aggregates - Amarillo):** Agrupación de datos y comportamientos transaccionales atómicos bajo raíces de agregación (Aggregate Roots) para garantizar la consistencia del estado del sistema en todo momento.
+
+---
+#### Evidencia del Modelado en Miro
+
+A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 7 Bounded Contexts formalizados con sus respectivos agregados, comandos, eventos, modelos de lectura, integraciones externas y políticas de automatización:
+
+![Evidencia integral de Design-Level Event Storming](../assets/img/event-storming/step-10-bounded-contexts.jpg)
+
+* **Enlace interactivo al espacio de trabajo:** [Tablero de Event Storming en Miro](https://miro.com/app/board/uXjVHPEmUbl=/)
+
+---
+#### Alineación con Subdominios SaaS y Bounded Contexts
+
+Considerando la estructura de subdominios recomendada para plataformas SaaS de servicios (gestión de identidades, suscripciones, recursos, ejecución de servicios y analítica) y adaptándola al *Ubiquitous Language* de la cadena de valor agroalimentaria, el dominio se estructuró en 7 Bounded Contexts:
 
 **1. Identity & Access Management (IAM) Context (Generic Subdomain)**
 * **Responsabilidad:** Administrar el ciclo de vida de identidades, perfiles, asignación de roles institucionales y provisión de credenciales seguras mediante tokens criptográficos JWT.
@@ -86,7 +109,8 @@ A partir del análisis de las responsabilidades operativas y los subdominios sug
     * *Events:* `BaseSettlementPriceSet`, `CertifiedLotPublished`, `PurchaseOfferReceived`, `LotSaleRegistered`, `NetIncomeCalculated`.
     * *Read Models:* `CertifiedLotCatalog`, `CommercialSettlementLedger`.
 
-**Políticas de Automatización Reactivas (Policies)**
+---
+#### Políticas de Automatización Reactivas (Policies)
 La orquestación entre los contextos delimitados se rige por políticas eventuales bajo el estándar *Whenever [Domain Event] Then [Command]*:
 * **P1:** `Whenever ProducerAccountCreated Then SelectSubscriptionPlan`
 * **P2:** `Whenever SubscriptionProActivated Then RegisterFieldPlot`
@@ -96,10 +120,6 @@ La orquestación entre los contextos delimitados se rige por políticas eventual
 * **P6:** `Whenever DeliveredLotWeighed Then ConsolidateLotExpenses`
 * **P7:** `Whenever DigitalQualityCertificateGenerated Then PublishCertifiedLot`
 * **P8:** `Whenever BreakevenPriceCalculated Then SetBaseSettlementPrice`
-
-![Evidencia de Design-Level Event Storming en Miro](../assets/img/event-storming/step-10-bounded-contexts.png)
-
-* **Enlace al espacio de trabajo interactivo:** [Tablero de Event Storming en Miro]([https://miro.com/app/board/uXjVHPEmUbl=/](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHQ0TUs3U1JnZ1ZPd3F2YXBiWVdCQnhnbHpza3F6REdEcmNpNEFOMmJXWXBBPT0hdjE=?share_link_id=936203723150))
 
 ### 4.6.2. Software Architecture Context Diagram
 El Diagrama de Contexto del Sistema (Nivel 1 de C4 Model) define el alcance de la solución y muestra a la plataforma **SumaqAgro** en el centro de su ecosistema operativo, delimitando sus interacciones con los distintos roles de usuario y las plataformas externas de terceros.
