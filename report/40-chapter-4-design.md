@@ -49,7 +49,7 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 
 ![Evidencia integral de Design-Level Event Storming](../assets/img/event-storming/step-10-bounded-contexts.jpg)
 
-* **Enlace interactivo al espacio de trabajo:** [Tablero de Event Storming en Miro](https://miro.com/app/board/uXjVHPEmUbl=/)
+* **Enlace interactivo al espacio de trabajo:** [Tablero de Event Storming en Miro](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHVPRUdrWUJzeGVtb1g5cE9UeGFKdjJBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=126689221129)
 
 ---
 #### Alineación con Subdominios SaaS y Bounded Contexts
