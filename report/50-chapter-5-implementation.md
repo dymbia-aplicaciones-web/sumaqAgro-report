@@ -213,6 +213,122 @@ El equipo aplica estrictamente la especificación **Conventional Commits** para 
 
 
 ### 5.1.3. Source Code Style Guide & Conventions
+
+Para mantener un código fuente legible, mantenible, uniforme y alineado con los estándares internacionales de ingeniería de software, el equipo de desarrollo ha adoptado guías oficiales de estilo y convenciones de codificación para cada lenguaje y tecnología utilizada en la solución **SumaqAgro** (HTML5, CSS3, JavaScript, TypeScript, Angular, Java y Spring Boot), así como las especificaciones de comportamiento en Gherkin.
+
+### Regla General de Nomenclatura en Inglés
+En cumplimiento estricto de las normas del proyecto y los estándares globales de software, **todas las identificaciones de elementos de código** (nombres de archivos, clases, interfaces, métodos, funciones, variables, constantes, parámetros, llaves de objetos JSON, rutas de endpoints REST y comentarios técnicos) **se redactan obligatoriamente en idioma inglés**. Los textos explicativos y la documentación del informe se mantienen en español.
+
+A continuación, se detallan las guías de estilo adoptadas y sus reglas específicas:
+
+---
+
+### 1. Guía de Estilo para HTML5, CSS3 / SASS y JavaScript (Landing Page & Web App)
+
+#### Normas de Referencia
+Se adoptan la **HTML Style Guide and Coding Conventions**, la **Google HTML/CSS Style Guide** y la **Google JavaScript Style Guide** (ES6+).
+
+#### Convenciones HTML5
+* **Etiquetas y Atributos:** Todas las etiquetas, elementos y atributos HTML deben escribirse estrictamente en minúsculas (`lowercase`).  
+  *Ejemplo correcto:* `<input type="email" id="user-email" class="form-control" name="userEmail" />`
+* **HTML5 Semántico:** Es obligatorio el uso de etiquetas semánticas (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`) en lugar de contenedores genéricos `<div>` para estructurar la maquetación, garantizando la accesibilidad y optimización SEO.
+* **Comillas en Atributos:** Todos los valores de los atributos deben delimitarse mediante comillas dobles (`"`).
+* **Accesibilidad (WCAG 2.1):** Todas las imágenes y elementos multimedia deben incluir obligatoriamente el atributo `alt` declarativo en inglés (ej. `alt="Satellite NDVI spectral map"`).
+* **Indentación:** Se establece una indentación consistente de 2 espacios por cada nivel jerárquico de anidamiento HTML, evitando el uso de tabuladores.
+
+#### Convenciones CSS3 / SASS
+* **Nomenclatura BEM (Block Element Modifier):** Para la organización de clases CSS y evitar colisiones de estilos, se aplica la convención BEM con identificadores en inglés:
+    * `Block`: Representa la entidad principal independiente (ej. `.card`, `.navbar`).
+    * `Element`: Componente dependiente del bloque (ej. `.card__title`, `.navbar__item`).
+    * `Modifier`: Variante de estado o apariencia (ej. `.card__button--accent`, `.navbar__link--active`).
+* **Propiedades CSS Ordenadas:** Las declaraciones dentro de una regla CSS deben ordenarse siguiendo la estructura:
+    1. Posicionamiento (`position`, `top`, `z-index`).
+    2. Modelo de Caja (`display`, `flex`, `grid`, `width`, `padding`, `margin`).
+    3. Tipografía (`font-family`, `font-size`, `color`, `text-align`).
+    4. Visuales y Efectos (`background-color`, `border`, `box-shadow`, `opacity`).
+* **Uso de Variables:** Se centralizan los colores corporativos, tipografías y espaciados mediante variables CSS/SASS (`:root` o `_variables.scss`), prohibiendo el uso de colores en formato hexadecimal directamente en las hojas de estilo de los componentes.
+
+#### Convenciones JavaScript (Vanilla JS para scripts dinámicos en la Landing Page)
+* **Variables y Funciones:** Se redactan en `camelCase` e idioma inglés. Se exige el uso de `const` para valores inmutables y `let` para variables mutables, quedando estrictamente prohibido el uso de `var`.
+* **Manipulación de DOM:** Se promueve el uso de métodos modernos de la API DOM (`document.querySelector`, `addEventListener`) con nombres de handlers descriptivos en inglés (ej. `handleLanguageToggle`, `initHeroSlider`).
+
+---
+
+### 2. Guía de Estilo para TypeScript y Angular Framework (Frontend Web Application)
+
+#### Normas de Referencia
+Se adopta la **Official Angular Coding Style Guide** en conjunto con la **Google TypeScript Style Guide**.
+
+#### Convenciones para el Nombrado de Archivos
+Todos los nombres de archivos en el proyecto Angular deben utilizar `kebab-case` en inglés y especificar el tipo de artefacto como sufijo antes de la extensión:
+* **Componentes:** `name.component.ts` *(Ejemplo: `parcel-monitoring.component.ts`)*
+* **Servicios:** `name.service.ts` *(Ejemplo: `satellite-data.service.ts`)*
+* **Modelos / Interfaces:** `name.model.ts` *(Ejemplo: `crop-evaluation.model.ts`)*
+* **Módulos / Rutas:** `name.routes.ts` *(Ejemplo: `app.routes.ts`)*
+
+#### Convenciones de Nombres en Código
+* **Clases, Interfaces y Decoradores:** Se redactan en `PascalCase` e inglés.  
+  *Ejemplo:* `export class ParcelDetailComponent implements OnInit`
+* **Variables, Métodos y Propiedades:** Se redactan en `camelCase` e inglés.  
+  *Ejemplo:* `currentNdviScore: number = 0.78;`
+* **Constantes Globales:** Se redactan en `UPPER_SNAKE_CASE` e inglés.  
+  *Ejemplo:* `export const DEFAULT_LANGUAGE = 'en';`
+
+#### Reglas de Calidad TypeScript
+* **Tipado Estricto (Strict Mode):** Se habilita la propiedad `"strict": true` en el archivo `tsconfig.json`. Queda expresamente prohibido el uso del tipo implícito o explícito `any`; todo dato debe contar con un tipo explícito o una interfaz bien definida.
+* **Inyección de Dependencias:** Se promueve el uso de la función `inject()` de Angular en lugar de la inyección por constructor para mantener la concisión.
+* **Manejo de Reactividad (RxJS):** La desuscripción de `Observables` debe manejarse mediante la tubería `async` en las plantillas HTML o mediante el operador `takeUntilDestroyed()` para prevenir fugas de memoria (*memory leaks*).
+
+---
+
+### 3. Guía de Estilo para Java 21 y Spring Boot (Backend RESTful API)
+
+#### Normas de Referencia
+Se adopta la **Google Java Style Guide** complementada con las convenciones oficiales del **Spring Boot Features / Standards**.
+
+#### Estructura de Paquetes
+La estructura del paquete base sigue la nomenclatura de dominio inverso en minúsculas y sin guiones, con identificadores en inglés:  
+`com.dymbia.sumaqagro.<bounded-context>.<layer>`
+
+*Ejemplo de capas:*
+* `com.dymbia.sumaqagro.monitoring.domain.model`
+* `com.dymbia.sumaqagro.monitoring.infrastructure.persistence`
+* `com.dymbia.sumaqagro.monitoring.interfaces.rest`
+
+#### Convenciones de Nombres
+* **Clases e Interfaces:** Se redactan en `PascalCase` e inglés utilizando sustantivos claros y descriptivos.  
+  *Ejemplos:* `CropParcel`, `ParcelRepository`, `CalculateBreakEvenUseCase`.
+* **Métodos y Variables de Instancia:** Se redactan en `camelCase` e inglés utilizando verbos o frases verbales para los métodos.  
+  *Ejemplos:* `calculateNdviAverage()`, `totalCostPerHectare`.
+* **Constantes:** Se definen como `public static final` y se redactan en `UPPER_SNAKE_CASE` e inglés.  
+  *Ejemplo:* `public static final int MAX_PARCEL_HECTARES = 500;`
+
+#### Estándares de Ingeniería Backend y REST API
+* **Formato de Código:** Indentación obligatoria de 4 espacios (configurada en IntelliJ IDEA). No se permiten comodines (`*`) en las sentencias `import` (ej. importar `java.util.List` explícitamente en lugar de `java.util.*`).
+* **Uso de DTOs (Data Transfer Objects):** La capa REST no debe exponer directamente entidades `@Entity` de JPA. Se exige el uso de patrones DTO (`Record` en Java 21) para las peticiones (`RequestDTO`) y respuestas (`ResponseDTO`).
+* **Anotaciones Lombok:** Se requiere el uso de `@Getter`, `@Setter`, `@Builder` y `@RequiredArgsConstructor` para reducir la verbosidad de métodos accesores y constructores.
+* **Diseño de Endpoints RESTful:**
+    * URIs en minúsculas, plurales, en idioma inglés y versionadas: `/api/v1/parcels`, `/api/v1/certificates`.
+    * Verbos HTTP adecuados: `GET` (lectura), `POST` (creación), `PUT` (actualización completa), `DELETE` (eliminación).
+* **Manejo Global de Excepciones:** Se implementa la anotación `@RestControllerAdvice` para capturar excepciones de negocio y retornar respuestas estructuradas bajo el estándar RFC 7807 (*Problem Details for HTTP APIs*) con el código de estado HTTP correspondiente.
+
+---
+
+### 4. Convenciones Gherkin para Especificaciones Legibles (BDD Acceptance Criteria)
+
+#### Norma de Referencia
+Se adopta la convención **Gherkin Conventions for Readable Specifications** para la especificación de los Criterios de Aceptación de las Historias de Usuario bajo el enfoque BDD (*Behavior-Driven Development*).
+
+#### Reglas de Redacción de Escenarios
+* **Estructura Declarativa:** Los escenarios deben redactarse con una sintaxis orientada al comportamiento del usuario (*behavior-driven*) y no a los detalles técnicos de la interfaz gráfica (evitar expresiones como "hacer clic en el botón X").
+* **Palabras Clave Estándar:** Cada escenario debe articularse estrictamente con los conectores BDD en español:
+    * **`Dado que` (`Given`):** Establece las precondiciones y el contexto inicial del sistema.
+    * **`Cuando` (`When`):** Describe la acción o evento desencadenante ejecutado por el actor.
+    * **`Entonces` (`Then`):** Especifica el resultado esperado, la respuesta del sistema o el cambio de estado observable.
+* **Atomicidad y Claridad:** Cada escenario debe probar una única regla de negocio o flujo alternativo (un escenario por cada caso de éxito o fallo principal).
+
+
+
 ### 5.1.4. Software Deployment Configuration
 
 ## 5.2. Landing Page, Services & Applications Implementation
