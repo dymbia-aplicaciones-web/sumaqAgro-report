@@ -84,16 +84,14 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 
 ![Postman](../assets/img/chapter-V/img-postman.png)
 
----
-
 #### 5. Software Deployment
 
-##### **Vercel / GitHub Pages**
 
-* **Propósito en el proyecto:** Plataformas de alojamiento en la nube para el despliegue continuo (*Continuous Deployment*) automatizado del frontend estático de la Landing Page, garantizando alta disponibilidad, certificado SSL (HTTPS) y tiempos de respuesta optimizados.
-* **Ruta de Referencia:** [https://vercel.com](https://vercel.com) / [https://pages.github.com](https://pages.github.com)
+##### **Cloudflare Pages / GitHub Pages**
+* **Propósito en el proyecto:** Plataformas de alojamiento en la nube para el despliegue continuo (*Continuous Deployment*) automatizado del frontend estático de la Landing Page, garantizando alta disponibilidad a través de la red Edge global de servidores, certificado SSL/TLS (HTTPS) de renovación automática y tiempos de respuesta optimizados.
+* **Ruta de Referencia:** [https://pages.cloudflare.com](https://pages.cloudflare.com) / [https://pages.github.com](https://pages.github.com)
 
-![Vercel](../assets/img/chapter-V/img-vercel.png)
+![Cloudflare Pages](../assets/img/chapter-V/img-cloudflare.png)
 
 ![GitHub Pages](../assets/img/chapter-V/img-github-pages.png)
 
