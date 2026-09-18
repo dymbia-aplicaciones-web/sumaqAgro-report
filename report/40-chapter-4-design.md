@@ -609,7 +609,7 @@ A continuación, se presentan y explican los diagramas entidad-relación (ERD) e
 
 Este contexto delimita la persistencia de usuarios, perfiles institucionales, roles y credenciales para la autenticación y autorización segura basada en tokens JWT.
 
-*(Insertar aquí captura del diagrama ERD del Bounded Context IAM en DataGrip / MySQL Workbench)*
+![Database Diagram - IAM Bounded Context](../assets/img/database/iam-db-diagram.png)
 
 ##### Especificación de Tablas y Relaciones
 
@@ -649,7 +649,7 @@ Tabla asociativa para la relación de muchos a muchos (N:M) entre usuarios y rol
 
 Gestiona los planes comerciales (Semilla, Cooperativa Pro, Asesor Técnico), el historial de suscripciones activas y las transacciones de pago con pasarelas externas.
 
-*(Insertar aquí captura del diagrama ERD del Bounded Context Subscription & Billing en DataGrip / MySQL Workbench)*
+![Database Diagram - Subscription & Billing Bounded Context](../assets/img/database/subscriptions-db-diagram.png)
 
 ##### Especificación de Tablas y Relaciones
 
@@ -691,7 +691,7 @@ Bitácora de cobros y facturación procesada mediante la pasarela de pagos.
 
 Modela las parcelas agrícolas georreferenciadas, los vértices de polígonos GPS y las campañas fenológicas de siembra.
 
-*(Insertar aquí captura del diagrama ERD del Bounded Context Plot & Crop Management en DataGrip / MySQL Workbench)*
+![Database Diagram - Plot & Crop Management Bounded Context](../assets/img/database/plots-db-diagram.png)
 
 ##### Especificación de Tablas y Relaciones
 
@@ -736,7 +736,7 @@ Registra las campañas fenológicas de cultivo por año/temporada.
 
 Guarda los registros de reflectancia multiespectral (NDVI y NDWI) extraídos periódicamente de las baldosas de Sentinel-2, así como las alertas agroclimáticas y recetas fitosanitarias.
 
-*(Insertar aquí captura del diagrama ERD del Bounded Context Satellite Analytics & Alerting en DataGrip / MySQL Workbench)*
+![Database Diagram - Satellite Analytics & Alerting Bounded Context](../assets/img/database/monitoring-db-diagram.png)
 
 ##### Especificación de Tablas y Relaciones
 
@@ -780,7 +780,7 @@ Recetas y prescripciones fitosanitarias emitidas por asesores agrónomos ante re
 
 Contabilidad de costos operativos rurales con soporte de sincronización offline (compras de insumos, jornales y fletes), calculando el costo unitario total y el punto de equilibrio financiero.
 
-*(Insertar aquí captura del diagrama ERD del Bounded Context Field Cost Accounting en DataGrip / MySQL Workbench)*
+![Database Diagram - Field Cost Accounting Bounded Context](../assets/img/database/costs-db-diagram.png)
 
 ##### Especificación de Tablas y Relaciones
 
@@ -840,7 +840,7 @@ Módulo de consolidación financiera que determina la inversión total y el cost
 
 Modelado de la cosecha recolectada, evaluaciones de calidad física por calibres (papa según norma MIDAGRI) y análisis sensorial de taza (café según protocolo SCA), emitiendo certificados digitales con código QR de verificación pública.
 
-*(Insertar aquí captura del diagrama ERD del Bounded Context Harvest Quality & Certification en DataGrip / MySQL Workbench)*
+![Database Diagram - Harvest Quality & Certification Bounded Context](../assets/img/database/quality-db-diagram.png)
 
 ##### Especificación de Tablas y Relaciones
 
@@ -896,7 +896,7 @@ Certificados digitales emitidos con código QR y archivo PDF firmado.
 
 Gestión del catálogo de lotes certificados expuestos a compradores mayoristas, registro de ofertas comerciales y liquidación final de la transacción.
 
-*(Insertar aquí captura del diagrama ERD del Bounded Context Commercial Settlement en DataGrip / MySQL Workbench)*
+![Database Diagram - Commercial Settlement Bounded Context](../assets/img/database/settlement-db-diagram.png)
 
 ##### Especificación de Tablas y Relaciones
 
