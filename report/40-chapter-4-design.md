@@ -133,7 +133,7 @@ La organización jerárquica del Landing Page de "SumaqAgro" ha sido diseñada c
 - **Impacto y Testimonios:** Presentación de métricas de alcance y testimonios reales de clientes que validan la experiencia.
 
 <p align="center">
-  <img src="assets/img/chapter-IV/organization-landing-page.png">
+  <img src="../assets/img/chapter-IV/organization-landing-page.png">
 </p>
 
 > <p align="center">Organización en el landing page</p>
@@ -143,7 +143,7 @@ Además, la arquitectura jerárquica en la interfaz de la aplicación web de "Su
 
 
 <p align="center">
-  <img src="assets/img/chapter-IV/organization-web-app.png">
+  <img src="../assets/img/chapter-IV/organization-web-app.png">
 </p>
 
 > <p align="center">Organización en la aplicación</p>
