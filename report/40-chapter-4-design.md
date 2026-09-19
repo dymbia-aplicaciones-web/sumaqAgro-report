@@ -316,6 +316,83 @@ Especifica el equipo de desarrollo web responsable del proyecto para asegurar la
 <br>
 
 ### 4.2.4. Searching Systems
+
+Dentro de la sección **Mi Parcela** de la aplicación web, el sistema de búsqueda está integrado de forma simple pero efectiva para que el usuario pueda localizar lotes, registros o métricas rápidamente. Se utiliza un campo de búsqueda principal centrado en la parte superior del encabezado del dashboard, acompañado de indicadores de estado de conexión y notificaciones.
+
+Este campo permite buscar por nombre de parcela, tipo de cultivo o sector. Por ejemplo: **“Papa Canchán”** o **“Lote 2”**.
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/searching-sumaqagro.png" alt="Searching System SumaqAgro">
+</p>
+
+#### Búsqueda en la parcela
+
+El sistema de búsqueda permite al usuario localizar información específica relacionada con sus parcelas de forma rápida. La búsqueda puede realizarse utilizando términos asociados al nombre del lote, cultivo, variedad o sector registrado dentro de la plataforma.
+
+#### Filtros de Búsqueda
+
+Al realizar una búsqueda, los usuarios pueden refinar los resultados mediante diferentes criterios que permiten adaptar la información mostrada según sus necesidades.
+
+- **Categoría o Cultivo:** Permite filtrar la información según el tipo de producto agrícola, como papa, café, entre otros.
+
+- **Salud Fitosanitaria / Vigor (NDVI):** Permite identificar lotes según su condición actual, diferenciando entre estado óptimo, alerta moderada o riesgo severo.
+
+#### Resultados de Búsqueda
+
+Los resultados se presentan mediante una estructura visual basada en tarjetas y mapas de calor, permitiendo al usuario identificar rápidamente la información más relevante de cada parcela.
+
+Cada resultado puede incluir:
+
+- **Nombre del lote o parcela.**
+- **Tipo de cultivo y variedad.**
+- **Índice NDVI de salud foliar.**
+- **Costo acumulado de la campaña.**
+- **Estado de alerta activa.**
+
+Para facilitar la interpretación de la información, se utiliza una codificación visual mediante colores:
+
+- **Verde:** Representa un estado saludable del cultivo y un nivel adecuado de vigor foliar.
+
+- **Amarillo:** Representa una condición de alerta moderada que requiere seguimiento.
+
+- **Rojo:** Representa una situación de riesgo alto o una posible alerta fitosanitaria.
+
+#### Búsqueda Avanzada por Segmento
+
+**SumaqAgro** adapta sus funciones de búsqueda y filtrado según las necesidades de los diferentes perfiles de usuario de la plataforma.
+
+##### Agricultores Independientes
+
+Los agricultores pueden realizar búsquedas rápidas de sus lotes individuales, consultar información asociada a cada parcela y filtrar sus registros de campaña.
+
+Entre las principales opciones se encuentran:
+
+- Búsqueda de lotes o parcelas.
+- Filtrado de gastos por categoría.
+- Consulta de mano de obra, fertilizantes e insumos.
+- Consulta del historial de precios de equilibrio de los cultivos.
+
+##### Líderes de Cooperativas
+
+Los líderes de cooperativas disponen de herramientas de búsqueda orientadas a la gestión consolidada de socios y producción agrícola.
+
+Entre las principales opciones se encuentran:
+
+- Búsqueda y filtrado de socios de la cooperativa.
+- Consulta de volúmenes de acopio por sector.
+- Seguimiento de certificados de cosecha.
+- Búsqueda mediante código QR o número de ficha.
+
+##### Asesores Técnicos Agrónomos
+
+Los asesores técnicos cuentan con funciones de búsqueda enfocadas en el seguimiento y supervisión de las parcelas asignadas.
+
+Entre las principales opciones se encuentran:
+
+- Filtrado de parcelas según nivel de urgencia.
+- Filtrado según severidad del riesgo.
+- Consulta del historial de diagnósticos.
+- Consulta de recetas fitosanitarias emitidas por predio.
 ### 4.2.5. Navigation Systems
 
 La navegación en **SumaqAgro** está diseñada para facilitar el recorrido del usuario de manera clara y rápida. En la Landing Page se implementa una barra de navegación fija (header) en la parte superior que contiene el isotipo de la marca, enlaces directos a las secciones principales, botones de acción y selector de idioma. Estas secciones son:
