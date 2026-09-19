@@ -198,7 +198,6 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 
 - **Funcionalidades destacadas:** Revisión de fotografías de plagas enviadas por agricultores, emisión de recetas técnicas y seguimiento de avisos de riesgo.
 
-
 **Segmentación por audiencia**
 
 **a. Agricultores independientes**
@@ -219,8 +218,59 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 
 - Canal de comunicación directo para dictar diagnósticos, recomendar dosificación de insumos y mantener un historial clínico por cada parcela.
   <br>
+
 ### 4.2.2. Labeling Systems
 ### 4.2.3. SEO Tags and Meta Tags
+
+Con el objetivo de mejorar la visibilidad de "SumaqAgro" en los motores de búsqueda y facilitar su descubrimiento tanto por agricultores independientes, líderes de cooperativas y asesores técnicos agrónomos interesados en optimizar el rendimiento y la gestión de sus cultivos, se ha establecido una estrategia SEO que incluye el uso adecuado de etiquetas HTML para los principales elementos informativos del sitio web estático (Landing Page) y la aplicación web.
+
+**Landing Page**
+
+- **Title:**  
+  `<title>SumaqAgro – Monitoreo Satelital y Gestión Agrícola de Precisión</title>`
+
+Una frase concisa que refleja la propuesta de valor de la plataforma e integra palabras clave estratégicas como "monitoreo satelital", "gestión agrícola" y "precisión", términos frecuentemente utilizados por productores y profesionales del sector agrotecnológico al buscar soluciones digitales.
+
+- **Meta Description:**  
+  `<meta name="description" content="Plataforma de agrotecnología para el campo peruano. Optimiza el rendimiento de tus cultivos con mapas NDVI, control de costos por lote, trazabilidad con QR y alertas de riesgo fitosanitario.">`
+
+Esta descripción sintetiza el propósito de la herramienta destacando sus beneficios diferenciadores (salud foliar NDVI, control financiero y certificación digital), incorporando términos de búsqueda de alta relevancia como “agrotecnología”, “alertas fitosanitarias” y “código QR”.
+
+- **Meta Keywords:**  
+  `<meta name="keywords" content="SumaqAgro, monitoreo satelital agrícola, índice NDVI, agricultura de precisión Perú, gestión de cooperativas agrícolas, control de gastos agrícolas, certificado QR cosecha, alertas fitosanitarias">`
+
+Un conjunto seleccionado de palabras clave que abarca los perfiles de usuario objetivo (agricultores, cooperativas, agrónomos) y las funcionalidades centrales de la solución (NDVI, control de gastos, trazabilidad y alertas de riesgo).
+
+- **Meta Author:**  
+  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
+
+Identifica al equipo responsable del diseño, desarrollo y arquitectura de información del sitio web, reforzando la transparencia y la atribución del proyecto.
+
+---
+
+**Web Application – Dashboard Principal**
+
+- **Title:**  
+  `<title>Mi Parcela – SumaqAgro | Panel de Control y Monitoreo de Cultivos</title>`
+
+Este título complementa la identidad de la plataforma con una llamada a la acción orientada a la gestión operativa, enfocándose en la centralización y monitoreo de predios agrícolas desde la vista principal de la aplicación.
+
+- **Meta Description:**  
+  `<meta name="description" content="Accede a tu panel principal en SumaqAgro. Visualiza el mapa de salud foliar (NDVI) de tus lotes, registra gastos de campaña, consulta el precio de equilibrio y gestiona solicitudes fitosanitarias con tu asesor técnico.">`
+
+Redactado con un enfoque funcional y operativo que detalla las acciones inmediatas que el usuario puede realizar en la interfaz, destacando la interacción entre agricultor, agrónomo y datos geoespaciales.
+
+- **Meta Keywords:**  
+  `<meta name="keywords" content="dashboard agrícola, mi parcela, mapas NDVI, salud del cultivo, control de gastos agrícolas, recetas técnicas, alertas de riesgo, plataforma SumaqAgro">`
+
+Palabras clave orientadas a la experiencia interna de la aplicación, utilizando términos específicos de uso continuo en la plataforma (ej. “dashboard agrícola”, “mapas NDVI”, “recetas técnicas”).
+
+- **Meta Author:**  
+  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
+
+Especifica el equipo de desarrollo web responsable del proyecto para asegurar la vigencia y atribución tecnológica de la aplicación.
+<br>
+
 ### 4.2.4. Searching Systems
 ### 4.2.5. Navigation Systems
 
