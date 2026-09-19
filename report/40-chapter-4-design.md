@@ -102,6 +102,51 @@ Este enfoque comunicacional busca generar confianza y lealtad, asegurando a los 
 
 ### 4.1.2. Web Style Guidelines
 
+Esta sección define las pautas visuales, de maquetación y de componentes de interfaz para el desarrollo del sitio web estático (**Landing Page en HTML5/CSS3/JS**) y la aplicación web orientada a la gestión agrícola en **Angular**, utilizando **Angular Material** como librería principal de componentes de UI.
+
+El enfoque está centrado en garantizar una experiencia visual y de interacción consistente, accesible (**a11y**) y adaptable a cualquier dispositivo utilizado en campo u oficina.
+
+### Responsive Design
+
+La interfaz de **SumaqAgro** se adapta de forma fluida a las pantallas de teléfonos móviles, tabletas y computadoras de escritorio mediante un sistema de cuadrícula (*Grid System*) y puntos de interrupción (*breakpoints*) estandarizados:
+
+- **Extra Small (xs ≤ 576px):** Smartphones en orientación vertical utilizados por agricultores en campo.
+
+- **Small (sm 577px – 768px):** Tabletas y dispositivos móviles en orientación horizontal.
+
+- **Medium (md 769px – 1024px):** Laptops y pantallas compactas de oficina cooperativa.
+
+- **Large (lg > 1024px):** Monitores de escritorio para análisis detallado de mapas satelitales y reportes.
+
+Para el **Landing Page**, la adaptabilidad se logra mediante *CSS Flexbox*, *CSS Grid* y *Media Queries* nativas.
+
+Para la **Web Application en Angular**, la maquetación se gestiona mediante directivas de diseño responsivo y librerías de componentes adaptables.
+
+### Componentes y patrones compatibles
+
+- **Navegación (*Navbar / Menu*):** En la aplicación web se utiliza `<mat-toolbar>` en combinación con `<mat-menu>` o `<mat-sidenav>` para la barra lateral responsiva, integrada con el módulo de enrutamiento mediante `routerLink`. En el Landing Page se emplea una barra superior fija (*sticky*) construida con elementos semánticos `<header>` y `<nav>`.
+
+- **Tarjetas (*Cards*):** Implementación de `<mat-card>` para estructurar contenedores de información clave como el resumen de lotes, mapas de vigor foliar (*NDVI*), estados de alertas fitosanitarias y balances financieros de campaña.
+
+- **Botones de acción:** Uso de variantes de Angular Material según la jerarquía del elemento:
+  - `<button mat-raised-button>` para llamadas a la acción principales, como **“Registrar Parcela”** y **“Consultar al Asesor”**.
+  - `<button mat-button>` para acciones secundarias.
+  - `<button mat-icon-button>` para controles en visores de mapas satelitales.
+
+- **Diálogos y Notificaciones:** Uso de `MatSnackBar` para la confirmación de registros de gastos o avisos preventivos, y `MatDialog` para el despliegue contextual de fichas técnicas de lotes, recetas fitosanitarias o vista previa de certificados de cosecha en PDF.
+
+### Accesibilidad (a11y)
+
+Con el fin de asegurar que la plataforma sea inclusiva para todos los perfiles de usuario, incluyendo agricultores, dirigentes de cooperativas y agrónomos, se consideran las siguientes pautas:
+
+- **Soporte ARIA:** Integración explícita de atributos `aria-label`, `aria-expanded` y `aria-live` en componentes interactivos y dinámicos.
+
+- **Navegación por teclado:** Compatibilidad completa de foco e interacción mediante secuencias de teclado estándar como `Tab`, `Enter`, `Space` y `Escape`.
+
+- **Contraste y escalabilidad:** Cumplimiento de los niveles de contraste de color según la norma **WCAG 2.1 AA**, con un ratio mínimo de **4.5:1** para texto normal, y uso de unidades relativas como `rem` y `em` para garantizar el escalado de tipografías sin distorsión de la interfaz.
+
+
+
 ## 4.2. Information Architecture
 
 ### 4.2.1. Organization Systems
