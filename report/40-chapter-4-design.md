@@ -218,8 +218,9 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 
 - Canal de comunicación directo para dictar diagnósticos, recomendar dosificación de insumos y mantener un historial clínico por cada parcela.
   <br>
-
+  <br>
 ### 4.2.2. Labeling Systems
+
 ### 4.2.3. SEO Tags and Meta Tags
 
 Con el objetivo de mejorar la visibilidad de "SumaqAgro" en los motores de búsqueda y facilitar su descubrimiento tanto por agricultores independientes, líderes de cooperativas y asesores técnicos agrónomos interesados en optimizar el rendimiento y la gestión de sus cultivos, se ha establecido una estrategia SEO que incluye el uso adecuado de etiquetas HTML para los principales elementos informativos del sitio web estático (Landing Page) y la aplicación web.
@@ -270,9 +271,52 @@ Palabras clave orientadas a la experiencia interna de la aplicación, utilizando
 
 Especifica el equipo de desarrollo web responsable del proyecto para asegurar la vigencia y atribución tecnológica de la aplicación.
 <br>
+<br>
 
 ### 4.2.4. Searching Systems
 ### 4.2.5. Navigation Systems
+
+La navegación en **SumaqAgro** está diseñada para facilitar el recorrido del usuario de manera clara y rápida. En la Landing Page se implementa una barra de navegación fija (header) en la parte superior que contiene el isotipo de la marca, enlaces directos a las secciones principales, botones de acción y selector de idioma. Estas secciones son:
+
+- **Home:** Retorno a la sección principal de bienvenida.
+- **About Us:** Información sobre la propuesta de valor y el equipo.
+- **Solutions:** Explicación técnica del monitoreo satelital y gestión agrícola.
+- **Plans:** Detalle de las suscripciones disponibles para el campo.
+- **Impact:** Resultados y testimonios de uso en los cultivos.
+- **Sign In / Register:** Botones de acceso y registro a la plataforma.
+- **Selector de Idioma (EN):** Opción para cambiar la localización del sitio.
+
+<p align="center">
+  <img src="assets/chapter-IV/header-navigation.png">
+</p>
+
+> <p align="center">Navegación del sitio web (Landing Page)</p>
+
+
+Además, en la aplicación web se implementa un menú lateral fijo (sidenav) organizado por categorías principales, el cual permite el acceso directo a las funcionalidades de gestión y monitoreo del sistema:
+
+- **Principal:**
+    - **Mi Parcela:** Vista del panel general del predio.
+- **Operación agrícola:**
+    - **Salud del Cultivo:** Visor con mapas de vigor foliar y métricas del predio.
+    - **Mis Gastos y Ganancias:** Gestión contable e historial financiero de campaña.
+    - **Consulta al Asesor:** Canal directo de atención fitosanitaria y recetas técnicas.
+    - **Mis Certificados de Cosecha:** Emisión y consulta de certificados trazables con QR.
+- **Sistema:**
+    - **Alertas Agrícolas:** Centro de avisos de riesgo y boletín fitosanitario.
+    - **Configuración y Ayuda:** Ajustes de la cuenta, datos de parcelas y soporte.
+    - **Modo Sin Conexión:** Estado operativo para sincronización de datos en campo.
+    - **Cerrar Sesión:** Salida segura de la plataforma.
+
+Cada sección está representada con un ícono claro y una etiqueta visible, asegurando una navegación fluida e intuitiva dentro de la consola de trabajo.
+
+<p align="center">
+  <img src="assets/chapter-IV/sidenav-navigation.png">
+</p>
+
+> <p align="center">Navegación de la aplicación web (Sidenav)</p>
+
+<br>
 
 ## 4.3. Landing Page UI Design
 ### 4.3.1. Landing Page Wireframe
