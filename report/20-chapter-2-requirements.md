@@ -664,8 +664,7 @@ Se analizaron 3 entrevistas a ingenieros agrónomos y extensionistas rurales (Ox
 
 #### 2.3.1. User Personas
 
-A continuación, se presentan los tres arquetipos de usuario elaborados en UXPressia a partir del análisis cualitativo y cuantitativo de las entrevistas de campo, representando formalmente a cada uno de los segmentos objetivo de la plataforma Dymbia:
-
+A continuación, se presentan los tres arquetipos de usuario elaborados en UXPressia (disponibles en: https://uxpressia.com/w/v8FzI/t/eqZxS) a partir del análisis cualitativo y cuantitativo de las entrevistas de campo, representando formalmente a cada uno de los segmentos objetivo de la plataforma Dymbia:
 ##### Segmento 1: Pequeños y medianos agricultores independientes
 El arquetipo "Guillermo Cortés" representa al agricultor familiar tradicional que conduce parcelas de café y papa bajo métodos empíricos y sin conectividad continua, demandando una arquitectura móvil fuera de línea y monitoreo satelital sin inversión en sensores costosos en tierra para defender precios justos frente a intermediarios.
 
@@ -712,8 +711,7 @@ Los segmentos considerados para este análisis corresponden a los perfiles defin
 
 ### 2.3.3. User Journey Mapping
 
-Con el User Journey Map reconstruimos paso a paso lo que viven y sienten el administrador y la familia durante el proceso. Al hacer visibles sus principales dificultades y puntos de dolor, podemos dirigir nuestra solución tecnológica justo donde más se necesita, convirtiendo una mala experiencia en un proceso simple y eficiente.
-
+Con el User Journey Map (disponible en: https://uxpressia.com/w/v8FzI/t/eqZxS) reconstruimos paso a paso lo que viven y sienten el administrador y la familia durante el proceso. Al hacer visibles sus principales dificultades y puntos de dolor, podemos dirigir nuestra solución tecnológica justo donde más se necesita, convirtiendo una mala experiencia en un proceso simple y eficiente.
 ### Segmento 1: Pequeño agricultor independiente de café (Guillermo Cortés)
 
 ![User Journey Mapping-segmento-01](../assets/img/chapter-II/User-Journey-Mapping-segment-01.png)
@@ -728,8 +726,7 @@ Con el User Journey Map reconstruimos paso a paso lo que viven y sienten el admi
 
 ### 2.3.4. Empathy Mapping
 
-Crear un producto con impacto real exige mirar más allá de las conductas visibles y conectar con el aspecto emocional del usuario. Mediante el mapa de empatía, superamos la simple segmentación demográfica para comprender su contexto interno. Desglosar lo que administradores y familias perciben, expresan y experimentan en su día a día nos permite descubrir tanto sus temores como sus expectativas clave. 
-
+Crear un producto con impacto real exige mirar más allá de las conductas visibles y conectar con el aspecto emocional del usuario. Mediante el mapa de empatía (disponible en: https://uxpressia.com/w/v8FzI/t/eqZxS), superamos la simple segmentación demográfica para comprender su contexto interno. Desglosar lo que administradores y familias perciben, expresan y experimentan en su día a día nos permite descubrir tanto sus temores como sus expectativas clave.
 ### Segmento 1: Pequeño agricultor independiente de café (Guillermo Cortés)
 
 ![Empathy-Mapping-segmet-01.png](../assets/img/chapter-II/Empathy-Mapping-segmet-01.png)
