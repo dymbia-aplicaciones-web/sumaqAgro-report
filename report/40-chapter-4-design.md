@@ -103,7 +103,122 @@ Este enfoque comunicacional busca generar confianza y lealtad, asegurando a los 
 ### 4.1.2. Web Style Guidelines
 
 ## 4.2. Information Architecture
+
 ### 4.2.1. Organization Systems
+
+La organización jerárquica del Landing Page de "SumaqAgro" ha sido diseñada con el propósito de guiar al usuario de manera lógica y efectiva desde su primer contacto con la solución hasta su conversión en cliente. Esta estructura responde a principios de arquitectura de la información que priorizan la claridad, la relevancia y la progresión natural del contenido, permitiendo que los usuarios comprendan de inmediato el valor del producto, cómo funciona, sus beneficios, y los pasos para adquirirlo.
+
+**Inicio**
+
+- **Propósito**: Captar la atención del visitante con un mensaje claro y directo orientado al sector agrícola.
+
+- **Contenido**: Propuesta de valor en el banner principal y llamadas a la acción directas.
+
+
+**Información explicativa**
+
+- **Nosotros:** Presentación del propósito de la plataforma y el equipo detrás de la solución.
+
+- **¿A quién ayudamos?:** Segmentación explícita del valor para los tres públicos objetivo (agricultores independientes, líderes de cooperativas y asesores técnicos/agrónomos).
+
+- **Soluciones y Características:** Detalle de las capacidades tecnológicas clave como monitoreo satelital (NDVI), contabilidad de costos, certificación digital y prescripciones con alertas.
+
+- **Demo del Producto:** Video demostrativo sobre el funcionamiento en campo de la plataforma.
+
+
+**Conversión y Validación**
+
+- **Planes:** Detalle de las opciones de suscripción diseñadas para cada perfil (Plan Semilla, Cooperativa Pro y Plan Asesor Técnico).
+
+- **Impacto y Testimonios:** Presentación de métricas de alcance y testimonios reales de clientes que validan la experiencia.
+
+<p align="center">
+  <img src="assets/chapter-IV/landing.png">
+</p>
+
+> <p align="center">Organización en el landing page</p>
+
+
+Además, la arquitectura jerárquica en la interfaz de la aplicación web de "SumaqAgro" ha sido diseñada para facilitar el acceso y gestión eficiente de las múltiples funcionalidades del sistema. Esta estructura permite una distribución lógica del contenido, reduciendo la carga cognitiva del usuario en campo y mejorando su capacidad para encontrar rápidamente las herramientas que necesita.
+
+
+<p align="center">
+  <img src="assets/chapter-IV/web-app.png">
+</p>
+
+> <p align="center">Organización en la aplicación</p>
+
+**Pantalla de inicio (Mi Parcela)**
+
+Una vista general tipo dashboard que presenta:
+
+- Tarjetas resumen de vigor vegetal (NDVI), costos acumulados de la campaña y punto de equilibrio financiero.
+
+- Avisos destacados de alertas fitosanitarias activas o riesgos climáticos.
+
+- Accesos rápidos para explorar lotes y consultar datos clave de la parcela.
+
+**Navegación principal**
+
+Sistema jerárquico accesible desde un menú lateral con iconografía clara. Incluye las siguientes pestañas:
+
+- Mi Parcela
+
+- Salud del Cultivo
+
+- Mis Gastos y Ganancias
+
+- Consulta al Asesor
+
+- Mis Certificados de Cosecha
+
+- Alertas Agrícolas
+
+- Configuración y Ayuda
+
+- Modo Sin Conexión
+
+**Filtrado y organización avanzada**
+
+**a. Para Agricultores Independientes**
+
+- **Filtros por:** Parcelas, lotes y capas satelitales (Vigor del Follaje / Humedad).
+
+- **Funcionalidades destacadas:** Visor satelital (NDVI), registro de gastos y solicitudes de asistencia al asesor.
+
+**b. Para Líderes de Cooperativas**
+
+- **Filtros por:** Lotes comunitarios, categorías de gastos acumulados e historial de cosechas.
+
+- **Funcionalidades destacadas:** Emisión de certificados de calidad con código QR, fichas PDF exportables y métricas de rendimiento por lote.
+
+**c. Para Asesores Técnicos y Agrónomos**
+
+- **Filtros por:** Parcelas asignadas, estado de consultas fitosanitarias y nivel de riesgo/alerta.
+
+- **Funcionalidades destacadas:** Revisión de fotografías de plagas enviadas por agricultores, emisión de recetas técnicas y seguimiento de avisos de riesgo.
+
+
+**Segmentación por audiencia**
+
+**a. Agricultores independientes**
+
+- Enfoque en el control visual de la salud de sus cultivos, manejo contable sencillo de la campaña y prevención ante contingencias climáticas.
+
+- Visualización rápida de métricas clave y acceso directo a canales de ayuda y soporte en campo.
+
+**b. Líderes de cooperativas**
+
+- Enfoque en la estandarización de la producción, respaldo técnico comercial de la cosecha colectiva y la gestión eficiente de costos.
+
+- Herramientas para la generación de documentos oficiales con código QR que facilitan la venta transparente a acopiadores y compradores.
+
+**c. Asesores técnicos y agrónomos**
+
+- Enfoque en la asistencia técnica distribuida, optimización de visitas a terreno e intervención precisa ante plagas o heladas.
+
+- Canal de comunicación directo para dictar diagnósticos, recomendar dosificación de insumos y mantener un historial clínico por cada parcela.
+  <br>
 ### 4.2.2. Labeling Systems
 ### 4.2.3. SEO Tags and Meta Tags
 ### 4.2.4. Searching Systems
