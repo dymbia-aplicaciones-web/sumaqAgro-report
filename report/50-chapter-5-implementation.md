@@ -130,7 +130,7 @@ A continuación, se especifican la estructura de la organización en GitHub, las
 
 ---
 
-### 1. Organización y Repositorios en GitHub
+#### 1. Organización y Repositorios en GitHub
 
 Todos los componentes de software y la documentación del proyecto están agrupados bajo una organización pública en GitHub. Se ha asignado un repositorio independiente para cada producto digital de la solución, incluyendo las suites de pruebas unitarias e integración en el caso de los servicios web:
 
@@ -151,7 +151,7 @@ Todos los componentes de software y la documentación del proyecto están agrupa
 
 ---
 
-### 2. Estrategia de Ramificación - GitFlow Workflow
+#### 2. Estrategia de Ramificación - GitFlow Workflow
 
 El equipo ha adoptado **GitFlow** como modelo y flujo de trabajo estructurado para la gestión de ramas (*branches*). Este enfoque garantiza la separación entre el código estable listo para producción y el desarrollo activo de nuevas funcionalidades.
 
@@ -171,7 +171,7 @@ El equipo ha adoptado **GitFlow** como modelo y flujo de trabajo estructurado pa
 
 ---
 
-### 3. Convenciones para el Nombrado de Ramas
+#### 3. Convenciones para el Nombrado de Ramas
 
 Para mantener una nomenclatura consistente y trazable entre los tableros de gestión y los repositorios de GitHub, se han definido las siguientes reglas estandarizadas:
 
@@ -184,7 +184,7 @@ Para mantener una nomenclatura consistente y trazable entre los tableros de gest
 
 ---
 
-### 4. Versionado Semántico (Semantic Versioning 2.0.0)
+#### 4. Versionado Semántico (Semantic Versioning 2.0.0)
 
 Para el etiquetado (*tagging*) de lanzamientos oficiales en la rama `main`, el proyecto adopta la norma **Semantic Versioning 2.0.0**, utilizando el formato estructurado **`MAJOR.MINOR.PATCH`**:
 
@@ -194,7 +194,7 @@ Para el etiquetado (*tagging*) de lanzamientos oficiales en la rama `main`, el p
 
 ---
 
-### 5. Estándar de Mensajes de Commit - Conventional Commits
+#### 5. Estándar de Mensajes de Commit - Conventional Commits
 
 El equipo aplica estrictamente la especificación **Conventional Commits** para la redacción de mensajes de confirmación de cambios (*commits*). La sintaxis adoptada sigue la estructura:
 
@@ -214,14 +214,14 @@ El equipo aplica estrictamente la especificación **Conventional Commits** para 
 
 Para mantener un código fuente legible, mantenible, uniforme y alineado con los estándares internacionales de ingeniería de software, el equipo de desarrollo ha adoptado guías oficiales de estilo y convenciones de codificación para cada lenguaje y tecnología utilizada en la solución **SumaqAgro** (HTML5, CSS3, JavaScript, TypeScript, Angular, Java y Spring Boot), así como las especificaciones de comportamiento en Gherkin.
 
-### Regla General de Nomenclatura en Inglés
+#### Regla General de Nomenclatura en Inglés
 En cumplimiento estricto de las normas del proyecto y los estándares globales de software, **todas las identificaciones de elementos de código** (nombres de archivos, clases, interfaces, métodos, funciones, variables, constantes, parámetros, llaves de objetos JSON, rutas de endpoints REST y comentarios técnicos) **se redactan obligatoriamente en idioma inglés**. Los textos explicativos y la documentación del informe se mantienen en español.
 
 A continuación, se detallan las guías de estilo adoptadas y sus reglas específicas:
 
 ---
 
-### 1. Guía de Estilo para HTML5, CSS3 / SASS y JavaScript (Landing Page & Web App)
+#### 1. Guía de Estilo para HTML5, CSS3 / SASS y JavaScript (Landing Page & Web App)
 
 #### Normas de Referencia
 Se adoptan la **HTML Style Guide and Coding Conventions**, la **Google HTML/CSS Style Guide** y la **Google JavaScript Style Guide** (ES6+).
@@ -252,7 +252,7 @@ Se adoptan la **HTML Style Guide and Coding Conventions**, la **Google HTML/CSS 
 
 ---
 
-### 2. Guía de Estilo para TypeScript y Angular Framework (Frontend Web Application)
+#### 2. Guía de Estilo para TypeScript y Angular Framework (Frontend Web Application)
 
 #### Normas de Referencia
 Se adopta la **Official Angular Coding Style Guide** en conjunto con la **Google TypeScript Style Guide**.
@@ -279,7 +279,7 @@ Todos los nombres de archivos en el proyecto Angular deben utilizar `kebab-case`
 
 ---
 
-### 3. Guía de Estilo para Java 21 y Spring Boot (Backend RESTful API)
+#### 3. Guía de Estilo para Java 21 y Spring Boot (Backend RESTful API)
 
 #### Normas de Referencia
 Se adopta la **Google Java Style Guide** complementada con las convenciones oficiales del **Spring Boot Features / Standards**.
@@ -312,7 +312,7 @@ La estructura del paquete base sigue la nomenclatura de dominio inverso en minú
 
 ---
 
-### 4. Convenciones Gherkin para Especificaciones Legibles (BDD Acceptance Criteria)
+#### 4. Convenciones Gherkin para Especificaciones Legibles (BDD Acceptance Criteria)
 
 #### Norma de Referencia
 Se adopta la convención **Gherkin Conventions for Readable Specifications** para la especificación de los Criterios de Aceptación de las Historias de Usuario bajo el enfoque BDD (*Behavior-Driven Development*).
@@ -325,9 +325,82 @@ Se adopta la convención **Gherkin Conventions for Readable Specifications** par
     * **`Entonces` (`Then`):** Especifica el resultado esperado, la respuesta del sistema o el cambio de estado observable.
 * **Atomicidad y Claridad:** Cada escenario debe probar una única regla de negocio o flujo alternativo (un escenario por cada caso de éxito o fallo principal).
 
-
+---
 
 ### 5.1.4. Software Deployment Configuration
+
+En esta sección se especifica la arquitectura y los procedimientos de despliegue continuo (*Continuous Deployment - CD*) e integración desde GitHub para los productos digitales que integran la solución **SumaqAgro**.
+
+
+
+#### 5.1.4.1\. Landing Page — Cloudflare Pages
+
+El Landing Page funciona como el portal público de presentación e ingreso a la solución. Su código fuente es un sitio web estático responsivo alojado en el repositorio público de GitHub y publicado en entorno de producción mediante la plataforma **Cloudflare Pages** (contando con **GitHub Pages** como entorno de respaldo y redundancia).
+
+#### Guía Paso a Paso del Despliegue
+
+##### Paso 1: Acceso al panel de administración de Workers &amp; Pages
+
+Se ingresa a la consola de administración de Cloudflare en la sección *Workers &amp; Pages*, donde se visualiza el panel principal de control del proyecto, junto con las métricas de solicitudes y estado del servicio.
+
+![Paso 1](../assets/img/chapter-V/deployment-configuration/step-1.png)
+
+##### Paso 2: Inicio del asistente de creación de aplicación
+
+En la cabecera superior del panel de *Workers &amp; Pages*, se selecciona el botón principal **"Create application"** para iniciar el flujo de aprovisionamiento de un nuevo sitio o servicio estático en la nube.
+
+![Paso 2](../assets/img/chapter-V/deployment-configuration/step-2.png)
+
+##### Paso 3: Selección del método de integración con repositorio (GitHub)
+
+Dentro de la pantalla de opciones *Make something new*, se elige el método **"Continue with GitHub"**. Esto permite establecer una conexión directa mediante *webhooks* con el repositorio de control de versiones para habilitar la compilación e integración continua (CI/CD).
+
+![Paso 3](../assets/img/chapter-V/deployment-configuration/step-3.png)
+
+##### Paso 4: Autenticación y autorización de la organización en GitHub
+
+Se autoriza a la plataforma Cloudflare Pages para acceder a la organización pública de GitHub, otorgando permisos de lectura sobre el código fuente para sincronizar las confirmaciones de cambios (*commits*).
+
+![Paso 4](../assets/img/chapter-V/deployment-configuration/step-4.png)
+
+##### Paso 5: Selección del repositorio del Landing Page
+
+En el listado de repositorios vinculados de la organización, se selecciona el proyecto correspondiente al sitio estático: `sumaqAgro-landing-page`. Se confirma la elección presionando el botón **"Begin setup"**.
+
+![Paso 5](../assets/img/chapter-V/deployment-configuration/step-5.png)
+
+##### Paso 6: Configuración de parámetros de build y rama de producción
+
+Se configuran los ajustes fundamentales del despliegue:
+
+* **Project name:** `sumaqagro-landing-page`
+* **Production branch:** `main` *(rama protegida de producción bajo GitFlow)*
+* **Framework preset:** `None` / `Static HTML`
+* **Build command:** *(Vacío para sitio estático directo)*
+* **Build output directory:** `/` *(directorio raíz)*
+
+Se finaliza la configuración haciendo clic en **"Save and Deploy"**.
+
+![Paso 6](../assets/img/chapter-V/deployment-configuration/step-6.png)
+
+##### Paso 7: Ejecución del pipeline de compilación y distribución Edge
+
+Cloudflare Pages inicia automáticamente el pipeline de entrega continua: clona el código fuente desde GitHub, valida la estructura de archivos estáticos (HTML/CSS/JS/Assets) y distribuye los artefactos en los más de 300 centros de datos de su red Edge global.
+
+![Paso 7](../assets/img/chapter-V/deployment-configuration/step-7.png) 
+
+##### Paso 8: Confirmación de despliegue exitoso y dominio público HTTPS
+
+Finalmente, se completa el proceso de publicación en producción de forma satisfactoria. Cloudflare genera la URL pública de acceso (`sumaqagro-landing-page.pages.dev`) con certificado SSL/TLS de encriptación automático, forzando la navegación segura mediante `HTTPS://`.
+
+![Paso 8](../assets/img/chapter-V/deployment-configuration/step-8.png)
+
+* **URL Oficial de Producción:** [https://sumaqagro-landing-page.pages.dev](https://sumaqagro-landing-page.pages.dev)
+
+
+
+
+
 
 ## 5.2. Landing Page, Services & Applications Implementation
 ### 5.2.1. Sprint 1
