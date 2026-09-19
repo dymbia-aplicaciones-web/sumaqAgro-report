@@ -683,32 +683,42 @@ El arquetipo "Juan Antonio Morales" consolida al consultor fitosanitario cuya co
 
 ### 2.3.2. User Task Matrix
 
-Se presenta el User Task Matrix, que reúne las tareas que los tres arquetipos de usuario identificados en la cadena de valor agrícola realizan para cumplir sus objetivos. Estas tareas comprenden funciones operativas, diagnósticas y comerciales que los usuarios llevan a cabo de forma habitual en su día a día, independientemente de la existencia de una solución tecnológica.
+El **User Task Matrix** evalúa las tareas clave que realizan los tres arquetipos en la cadena de valor:
+* **Segmento 1: Pequeños y medianos agricultores independientes de papa y café**, representado por **Guillermo Cortés** (Agricultor Independiente).
+* **Segmento 2: Productores organizados y directivos de cooperativas agrícolas**, representado por **Cristian Santana** (Directivo de Cooperativa).
+* **Segmento 3: Ingenieros agrónomos y asesores técnicos de campo**, representado por **Juan Antonio Morales** (Asesor Técnico).
 
-Los segmentos considerados para este análisis corresponden a los perfiles definidos en la investigación cualitativa:
+| Tarea Identificada | Guillermo Cortés (Agricultor)<br>Frecuencia \| Importancia | Cristian Santana (Directivo)<br>Frecuencia \| Importancia | Juan Antonio Morales (Asesor)<br>Frecuencia \| Importancia |
+| :--- | :---: | :---: | :---: |
+| **Inspección fitosanitaria del cultivo** | Often \| High | Rarely \| Low | Often \| High |
+| **Registro de costos, jornales e insumos** | Sometimes \| High | Sometimes \| High | Rarely \| Low |
+| **Monitoreo de alertas climáticas** | Often \| High | Often \| High | Sometimes \| High |
+| **Aplicación de agroquímicos y fertilizantes** | Often \| High | Never \| Low | Sometimes \| High |
+| **Evaluación de daños post-siniestro** | Sometimes \| High | Rarely \| Medium | Sometimes \| High |
+| **Negociación de volúmenes y precios** | Sometimes \| High | Often \| High | Never \| Low |
+| **Auditoría de cuadernos de campo (trazabilidad)** | Never \| Low | Often \| High | Sometimes \| High |
+| **Control de calidad y catación en acopio** | Rarely \| Medium | Often \| High | Rarely \| Medium |
+| **Georreferenciación y mapeo de parcelas** | Never \| Low | Sometimes \| High | Often \| High |
+| **Planes de dosificación nutricional** | Rarely \| Low | Rarely \| Low | Often \| High |
+| **Informes de visitas técnicas** | Never \| Low | Sometimes \| High | Often \| High |
+| **Gestión de certificaciones (orgánica/origen)** | Never \| Low | Often \| High | Rarely \| Medium |
 
-1) Segmento 1: Pequeños y medianos agricultores independientes de papa y café (representado por el arquetipo de Agricultor Independiente).
-2) Segmento 2: Productores organizados y directivos de cooperativas agrícolas (representado por el arquetipo de Directivo de Cooperativa).
-3) Segmento 3: Ingenieros agrónomos y asesores técnicos de campo (representado por el arquetipo de Asesor Técnico).
+### Análisis del Task Matrix
 
-##### Task Matrix
+#### 1. Tareas Críticas (Mayor Frecuencia e Importancia)
+* **Clima y prevención:** *Monitorear alertas climáticas* es la tarea con mayor peso transversal (**High** para todos, **Often** para Guillermo y Cristian), siendo vital para mitigar riesgos agronómicos y de abastecimiento.
+* **Núcleo operativo de campo:** *Inspeccionar fitosanitariamente* y *aplicar insumos* lideran en Guillermo (**Often / High**) y Juan Antonio (**Often / High** en diagnóstico).
+* **Gestión comercial y normativa:** *Negociar precios/volúmenes*, *auditar cuadernos de campo* y *gestionar certificaciones* son exclusivas de Cristian (**Often / High**).
 
-| Tarea | Guillermo Cortés | | Cristian Santana | | Juan Antonio Morales | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| | Frecuencia | Importancia | Frecuencia | Importancia | Frecuencia | Importancia |
-| Inspeccionar visualmente el estado fitosanitario del cultivo | often | high | rarely | low | often | high |
-| Registrar costos de insumos, jornales y labores culturales | sometimes | high | sometimes | high | rarely | low |
-| Monitorear alertas climáticas y eventos extremos | often | high | often | high | sometimes | high |
-| Ejecutar aplicaciones de agroquímicos y fertilizantes | often | high | never | low | sometimes | high |
-| Evaluar daños físicos y estrés en el campo post-siniestro | sometimes | high | rarely | medium | sometimes | high |
-| Negociar volúmenes y precios de venta de la cosecha | sometimes | high | often | high | never | low |
-| Auditar y consolidar cuadernos de campo de trazabilidad | never | low | often | high | sometimes | high |
-| Realizar control de calidad, muestreo y catación en acopio | rarely | medium | often | high | rarely | medium |
-| Georreferenciar y mapear polígonos de parcelas | never | low | sometimes | high | often | high |
-| Elaborar planes de dosificación nutricional y recetas técnicas | rarely | low | rarely | low | often | high |
-| Rendir informes de visitas técnicas y justificar impacto | never | low | sometimes | high | often | high |
-| Gestionar certificaciones orgánicas, de origen o comercio justo | never | low | often | high | rarely | medium |
+#### 2. Principales Coincidencias
+* **Monitoreo y respuesta a siniestros:** Alta relevancia compartida en clima y daños post-siniestro entre agricultor y asesor para replantear el manejo técnico.
+* **Control de costos:** Tanto Guillermo como Cristian priorizan el registro financiero (**High**), aunque su ejecución es intermitente (**Sometimes**).
+* **Trazabilidad y georreferenciación:** Cristian y Juan Antonio coinciden en la alta importancia de auditar lotes y parcelas (**High**) como requisito para certificar y formular planes.
 
+#### 3. Principales Diferencias
+* **Campo vs. Administración:** Guillermo ejecuta labores físicas directas (*Never / Low* para Cristian), mientras Cristian gestiona acopio, auditorías y certificaciones (*Never / Low* para Guillermo).
+* **Prescripción técnica:** Juan Antonio formula recetas y dosificaciones nutricionales (**Often / High**), rol donde el agricultor y directivo solo actúan como receptores (*Rarely / Low*).
+* **Comercialización:** Ausente en el asesor técnico (**Never / Low**), pero crítica y formal en la cooperativa (**Often / High**), frente a una negociación esporádica e individual en el agricultor independiente (**Sometimes / High**).
 ### 2.3.3. User Journey Mapping
 
 Con el User Journey Map (disponible en: https://uxpressia.com/w/v8FzI/t/eqZxS) reconstruimos paso a paso lo que viven y sienten el administrador y la familia durante el proceso. Al hacer visibles sus principales dificultades y puntos de dolor, podemos dirigir nuestra solución tecnológica justo donde más se necesita, convirtiendo una mala experiencia en un proceso simple y eficiente.
