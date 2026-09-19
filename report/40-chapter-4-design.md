@@ -287,7 +287,7 @@ La navegación en **SumaqAgro** está diseñada para facilitar el recorrido del 
 - **Selector de Idioma (EN):** Opción para cambiar la localización del sitio.
 
 <p align="center">
-  <img src="assets/chapter-IV/header-navigation.png">
+  <img src="../assets/img/chapter-IV/navigation-landing-page.png">
 </p>
 
 > <p align="center">Navegación del sitio web (Landing Page)</p>
@@ -311,7 +311,7 @@ Además, en la aplicación web se implementa un menú lateral fijo (sidenav) org
 Cada sección está representada con un ícono claro y una etiqueta visible, asegurando una navegación fluida e intuitiva dentro de la consola de trabajo.
 
 <p align="center">
-  <img src="assets/chapter-IV/sidenav-navigation.png">
+  <img src="../assets/img/chapter-IV/navigation-web-app.png">
 </p>
 
 > <p align="center">Navegación de la aplicación web (Sidenav)</p>
