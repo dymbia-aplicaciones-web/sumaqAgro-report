@@ -1,32 +1,50 @@
-# Universidad Peruana de Ciencias Aplicadas
+<div align="center">
 
-<p align="center">
-  <img src="assets/img/upc-logo.png" alt="UPC Logo" width="200"/>
-</p>
+<img src="./assets/img/upc-logo.png" width="60" alt="UPC Logo">
 
-**FACULTAD DE INGENIERÍA**  
-**CARRERA DE INGENIERÍA DE SOFTWARE**
+Universidad Peruana de Ciencias Aplicadas
 
-**CURSO:** 1ASI0729 - Desarrollo de Aplicaciones Open Source  
-**SECCIÓN:** 7742  
-**PROFESOR:** Angel Augusto Velasquez Nuñez  
-**CICLO ACADÉMICO:** 2026-20
+Carrera de Ingeniería de Software
 
----
+**1ASI0729**
 
-# INFORME DE TRABAJO FINAL
+**Desarrollo de Aplicaciones Open Source**
 
-**STARTUP:** Dymbia  
-**PRODUCTO:** Dymbia - SaaS de Agricultura de Precisión (Café y Tubérculos)
+NRC
 
-### RELACIÓN DE INTEGRANTES:
+**7742**
 
-| Código | Apellidos y Nombres | Carrera |
-| :--- | :--- | :--- |
-| U202315120 | Duarte Ruffner, Drago Derick | Ingeniería de Software |
-| U20241E057 | Sanca Condori, Miguel | Ingeniería de Software |
-| U202422816 | Solorzano Sullca, Benjamin | Ingeniería de Software |
-| U20241H037 | Tejada Pumacayo, Yamil Jared | Ingeniería de Software |
-| U202422128 | Vargas Enriquez, Jose Carlos | Ingeniería de Software |
+**Informe del Trabajo Final**
 
-**FECHA DE ENTREGA:** Septiembre 2026
+Docente
+
+**Velásquez Núñez, Ángel Augusto**
+
+Equipo
+
+**Dymbia**
+
+Proyecto
+
+**SumaqAgro**
+
+**Integrantes**
+
+<table style="border-collapse: collapse; border: none;" >
+  <tr>
+    <th style="border: none; text-align: left;">Código</th>
+    <th style="border: none; text-align: left;">Apellidos y Nombres</th>
+  </tr>
+  <tr><td style="border: none;">U202315120</td><td style="border: none;">Duarte Ruffner, Drago Derick</td></tr>
+  <tr><td style="border: none;">U20241e057</td><td style="border: none;">Sanca Condori, Miguel</td></tr>
+  <tr><td style="border: none;">U202422816</td><td style="border: none;">Solorzano Sullca, Benjamin</td></tr>
+  <tr><td style="border: none;">U20241h037</td><td style="border: none;">Tejada Pumacayo, Yamil Jared</td></tr>
+  <tr><td style="border: none;">U202422128</td><td style="border: none;">Vargas Enriquez, Jose Carlos</td></tr>
+</table>
+
+**Período 202620**
+
+**Septiembre 2026**
+</div>
+
+<div style="page-break-after: always;"></div>
