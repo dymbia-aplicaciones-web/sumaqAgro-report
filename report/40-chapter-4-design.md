@@ -102,12 +102,385 @@ Este enfoque comunicacional busca generar confianza y lealtad, asegurando a los 
 
 ### 4.1.2. Web Style Guidelines
 
+Esta sección define las pautas visuales, de maquetación y de componentes de interfaz para el desarrollo del sitio web estático (**Landing Page en HTML5/CSS3/JS**) y la aplicación web orientada a la gestión agrícola en **Angular**, utilizando **Angular Material** como librería principal de componentes de UI.
+
+El enfoque está centrado en garantizar una experiencia visual y de interacción consistente, accesible (**a11y**) y adaptable a cualquier dispositivo utilizado en campo u oficina.
+
+### Responsive Design
+
+La interfaz de **SumaqAgro** se adapta de forma fluida a las pantallas de teléfonos móviles, tabletas y computadoras de escritorio mediante un sistema de cuadrícula (*Grid System*) y puntos de interrupción (*breakpoints*) estandarizados:
+
+- **Extra Small (xs ≤ 576px):** Smartphones en orientación vertical utilizados por agricultores en campo.
+
+- **Small (sm 577px – 768px):** Tabletas y dispositivos móviles en orientación horizontal.
+
+- **Medium (md 769px – 1024px):** Laptops y pantallas compactas de oficina cooperativa.
+
+- **Large (lg > 1024px):** Monitores de escritorio para análisis detallado de mapas satelitales y reportes.
+
+Para el **Landing Page**, la adaptabilidad se logra mediante *CSS Flexbox*, *CSS Grid* y *Media Queries* nativas.
+
+Para la **Web Application en Angular**, la maquetación se gestiona mediante directivas de diseño responsivo y librerías de componentes adaptables.
+
+### Componentes y patrones compatibles
+
+- **Navegación (*Navbar / Menu*):** En la aplicación web se utiliza `<mat-toolbar>` en combinación con `<mat-menu>` o `<mat-sidenav>` para la barra lateral responsiva, integrada con el módulo de enrutamiento mediante `routerLink`. En el Landing Page se emplea una barra superior fija (*sticky*) construida con elementos semánticos `<header>` y `<nav>`.
+
+- **Tarjetas (*Cards*):** Implementación de `<mat-card>` para estructurar contenedores de información clave como el resumen de lotes, mapas de vigor foliar (*NDVI*), estados de alertas fitosanitarias y balances financieros de campaña.
+
+- **Botones de acción:** Uso de variantes de Angular Material según la jerarquía del elemento:
+  - `<button mat-raised-button>` para llamadas a la acción principales, como **“Registrar Parcela”** y **“Consultar al Asesor”**.
+  - `<button mat-button>` para acciones secundarias.
+  - `<button mat-icon-button>` para controles en visores de mapas satelitales.
+
+- **Diálogos y Notificaciones:** Uso de `MatSnackBar` para la confirmación de registros de gastos o avisos preventivos, y `MatDialog` para el despliegue contextual de fichas técnicas de lotes, recetas fitosanitarias o vista previa de certificados de cosecha en PDF.
+
+### Accesibilidad (a11y)
+
+Con el fin de asegurar que la plataforma sea inclusiva para todos los perfiles de usuario, incluyendo agricultores, dirigentes de cooperativas y agrónomos, se consideran las siguientes pautas:
+
+- **Soporte ARIA:** Integración explícita de atributos `aria-label`, `aria-expanded` y `aria-live` en componentes interactivos y dinámicos.
+
+- **Navegación por teclado:** Compatibilidad completa de foco e interacción mediante secuencias de teclado estándar como `Tab`, `Enter`, `Space` y `Escape`.
+
+- **Contraste y escalabilidad:** Cumplimiento de los niveles de contraste de color según la norma **WCAG 2.1 AA**, con un ratio mínimo de **4.5:1** para texto normal, y uso de unidades relativas como `rem` y `em` para garantizar el escalado de tipografías sin distorsión de la interfaz.
+
+
+
 ## 4.2. Information Architecture
+
 ### 4.2.1. Organization Systems
+
+La organización jerárquica del Landing Page de "SumaqAgro" ha sido diseñada con el propósito de guiar al usuario de manera lógica y efectiva desde su primer contacto con la solución hasta su conversión en cliente. Esta estructura responde a principios de arquitectura de la información que priorizan la claridad, la relevancia y la progresión natural del contenido, permitiendo que los usuarios comprendan de inmediato el valor del producto, cómo funciona, sus beneficios, y los pasos para adquirirlo.
+
+**Inicio**
+
+- **Propósito**: Captar la atención del visitante con un mensaje claro y directo orientado al sector agrícola.
+
+- **Contenido**: Propuesta de valor en el banner principal y llamadas a la acción directas.
+
+
+**Información explicativa**
+
+- **Nosotros:** Presentación del propósito de la plataforma y el equipo detrás de la solución.
+
+- **¿A quién ayudamos?:** Segmentación explícita del valor para los tres públicos objetivo (agricultores independientes, líderes de cooperativas y asesores técnicos/agrónomos).
+
+- **Soluciones y Características:** Detalle de las capacidades tecnológicas clave como monitoreo satelital (NDVI), contabilidad de costos, certificación digital y prescripciones con alertas.
+
+- **Demo del Producto:** Video demostrativo sobre el funcionamiento en campo de la plataforma.
+
+
+**Conversión y Validación**
+
+- **Planes:** Detalle de las opciones de suscripción diseñadas para cada perfil (Plan Semilla, Cooperativa Pro y Plan Asesor Técnico).
+
+- **Impacto y Testimonios:** Presentación de métricas de alcance y testimonios reales de clientes que validan la experiencia.
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/organization-landing-page.png">
+</p>
+
+> <p align="center">Organización en el landing page</p>
+
+
+Además, la arquitectura jerárquica en la interfaz de la aplicación web de "SumaqAgro" ha sido diseñada para facilitar el acceso y gestión eficiente de las múltiples funcionalidades del sistema. Esta estructura permite una distribución lógica del contenido, reduciendo la carga cognitiva del usuario en campo y mejorando su capacidad para encontrar rápidamente las herramientas que necesita.
+
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/organization-web-app.png">
+</p>
+
+> <p align="center">Organización en la aplicación</p>
+
+**Pantalla de inicio (Mi Parcela)**
+
+Una vista general tipo dashboard que presenta:
+
+- Tarjetas resumen de vigor vegetal (NDVI), costos acumulados de la campaña y punto de equilibrio financiero.
+
+- Avisos destacados de alertas fitosanitarias activas o riesgos climáticos.
+
+- Accesos rápidos para explorar lotes y consultar datos clave de la parcela.
+
+**Navegación principal**
+
+Sistema jerárquico accesible desde un menú lateral con iconografía clara. Incluye las siguientes pestañas:
+
+- Mi Parcela
+
+- Salud del Cultivo
+
+- Mis Gastos y Ganancias
+
+- Consulta al Asesor
+
+- Mis Certificados de Cosecha
+
+- Alertas Agrícolas
+
+- Configuración y Ayuda
+
+- Modo Sin Conexión
+
+**Filtrado y organización avanzada**
+
+**a. Para Agricultores Independientes**
+
+- **Filtros por:** Parcelas, lotes y capas satelitales (Vigor del Follaje / Humedad).
+
+- **Funcionalidades destacadas:** Visor satelital (NDVI), registro de gastos y solicitudes de asistencia al asesor.
+
+**b. Para Líderes de Cooperativas**
+
+- **Filtros por:** Lotes comunitarios, categorías de gastos acumulados e historial de cosechas.
+
+- **Funcionalidades destacadas:** Emisión de certificados de calidad con código QR, fichas PDF exportables y métricas de rendimiento por lote.
+
+**c. Para Asesores Técnicos y Agrónomos**
+
+- **Filtros por:** Parcelas asignadas, estado de consultas fitosanitarias y nivel de riesgo/alerta.
+
+- **Funcionalidades destacadas:** Revisión de fotografías de plagas enviadas por agricultores, emisión de recetas técnicas y seguimiento de avisos de riesgo.
+
+**Segmentación por audiencia**
+
+**a. Agricultores independientes**
+
+- Enfoque en el control visual de la salud de sus cultivos, manejo contable sencillo de la campaña y prevención ante contingencias climáticas.
+
+- Visualización rápida de métricas clave y acceso directo a canales de ayuda y soporte en campo.
+
+**b. Líderes de cooperativas**
+
+- Enfoque en la estandarización de la producción, respaldo técnico comercial de la cosecha colectiva y la gestión eficiente de costos.
+
+- Herramientas para la generación de documentos oficiales con código QR que facilitan la venta transparente a acopiadores y compradores.
+
+**c. Asesores técnicos y agrónomos**
+
+- Enfoque en la asistencia técnica distribuida, optimización de visitas a terreno e intervención precisa ante plagas o heladas.
+
+- Canal de comunicación directo para dictar diagnósticos, recomendar dosificación de insumos y mantener un historial clínico por cada parcela.
+  <br>
+  <br>
 ### 4.2.2. Labeling Systems
+
+El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, directo y fácil de entender por agricultores, cooperativas y agrónomos, usando palabras clave con un número mínimo de términos sin perder precisión. Las etiquetas evitan tecnicismos innecesarios y buscan reducir la carga cognitiva del usuario en el campo.
+
+### Principios
+
+- **Consistencia:** Se usan las mismas etiquetas en botones, menús y mensajes relacionados. Por ejemplo: **“Ver todos mis lotes”**, **“Consultar con el Asesor”** y **“Descargar Ficha PDF”**.
+
+- **Simplicidad:** Se evita el uso de jergas técnicas complejas, empleando términos agrícolas cotidianos. Ejemplos: **“Vigor del Follaje (NDVI)”**, **“Déficit de Humedad”** y **“Precio para no perder”**.
+
+### Etiquetado en el Landing Page
+
+- **Inicio:** Es la primera sección que el usuario ve al entrar. Presenta la propuesta de valor **“Cultiva con Información. Decide con Precisión”** y botones directos.
+
+- **Nosotros:** Muestra el propósito de **SumaqAgro** y la presentación del equipo detrás de la plataforma.
+
+- **¿A quién ayudamos?:** Segmenta la información para **“Agricultores independientes”**, **“Líderes de cooperativas”** y **“Asesores técnicos y agrónomos”**.
+
+- **Soluciones y Características:** Presenta los módulos de **“Monitoreo satelital (NDVI)”**, **“Contabilidad de costos”**, **“Certificación digital”** y **“Prescripciones y alertas”**.
+
+- **Demo del Producto:** Incluye la sección de **“Video demostrativo”** para conocer la plataforma en acción.
+
+- **Planes:** Presenta las opciones de suscripción: **“Plan Semilla”**, **“Cooperativa Pro”** y **“Plan Asesor Técnico”**.
+
+- **Impacto:** Muestra **“Métricas”** y datos estadísticos de alcance en hectáreas monitoreadas y rendimiento de cultivos.
+
+- **Testimonios:** Muestra **“Testimonios de Clientes”** y opiniones de productores que validan el uso de la solución.
+
+### Etiquetado en la Aplicación Web
+
+- **Mi Parcela:** Vista principal del dashboard con métricas clave como **“Salud Foliar”**, **“Gasto Total”**, **“Precio para no perder”** y accesos a **“Ver todos mis lotes”**.
+
+- **Salud del Cultivo:** Visor con mapas de **“Vigor del Follaje (NDVI)”**, **“Humedad del Suelo”** y opciones como **“Cambiar Parcela”**, **“Consultar con el Asesor”** y **“Descargar Ficha PDF”**.
+
+- **Mis Gastos y Ganancias:** Sección financiera que etiqueta **“Finanzas de la Campaña”**, **“Anotar nuevo gasto”**, **“Historial de desembolsos”** y **“Filtrar Historial”**.
+
+- **Consulta al Asesor:** Canal fitosanitario con etiquetas como **“Asistencia Fitosanitaria y Recetas”**, **“Enviar foto de plaga”**, **“Ver receta técnica”** e **“Historial de consultas”**.
+
+- **Mis Certificados de Cosecha:** Módulo oficial con botones e indicadores como **“Generar código QR”**, **“Descargar certificado PDF”** y **“Ver ficha web”**.
+
+- **Alertas Agrícolas:** Panel de notificaciones etiquetado con **“Avisos de riesgo”**, **“Boletín Fitosanitario”** y acciones como **“Medidas Detalladas”**.
+
+- **Configuración y Ayuda:** Sección para gestionar **“Datos de mi parcela”**, **“Cuenta”**, **“Manuales de ayuda”** y el botón directo **“Llamar a Soporte SumaqAgro”**.
+
 ### 4.2.3. SEO Tags and Meta Tags
+
+Con el objetivo de mejorar la visibilidad de "SumaqAgro" en los motores de búsqueda y facilitar su descubrimiento tanto por agricultores independientes, líderes de cooperativas y asesores técnicos agrónomos interesados en optimizar el rendimiento y la gestión de sus cultivos, se ha establecido una estrategia SEO que incluye el uso adecuado de etiquetas HTML para los principales elementos informativos del sitio web estático (Landing Page) y la aplicación web.
+
+**Landing Page**
+
+- **Title:**  
+  `<title>SumaqAgro – Monitoreo Satelital y Gestión Agrícola de Precisión</title>`
+
+Una frase concisa que refleja la propuesta de valor de la plataforma e integra palabras clave estratégicas como "monitoreo satelital", "gestión agrícola" y "precisión", términos frecuentemente utilizados por productores y profesionales del sector agrotecnológico al buscar soluciones digitales.
+
+- **Meta Description:**  
+  `<meta name="description" content="Plataforma de agrotecnología para el campo peruano. Optimiza el rendimiento de tus cultivos con mapas NDVI, control de costos por lote, trazabilidad con QR y alertas de riesgo fitosanitario.">`
+
+Esta descripción sintetiza el propósito de la herramienta destacando sus beneficios diferenciadores (salud foliar NDVI, control financiero y certificación digital), incorporando términos de búsqueda de alta relevancia como “agrotecnología”, “alertas fitosanitarias” y “código QR”.
+
+- **Meta Keywords:**  
+  `<meta name="keywords" content="SumaqAgro, monitoreo satelital agrícola, índice NDVI, agricultura de precisión Perú, gestión de cooperativas agrícolas, control de gastos agrícolas, certificado QR cosecha, alertas fitosanitarias">`
+
+Un conjunto seleccionado de palabras clave que abarca los perfiles de usuario objetivo (agricultores, cooperativas, agrónomos) y las funcionalidades centrales de la solución (NDVI, control de gastos, trazabilidad y alertas de riesgo).
+
+- **Meta Author:**  
+  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
+
+Identifica al equipo responsable del diseño, desarrollo y arquitectura de información del sitio web, reforzando la transparencia y la atribución del proyecto.
+
+---
+
+**Web Application – Dashboard Principal**
+
+- **Title:**  
+  `<title>Mi Parcela – SumaqAgro | Panel de Control y Monitoreo de Cultivos</title>`
+
+Este título complementa la identidad de la plataforma con una llamada a la acción orientada a la gestión operativa, enfocándose en la centralización y monitoreo de predios agrícolas desde la vista principal de la aplicación.
+
+- **Meta Description:**  
+  `<meta name="description" content="Accede a tu panel principal en SumaqAgro. Visualiza el mapa de salud foliar (NDVI) de tus lotes, registra gastos de campaña, consulta el precio de equilibrio y gestiona solicitudes fitosanitarias con tu asesor técnico.">`
+
+Redactado con un enfoque funcional y operativo que detalla las acciones inmediatas que el usuario puede realizar en la interfaz, destacando la interacción entre agricultor, agrónomo y datos geoespaciales.
+
+- **Meta Keywords:**  
+  `<meta name="keywords" content="dashboard agrícola, mi parcela, mapas NDVI, salud del cultivo, control de gastos agrícolas, recetas técnicas, alertas de riesgo, plataforma SumaqAgro">`
+
+Palabras clave orientadas a la experiencia interna de la aplicación, utilizando términos específicos de uso continuo en la plataforma (ej. “dashboard agrícola”, “mapas NDVI”, “recetas técnicas”).
+
+- **Meta Author:**  
+  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
+
+Especifica el equipo de desarrollo web responsable del proyecto para asegurar la vigencia y atribución tecnológica de la aplicación.
+<br>
+<br>
+
 ### 4.2.4. Searching Systems
+
+Dentro de la sección **Mi Parcela** de la aplicación web, el sistema de búsqueda está integrado de forma simple pero efectiva para que el usuario pueda localizar lotes, registros o métricas rápidamente. Se utiliza un campo de búsqueda principal centrado en la parte superior del encabezado del dashboard, acompañado de indicadores de estado de conexión y notificaciones.
+
+Este campo permite buscar por nombre de parcela, tipo de cultivo o sector. Por ejemplo: **“Papa Canchán”** o **“Lote 2”**.
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/searching-sumaqagro.png" alt="Searching System SumaqAgro">
+</p>
+
+#### Búsqueda en la parcela
+
+El sistema de búsqueda permite al usuario localizar información específica relacionada con sus parcelas de forma rápida. La búsqueda puede realizarse utilizando términos asociados al nombre del lote, cultivo, variedad o sector registrado dentro de la plataforma.
+
+#### Filtros de Búsqueda
+
+Al realizar una búsqueda, los usuarios pueden refinar los resultados mediante diferentes criterios que permiten adaptar la información mostrada según sus necesidades.
+
+- **Categoría o Cultivo:** Permite filtrar la información según el tipo de producto agrícola, como papa, café, entre otros.
+
+- **Salud Fitosanitaria / Vigor (NDVI):** Permite identificar lotes según su condición actual, diferenciando entre estado óptimo, alerta moderada o riesgo severo.
+
+#### Resultados de Búsqueda
+
+Los resultados se presentan mediante una estructura visual basada en tarjetas y mapas de calor, permitiendo al usuario identificar rápidamente la información más relevante de cada parcela.
+
+Cada resultado puede incluir:
+
+- **Nombre del lote o parcela.**
+- **Tipo de cultivo y variedad.**
+- **Índice NDVI de salud foliar.**
+- **Costo acumulado de la campaña.**
+- **Estado de alerta activa.**
+
+Para facilitar la interpretación de la información, se utiliza una codificación visual mediante colores:
+
+- **Verde:** Representa un estado saludable del cultivo y un nivel adecuado de vigor foliar.
+
+- **Amarillo:** Representa una condición de alerta moderada que requiere seguimiento.
+
+- **Rojo:** Representa una situación de riesgo alto o una posible alerta fitosanitaria.
+
+#### Búsqueda Avanzada por Segmento
+
+**SumaqAgro** adapta sus funciones de búsqueda y filtrado según las necesidades de los diferentes perfiles de usuario de la plataforma.
+
+##### Agricultores Independientes
+
+Los agricultores pueden realizar búsquedas rápidas de sus lotes individuales, consultar información asociada a cada parcela y filtrar sus registros de campaña.
+
+Entre las principales opciones se encuentran:
+
+- Búsqueda de lotes o parcelas.
+- Filtrado de gastos por categoría.
+- Consulta de mano de obra, fertilizantes e insumos.
+- Consulta del historial de precios de equilibrio de los cultivos.
+
+##### Líderes de Cooperativas
+
+Los líderes de cooperativas disponen de herramientas de búsqueda orientadas a la gestión consolidada de socios y producción agrícola.
+
+Entre las principales opciones se encuentran:
+
+- Búsqueda y filtrado de socios de la cooperativa.
+- Consulta de volúmenes de acopio por sector.
+- Seguimiento de certificados de cosecha.
+- Búsqueda mediante código QR o número de ficha.
+
+##### Asesores Técnicos Agrónomos
+
+Los asesores técnicos cuentan con funciones de búsqueda enfocadas en el seguimiento y supervisión de las parcelas asignadas.
+
+Entre las principales opciones se encuentran:
+
+- Filtrado de parcelas según nivel de urgencia.
+- Filtrado según severidad del riesgo.
+- Consulta del historial de diagnósticos.
+- Consulta de recetas fitosanitarias emitidas por predio.
 ### 4.2.5. Navigation Systems
+
+La navegación en **SumaqAgro** está diseñada para facilitar el recorrido del usuario de manera clara y rápida. En la Landing Page se implementa una barra de navegación fija (header) en la parte superior que contiene el isotipo de la marca, enlaces directos a las secciones principales, botones de acción y selector de idioma. Estas secciones son:
+
+- **Home:** Retorno a la sección principal de bienvenida.
+- **About Us:** Información sobre la propuesta de valor y el equipo.
+- **Solutions:** Explicación técnica del monitoreo satelital y gestión agrícola.
+- **Plans:** Detalle de las suscripciones disponibles para el campo.
+- **Impact:** Resultados y testimonios de uso en los cultivos.
+- **Sign In / Register:** Botones de acceso y registro a la plataforma.
+- **Selector de Idioma (EN):** Opción para cambiar la localización del sitio.
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/navigation-landing-page.png">
+</p>
+
+> <p align="center">Navegación del sitio web (Landing Page)</p>
+
+
+Además, en la aplicación web se implementa un menú lateral fijo (sidenav) organizado por categorías principales, el cual permite el acceso directo a las funcionalidades de gestión y monitoreo del sistema:
+
+- **Principal:**
+    - **Mi Parcela:** Vista del panel general del predio.
+- **Operación agrícola:**
+    - **Salud del Cultivo:** Visor con mapas de vigor foliar y métricas del predio.
+    - **Mis Gastos y Ganancias:** Gestión contable e historial financiero de campaña.
+    - **Consulta al Asesor:** Canal directo de atención fitosanitaria y recetas técnicas.
+    - **Mis Certificados de Cosecha:** Emisión y consulta de certificados trazables con QR.
+- **Sistema:**
+    - **Alertas Agrícolas:** Centro de avisos de riesgo y boletín fitosanitario.
+    - **Configuración y Ayuda:** Ajustes de la cuenta, datos de parcelas y soporte.
+    - **Modo Sin Conexión:** Estado operativo para sincronización de datos en campo.
+    - **Cerrar Sesión:** Salida segura de la plataforma.
+
+Cada sección está representada con un ícono claro y una etiqueta visible, asegurando una navegación fluida e intuitiva dentro de la consola de trabajo.
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/navigation-web-app.png">
+</p>
+
+> <p align="center">Navegación de la aplicación web (Sidenav)</p>
+
+<br>
 
 ## 4.3. Landing Page UI Design
 El landing page representa el primer punto de contacto entre los usuarios y la plataforma, por lo que su diseño debe comunicar de manera clara el propósito y los principales beneficios del servicio. En esta sección se presenta el diseño de la interfaz del landing page, considerando una organización visual atractiva, una navegación sencilla y elementos que faciliten la comprensión de la información y orienten al usuario hacia las acciones principales.
@@ -854,4 +1227,376 @@ Gobierna la publicación en catálogo de los lotes certificados, la recepción d
 ---
 
 ## 4.8. Database Design
+
+En esta sección se presenta el diseño lógico y físico de la base de datos relacional para la plataforma **SumaqAgro**. El diseño de persistencia se ha estructurado utilizando **MySQL 8.0** como motor gestor de base de datos (RDBMS), garantizando cumplimiento de propiedades ACID, integridad referencial inmutable y soporte de datos espaciales (GIS) para los polígonos perimetrales GPS de las parcelas agrícolas.
+
+Para mantener una alineación estricta con la arquitectura de software basada en **Domain-Driven Design (DDD)** establecida en la sección 4.6 y los diagramas de clases orientados a objetos de la sección 4.7, el esquema de base de datos se encuentra completamente desacoplado y organizado por **Bounded Contexts**. Esta separación previene acoplamientos innecesarios entre dominios y facilita la evolución o eventual migración hacia una topología de microservicios con bases de datos independientes por servicio (*Database-per-Service Pattern*).
+
+#### Convenciones de Nomenclatura y Estándares de Diseño
+
+* **Idioma:** Todos los nombres de tablas, columnas, índices y restricciones se redactan estrictamente en **idioma inglés** (`lowercase`).
+* **Formato de Nombres de Tablas:** Nombres en plural utilizando `snake_case` (ej. `users`, `field_plots`, `quality_certificates`).
+* **Claves Primarias (Primary Keys - PK):** Identificador entero de 64 bits `id` de tipo `BIGINT AUTO_INCREMENT` en todas las tablas.
+* **Claves Foráneas (Foreign Keys - FK):** Formato `<entity_singular>_id` vinculado explícitamente a la clave primaria de la tabla referenciada (ej. `user_id`, `field_plot_id`).
+* **Auditoría y Trazabilidad:** Todas las tablas principales incluyen las columnas obligatorias de auditoría temporal:
+    * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP`
+    * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`
+* **Manejo de Estados:** Atributos de estado definidos mediante cadenas `VARCHAR` con restricciones `CHECK` o tipos enumerados implícitos en inglés (ej. `'ACTIVE'`, `'INACTIVE'`, `'PENDING'`, `'CERTIFIED'`).
+
+---
+
 ### 4.8.1. Database Diagrams
+
+En esta sección se define el diseño lógico y físico de la base de datos para la plataforma SumaqAgro de la startup Dymbia. Se utiliza MySQL 8.0 con el motor transaccional InnoDB, lo que garantiza transacciones seguras bajo estándares ACID, integridad referencial mediante claves foráneas y un manejo eficiente de accesos concurrentes.
+
+Para mantener la coherencia con el diseño guiado por el dominio (DDD) de la sección 4.6 y las clases de la sección 4.7, el esquema se organizó por Bounded Contexts. Esta separación evita acoplamientos entre módulos del sistema y deja la base de datos lista para una futura división por servicios (Database-per-Service).
+
+#### Principales Decisiones y Estándares de Persistencia
+
+* **Herramientas Utilizadas:** El modelado entidad-relación (ERD) se realizó en **Hackolade Studio** siguiendo las herramientas autorizadas del curso. Para la administración, ejecución de scripts SQL y pruebas de persistencia se utilizó **DataGrip** conectado a una base de datos **MySQL 8.0**.
+* **Convenciones de Nombres:** Las tablas, columnas y restricciones se definieron en inglés, en minúsculas y usando `snake_case` (por ejemplo, `field_plots`, `crop_campaigns`, `quality_certificates`), manteniendo consistencia con los nombres de las entidades en el backend.
+* **Claves Primarias (PK):** Se utilizó un identificador subrogado `id` de tipo `BIGINT AUTO_INCREMENT` en todas las tablas para facilitar la indexación y optimizar las consultas en MySQL.
+* **Claves Foráneas (FK) e Integridad:** Las relaciones usan el formato `<entidad>_id` vinculado con restricciones `FOREIGN KEY` explícitas. En tablas dependientes (como las coordenadas perimetrales de una parcela) se aplica `ON DELETE CASCADE` para evitar registros huérfanos.
+* **Tipos de Datos y Precisión:**
+    * **Montos contables y costos:** Se utiliza `DECIMAL(10,2)` para registrar precios, jornales, compras y liquidaciones sin errores de redondeo.
+    * **Coordenadas GPS:** Se definieron como `DECIMAL(10,8)` para latitud y `DECIMAL(11,8)` para longitud, logrando precisión adecuada al trazar los polígonos de las parcelas.
+    * **Índices satelitales:** Los valores de reflectancia foliar (NDVI y NDWI) usan `DECIMAL(5,4)`, cubriendo el rango de trabajo de -1.0000 a +1.0000.
+* **Manejo de Estados:** Los estados de negocio se guardan como cadenas `VARCHAR(20)` asociadas a los enums del backend (como `'ACTIVE'`, `'IN_PROGRESS'`, `'PENDING'` o `'CERTIFIED'`).
+* **Campos de Auditoría:** Las tablas principales incluyen las columnas `created_at` y `updated_at` de tipo `TIMESTAMP` para registrar automáticamente cuándo se crea o modifica cada fila.
+
+---
+
+### 4.8.1. Database Diagrams
+
+A continuación, se presentan y explican los Database Diagrams elaborados en **Hackolade Studio** para la base de datos relacional sobre **MySQL 8.0**, gestionada y desplegada mediante **DataGrip**, agrupados de forma modular por cada uno de los 7 **Bounded Contexts** del dominio de negocio de SumaqAgro.
+
+---
+
+#### 4.8.1.1. Identity & Access Management (IAM) Bounded Context Diagram
+
+Este contexto delimita la persistencia de usuarios, perfiles institucionales, roles y credenciales para la autenticación y autorización segura basada en tokens JWT.
+
+![Database Diagram - IAM Bounded Context](../assets/img/database/iam-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `users`
+Almacena las cuentas de usuario registradas en la plataforma (productores, directivos de cooperativa, asesores agrónomos y administradores).
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador único del usuario.
+    * `first_name`: `VARCHAR(100) NOT NULL` - Nombres del usuario.
+    * `last_name`: `VARCHAR(100) NOT NULL` - Apellidos del usuario.
+    * `email`: `VARCHAR(150) NOT NULL UNIQUE` - Correo electrónico de inicio de sesión.
+    * `password_hash`: `VARCHAR(255) NOT NULL` - Contraseña encriptada con algoritmo BCrypt.
+    * `phone_number`: `VARCHAR(20) NULL` - Número de teléfono o WhatsApp para notificaciones rural/SMS.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado de la cuenta (`'ACTIVE'`, `'INACTIVE'`, `'BLOCKED'`).
+    * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de registro.
+    * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` - Fecha de última actualización.
+
+###### Tabla `roles`
+Catálogo de roles del sistema para el control de acceso basado en roles (RBAC).
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del rol.
+    * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre técnico del rol (`'ROLE_FARMER'`, `'ROLE_COOPERATIVE_DIRECTOR'`, `'ROLE_AGRONOMIST'`).
+    * `description`: `VARCHAR(255) NULL` - Descripción funcional del rol.
+
+###### Tabla `user_roles`
+Tabla asociativa para la relación de muchos a muchos (N:M) entre usuarios y roles.
+
+* **Columnas y Restricciones:**
+    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` ON DELETE CASCADE.
+    * `role_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `roles(id)` ON DELETE CASCADE.
+    * **Primary Key Compuesta:** `PRIMARY KEY (user_id, role_id)`
+
+---
+
+#### 4.8.1.2. Subscription & Billing Bounded Context Diagram
+
+Gestiona los planes comerciales (Semilla, Cooperativa Pro, Asesor Técnico), el historial de suscripciones activas y las transacciones de pago con pasarelas externas.
+
+![Database Diagram - Subscription & Billing Bounded Context](../assets/img/database/subscriptions-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `subscription_plans`
+Catálogo de planes comerciales habilitados.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del plan.
+    * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre del plan (`'SEED_FREE'`, `'COOPERATIVE_PRO'`, `'AGRONOMIST_TECH'`).
+    * `price_monthly`: `DECIMAL(10,2) NOT NULL` - Tarifa mensual en Soles (PEN).
+    * `max_plots_allowed`: `INT NOT NULL` - Límite máximo de parcelas georreferenciadas permitidas.
+    * `max_hectares_allowed`: `DECIMAL(10,2) NOT NULL` - Límite de hectáreas acumuladas.
+
+###### Tabla `subscriptions`
+Registra la suscripción activa o histórica de un usuario/entidad.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la suscripción.
+    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)`.
+    * `plan_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscription_plans(id)`.
+    * `start_date`: `DATE NOT NULL` - Fecha de inicio.
+    * `end_date`: `DATE NOT NULL` - Fecha de vencimiento.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado (`'ACTIVE'`, `'EXPIRED'`, `'CANCELLED'`).
+
+###### Tabla `payments`
+Bitácora de cobros y facturación procesada mediante la pasarela de pagos.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del pago.
+    * `subscription_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscriptions(id)`.
+    * `amount`: `DECIMAL(10,2) NOT NULL` - Monto cobrado.
+    * `transaction_token`: `VARCHAR(255) NOT NULL` - Token de transacción retornado por Stripe/Niubiz.
+    * `payment_status`: `VARCHAR(20) NOT NULL` - Estado (`'COMPLETED'`, `'FAILED'`, `'REFUNDED'`).
+    * `paid_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora del pago.
+
+---
+
+#### 4.8.1.3. Plot & Crop Management Bounded Context Diagram
+
+Modela las parcelas agrícolas georreferenciadas, los vértices de polígonos GPS y las campañas fenológicas de siembra.
+
+![Database Diagram - Plot & Crop Management Bounded Context](../assets/img/database/plots-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `field_plots`
+Almacena las parcelas registradas por los productores agrícolas.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la parcela.
+    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Propietario del predio).
+    * `plot_name`: `VARCHAR(100) NOT NULL` - Nombre o alias del fundo (ej. "Fundo La Libertad").
+    * `crop_type`: `VARCHAR(50) NOT NULL` - Tipo de cultivo (`'POTATO'`, `'COFFEE'`).
+    * `seed_variety`: `VARCHAR(100) NOT NULL` - Variedad botánica (ej. "Yungay", "Canchan", "Typica", "Geisha").
+    * `total_area_hectares`: `DECIMAL(10,2) NOT NULL` - Área calculada del polígono en hectáreas.
+    * `altitude_masl`: `INT NULL` - Altitud sobre el nivel del mar (m.s.n.m.).
+    * `soil_ph`: `DECIMAL(4,2) NULL` - Valor de pH del suelo registrado en la línea base.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado operacional.
+
+###### Tabla `plot_coordinates`
+Guarda la secuencia ordenada de coordenadas GPS (latitud y longitud) que forman el perímetro de la parcela (Relación 1:N con `field_plots`).
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del punto GPS.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)` ON DELETE CASCADE.
+    * `sequence_order`: `INT NOT NULL` - Orden consecutivo del vértice en el polígono (1, 2, 3...).
+    * `latitude`: `DECIMAL(10,8) NOT NULL` - Latitud decimal GPS.
+    * `longitude`: `DECIMAL(11,8) NOT NULL` - Longitud decimal GPS.
+
+###### Tabla `crop_campaigns`
+Registra las campañas fenológicas de cultivo por año/temporada.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la campaña.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `campaign_name`: `VARCHAR(100) NOT NULL` - Nombre de la campaña (ej. "Campaña Chica 2026").
+    * `sowing_date`: `DATE NOT NULL` - Fecha de siembra.
+    * `estimated_harvest_date`: `DATE NOT NULL` - Fecha estimada de cosecha.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'IN_PROGRESS'` - Estado (`'IN_PROGRESS'`, `'HARVESTED'`).
+
+---
+
+#### 4.8.1.4. Satellite Analytics & Alerting Bounded Context Diagram
+
+Guarda los registros de reflectancia multiespectral (NDVI y NDWI) extraídos periódicamente de las baldosas de Sentinel-2, así como las alertas agroclimáticas y recetas fitosanitarias.
+
+![Database Diagram - Satellite Analytics & Alerting Bounded Context](../assets/img/database/monitoring-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `satellite_readings`
+Almacena el historial de índices multiespectrales procesados por fecha y parcela.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la lectura.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `capture_date`: `DATE NOT NULL` - Fecha de la toma de imagen satelital por Sentinel-2.
+    * `ndvi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Vegetación de Diferencia Normalizada (-1.0000 a +1.0000).
+    * `ndwi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Humedad de Diferencia Normalizada.
+    * `tile_image_url`: `VARCHAR(255) NULL` - URL de la baldosa o mapa de calor generado en color falso.
+    * `anomaly_detected`: `BOOLEAN DEFAULT FALSE` - Flag que indica si el índice cayó por debajo del umbral mínimo.
+
+###### Tabla `agroclimatic_alerts`
+Boletines de alerta por heladas, sequías o ataques de plagas despachados a los productores.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la alerta.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `alert_type`: `VARCHAR(50) NOT NULL` - Tipo (`'FROST_WARNING'`, `'WATER_STRESS'`, `'PEST_ANOMALY'`).
+    * `severity`: `VARCHAR(20) NOT NULL` - Gravedad (`'LOW'`, `'MEDIUM'`, `'HIGH'`, `'CRITICAL'`).
+    * `message`: `TEXT NOT NULL` - Descripción detallada del riesgo detectado.
+    * `dispatched_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de emisión.
+
+###### Tabla `agronomic_prescriptions`
+Recetas y prescripciones fitosanitarias emitidas por asesores agrónomos ante reportes de campo.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la receta.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `agronomist_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Asesor emisor).
+    * `diagnosis`: `TEXT NOT NULL` - Diagnóstico de la afección o plaga.
+    * `recommended_treatment`: `TEXT NOT NULL` - Dosis y producto fitosanitario recomendado.
+    * `application_confirmed`: `BOOLEAN DEFAULT FALSE` - Confirmación del productor tras aplicar la receta.
+
+---
+
+#### 4.8.1.5. Field Cost Accounting Bounded Context Diagram
+
+Contabilidad de costos operativos rurales con soporte de sincronización offline (compras de insumos, jornales y fletes), calculando el costo unitario total y el punto de equilibrio financiero.
+
+![Database Diagram - Field Cost Accounting Bounded Context](../assets/img/database/costs-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `agrochemical_expenses`
+Registro de compras de fertilizantes, abonos y plaguicidas por parcela/campaña.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `product_name`: `VARCHAR(100) NOT NULL` - Nombre del insumo/fertilizante.
+    * `quantity`: `DECIMAL(10,2) NOT NULL` - Cantidad comprada.
+    * `unit_of_measure`: `VARCHAR(20) NOT NULL` - Unidad (`'KG'`, `'LITER'`, `'SAC'`).
+    * `unit_cost`: `DECIMAL(10,2) NOT NULL` - Precio unitario (PEN).
+    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total del gasto.
+    * `purchase_date`: `DATE NOT NULL` - Fecha de compra.
+
+###### Tabla `labor_expenses`
+Registro de pago de jornales a trabajadores agrícolas para labores de siembra, deshierbe o cosecha.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto de mano de obra.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `activity_type`: `VARCHAR(100) NOT NULL` - Labor realizada (ej. "Deshierbe manual", "Cosecha").
+    * `workers_count`: `INT NOT NULL` - Número de peones contratados.
+    * `days_worked`: `DECIMAL(5,2) NOT NULL` - Número de días/jornales.
+    * `cost_per_day`: `DECIMAL(10,2) NOT NULL` - Pago por jornal diario (PEN).
+    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total de jornales.
+    * `work_date`: `DATE NOT NULL` - Fecha del trabajo.
+
+###### Tabla `freight_expenses`
+Gastos de transporte y flete desde la parcela hacia el centro de acopio o almacén.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del flete.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `driver_name`: `VARCHAR(100) NULL` - Nombre del transportista/camionero.
+    * `destination`: `VARCHAR(150) NOT NULL` - Almacén o destino del flete.
+    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Costo total del servicio de flete.
+    * `freight_date`: `DATE NOT NULL` - Fecha del traslado.
+
+###### Tabla `breakeven_calculations`
+Módulo de consolidación financiera que determina la inversión total y el costo mínimo de venta por unidad.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del cálculo.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)` UNIQUE.
+    * `total_agrochemical_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de insumos.
+    * `total_labor_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de jornales.
+    * `total_freight_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de fletes.
+    * `total_investment`: `DECIMAL(10,2) NOT NULL` - Inversión total de la campaña.
+    * `estimated_yield_units`: `DECIMAL(10,2) NOT NULL` - Volumen cosechado estimado (en quintales/toneladas).
+    * `breakeven_price_per_unit`: `DECIMAL(10,2) NOT NULL` - **Punto de equilibrio:** Precio mínimo de venta por unidad para no generar pérdidas.
+
+---
+
+#### 4.8.1.6. Harvest Quality & Certification Bounded Context Diagram
+
+Modelado de la cosecha recolectada, evaluaciones de calidad física por calibres (papa según norma MIDAGRI) y análisis sensorial de taza (café según protocolo SCA), emitiendo certificados digitales con código QR de verificación pública.
+
+![Database Diagram - Harvest Quality & Certification Bounded Context](../assets/img/database/quality-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `harvest_batches`
+Registro de lotes de cosecha ingresados a almacén/cooperativa.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del lote cosechado.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `batch_code`: `VARCHAR(50) NOT NULL UNIQUE` - Código de lote asignado (ej. "BATCH-2026-P01").
+    * `total_weight_kg`: `DECIMAL(10,2) NOT NULL` - Peso total cosechado en kilogramos.
+    * `harvest_date`: `DATE NOT NULL` - Fecha de recolección.
+    * `quality_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'EVALUATED'`, `'CERTIFIED'`).
+
+###### Tabla `potato_caliber_evaluations`
+Clasificación de calibres de tubérculo para papa según estándar de pesaje/diámetro.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la evaluación de papa.
+    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+    * `first_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Primera (>120g / >6cm).
+    * `second_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Segunda (80g-120g).
+    * `third_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Tercera/Chanchera (<80g).
+    * `defective_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje con daños mecánicos o plagas.
+
+###### Tabla `coffee_cupping_evaluations`
+Ficha de catación de café de especialidad según estándar SCA (Specialty Coffee Association).
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la catación.
+    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+    * `fragrance_aroma_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Fragancia/Aroma (0-10).
+    * `flavor_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Sabor (0-10).
+    * `acidity_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Acidez (0-10).
+    * `body_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Cuerpo (0-10).
+    * `overall_score`: `DECIMAL(4,2) NOT NULL` - Puntaje General del catador (0-10).
+    * `total_sca_score`: `DECIMAL(5,2) NOT NULL` - **Puntaje Total Taza SCA** (ej. 85.50 pts -> Café de Especialidad).
+
+###### Tabla `quality_certificates`
+Certificados digitales emitidos con código QR y archivo PDF firmado.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del certificado.
+    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+    * `certificate_number`: `VARCHAR(100) NOT NULL UNIQUE` - Código único de certificado (ej. "CERT-SUMAQ-2026-8841").
+    * `pdf_download_url`: `VARCHAR(255) NOT NULL` - Enlace de descarga del PDF generado.
+    * `qr_verification_code`: `VARCHAR(255) NOT NULL UNIQUE` - Token encriptado codificado en el código QR para verificación pública.
+    * `issued_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora de emisión.
+
+---
+
+#### 4.8.1.7. Commercial Settlement Context Diagram
+
+Gestión del catálogo de lotes certificados expuestos a compradores mayoristas, registro de ofertas comerciales y liquidación final de la transacción.
+
+![Database Diagram - Commercial Settlement Bounded Context](../assets/img/database/settlement-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `certified_lot_publications`
+Publicaciones de lotes de cosecha certificados disponibles para la venta.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la publicación.
+    * `quality_certificate_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `quality_certificates(id)` UNIQUE.
+    * `asking_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio base pretendido por quintal/tonelada.
+    * `available_quantity`: `DECIMAL(10,2) NOT NULL` - Volumen disponible para venta.
+    * `publication_status`: `VARCHAR(20) NOT NULL DEFAULT 'PUBLISHED'` - Estado (`'PUBLISHED'`, `'NEGOTIATING'`, `'SOLD'`).
+    * `published_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de publicación.
+
+###### Tabla `purchase_offers`
+Ofertas comerciales enviadas por compradores mayoristas o empresas exportadoras.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la oferta.
+    * `publication_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `certified_lot_publications(id)`.
+    * `buyer_user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Comprador ofertante).
+    * `offered_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio por unidad ofertado.
+    * `offered_total_amount`: `DECIMAL(10,2) NOT NULL` - Monto total de la oferta.
+    * `offer_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'ACCEPTED'`, `'REJECTED'`).
+    * `offered_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de recepción de la oferta.
+
+###### Tabla `commercial_settlements`
+Liquidación comercial final que cierra la venta y calcula la ganancia neta.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la liquidación.
+    * `purchase_offer_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `purchase_offers(id)` UNIQUE.
+    * `agreed_total_sale`: `DECIMAL(10,2) NOT NULL` - Ingreso bruto total acordado por la venta.
+    * `total_campaign_cost`: `DECIMAL(10,2) NOT NULL` - Costo total de inversión derivado del módulo financiero.
+    * `net_profit_margin`: `DECIMAL(10,2) NOT NULL` - **Ganancia Neta Real:** (`agreed_total_sale - total_campaign_cost`).
+    * `settlement_date`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de cierre y liquidación.

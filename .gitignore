@@ -8,6 +8,15 @@ out/
 .DS_Store
 Thumbs.db
 
-# Directorios de salida de compilación (Pandoc / PDF)
+# Directorios de salida y compilación (Pandoc / PDF)
 dist/
 build/
+
+# Archivos temporales de XeLaTeX / TeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz

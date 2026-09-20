@@ -668,17 +668,17 @@ A continuación, se presentan los tres arquetipos de usuario elaborados en UXPre
 ##### Segmento 1: Pequeños y medianos agricultores independientes
 El arquetipo "Guillermo Cortés" representa al agricultor familiar tradicional que conduce parcelas de café y papa bajo métodos empíricos y sin conectividad continua, demandando una arquitectura móvil fuera de línea y monitoreo satelital sin inversión en sensores costosos en tierra para defender precios justos frente a intermediarios.
 
-![User Persona - Segmento 1: Guillermo Cortés](../assets/img/chapter-II/user-persona-segmento-1-guillermo-cortes.png)
+![user-persona-segmento-1-guillermo-cortes.jpeg](../assets/img/chapter-II/user-persona-segmento-1-guillermo-cortes.jpeg)
 
 ##### Segmento 2: Productores organizados y directivos de cooperativas/asociaciones
 El arquetipo "Cristian Santana" sintetiza las necesidades de los administradores y directivos de acopio cooperativo, quienes requieren digitalizar los análisis de calidad en almacén, asegurar la trazabilidad de origen y agilizar los expedientes de auditoría para proteger las primas comerciales y de exportación.
 
-![User Persona - Segmento 2: Cristian Santana](../assets/img/chapter-II/user-persona-segmento-2-cristian-santana.png)
+![user-persona-segmento-2-cristian-santana.jpeg](../assets/img/chapter-II/user-persona-segmento-2-cristian-santana.jpeg)
 
 ##### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
 El arquetipo "Juan Antonio Morales" consolida al consultor fitosanitario cuya cobertura se ve restringida por la dispersión geográfica en quebradas y por métodos visuales subjetivos, requiriendo teledetección multiespectral para priorizar predios y sustentar prescripciones técnicas ante la gerencia.
 
-![User Persona - Segmento 3: Ing. Juan Antonio Morales](../assets/img/chapter-II/user-persona-segmento-3-juan-antonio-morales.png)
+![user-persona-segmento-3-juan-antonio-morales.jpeg](../assets/img/chapter-II/user-persona-segmento-3-juan-antonio-morales.jpeg)
 
 
 ### 2.3.2. User Task Matrix

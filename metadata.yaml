@@ -1,9 +1,17 @@
 ---
-title: "Informe de Trabajo Final"
-subtitle: "Curso: 1ASI0729 Desarrollo de Aplicaciones Open Source"
+title: "Informe de Trabajo Final — SumaqAgro"
+subtitle: "Plataforma SaaS para Digitalización y Trazabilidad en Cadenas de Café y Papa Andina"
 author:
-  - "Dymbia Team"
-date: "2026"
-geometry: "margin=1in"
-lang: "es"
+  - "Tejada Pumacayo, Yamil Jared (U20241H037)"
+  - "Duarte Ruffner, Drago Derick (U202315120)"
+  - "Solorzano Sullca, Benjamin (U202422816)"
+  - "Sanca Condori, Miguel (U20241E057)"
+  - "Vargas Enriquez, Jose Carlos (U202422128)"
+date: "Mayo, 2026 (Semana 4 — Hito AV1)"
+institution: "Universidad Peruana de Ciencias Aplicadas (UPC)"
+course: "1ASI0729 — Desarrollo de Aplicaciones Open Source"
+term: "Ciclo 2026-20"
+instructor: "Velasquez Nuñez, Angel Augusto"
+lang: "es-PE"
+papersize: a4
 ---

@@ -10,12 +10,12 @@ input-files:
   - report/50-chapter-5-implementation.md
   - report/60-conclusions.md
   - report/99-bibliography.md
-  - annexes/annex-a-student-outcome.md
-  - annexes/annex-b-performance-report.md
-  - annexes/annex-c-videos.md
+  - report/annexes/annex-a-student-outcome.md
+  - report/annexes/annex-b-performance-report.md
+  - report/annexes/annex-c-videos.md
 
 file-scope: true
-resource-path: ['.', 'assets/img', 'assets/diagrams']
+resource-path: ['.', 'report', 'assets', 'assets/img', 'report/assets', 'report/assets/img']
 output-file: dist/upc-pre-202620-1asi0729-dymbia-report-av1.pdf
 pdf-engine: xelatex
 number-sections: true
