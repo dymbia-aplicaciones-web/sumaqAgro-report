@@ -748,6 +748,7 @@ Un **wireflow** o flujo de pantallas es una representación visual que conecta d
 Para construir un wireflow, primero se identifica el objetivo que el usuario desea lograr. Después, se establece la secuencia de tareas necesarias para completar dicho objetivo dentro de la aplicación. Finalmente, estas tareas se representan mediante las pantallas correspondientes y se conectan a través de las acciones disponibles en botones, enlaces u otros elementos interactivos del wireframe.
 
 **User Goal 1:** Usuario desea registrarse en la aplicación
+
 Flujo normal: 
 <p align="center">
   <img src="../assets/img/chapter-IV/wireflows/ug-1-resumido.png"  width="600px" height="auto"/>
@@ -759,6 +760,7 @@ El flujo de interacción inicia en la pantalla principal de la aplicación cuand
 </p>
 
 **User Goal 2:** Usuario desea ingresar con su cuenta en la aplicación
+
 Flujo normal:
 <p align="center">
   <img src="../assets/img/chapter-IV/wireflows/ug-2-resumido.png"  width="600px" height="auto"/>
@@ -771,6 +773,7 @@ El flujo de interacción inicia cuando el usuario registrado accede a la pantall
 
 
 **User Goal 3:** Usuario desea cambiar su contraseña
+
 Flujo normal:
 <p align="center">
   <img src="../assets/img/chapter-IV/wireflows/ug-3-resumido.png"  width="600px" height="auto"/>
@@ -782,6 +785,7 @@ El flujo de interacción comienza en la pantalla de inicio de sesión cuando el 
 </p>
 
 **User Goal 4:** Usuario desea revisar sus parcelas
+
 Flujo normal:
 <p align="center">
   <img src="../assets/img/chapter-IV/wireflows/ug-4-resumido.png"  width="600px" height="auto"/>
