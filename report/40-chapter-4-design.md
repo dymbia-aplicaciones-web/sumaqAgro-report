@@ -748,6 +748,14 @@ Flujo de acceso e identificación institucional que permite a agricultores y ase
 
 En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
 
+### LOGIN / REGISTER 
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-login.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register.png"  width="600px" height="auto"/>
+</p>
+
+
 
 
 
