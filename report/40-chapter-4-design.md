@@ -805,7 +805,16 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-task.png"  width="600px" height="auto"/>
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-modal-check.png"  width="600px" height="auto"/>
 </p>
+
+
+### SETTINGS
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-details-plot.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-account.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-help-manuals.png"  width="600px" height="auto"/>
 </p>
+
+
 
 
 
