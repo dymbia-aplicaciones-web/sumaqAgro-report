@@ -802,6 +802,18 @@ El flujo de interacción se inicia en la sección «Asistencia Fitosanitaria y R
   <img src="../assets/img/chapter-IV/wireflows/ug-7.png" width="600px" height="auto"/>
 </p>
 
+**User Goal 8:** Usuario desea cambiar de parcela en el visor satelital multispectral
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-8-resumido.png" width="600px" height="auto"/>
+</p>
+
+El flujo de interacción se inicia en el módulo «Visor Satelital Multispectral» (Salud del Cultivo), donde el usuario hace clic en el botón «Cambiar Parcela»; tras este evento, se despliega una ventana modal que muestra el listado de terrenos disponibles para que seleccione la parcela deseada; finalmente, el sistema solicita una confirmación mediante una ventana emergente y, al pulsar «Confirmar», la interfaz actualiza los datos e índices multiespectrales correspondientes al nuevo predio seleccionado.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-8.png" width="600px" height="auto"/>
+</p>
+
 ### 4.4.3. Web Applications Mock-ups
 
 En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
