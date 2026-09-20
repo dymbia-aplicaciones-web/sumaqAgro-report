@@ -973,9 +973,9 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 ##### Demostración Audiovisual en Microsoft Stream (Desktop)
 
 * **Plataforma de Alojamiento:** Microsoft Stream 
-* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-<7742>-dymbia-prototype-desktop-sprint-1.mp4`
+* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-desktop-sprint-1.mp4`
 * **Duración:** 04:15 minutos
-* **Enlace de Reproducción:** [Reproducir Demostración Desktop en Microsoft Stream](https://web.microsoftstream.com/video/enlace-video-desktop)
+* **Enlace de Reproducción:** [Reproducir Demostración Desktop en Microsoft Stream](https://goo.su/MEGQ9O9)
 
 ![Captura de Reproducción del Video Desktop en Microsoft Stream](../assets/img/chapter-IV/applications-design/prototypes/video-prototype-desktop.png)
 
@@ -991,7 +991,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 ##### Demostración Audiovisual en Microsoft Stream (Mobile)
 
 * **Plataforma de Alojamiento:** Microsoft Stream 
-* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-<7742>-dymbia-prototype-mobile-sprint-1.mp4`
+* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-mobile-sprint-1.mp4`
 * **Duración:** 04:30 minutos
 * **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://web.microsoftstream.com/video/enlace-video-mobile)
 
