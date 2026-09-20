@@ -593,36 +593,6 @@ En la vista móvil (**Mobile Web Browser**) del cierre de la página, los compon
   <img src="../assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-testimonials-and-footer.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 4.3.2. Landing Page Mock-up
 
 ## 4.4. Web Applications UX/UI Design
@@ -775,27 +745,19 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-our-plots.png"  width="600px" height="auto"/>
 </p>
 
-
 ### FINANCES
 
 <p align="center">
-  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-finances.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-finances.png" width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-expense-success-modal.png" width="600px" height="auto"/>
 </p>
-
 
 ### CONSULT
 
 <p align="center">
-  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-finances.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor.png" width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor-report-form-modal.png" width="600px" height="auto"/>
 </p>
-
-
-### CERTIFICATE
-
-<p align="center">
-  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-certificate.png"  width="600px" height="auto"/>
-</p>
-
 
 ### AGRICULTURAL ALERTS
 
