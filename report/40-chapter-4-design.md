@@ -818,4 +818,376 @@ Gobierna la publicación en catálogo de los lotes certificados, la recepción d
 ---
 
 ## 4.8. Database Design
+
+En esta sección se presenta el diseño lógico y físico de la base de datos relacional para la plataforma **SumaqAgro**. El diseño de persistencia se ha estructurado utilizando **MySQL 8.0** como motor gestor de base de datos (RDBMS), garantizando cumplimiento de propiedades ACID, integridad referencial inmutable y soporte de datos espaciales (GIS) para los polígonos perimetrales GPS de las parcelas agrícolas.
+
+Para mantener una alineación estricta con la arquitectura de software basada en **Domain-Driven Design (DDD)** establecida en la sección 4.6 y los diagramas de clases orientados a objetos de la sección 4.7, el esquema de base de datos se encuentra completamente desacoplado y organizado por **Bounded Contexts**. Esta separación previene acoplamientos innecesarios entre dominios y facilita la evolución o eventual migración hacia una topología de microservicios con bases de datos independientes por servicio (*Database-per-Service Pattern*).
+
+#### Convenciones de Nomenclatura y Estándares de Diseño
+
+* **Idioma:** Todos los nombres de tablas, columnas, índices y restricciones se redactan estrictamente en **idioma inglés** (`lowercase`).
+* **Formato de Nombres de Tablas:** Nombres en plural utilizando `snake_case` (ej. `users`, `field_plots`, `quality_certificates`).
+* **Claves Primarias (Primary Keys - PK):** Identificador entero de 64 bits `id` de tipo `BIGINT AUTO_INCREMENT` en todas las tablas.
+* **Claves Foráneas (Foreign Keys - FK):** Formato `<entity_singular>_id` vinculado explícitamente a la clave primaria de la tabla referenciada (ej. `user_id`, `field_plot_id`).
+* **Auditoría y Trazabilidad:** Todas las tablas principales incluyen las columnas obligatorias de auditoría temporal:
+    * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP`
+    * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`
+* **Manejo de Estados:** Atributos de estado definidos mediante cadenas `VARCHAR` con restricciones `CHECK` o tipos enumerados implícitos en inglés (ej. `'ACTIVE'`, `'INACTIVE'`, `'PENDING'`, `'CERTIFIED'`).
+
+---
+
 ### 4.8.1. Database Diagrams
+
+En esta sección se define el diseño lógico y físico de la base de datos para la plataforma SumaqAgro de la startup Dymbia. Se utiliza MySQL 8.0 con el motor transaccional InnoDB, lo que garantiza transacciones seguras bajo estándares ACID, integridad referencial mediante claves foráneas y un manejo eficiente de accesos concurrentes.
+
+Para mantener la coherencia con el diseño guiado por el dominio (DDD) de la sección 4.6 y las clases de la sección 4.7, el esquema se organizó por Bounded Contexts. Esta separación evita acoplamientos entre módulos del sistema y deja la base de datos lista para una futura división por servicios (Database-per-Service).
+
+#### Principales Decisiones y Estándares de Persistencia
+
+* **Herramientas Utilizadas:** El modelado entidad-relación (ERD) se realizó en **Hackolade Studio** siguiendo las herramientas autorizadas del curso. Para la administración, ejecución de scripts SQL y pruebas de persistencia se utilizó **DataGrip** conectado a una base de datos **MySQL 8.0**.
+* **Convenciones de Nombres:** Las tablas, columnas y restricciones se definieron en inglés, en minúsculas y usando `snake_case` (por ejemplo, `field_plots`, `crop_campaigns`, `quality_certificates`), manteniendo consistencia con los nombres de las entidades en el backend.
+* **Claves Primarias (PK):** Se utilizó un identificador subrogado `id` de tipo `BIGINT AUTO_INCREMENT` en todas las tablas para facilitar la indexación y optimizar las consultas en MySQL.
+* **Claves Foráneas (FK) e Integridad:** Las relaciones usan el formato `<entidad>_id` vinculado con restricciones `FOREIGN KEY` explícitas. En tablas dependientes (como las coordenadas perimetrales de una parcela) se aplica `ON DELETE CASCADE` para evitar registros huérfanos.
+* **Tipos de Datos y Precisión:**
+    * **Montos contables y costos:** Se utiliza `DECIMAL(10,2)` para registrar precios, jornales, compras y liquidaciones sin errores de redondeo.
+    * **Coordenadas GPS:** Se definieron como `DECIMAL(10,8)` para latitud y `DECIMAL(11,8)` para longitud, logrando precisión adecuada al trazar los polígonos de las parcelas.
+    * **Índices satelitales:** Los valores de reflectancia foliar (NDVI y NDWI) usan `DECIMAL(5,4)`, cubriendo el rango de trabajo de -1.0000 a +1.0000.
+* **Manejo de Estados:** Los estados de negocio se guardan como cadenas `VARCHAR(20)` asociadas a los enums del backend (como `'ACTIVE'`, `'IN_PROGRESS'`, `'PENDING'` o `'CERTIFIED'`).
+* **Campos de Auditoría:** Las tablas principales incluyen las columnas `created_at` y `updated_at` de tipo `TIMESTAMP` para registrar automáticamente cuándo se crea o modifica cada fila.
+
+---
+
+### 4.8.1. Database Diagrams
+
+A continuación, se presentan y explican los Database Diagrams elaborados en **Hackolade Studio** para la base de datos relacional sobre **MySQL 8.0**, gestionada y desplegada mediante **DataGrip**, agrupados de forma modular por cada uno de los 7 **Bounded Contexts** del dominio de negocio de SumaqAgro.
+
+---
+
+#### 4.8.1.1. Identity & Access Management (IAM) Bounded Context Diagram
+
+Este contexto delimita la persistencia de usuarios, perfiles institucionales, roles y credenciales para la autenticación y autorización segura basada en tokens JWT.
+
+![Database Diagram - IAM Bounded Context](../assets/img/database/iam-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `users`
+Almacena las cuentas de usuario registradas en la plataforma (productores, directivos de cooperativa, asesores agrónomos y administradores).
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador único del usuario.
+    * `first_name`: `VARCHAR(100) NOT NULL` - Nombres del usuario.
+    * `last_name`: `VARCHAR(100) NOT NULL` - Apellidos del usuario.
+    * `email`: `VARCHAR(150) NOT NULL UNIQUE` - Correo electrónico de inicio de sesión.
+    * `password_hash`: `VARCHAR(255) NOT NULL` - Contraseña encriptada con algoritmo BCrypt.
+    * `phone_number`: `VARCHAR(20) NULL` - Número de teléfono o WhatsApp para notificaciones rural/SMS.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado de la cuenta (`'ACTIVE'`, `'INACTIVE'`, `'BLOCKED'`).
+    * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de registro.
+    * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` - Fecha de última actualización.
+
+###### Tabla `roles`
+Catálogo de roles del sistema para el control de acceso basado en roles (RBAC).
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del rol.
+    * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre técnico del rol (`'ROLE_FARMER'`, `'ROLE_COOPERATIVE_DIRECTOR'`, `'ROLE_AGRONOMIST'`).
+    * `description`: `VARCHAR(255) NULL` - Descripción funcional del rol.
+
+###### Tabla `user_roles`
+Tabla asociativa para la relación de muchos a muchos (N:M) entre usuarios y roles.
+
+* **Columnas y Restricciones:**
+    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` ON DELETE CASCADE.
+    * `role_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `roles(id)` ON DELETE CASCADE.
+    * **Primary Key Compuesta:** `PRIMARY KEY (user_id, role_id)`
+
+---
+
+#### 4.8.1.2. Subscription & Billing Bounded Context Diagram
+
+Gestiona los planes comerciales (Semilla, Cooperativa Pro, Asesor Técnico), el historial de suscripciones activas y las transacciones de pago con pasarelas externas.
+
+![Database Diagram - Subscription & Billing Bounded Context](../assets/img/database/subscriptions-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `subscription_plans`
+Catálogo de planes comerciales habilitados.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del plan.
+    * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre del plan (`'SEED_FREE'`, `'COOPERATIVE_PRO'`, `'AGRONOMIST_TECH'`).
+    * `price_monthly`: `DECIMAL(10,2) NOT NULL` - Tarifa mensual en Soles (PEN).
+    * `max_plots_allowed`: `INT NOT NULL` - Límite máximo de parcelas georreferenciadas permitidas.
+    * `max_hectares_allowed`: `DECIMAL(10,2) NOT NULL` - Límite de hectáreas acumuladas.
+
+###### Tabla `subscriptions`
+Registra la suscripción activa o histórica de un usuario/entidad.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la suscripción.
+    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)`.
+    * `plan_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscription_plans(id)`.
+    * `start_date`: `DATE NOT NULL` - Fecha de inicio.
+    * `end_date`: `DATE NOT NULL` - Fecha de vencimiento.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado (`'ACTIVE'`, `'EXPIRED'`, `'CANCELLED'`).
+
+###### Tabla `payments`
+Bitácora de cobros y facturación procesada mediante la pasarela de pagos.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del pago.
+    * `subscription_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscriptions(id)`.
+    * `amount`: `DECIMAL(10,2) NOT NULL` - Monto cobrado.
+    * `transaction_token`: `VARCHAR(255) NOT NULL` - Token de transacción retornado por Stripe/Niubiz.
+    * `payment_status`: `VARCHAR(20) NOT NULL` - Estado (`'COMPLETED'`, `'FAILED'`, `'REFUNDED'`).
+    * `paid_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora del pago.
+
+---
+
+#### 4.8.1.3. Plot & Crop Management Bounded Context Diagram
+
+Modela las parcelas agrícolas georreferenciadas, los vértices de polígonos GPS y las campañas fenológicas de siembra.
+
+![Database Diagram - Plot & Crop Management Bounded Context](../assets/img/database/plots-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `field_plots`
+Almacena las parcelas registradas por los productores agrícolas.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la parcela.
+    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Propietario del predio).
+    * `plot_name`: `VARCHAR(100) NOT NULL` - Nombre o alias del fundo (ej. "Fundo La Libertad").
+    * `crop_type`: `VARCHAR(50) NOT NULL` - Tipo de cultivo (`'POTATO'`, `'COFFEE'`).
+    * `seed_variety`: `VARCHAR(100) NOT NULL` - Variedad botánica (ej. "Yungay", "Canchan", "Typica", "Geisha").
+    * `total_area_hectares`: `DECIMAL(10,2) NOT NULL` - Área calculada del polígono en hectáreas.
+    * `altitude_masl`: `INT NULL` - Altitud sobre el nivel del mar (m.s.n.m.).
+    * `soil_ph`: `DECIMAL(4,2) NULL` - Valor de pH del suelo registrado en la línea base.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado operacional.
+
+###### Tabla `plot_coordinates`
+Guarda la secuencia ordenada de coordenadas GPS (latitud y longitud) que forman el perímetro de la parcela (Relación 1:N con `field_plots`).
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del punto GPS.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)` ON DELETE CASCADE.
+    * `sequence_order`: `INT NOT NULL` - Orden consecutivo del vértice en el polígono (1, 2, 3...).
+    * `latitude`: `DECIMAL(10,8) NOT NULL` - Latitud decimal GPS.
+    * `longitude`: `DECIMAL(11,8) NOT NULL` - Longitud decimal GPS.
+
+###### Tabla `crop_campaigns`
+Registra las campañas fenológicas de cultivo por año/temporada.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la campaña.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `campaign_name`: `VARCHAR(100) NOT NULL` - Nombre de la campaña (ej. "Campaña Chica 2026").
+    * `sowing_date`: `DATE NOT NULL` - Fecha de siembra.
+    * `estimated_harvest_date`: `DATE NOT NULL` - Fecha estimada de cosecha.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'IN_PROGRESS'` - Estado (`'IN_PROGRESS'`, `'HARVESTED'`).
+
+---
+
+#### 4.8.1.4. Satellite Analytics & Alerting Bounded Context Diagram
+
+Guarda los registros de reflectancia multiespectral (NDVI y NDWI) extraídos periódicamente de las baldosas de Sentinel-2, así como las alertas agroclimáticas y recetas fitosanitarias.
+
+![Database Diagram - Satellite Analytics & Alerting Bounded Context](../assets/img/database/monitoring-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `satellite_readings`
+Almacena el historial de índices multiespectrales procesados por fecha y parcela.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la lectura.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `capture_date`: `DATE NOT NULL` - Fecha de la toma de imagen satelital por Sentinel-2.
+    * `ndvi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Vegetación de Diferencia Normalizada (-1.0000 a +1.0000).
+    * `ndwi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Humedad de Diferencia Normalizada.
+    * `tile_image_url`: `VARCHAR(255) NULL` - URL de la baldosa o mapa de calor generado en color falso.
+    * `anomaly_detected`: `BOOLEAN DEFAULT FALSE` - Flag que indica si el índice cayó por debajo del umbral mínimo.
+
+###### Tabla `agroclimatic_alerts`
+Boletines de alerta por heladas, sequías o ataques de plagas despachados a los productores.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la alerta.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `alert_type`: `VARCHAR(50) NOT NULL` - Tipo (`'FROST_WARNING'`, `'WATER_STRESS'`, `'PEST_ANOMALY'`).
+    * `severity`: `VARCHAR(20) NOT NULL` - Gravedad (`'LOW'`, `'MEDIUM'`, `'HIGH'`, `'CRITICAL'`).
+    * `message`: `TEXT NOT NULL` - Descripción detallada del riesgo detectado.
+    * `dispatched_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de emisión.
+
+###### Tabla `agronomic_prescriptions`
+Recetas y prescripciones fitosanitarias emitidas por asesores agrónomos ante reportes de campo.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la receta.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `agronomist_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Asesor emisor).
+    * `diagnosis`: `TEXT NOT NULL` - Diagnóstico de la afección o plaga.
+    * `recommended_treatment`: `TEXT NOT NULL` - Dosis y producto fitosanitario recomendado.
+    * `application_confirmed`: `BOOLEAN DEFAULT FALSE` - Confirmación del productor tras aplicar la receta.
+
+---
+
+#### 4.8.1.5. Field Cost Accounting Bounded Context Diagram
+
+Contabilidad de costos operativos rurales con soporte de sincronización offline (compras de insumos, jornales y fletes), calculando el costo unitario total y el punto de equilibrio financiero.
+
+![Database Diagram - Field Cost Accounting Bounded Context](../assets/img/database/costs-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `agrochemical_expenses`
+Registro de compras de fertilizantes, abonos y plaguicidas por parcela/campaña.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `product_name`: `VARCHAR(100) NOT NULL` - Nombre del insumo/fertilizante.
+    * `quantity`: `DECIMAL(10,2) NOT NULL` - Cantidad comprada.
+    * `unit_of_measure`: `VARCHAR(20) NOT NULL` - Unidad (`'KG'`, `'LITER'`, `'SAC'`).
+    * `unit_cost`: `DECIMAL(10,2) NOT NULL` - Precio unitario (PEN).
+    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total del gasto.
+    * `purchase_date`: `DATE NOT NULL` - Fecha de compra.
+
+###### Tabla `labor_expenses`
+Registro de pago de jornales a trabajadores agrícolas para labores de siembra, deshierbe o cosecha.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto de mano de obra.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `activity_type`: `VARCHAR(100) NOT NULL` - Labor realizada (ej. "Deshierbe manual", "Cosecha").
+    * `workers_count`: `INT NOT NULL` - Número de peones contratados.
+    * `days_worked`: `DECIMAL(5,2) NOT NULL` - Número de días/jornales.
+    * `cost_per_day`: `DECIMAL(10,2) NOT NULL` - Pago por jornal diario (PEN).
+    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total de jornales.
+    * `work_date`: `DATE NOT NULL` - Fecha del trabajo.
+
+###### Tabla `freight_expenses`
+Gastos de transporte y flete desde la parcela hacia el centro de acopio o almacén.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del flete.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `driver_name`: `VARCHAR(100) NULL` - Nombre del transportista/camionero.
+    * `destination`: `VARCHAR(150) NOT NULL` - Almacén o destino del flete.
+    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Costo total del servicio de flete.
+    * `freight_date`: `DATE NOT NULL` - Fecha del traslado.
+
+###### Tabla `breakeven_calculations`
+Módulo de consolidación financiera que determina la inversión total y el costo mínimo de venta por unidad.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del cálculo.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)` UNIQUE.
+    * `total_agrochemical_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de insumos.
+    * `total_labor_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de jornales.
+    * `total_freight_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de fletes.
+    * `total_investment`: `DECIMAL(10,2) NOT NULL` - Inversión total de la campaña.
+    * `estimated_yield_units`: `DECIMAL(10,2) NOT NULL` - Volumen cosechado estimado (en quintales/toneladas).
+    * `breakeven_price_per_unit`: `DECIMAL(10,2) NOT NULL` - **Punto de equilibrio:** Precio mínimo de venta por unidad para no generar pérdidas.
+
+---
+
+#### 4.8.1.6. Harvest Quality & Certification Bounded Context Diagram
+
+Modelado de la cosecha recolectada, evaluaciones de calidad física por calibres (papa según norma MIDAGRI) y análisis sensorial de taza (café según protocolo SCA), emitiendo certificados digitales con código QR de verificación pública.
+
+![Database Diagram - Harvest Quality & Certification Bounded Context](../assets/img/database/quality-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `harvest_batches`
+Registro de lotes de cosecha ingresados a almacén/cooperativa.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del lote cosechado.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `batch_code`: `VARCHAR(50) NOT NULL UNIQUE` - Código de lote asignado (ej. "BATCH-2026-P01").
+    * `total_weight_kg`: `DECIMAL(10,2) NOT NULL` - Peso total cosechado en kilogramos.
+    * `harvest_date`: `DATE NOT NULL` - Fecha de recolección.
+    * `quality_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'EVALUATED'`, `'CERTIFIED'`).
+
+###### Tabla `potato_caliber_evaluations`
+Clasificación de calibres de tubérculo para papa según estándar de pesaje/diámetro.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la evaluación de papa.
+    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+    * `first_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Primera (>120g / >6cm).
+    * `second_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Segunda (80g-120g).
+    * `third_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Tercera/Chanchera (<80g).
+    * `defective_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje con daños mecánicos o plagas.
+
+###### Tabla `coffee_cupping_evaluations`
+Ficha de catación de café de especialidad según estándar SCA (Specialty Coffee Association).
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la catación.
+    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+    * `fragrance_aroma_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Fragancia/Aroma (0-10).
+    * `flavor_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Sabor (0-10).
+    * `acidity_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Acidez (0-10).
+    * `body_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Cuerpo (0-10).
+    * `overall_score`: `DECIMAL(4,2) NOT NULL` - Puntaje General del catador (0-10).
+    * `total_sca_score`: `DECIMAL(5,2) NOT NULL` - **Puntaje Total Taza SCA** (ej. 85.50 pts -> Café de Especialidad).
+
+###### Tabla `quality_certificates`
+Certificados digitales emitidos con código QR y archivo PDF firmado.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del certificado.
+    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+    * `certificate_number`: `VARCHAR(100) NOT NULL UNIQUE` - Código único de certificado (ej. "CERT-SUMAQ-2026-8841").
+    * `pdf_download_url`: `VARCHAR(255) NOT NULL` - Enlace de descarga del PDF generado.
+    * `qr_verification_code`: `VARCHAR(255) NOT NULL UNIQUE` - Token encriptado codificado en el código QR para verificación pública.
+    * `issued_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora de emisión.
+
+---
+
+#### 4.8.1.7. Commercial Settlement Context Diagram
+
+Gestión del catálogo de lotes certificados expuestos a compradores mayoristas, registro de ofertas comerciales y liquidación final de la transacción.
+
+![Database Diagram - Commercial Settlement Bounded Context](../assets/img/database/settlement-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `certified_lot_publications`
+Publicaciones de lotes de cosecha certificados disponibles para la venta.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la publicación.
+    * `quality_certificate_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `quality_certificates(id)` UNIQUE.
+    * `asking_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio base pretendido por quintal/tonelada.
+    * `available_quantity`: `DECIMAL(10,2) NOT NULL` - Volumen disponible para venta.
+    * `publication_status`: `VARCHAR(20) NOT NULL DEFAULT 'PUBLISHED'` - Estado (`'PUBLISHED'`, `'NEGOTIATING'`, `'SOLD'`).
+    * `published_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de publicación.
+
+###### Tabla `purchase_offers`
+Ofertas comerciales enviadas por compradores mayoristas o empresas exportadoras.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la oferta.
+    * `publication_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `certified_lot_publications(id)`.
+    * `buyer_user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Comprador ofertante).
+    * `offered_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio por unidad ofertado.
+    * `offered_total_amount`: `DECIMAL(10,2) NOT NULL` - Monto total de la oferta.
+    * `offer_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'ACCEPTED'`, `'REJECTED'`).
+    * `offered_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de recepción de la oferta.
+
+###### Tabla `commercial_settlements`
+Liquidación comercial final que cierra la venta y calcula la ganancia neta.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la liquidación.
+    * `purchase_offer_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `purchase_offers(id)` UNIQUE.
+    * `agreed_total_sale`: `DECIMAL(10,2) NOT NULL` - Ingreso bruto total acordado por la venta.
+    * `total_campaign_cost`: `DECIMAL(10,2) NOT NULL` - Costo total de inversión derivado del módulo financiero.
+    * `net_profit_margin`: `DECIMAL(10,2) NOT NULL` - **Ganancia Neta Real:** (`agreed_total_sale - total_campaign_cost`).
+    * `settlement_date`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de cierre y liquidación.
