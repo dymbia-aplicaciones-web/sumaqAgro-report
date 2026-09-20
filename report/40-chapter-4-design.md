@@ -662,14 +662,23 @@ A continuación, se presentan los wireframes principales de la aplicación web c
   <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-certificate.png"  width="600px" height="auto"/>
 </p>
 
-
-**Agricultural Alerts:** Este módulo centraliza la vigilancia agroclimática y sanitaria de las parcelas del productor (US-13, US-31), estructurándose a través de una secuencia de tarjetas informativas que detallan el incidente detectado (tales como caídas críticas de vigor foliar, estrés hídrico o riesgos de helada); cada reporte integra un panel de medidas técnicas detalladas, la cronología temporal de tareas requeridas para mitigar la anomalía y un indicador de plan de acción finalizado con confirmación de cumplimiento en campo, permitiendo auditar y cerrar el ciclo de contingencia del cultivo de manera ordenada y oportuna.
+**Agricultural Alerts:** Este módulo centraliza la vigilancia agroclimática y sanitaria de las parcelas del productor (US-13, US-31)[cite: 3, 7], estructurándose a través de una secuencia de tarjetas informativas que detallan el incidente detectado (tales como caídas críticas de vigor foliar, estrés hídrico o riesgos de helada)[cite: 3, 7]; cada reporte integra un panel de medidas técnicas detalladas, la cronología temporal de tareas requeridas para mitigar la anomalía y un indicador de plan de acción finalizado con confirmación de cumplimiento en campo, permitiendo auditar y cerrar el ciclo de contingencia del cultivo de manera ordenada y oportuna.
 <p align="center">
   <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert.png"  width="600px" height="auto"/>
   <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-statistics.png"  width="600px" height="auto"/>
   <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert-report.png"  width="600px" height="auto"/>
   <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert-modal.png"  width="600px" height="auto"/>
 </p>
+
+
+- **Settings and Help:** Esta vista técnica expone los parámetros operativos y de soporte del productor a través de un contenedor modal organizado en pestañas contextuales (*Tabs*), permitiendo la actualización de datos agronómicos del predio (nombre de la parcela, tipo de cultivo y área declarada), la gestión de información de contacto (teléfono y credenciales de acceso) y el acceso a manuales interactivos de usuario con línea directa de asistencia técnica; asimismo, el módulo integra la funcionalidad de **Offline Mode**, respaldada por la historia técnica TS-05, la cual permite al agricultor alternar conscientemente hacia un modo de trabajo en almacenamiento local para registrar labores e insumos en sectores profundos de la chacra donde la señal celular desaparece por completo, garantizando que los datos queden retenidos en la memoria del navegador y se sincronicen de manera diferida y automática una vez recuperada la cobertura de red.
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-config-account.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-offline.png"  width="600px" height="auto"/>
+</p>
+
+
+
 
 
 
