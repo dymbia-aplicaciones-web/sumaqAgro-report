@@ -770,6 +770,22 @@ El flujo de interacción inicia cuando el usuario registrado accede a la pantall
 </p>
 
 
+**User Goal 3:** Usuario desea cambiar su contraseña
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-3-resumido.png"  width="600px" height="auto"/>
+</p>
+
+El flujo de interacción comienza en la pantalla de inicio de sesión cuando el usuario hace clic en el enlace «¿Olvidaste tu contraseña?» (/forgot-password), desplegando el formulario de recuperación donde ingresa su correo electrónico registrado y presiona el botón de envío; tras validar la existencia de la cuenta, el sistema transiciona la pantalla a un estado de confirmación visual mediante un mensaje informativo en pantalla y despacha un correo con el enlace y token temporal para el restablecimiento seguro de sus credenciales.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-3.png"  width="600px" height="auto"/>
+</p>
+
+
+
+
+
+
 
 
 
