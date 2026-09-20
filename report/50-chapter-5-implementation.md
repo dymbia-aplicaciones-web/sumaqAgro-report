@@ -569,12 +569,57 @@ Para evidenciar el correcto comportamiento de los componentes interactivos, el m
 * **Enlace de Reproducción (Microsoft Stream):**
   [Video de Navegación del Landing Page - Sprint 1](INSERTA_TU_LINK_DE_STREAM_AQUI)
 
+---
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
 Durante el presente Sprint no se elaboró documentación de servicios web específicos, debido a que el alcance y los esfuerzos del equipo se concentraron de manera exclusiva en el diseño, desarrollo y despliegue continuo del Landing Page institucional.
 
+---
+
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
+Para este sprint se realizó el despliegue de la **Landing Page**.
+
+**1. Despliegue en Producción mediante Cloudflare Pages (Landing Pages)**
+
+Tal como se detalló anteriormente en la sección **5.1.4. Software Deployment Configuration**, el despliegue principal de la Landing Page se ejecutó a través de **Cloudflare Pages**, garantizando una canalización de entrega continua automatizada (*Continuous Deployment*).
+
+A través de la integración mediante *webhooks* con el repositorio en GitHub, cada actualización o *commit* verificado en la rama principal (`main`) dispara de forma automática la compilación y distribución del portal en la red global *Edge* de Cloudflare. Este proceso asegura un entorno de despliegue ágil, con alta disponibilidad y acceso inmediato bajo protocolo seguro `HTTPS`.
+
+![Cloudflare Pages](../assets/img/chapter-V/deployment-configuration/step-8.png)
+
+
+
+**2. Despliegue mediante GitHub Pages (Landing Page)**
+
+A pesar de que el despliegue principal se gestionó a través de Cloudflare Pages, se configuró adicionalmente el despliegue de la landing page en GitHub Pages con el propósito de contar con un entorno alternativo de respaldo y validación continua. La evidencia del proceso es la siguiente:
+
+*   **Paso 1 (Preparación):** Se accedió a la configuración del repositorio (`Settings` > `Pages`) para establecer la fuente de publicación.
+
+![Paso 1](../assets/img/chapter-V/deployment-configuration/gitpages-1.png)
+
+*   **Paso 2 (Configuración):** En la sección *Build and deployment*, se seleccionó la rama `main` y la carpeta raíz `/ (root)` como origen del código.
+
+![Paso 2](../assets/img/chapter-V/deployment-configuration/gitpages-2.png)
+
+*   **Paso 3 (Publicación):** El sistema finalizó el proceso de compilación con éxito, confirmando el despliegue con el mensaje *"Your site is live"* y otorgando la URL pública.
+
+![Paso 3](../assets/img/chapter-V/deployment-configuration/gitpages-3.png)
+
+
+
+
+---
+
+##### Enlaces Oficiales del Landing Page
+
+| Recurso / Plataforma | Descripción | Dirección / Enlace Oficial                                                                                                                                                                               |
+| :--- | :--- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Repositorio GitHub** | Código fuente del sitio estático (HTML5, CSS3, JavaScript) | [https://dymbia-opensource.github.io/sumaqAgro-landing-page](https://dymbia-opensource.github.io/sumaqAgro-landing-page)                                                                                 |
+| **Cloudflare Pages** | Portal oficial publicado y activo en producción | [https://sumaqagro-landing-page.pages.dev](https://sumaqagro-landing-page.pages.dev)                                                                                                                     |
+
+
+---
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
