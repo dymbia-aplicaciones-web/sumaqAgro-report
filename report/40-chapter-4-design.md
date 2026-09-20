@@ -744,7 +744,8 @@ Flujo de acceso e identificación institucional que permite a agricultores y ase
 ### 4.4.2. Web Applications Wireflow Diagrams
 ### 4.4.3. Web Applications Mock-ups
 ### 4.4.4. Web Applications User Flow Diagrams
-### 4.5. Web Applications Prototyping
+
+## 4.5. Web Applications Prototyping
 
 En esta sección se presentan y sustentan los prototipos interactivos de alta fidelidad (*high-fidelity*) desarrollados para la plataforma **SumaqAgro**, abarcando las experiencias de usuario para **Desktop Web Browser** y **Mobile Web Browser**. La interactividad simula las rutas principales (*happy paths*) y rutas alternativas formalizadas en los diagramas de flujos de usuario (*User Flow Diagrams*).
 
@@ -806,8 +807,6 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 * **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://web.microsoftstream.com/video/enlace-video-mobile)
 
 ![Captura de Reproducción del Video Mobile en Microsoft Stream](../assets/img/chapter-IV/applications-design/prototypes/video-prototype-mobile.png)
-
-## 4.5. Web Applications Prototyping
 
 ## 4.6. Domain-Driven Software Architecture
 En esta sección se traslada la comprensión del negocio obtenida en el Big Picture Event Storming hacia el diseño de arquitectura de software guiado por el dominio (Domain-Driven Design - DDD) y el modelo de abstracción y comunicación visual C4 Model en sus niveles de Contexto, Contenedores y Componentes. A través de esta aproximación arquitectónica, se divide el espacio del problema en Bounded Contexts independientes y de bajo acoplamiento, estableciendo sus agregados transaccionales (Aggregates), comandos, eventos de dominio, modelos de consulta (Read Models) y políticas de automatización reactivas. Asimismo, se formaliza la topología técnica y modular de la solución distribuida, articulando la aplicación web de cara al usuario, el servicio de backend RESTful en Spring Boot, la base de datos relacional y las interfaces de integración con servicios externos.
