@@ -1100,7 +1100,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 * **Plataforma de Alojamiento:** Microsoft Stream 
 * **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-mobile-sprint-1.mp4`
 * **Duración:** 04:30 minutos
-* **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://web.microsoftstream.com/video/enlace-video-mobile)
+* **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://goo.su/XRcWU)
 
 ![Captura de Reproducción del Video Mobile en Microsoft Stream](../assets/img/chapter-IV/applications-design/prototypes/video-prototype-mobile.png)
 
