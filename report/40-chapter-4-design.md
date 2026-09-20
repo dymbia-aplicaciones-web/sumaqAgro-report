@@ -656,6 +656,14 @@ A continuación, se presentan los wireframes principales de la aplicación web c
   <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-earning.png"  width="600px" height="auto"/>
 </p>
 
+**Consult the Advisor:** La plataforma complementa la operación agrícola mediante la sección **Phytosanitary Assistance and Prescriptions**, la cual exhibe la prescripción técnica activa del agrónomo con su dosificación exacta y el historial cronológico de consultas, permitiendo reportar nuevas incidencias fitosanitarias mediante carga fotográfica; de manera complementaria, el módulo **My Harvest Certificates** organiza los expedientes de acreditación comercial del lote, reflejando el nombre del cultivo, el desglose de calibres de cosecha, el sello digital de respaldo cooperativo y el código QR de trazabilidad pública para respaldar el valor del producto ante intermediarios y compradores.
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-asesor.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-certificate.png"  width="600px" height="auto"/>
+</p>
+
+
+
 
 
 
