@@ -815,7 +815,7 @@ La orquestación entre los contextos delimitados se rige por políticas eventual
 
 En este apartado se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
 
-![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](../assets/img/c4/c4-system-context-diagram.svg)
+![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](../assets/img/c4/c4-system-context-diagram.png)
 
 #### Explicación del Diagrama de Contexto
 
@@ -840,7 +840,7 @@ El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distrib
 
 En esta sección se presenta y describe el Diagrama de Contenedores (Nivel 2 del modelo C4) de la plataforma **SumaqAgro**, el cual profundiza en la frontera del sistema para exponer su arquitectura técnica distribuida. Este diagrama muestra las unidades de despliegue y ejecución independientes que componen la solución, la distribución de responsabilidades entre ellas, las principales decisiones de tecnología adoptadas y los protocolos de red empleados para la comunicación interna y con sistemas externos. El modelado fue estructurado y generado formalmente mediante la especificación DSL de la herramienta **Structurizr**.
 
-![C4 Model - Diagrama de Contenedores (Nivel 2)](../assets/img/c4/c4-container-diagram.svg)
+![C4 Model - Diagrama de Contenedores (Nivel 2)](../assets/img/c4/c4-container-diagram.png)
 
 #### Asignación de Responsabilidades y Decisiones Tecnológicas
 
@@ -876,7 +876,7 @@ En esta sección se presentan y explican los Diagramas de Componentes (Nivel 3 d
 
 El contenedor de la Landing Page descompone la estructura del sitio web estático público, diseñado con una arquitectura liviana orientada a maximizar la velocidad de carga y la tasa de conversión en dispositivos móviles bajo redes rurales 3G/4G.
 
-![C4 Model - Diagrama de Componentes de la Landing Page (Nivel 3)](../assets/img/c4/c4-components-landing-diagram.svg)
+![C4 Model - Diagrama de Componentes de la Landing Page (Nivel 3)](../assets/img/c4/c4-components-landing-diagram.png)
 
 ##### Desglose de Componentes de la Landing Page:
 * **`Navigation & Hero Component`:** Bloque estructural desarrollado con HTML5 semántico y maquetado responsivo mediante CSS3 Flexbox. Administra la barra de navegación superior, la identidad visual corporativa de SumaqAgro, la propuesta de valor agroclimática orientada a café de especialidad y papa andina, y el llamado a la acción (CTA) que conduce al formulario de registro y demostración.
@@ -890,7 +890,7 @@ El contenedor de la Landing Page descompone la estructura del sitio web estátic
 
 El contenedor de la aplicación cliente SPA, implementado sobre el framework **Angular 18**, descompone sus módulos para brindar una experiencia de usuario interactiva y garantizar la persistencia local de datos en campo mediante capacidades desconectadas (*offline-first*).
 
-![C4 Model - Diagrama de Componentes de la Web Application (Nivel 3)](../assets/img/c4/c4-components-webapp-diagram.svg)
+![C4 Model - Diagrama de Componentes de la Web Application (Nivel 3)](../assets/img/c4/c4-components-webapp-diagram.png)
 
 ##### Desglose de Componentes de la Web Application:
 * **`Auth & Role Guard`:** Guardia funcional de enrutamiento (`CanActivateFn`) de Angular. Intercepta la navegación hacia rutas protegidas comprobando la vigencia del token JWT almacenado en `sessionStorage`, aplicando el control de acceso basado en roles (RBAC) para productores, directivos y agrónomos.
@@ -908,7 +908,7 @@ El contenedor de la aplicación cliente SPA, implementado sobre el framework **A
 
 El contenedor transaccional de backend, desarrollado en **Java 21 con Spring Boot 3.x**, implementa una arquitectura en capas desacopladas orientada al dominio (*Layered Architecture / DDD*), gobernando las reglas de negocio de los 7 Bounded Contexts y agregados de la solución.
 
-![C4 Model - Diagrama de Componentes del API Backend (Nivel 3)](../assets/img/c4/c4-components-backend-diagram.svg)
+![C4 Model - Diagrama de Componentes del API Backend (Nivel 3)](../assets/img/c4/c4-components-backend-diagram.png)
 
 ##### Desglose de Componentes del Backend por Capa Técnica:
 
