@@ -787,7 +787,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 * **Duración:** 04:15 minutos
 * **Enlace de Reproducción:** [Reproducir Demostración Desktop en Microsoft Stream](https://web.microsoftstream.com/video/enlace-video-desktop)
 
-![Captura de Reproducción del Video Desktop en Microsoft Stream](.../assets/img/chapter-IV/applications-design/prototypes/video-prototype-desktop.png)
+![Captura de Reproducción del Video Desktop en Microsoft Stream](../assets/img/chapter-IV/applications-design/prototypes/video-prototype-desktop.png)
 
 *Figura 4.5.1: Cuadro representativo de la sesión en video demostrando la navegación del prototipo Desktop en Microsoft Stream.*
 
@@ -805,7 +805,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 * **Duración:** 04:30 minutos
 * **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://web.microsoftstream.com/video/enlace-video-mobile)
 
-![Captura de Reproducción del Video Mobile en Microsoft Stream](.../assets/img/chapter-IV/applications-design/prototypes/video-prototype-mobile.png)
+![Captura de Reproducción del Video Mobile en Microsoft Stream](../assets/img/chapter-IV/applications-design/prototypes/video-prototype-mobile.png)
 
 ## 4.5. Web Applications Prototyping
 
