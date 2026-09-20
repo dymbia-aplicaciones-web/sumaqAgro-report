@@ -305,9 +305,9 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 #### Step 8: External Systems
 ![event-storming-step-8-external-systems-refactorizado.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-8-external-systems-refactorizado.jpg)
 * El paso 8 identifica e integra los sistemas externos y servicios de terceros que interactúan con el dominio, enviando comandos o reaccionando a los eventos generados.
-
-#### Step 9: Commands
-
+#### Step 9: Aggregates
+![event-storming-step-9-aggregates.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-9-aggregates.jpg)
+* El paso 9 encapsula la lógica de negocio, las entidades y sus reglas de consistencia en agregados, garantizando la integridad transaccional del sistema.
 #### Step 10: Bounded Contexts
 ![Evidencia integral de Design-Level Event Storming](../assets/img/event-storming/step-10-bounded-contexts.jpg)
 
