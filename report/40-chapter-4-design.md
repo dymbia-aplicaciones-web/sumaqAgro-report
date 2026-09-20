@@ -653,9 +653,35 @@ Durante la dinámica colaborativa, el equipo ejecutó las siguientes actividades
 
 ---
 #### Evidencia del Modelado en Miro
-
-A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 7 Bounded Contexts formalizados con sus respectivos agregados, comandos, eventos, modelos de lectura, integraciones externas y políticas de automatización:
-
+A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 10 pasos de la metodología Design-Level Event Storming y la organización de los elementos de modelado por colores y categorías.
+#### Step 1: Domain Events
+![event-storming-step-1-bainstrome.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-1-bainstrome.jpg)
+* Dentro de la metodología de Event Storming consiste en realizar una lluvia de ideas intensiva para capturar todos los acontecimientos relevantes que ocurren dentro del dominio del negocio.
+#### Step 2: Timelines
+![event-storming-step-2-timelines.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-2-timelines.jpg)
+* El segundo paso de Event Storming transforma la lluvia de ideas caótica del Paso 1 en una narrativa operativa coherente, secuenciada cronológicamente de izquierda a derecha bajo el escenario principal o Happy Path.
+#### Step 3: Paints Points
+![event-storming-step-3-paint-points.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-3-paint-points.jpg)
+* El tercer paso tiene como función principal identificar y visibilizar de forma temprana las fricciones, riesgos, dudas y cuellos de botella existentes en el flujo operativo del negocio agrícola.
+#### Step 4: Pivotal Points
+![event-storming-step-4-timelines-pivotal-points.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-4-timelines-pivotal-points.jpg)
+* El cuarto paso tiene como propósito identificar y marcar aquellos eventos de dominio transcendentales que representan cambios de estado irreversibles, puntos de inflexión de alto impacto o transiciones entre diferentes etapas del negocio agrícola.
+#### Step 5: Commands
+![event-storming-step-5-Commands.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-5-Commands.jpg)
+* El paso 5 modela las intenciones directas, acciones de usuario e invocaciones del sistema que provocan la ocurrencia de los eventos de dominio.
+#### Step 6: Policies
+![event-storming-step-6-policies.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-6-policies.jpg)
+* El paso 6 define las reglas de negocio reactivas, políticas y automatizaciones que se desencadenan automáticamente tras la ocurrencia de uno o más eventos de dominio.
+#### Step 7: Read Models
+![event-storming-step-7-read-models.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-7-read-models.jpg)
+* El paso 7 proyecta los modelos de lectura y vistas de datos necesarios para que los actores e interfaces puedan tomar decisiones informadas antes de ejecutar un comando.
+#### Step 8: External Systems
+![event-storming-step-8-external-systems-refactorizado.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-8-external-systems-refactorizado.jpg)
+* El paso 8 identifica e integra los sistemas externos y servicios de terceros que interactúan con el dominio, enviando comandos o reaccionando a los eventos generados.
+#### Step 9: Aggregates
+![event-storming-step-9-aggregates.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-9-aggregates.jpg)
+* El paso 9 encapsula la lógica de negocio, las entidades y sus reglas de consistencia en agregados, garantizando la integridad transaccional del sistema.
+#### Step 10: Bounded Contexts
 ![Evidencia integral de Design-Level Event Storming](../assets/img/event-storming/step-10-bounded-contexts.jpg)
 
 * **Enlace interactivo al espacio de trabajo:** [Tablero de Event Storming en Miro](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHVPRUdrWUJzeGVtb1g5cE9UeGFKdjJBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=126689221129)
@@ -918,21 +944,24 @@ El Bounded Context de Identity & Access Management modela la gestión de identid
 * **`UserAccountService` y `UserAccountServiceImpl` (Application Layer):**
   Define y ejecuta la orquestación de casos de uso de seguridad. `UserAccountServiceImpl` posee dependencias privadas hacia `UserAccountRepository` y `JwtTokenService`; implementa `+ registerProducer(cmd: RegisterProducerCommand): Long`, `+ registerCooperative(cmd: RegisterCooperativeCommand): Long`, `+ authenticate(cmd: SignInCommand): String` y `+ findById(id: Long): Optional<UserAccount>`.
 
+* **`UserAccountResourceAssembler` (Assembler / Interface Layer):**
+  Componente encargado de la transformación desacoplada entre las cargas útiles de la API y las entidades del dominio. Expone `+ toResourceFromEntity(entity: UserAccount): UserAccountResource` para serializar las respuestas HTTP y `+ toEntityFromResource(resource: SignUpProducerResource): UserAccount` para reconstruir la raíz de agregación.
+
 * **`IamController` (REST Controller Interface Layer):**
-  Punto de entrada HTTP expuesto bajo `/api/v1/auth` y `/api/v1/users`. Inyecta `UserAccountService` y expone `+ signUpProducer(resource: SignUpProducerResource): ResponseEntity<Long>`, `+ signUpCooperative(resource: SignUpCooperativeResource): ResponseEntity<Long>` y `+ signIn(resource: SignInResource): ResponseEntity<AuthenticatedUserResource>`.
+  Punto de entrada HTTP expuesto bajo `/api/v1/auth` y `/api/v1/users`. Inyecta `UserAccountService` y `UserAccountResourceAssembler`, exponiendo `+ signUpProducer(resource: SignUpProducerResource): ResponseEntity<Long>`, `+ signUpCooperative(resource: SignUpCooperativeResource): ResponseEntity<Long>` y `+ signIn(resource: SignInResource): ResponseEntity<AuthenticatedUserResource>`.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`UserAccount` "1" *-- "1..*" `Role`):** Una cuenta de usuario es dueña del ciclo de vida de sus roles asignados; no pueden existir roles huérfanos sin una cuenta asociada. Un usuario posee como mínimo un rol (`1..*`).
 * **Asociación dirigida (`Role` --> "1" `RoleType`):** Cada entidad `Role` referencia exactamente a un valor de la enumeración `RoleType`.
 * **Composición (`UserAccount` *-- "1" `Email` y `PasswordHash`):** La identidad y la seguridad son parte constituyente e inseparable del agregado.
-* **Dependencia de uso (`IamController` ..> `UserAccountService`):** El controlador delega comandos hacia el servicio de aplicación.
+* **Dependencia de uso (`IamController` ..> `UserAccountService` y `UserAccountResourceAssembler`):** El controlador delega comandos hacia el servicio de aplicación y utiliza el ensamblador para mapear recursos externos.
 * **Dependencia de uso y gestión (`UserAccountServiceImpl` ..> `UserAccount` y `UserAccountRepository`):** El servicio gestiona la mutación del agregado e interactúa con el repositorio para persistir los cambios vía JDBC.
 
 ---
 
 #### 4.7.1.2. Subscriptions & Payments Context Class Diagram
 
-Este contexto delimita el modelo de monetización SaaS, gobernando la activación comercial de planes, las cuotas de predios asignadas y la interoperabilidad con pasarelas de pago externas.
+Este contexto delimita el modelo de monetización SaaS, gobernando la activación comercial de planes, la cancelación de membresías, las cuotas de predios asignadas y la interoperabilidad con pasarelas de pago externas.
 
 ![Diagrama de Clases - Subscriptions Context](../assets/img/class-diagrams/subscriptions-class-diagram.png)
 
@@ -953,7 +982,7 @@ Este contexto delimita el modelo de monetización SaaS, gobernando la activació
         * `+ Subscription(userId: Long, planTier: PlanTier, months: Integer)`: Constructor que establece fechas y cuota base.
         * `+ activate(): void`: Habilita la suscripción tras la confirmación del pago.
         * `+ renew(months: Integer): void`: Extiende la fecha de término por el periodo pagado.
-        * `+ cancel(): void`: Inhabilita la renovación automática y actualiza `isActive` a falso.
+        * `+ cancel(): void`: Inhabilita la renovación automática y actualiza `isActive` a falso, emitiendo la cancelación del contrato.
         * `+ hasPlotQuotaAvailable(currentCount: Integer): Boolean`: Valida si el cliente aún puede registrar parcelas adicionales.
 
 * **`PaymentTransaction` (Entity):**
@@ -966,30 +995,30 @@ Este contexto delimita el modelo de monetización SaaS, gobernando la activació
     * `PlanTier`: Define los niveles `FREE_SEED` (plan base individual), `COOPERATIVE_PRO` (gestión gremial multivariable) y `TECHNICAL_ADVISOR` (cartera agronómica).
     * `PaymentStatus`: Fases de cobro `PENDING`, `COMPLETED` y `FAILED`.
 
-* **`StripeClientAdapter` (Outbound Infrastructure Adapter):**
-  Cliente tipado anotado con `@Component` que encapsula las credenciales y llamadas seguras HTTPS/JSON hacia la API de pagos mediante `+ chargeCard(token: String, amount: Money): String`.
+* **`StripeClientAssembler` (Infrastructure Layer):**
+  Componente de infraestructura y enlace con la pasarela de pagos externa. Encapsula las credenciales y llamadas seguras HTTPS/JSON mediante `+ chargeCard(token: String, amount: Money): String` y `+ toPaymentTransaction(stripeResponse: String): PaymentTransaction` para transformar la respuesta sin procesar de la API en la entidad de cobro del dominio.
 
 * **`SubscriptionRepository`, `SubscriptionService` y `SubscriptionController`:**
-  El repositorio declara `+ findByUserId(userId: Long): Optional<Subscription>`. El servicio orquesta `+ selectPlan(cmd: SelectPlanCommand): Long` y `+ processPayment(cmd: ProcessPaymentCommand): Boolean`. El controlador atiende peticiones REST bajo `/api/v1/subscriptions`.
+  El repositorio declara `+ findByUserId(userId: Long): Optional<Subscription>`. El servicio orquesta `+ selectPlan(cmd: SelectPlanCommand): Long`, `+ processPayment(cmd: ProcessPaymentCommand): Boolean` y `+ cancelSubscription(cmd: CancelSubscriptionCommand): void`. El controlador atiende peticiones REST bajo `/api/v1/subscriptions`, exponiendo `+ subscribe()`, `+ pay()` y `+ cancel(subscriptionId: Long): ResponseEntity<Void>`.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`Subscription` "1" *-- "0..*" `PaymentTransaction`):** Las transacciones financieras están subordinadas al contrato de suscripción.
 * **Composición (`PaymentTransaction` *-- "1" `Money`):** El valor económico es intrínseco al comprobante de cobro.
 * **Asociación dirigida hacia Enums:** `Subscription` apunta a `PlanTier` (`1`), y `PaymentTransaction` apunta a `PaymentStatus` (`1`).
-* **Dependencias:** `SubscriptionController` consume `SubscriptionService`, el cual depende de `SubscriptionRepository` y de `StripeClientAdapter` para interactuar con la pasarela externa.
+* **Dependencias:** `SubscriptionController` consume `SubscriptionService`, el cual depende de `SubscriptionRepository` y de `StripeClientAssembler` para interactuar con la pasarela externa.
 
 ---
 
 #### 4.7.1.3. Plot & Crop Management Context Class Diagram
 
-Gestiona la delimitación espacial y catastral de predios agrícolas, los atributos físico-químicos del suelo y las campañas fenológicas de cultivo.
+Gestiona la delimitación espacial y catastral de predios agrícolas, los atributos físico-químicos del suelo y las campañas fenológicas de cultivo instaladas.
 
 ![Diagrama de Clases - Plot & Crop Context](../assets/img/class-diagrams/plots-class-diagram.png)
 
 ##### Desglose Estructural de Clases y Componentes:
 
 * **`FieldPlot` (Aggregate Root):**
-  Raíz de agregación que salvaguarda la integridad geográfica de la parcela.
+  Raíz de agregación que salvaguarda la integridad geográfica y el estado agronómico de la parcela.
     * **Atributos privados:**
         * `- id: Long`: Identificador único del predio.
         * `- producerId: Long`: Vínculo referencial hacia el productor titular en IAM.
@@ -997,29 +1026,29 @@ Gestiona la delimitación espacial y catastral de predios agrícolas, los atribu
         * `- calculatedAreaHectares: Double`: Superficie calculada de forma computacional en hectáreas.
         * `- perimeter: PerimeterCoordinates`: Geometría vectorial cerrada del lote.
         * `- soil: SoilBaseline`: Caracterización inicial de suelo.
-        * `- crop: CropBatch`: Cultivo actualmente instalado en el terreno.
+        * `- campaign: CropCampaign`: Campaña agrícola instalada en el terreno.
     * **Métodos públicos:**
         * `+ FieldPlot(producerId: Long, plotName: String, perimeter: PerimeterCoordinates)`: Inicializa la parcela validando topología.
         * `+ updatePerimeter(newPerimeter: PerimeterCoordinates): void`: Recalcula el área y reemplaza las coordenadas perimetrales.
         * `+ registerSoilAnalysis(soil: SoilBaseline): void`: Asocia los resultados de laboratorio del suelo.
-        * `+ startCropCampaign(crop: CropBatch): void`: Asigna un nuevo lote fenológico de siembra.
+        * `+ startCropCampaign(campaign: CropCampaign): void`: Asigna una nueva campaña fenológica de siembra.
 
 * **`PerimeterCoordinates` y `GeoPoint` (Value Objects):**
     * `GeoPoint`: Encapsula un vértice geográfico mediante `- latitude: Double` y `- longitude: Double`, validando los rangos estándar de latitud (-90 a 90) y longitud (-180 a 180).
     * `PerimeterCoordinates`: Encapsula la lista privada `- points: List<GeoPoint>`. Su método `+ validatePolygonClosure(): Boolean` asegura que el vértice final coincida con el inicial, mientras que `+ computeAreaHectares(): Double` calcula el área utilizando el algoritmo de la fórmula de Shoelace proyectada.
 
-* **`SoilBaseline` y `CropBatch` (Entities):**
+* **`SoilBaseline` y `CropCampaign` (Entities):**
     * `SoilBaseline`: Contiene `- textureType: String`, `- phLevel: Double` y `- organicMatterPercentage: Double`.
-    * `CropBatch`: Contiene `- cropType: CropType`, `- seedVariety: String` (ej. Typica, Caturra, Canchán, Yungay) y `- sowingDate: LocalDate`. `CropType` tipifica `SPECIALTY_COFFEE` o `ANDEAN_POTATO`.
+    * `CropCampaign`: Modela la campaña fenológica instalada en la parcela. Contiene los atributos privados `- id: Long`, `- cropType: CropType` (`SPECIALTY_COFFEE` o `ANDEAN_POTATO`), `- seedVariety: String` (ej. Typica, Caturra, Canchán, Yungay) y `- sowingDate: LocalDate`. Expone los métodos `+ updateSeedVariety(variety: String): void` y `+ recordSowingDate(date: LocalDate): void`, soportando los eventos de siembra.
 
-* **`MidagriClientAdapter` (Outbound Infrastructure Adapter):**
-  Componente que interactúa con el Padrón de Productores Agrarios del MIDAGRI mediante `+ validateProducerCadastralId(producerDni: String, cadastralCode: String): Boolean`.
+* **`MidagriClientAssembler` (Infrastructure Layer):**
+  Componente de infraestructura que consulta el Padrón de Productores Agrarios (PPA). Expone `+ validateProducerCadastralId(producerDni: String, cadastralCode: String): Boolean` y `+ toProducerProfile(ppaApiResponse: String): Object` para traducir las respuestas del padrón gubernamental hacia el dominio.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`FieldPlot` "1" *-- "1" `PerimeterCoordinates`):** Toda parcela posee obligatoriamente una frontera geométrica.
 * **Composición (`PerimeterCoordinates` "1" *-- "3..*" `GeoPoint`):** Un polígono válido requiere como mínimo tres vértices cerrados (`3..*`).
-* **Composición (`FieldPlot` "1" *-- "1" `SoilBaseline` y `FieldPlot` "1" *-- "0..1" `CropBatch`):** La línea base de suelo es obligatoria, mientras que la siembra es opcional según el ciclo productivo.
-* **Dependencias:** `FieldPlotServiceImpl` orquesta el agregado utilizando `FieldPlotRepository` y valida la formalidad del predio mediante `MidagriClientAdapter`.
+* **Composición (`FieldPlot` "1" *-- "1" `SoilBaseline` y `FieldPlot` "1" *-- "0..1" `CropCampaign`):** La línea base de suelo es obligatoria, mientras que la campaña es opcional según el ciclo productivo.
+* **Dependencias:** `FieldPlotServiceImpl` orquesta el agregado utilizando `FieldPlotRepository` y valida la formalidad del predio mediante `MidagriClientAssembler`.
 
 ---
 
@@ -1048,21 +1077,21 @@ Este contexto centraliza la captura de telemetría espectral provista por Sentin
         * `+ addPrescription(rx: TechnicalPrescription): void`: Incorpora la prescripción correctiva del asesor técnico.
 
 * **`NdviReading` y `NdwiReading` (Value Objects):**
-  Encapsulan los índices matemáticos mediante `- value: Double`, validando en sus constructores que el valor numérico se sitúe estrictamente en el intervalo $[-1.0, 1.0]$. `NdviReading` provee `+ isStressAnomaly(): Boolean` (activo si el valor cae por debajo de 0.40 en etapas de floración o crecimiento), y `NdwiReading` expone `+ isWaterDeficit(): Boolean`.
+  Encapsulan los índices matemáticos mediante `- value: Double`, validando en sus constructores que el valor numérico se sitúe estrictamente en el intervalo $[-1.0, 1.0]$. `NdviReading` provee `+ isStressAnomaly(): Boolean` (activo si el valor cae por debajo de 0.40 en etapas clave), y `NdwiReading` expone `+ isWaterDeficit(): Boolean`.
 
 * **`AgroclimaticAlert` y `TechnicalPrescription` (Entities):**
     * `AgroclimaticAlert`: Modela eventos de riesgo; posee `- alertType: String`, `- severity: AlertSeverity` (`LOW`, `MEDIUM`, `CRITICAL`), `- message: String` y `- emittedAt: LocalDateTime`.
     * `TechnicalPrescription`: Receta de campo; posee `- advisorId: Long`, `- diagnosis: String`, `- correctiveTreatment: String`, `- dosage: String` y `- isApplied: Boolean`, exponiendo `+ markAsApplied(): void`.
 
-* **Adaptadores de Integración (`SatelliteClientAdapter`, `WeatherClientAdapter`, `TwilioNotificationAdapter`):**
-    * `SatelliteClientAdapter`: Descarga bandas ópticas multiespectrales B4, B8 y B8A desde la API de Sentinel-2.
-    * `WeatherClientAdapter`: Consume alertas climáticas y pronósticos de heladas de SENAMHI.
-    * `TwilioNotificationAdapter`: Remite notificaciones de emergencia mediante SMS y WhatsApp a terminales de agricultores en zonas con baja conectividad.
+* **Componentes de Integración y Transformación (`SatelliteClientAssembler`, `WeatherClientAssembler`, `TwilioNotificationAssembler`):**
+    * `SatelliteClientAssembler`: Descarga bandas ópticas multiespectrales B4, B8 y B8A desde Sentinel-2 y ejecuta `+ toVegetationAnalysis(tileData: byte[]): VegetationAnalysis`.
+    * `WeatherClientAssembler`: Consume alertas meteorológicas y heladas de SENAMHI, traduciéndolas mediante `+ toAgroclimaticAlert(rawWeatherAlert: String): AgroclimaticAlert`.
+    * `TwilioNotificationAssembler`: Serializa la alerta en una carga útil de texto con `+ toSmsPayload(alert: AgroclimaticAlert): String` y despacha el mensaje SMS/WhatsApp a los productores.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`VegetationAnalysis` "1" *-- "1" `NdviReading` y `NdwiReading`):** Los índices satelitales son inseparables del informe espectral.
 * **Composición (`VegetationAnalysis` "1" *-- "0..*" `AgroclimaticAlert` y `TechnicalPrescription`):** El análisis de una fecha puede generar múltiples alertas y albergar varias prescripciones correctivas.
-* **Dependencias:** `VegetationAnalysisServiceImpl` consume los adaptadores satelitales, meteorológicos y de mensajería para orquestar la ingesta y respuesta agronómica.
+* **Dependencias:** `VegetationAnalysisServiceImpl` consume los ensambladores satelitales, meteorológicos y de mensajería para orquestar la ingesta y respuesta agronómica.
 
 ---
 
@@ -1091,18 +1120,22 @@ Modela la contabilidad analítica de costos agrícolas, soportando la sincroniza
         * `+ calculateBreakeven(): BreakevenPrice`: Ejecuta la fórmula financiera dividiendo el total invertido entre el volumen cosechado.
 
 * **`ExpenseEntry` (Entity) y `ExpenseCategory` (Enumeration):**
-  Modela cada egreso operativo. Contiene `- id: Long`, `- category: ExpenseCategory`, `- concept: String`, `- expenseDate: LocalDate`, `- amount: Money` y `- isOfflineSync: Boolean`. `ExpenseCategory` clasifica el gasto en `AGROCHEMICALS` (fertilizantes y plaguicidas), `LABOR_PAYROLL` (jornales de campo), `FREIGHT_TRANSPORT` (flete rural) o `MACHINERY_SERVICES` (alquiler de tractor o despulpadoras).
+  Modela cada egreso operativo. Contiene `- id: Long`, `- category: ExpenseCategory`, `- concept: String`, `- expenseDate: LocalDate`, `- amount: Money` y `- isOfflineSync: Boolean`. `ExpenseCategory` clasifica el gasto en `AGROCHEMICALS` (fertilizantes y plaguicidas), `LABOR_PAYROLL` (jornales de campo), `FREIGHT_TRANSPORT` (flete rural) o `MACHINERY_SERVICES` (alquiler de maquinaria).
 
 * **`BreakevenPrice` (Value Object):**
   Almacena de forma inmutable el resultado del costeo financiero mediante `- unitCostPerBag: BigDecimal` y `- suggestedSalePrice: BigDecimal` (precio con margen de utilidad proyectado).
 
+* **`ExpenseResourceAssembler` (Assembler / Interface Layer):**
+  Transformador de presentación desacoplado. Expone `+ toResourceFromEntity(entity: ExpenseEntry): ExpenseResource` y `+ toEntityFromResource(resource: AddExpenseResource): ExpenseEntry` para evitar que las entidades contables internas queden expuestas directamente sobre la red HTTP.
+
 * **`LotFinancialLedgerRepository`, `LotFinancialLedgerService` y `CostController`:**
-  El repositorio permite la consulta mediante `+ findByPlotIdAndCampaignYear(plotId: Long, year: Integer)`. El servicio orquesta `+ recordExpense()`, `+ syncOfflineLedger()` y `+ computeBreakeven()`. El controlador REST expone los endpoints en `/api/v1/finances`.
+  El repositorio permite la consulta mediante `+ findByPlotIdAndCampaignYear(plotId: Long, year: Integer)`. El servicio orquesta `+ recordExpense()`, `+ syncOfflineLedger()` y `+ computeBreakeven()`. El controlador REST expone los endpoints en `/api/v1/finances` e inyecta `ExpenseResourceAssembler`.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`LotFinancialLedger` "1" *-- "1..*" `ExpenseEntry`):** Un libro contable se compone necesariamente de uno o más asientos de egreso.
 * **Composición (`LotFinancialLedger` *-- "1" `Money` y `0..1` `BreakevenPrice`):** El balance acumulado y el punto de equilibrio son partes integrales del estado del libro contable.
 * **Asociación dirigida (`ExpenseEntry` --> "1" `ExpenseCategory`):** Todo asiento está unívocamente tipificado por una categoría operativa.
+* **Dependencias:** `CostController` utiliza `LotFinancialLedgerService` y `ExpenseResourceAssembler` para procesar y presentar los asientos contables.
 
 ---
 
@@ -1139,13 +1172,13 @@ Este contexto delimita el pesaje formal de acopio, la graduación física de tub
 * **`QualityCertificate` (Value Object):**
   Encapsula la acreditación inmutable mediante `- certificateCode: String`, `- digitalSignatureHash: String` (código hash SHA-256 generado sobre los atributos del lote), `- publicVerificationUrl: String` y `- issuedAt: LocalDateTime`.
 
-* **`PdfQrGeneratorAdapter` (Outbound Infrastructure Adapter):**
-  Generador técnico que sintetiza el reporte formal en un arreglo binario `byte[]` en formato PDF e incrusta el código QR direccionado a la URL pública de validación.
+* **`PdfQrGeneratorAssembler` (Infrastructure Layer):**
+  Componente encargado del ensamblado técnico de comprobantes. Ejecuta `+ generateQualityReportPdf(batch: HarvestBatch): byte[]` para compilar el reporte formal en PDF y `+ createQrCodePng(publicUrl: String): byte[]` para renderizar la matriz visual del código QR auditable.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`HarvestBatch` "1" *-- "0..1" `CoffeeCuppingSession` / `PotatoCaliberGrading`):** La evaluación técnica depende del tipo botánico del cultivo cosechado en la parcela.
 * **Composición (`HarvestBatch` "1" *-- "0..1" `QualityCertificate`):** El certificado digital se expide únicamente tras concluir el pesaje y la calificación técnica.
-* **Dependencias:** `HarvestBatchServiceImpl` orquesta el agregado y delega en `PdfQrGeneratorAdapter` la construcción de los artefactos visuales de verificación.
+* **Dependencias:** `HarvestBatchServiceImpl` orquesta el agregado y delega en `PdfQrGeneratorAssembler` la construcción de los artefactos visuales de verificación.
 
 ---
 
@@ -1168,7 +1201,7 @@ Gobierna la publicación en catálogo de los lotes certificados, la recepción d
         * `- netMargin: NetMargin`: Margen de ganancia neta consolidado.
         * `- offers: List<PurchaseOffer>`: Lista de propuestas de compra recibidas.
     * **Métodos públicos:**
-        * `+ publishLot(): void`: Transiciona el estado a publicado en el catálogo mayorista.
+        * `+ publishLot(): void`: Transiciona el estado a publicado en el catálogo mayorista tras verificar el punto de equilibrio.
         * `+ receiveOffer(offer: PurchaseOffer): void`: Añade una propuesta de compra a la negociación.
         * `+ acceptOfferAndLiquidate(offerId: Long, productionCost: Money): void`: Acepta la oferta seleccionada, calcula el margen neto resultante y cambia el estado a liquidado (`LIQUIDATED`).
 
@@ -1179,14 +1212,17 @@ Gobierna la publicación en catálogo de los lotes certificados, la recepción d
     * `SettlementStatus`: Máquina de estados de la venta: `DRAFT`, `PUBLISHED`, `OFFER_RECEIVED`, `ACCEPTED` y `LIQUIDATED`.
     * `NetMargin`: Objeto inmutable que almacena `- netProfitAmount: BigDecimal` y `- marginPercentage: Double`, garantizando que la liquidación visualice la rentabilidad final obtenida.
 
+* **`SettlementResourceAssembler` (Assembler / Interface Layer):**
+  Traduce las peticiones comerciales entre la web y el dominio. Implementa `+ toResourceFromEntity(entity: CommercialSettlement): SettlementResource` y `+ toEntityFromResource(resource: PublishLotResource): CommercialSettlement`.
+
 * **`CommercialSettlementRepository`, `CommercialSettlementService` y `SettlementController`:**
-  El repositorio declara `+ findByHarvestBatchId(batchId: Long): Optional<CommercialSettlement>`. El servicio orquesta `+ publishCertifiedLot()`, `+ submitBidOffer()` y `+ settleCommercialSale()`. El controlador REST expone los endpoints bajo `/api/v1/settlements`.
+  El repositorio declara `+ findByHarvestBatchId(batchId: Long): Optional<CommercialSettlement>`. El servicio orquesta `+ publishCertifiedLot(cmd: PublishLotCommand): Long`, `+ submitBidOffer()` y `+ settleCommercialSale()`. El controlador REST expone los endpoints bajo `/api/v1/settlements` e inyecta `SettlementResourceAssembler`.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`CommercialSettlement` "1" *-- "0..*" `PurchaseOffer`):** Un acuerdo comercial puede recibir múltiples ofertas mayoristas en competencia (`0..*`).
 * **Composición (`CommercialSettlement` *-- "1" `Money` y `0..1` `NetMargin`):** El precio base y el margen neto final son parte constituyente del agregado.
 * **Asociación dirigida (`CommercialSettlement` --> "1" `SettlementStatus`):** El ciclo de vida de la comercialización está regido por la enumeración de estados.
-* **Dependencias:** `SettlementController` utiliza `CommercialSettlementService`, el cual opera sobre el agregado `CommercialSettlement` y persiste su estado mediante `CommercialSettlementRepository`.lSettlementRepository` (Domain Repository):** Persiste los contratos y acuerdos transaccionales en la base de datos relacional.
+* **Dependencias:** `SettlementController` utiliza `CommercialSettlementService` y `SettlementResourceAssembler`, el cual opera sobre el agregado `CommercialSettlement` y persiste su estado mediante `CommercialSettlementRepository`.
 
 ---
 
