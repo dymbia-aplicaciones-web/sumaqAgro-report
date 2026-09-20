@@ -741,10 +741,71 @@ Flujo de acceso e identificación institucional que permite a agricultores y ase
 * **Sistemas de Rotulado (*Labeling Systems*):** Las etiquetas adoptadas derivan del Glosario de Lenguaje Ubicuo formalizado para el proyecto ("Mi Parcela", "Salud Foliar", "Insumos", "Jornales", "Punto de Equilibrio", "Certificado QR"), empleando terminología precisa y familiar para la comunidad agrícola.
 * **Sistemas de Búsqueda y Filtrado (*Searching Systems*):** Se integraron barras de búsqueda con autocompletado y selectores rápidos horizontales (*chips*) que permiten segmentar notificaciones y lotes históricos por fecha, nivel de riesgo o campaña fenológica activa.
 
-
 ### 4.4.2. Web Applications Wireflow Diagrams
 ### 4.4.3. Web Applications Mock-ups
 ### 4.4.4. Web Applications User Flow Diagrams
+### 4.5. Web Applications Prototyping
+
+En esta sección se presentan y sustentan los prototipos interactivos de alta fidelidad (*high-fidelity*) desarrollados para la plataforma **SumaqAgro**, abarcando las experiencias de usuario para **Desktop Web Browser** y **Mobile Web Browser**. La interactividad simula las rutas principales (*happy paths*) y rutas alternativas formalizadas en los diagramas de flujos de usuario (*User Flow Diagrams*).
+
+---
+
+#### 1. Criterios para las Decisiones de Interacción
+
+Las decisiones de interacción se fundamentan en los diferentes entornos de uso y perfiles operacionales de los tres segmentos de usuario de la plataforma:
+
+* **Contexto de Uso Diferenciado:** La versión Desktop se diseñó para la gestión administrativa, auditoría y análisis en oficina (empleada por directivos de cooperativas y agrónomos frente a monitores estándar), mientras que la versión Mobile Web se optimizó para la operación táctil en campo bajo condiciones de alta luminosidad y conectividad intermitente (productores agrícolas y técnicos en terreno).
+* **Tipos de Interacciones Seleccionadas:**
+  * *En Desktop:* Se implementaron interacciones basadas en cursor (*hover states*, menús desplegables contextuales, tablas dinámicas y clics directos sobre gráficos multiespectrales), agilizando el acceso a herramientas de supervisión masiva.
+  * *En Mobile:* Se restringieron los eventos a pulsaciones simples (*on tap*), evitando gestos complejos propensos a error en campo. Se incorporaron microinteracciones con retroalimentación visual inmediata (transiciones *Instant* y *Dissolve* de 200 ms) en selectores de lote, botones de acción flotante (FAB) y filtros rápidos (*chips*).
+* **Simulación de Comportamiento Desconectado (*Offline-First*):** En la experiencia móvil, las interacciones en formularios de bitácora y egresos simulan la persistencia local inmediata mediante avisos de confirmación en pantalla, actualizando la cabecera con el estado de cola de sincronización diferida hasta simular la reconexión a la red.
+
+---
+
+#### 2. Relación con la Arquitectura de Información
+
+La navegación interactiva traduce de manera directa las decisiones de Arquitectura de Información establecidas en el proyecto:
+
+* **Sistema de Navegación (*Navigation System*):**
+  * *Desktop:* Mantiene un menú lateral fijo (*sidebar*) con navegación jerárquica permanente, permitiendo alternar entre el catálogo de parcelas, módulo contable y reportes consolidados sin perder contexto de trabajo.
+  * *Mobile:* La navegación global se traslada íntegramente a una barra inferior (*Bottom Navigation Bar*) con 5 destinos clave (Inicio, Monitoreo, Finanzas, Alertas y Perfil) dentro de la zona ergonómica del pulgar (*thumb zone*), combinada con navegación jerárquica mediante botones de retroceso en el *AppBar*.
+* **Sistema de Organización (*Organization System*):** Ambas interfaces aplican una organización jerárquica orientada a tareas. El punto de entrada es un panel de control consolidado (*Dashboard* con indicadores de salud vegetal NDVI y costos), desde el cual las tarjetas (*cards*) funcionan como disparadores interactivos para profundizar en vistas de detalle analítico o formularios transaccionales.
+* **Sistema de Rotulado (*Labeling System*):** La rotulación interactiva mantiene una correspondencia biunívoca con el Lenguaje Ubicuo del dominio ("Mi Parcela", "Salud Foliar", "Insumos", "Jornales", "Punto de Equilibrio", "Certificado QR"), garantizando que cada botón o enlace anticipe con exactitud el resultado de la acción.
+* **Sistema de Búsqueda y Filtrado (*Searching System*):** Las vistas de alertas y bitácoras contables integran selectores horizontales (*chips*) e interacciones de filtrado instantáneo por severidad, fecha o campaña fenológica, reduciendo la fricción en la localización de anomalías agronómicas.
+
+---
+
+#### 3. Prototipo y Demostración en Video: Desktop Web Browser
+
+* **Enlace al Prototipo Interactivo en Figma (Desktop):**  
+  [Visualizar Prototipo Desktop SumaqAgro en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=7-55&t=zJ6zOatR2rSsKo7x-1)
+
+##### Demostración Audiovisual en Microsoft Stream (Desktop)
+
+* **Plataforma de Alojamiento:** Microsoft Stream 
+* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-<7742>-dymbia-prototype-desktop-sprint-1.mp4`
+* **Duración:** 04:15 minutos
+* **Enlace de Reproducción:** [Reproducir Demostración Desktop en Microsoft Stream](https://web.microsoftstream.com/video/enlace-video-desktop)
+
+![Captura de Reproducción del Video Desktop en Microsoft Stream](.../assets/img/chapter-IV/applications-design/prototypes/video-prototype-desktop.png)
+
+*Figura 4.5.1: Cuadro representativo de la sesión en video demostrando la navegación del prototipo Desktop en Microsoft Stream.*
+
+---
+
+#### 4. Prototipo y Demostración en Video: Mobile Web Browser
+
+* **Enlace al Prototipo Interactivo en Figma (Mobile):**  
+  [Visualizar Prototipo Mobile SumaqAgro en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=7-56&t=zJ6zOatR2rSsKo7x-1)
+
+##### Demostración Audiovisual en Microsoft Stream (Mobile)
+
+* **Plataforma de Alojamiento:** Microsoft Stream 
+* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-<7742>-dymbia-prototype-mobile-sprint-1.mp4`
+* **Duración:** 04:30 minutos
+* **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://web.microsoftstream.com/video/enlace-video-mobile)
+
+![Captura de Reproducción del Video Mobile en Microsoft Stream](.../assets/img/chapter-IV/applications-design/prototypes/video-prototype-mobile.png)
 
 ## 4.5. Web Applications Prototyping
 
