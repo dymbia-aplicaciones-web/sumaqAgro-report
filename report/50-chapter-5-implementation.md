@@ -528,6 +528,53 @@ A continuación, se detalla la evidencia de los commits integrados en el reposit
 
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
+
+En esta sección se presenta la evidencia visual y funcional de los productos de software desarrollados y desplegados durante el **Sprint 1**. El equipo Dymbia logró construir exitosamente la primera versión del **Landing Page** de SumaqAgro, cumpliendo con los criterios de aceptación establecidos, aplicando un diseño responsivo adaptable a múltiples dispositivos (Desktop y Mobile), e integrando soporte de internacionalización (i18n) para los idiomas español e inglés.
+
+A continuación, se adjuntan las capturas de pantalla de las vistas principales implementadas, demostrando la alta fidelidad de la interfaz construida respecto a los *mock-ups* originales definidos en la etapa de diseño:
+
+**Evidencia Visual: Capturas de Pantalla (Desktop y Mobile)** 
+
+**Desktop View:**
+
+![landinpage-1](../assets/img/chapter-V/landing-page/landingpage-1.png)
+![landinpage-2](../assets/img/chapter-V/landing-page/landingpage-2.png)
+![landinpage-3](../assets/img/chapter-V/landing-page/landingpage-3.png)
+![landinpage-4](../assets/img/chapter-V/landing-page/landingpage-4.png)
+![landinpage-5](../assets/img/chapter-V/landing-page/landingpage-5.png)
+![landinpage-6](../assets/img/chapter-V/landing-page/landingpage-6.png)
+![landinpage-7](../assets/img/chapter-V/landing-page/landingpage-7.png)
+![landinpage-8](../assets/img/chapter-V/landing-page/landingpage-8.png)
+![landinpage-9](../assets/img/chapter-V/landing-page/landingpage-9.png)
+
+**Mobile View:**
+
+![mobile-1](../assets/img/chapter-V/landing-page/mobile-1.png)
+![mobile-2](../assets/img/chapter-V/landing-page/mobile-2.png)
+![mobile-3](../assets/img/chapter-V/landing-page/mobile-3.png)
+![mobile-4](../assets/img/chapter-V/landing-page/mobile-4.png)
+![mobile-5](../assets/img/chapter-V/landing-page/mobile-5.png)
+![mobile-6](../assets/img/chapter-V/landing-page/mobile-6.png)
+![mobile-7](../assets/img/chapter-V/landing-page/mobile-7.png)
+![mobile-8](../assets/img/chapter-V/landing-page/mobile-8.png)
+![mobile-9](../assets/img/chapter-V/landing-page/mobile-9.png)
+
+
+**Evidencia Funcional: Video Demostrativo de Navegación**
+Para evidenciar el correcto comportamiento de los componentes interactivos, el menú de navegación fijo (*sticky navbar*), el desplazamiento suave (*smooth scroll*) hacia las anclas de las secciones y el intercambio dinámico de idioma, se ha registrado la navegación real del producto operando en su entorno de producción.
+
+* **Vista Previa del Video:**
+  *(Inserta aquí un screenshot/captura de un cuadro de tu video reproduciéndose)*
+
+* **Enlace de Reproducción (Microsoft Stream):**
+  [Video de Navegación del Landing Page - Sprint 1](INSERTA_TU_LINK_DE_STREAM_AQUI)
+
+
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+Durante el presente Sprint no se elaboró documentación de servicios web específicos, debido a que el alcance y los esfuerzos del equipo se concentraron de manera exclusiva en el diseño, desarrollo y despliegue continuo del Landing Page institucional.
+
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+
 #### 5.2.1.8. Team Collaboration Insights during Sprint
