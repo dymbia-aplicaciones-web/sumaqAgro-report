@@ -18,3 +18,18 @@ Durante el desarrollo del proyecto **SumaqAgro**, la validación mediante el enf
 
 - La exportación de fichas PDF y la trazabilidad vía código QR demostraron ser piezas clave para la estandarización de la producción y la certificación de calidad en la cadena de valor agrícola.
 
+**Recomendaciones**
+
+- Dar máxima prioridad en la entrega inicial al visor satelital NDVI, al módulo de costos por lote y al canal de recetas fitosanitarias, al concentrar el mayor valor percibido por los usuarios.
+
+- Incorporar dobles validaciones en la firma de prescripciones agronómicas y emisión de certificados QR para asegurar la trazabilidad auditable de los insumos aplicados en el cultivo.
+
+- Desplegar un programa de acompañamiento y capacitación asistida para facilitar la migración progresiva de las cooperativas desde cuadernos de campo físicos hacia la plataforma digital.
+
+- Fortalecer la arquitectura de sincronización *offline* optimizando el almacenamiento local y las colas de datos para garantizar la integridad de la información al recuperar señal en áreas rurales.
+
+- Implementar la estructura comercial por niveles (Plan Semilla, Cooperativa Pro y Plan Asesor Técnico) para impulsar la adopción progresiva dentro del mercado agrario nacional.
+
+- Desarrollar una prueba piloto en condiciones de campo reales durante una campaña corta para evaluar en terreno los tiempos de respuesta ante emergencias fitosanitarias y la tasa de adopción de la herramienta.
+
+- Mantener ciclos de prueba sistemáticos en cada actualización evaluando la tasa de finalización de tareas e involucrando a compradores finales en la validación de los certificados de calidad QR.
