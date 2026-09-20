@@ -634,6 +634,16 @@ Esta sección presenta y sustenta la arquitectura de interacción y el diseño v
 
 **Aplicación de Principios de Diseño y Arquitectura de Información:** Para la conceptualización de este Wireframe (*Desktop Web Browser*), nos centramos en una Arquitectura de Información basada en el patrón de escaneo en "F" (*F-Pattern*), disponiendo la barra lateral (*Sidebar*) a la izquierda para organizar jerárquicamente los módulos de operación agrícola y configuración del sistema sin perder el contexto de navegación, mientras que la cabecera superior centraliza la búsqueda rápida y los indicadores de estado global (conectividad, notificaciones y perfil). Aplicamos el principio de Región Común y Proximidad de la Gestalt agrupando los datos clave en tres tarjetas de indicadores (*KPI Cards*) de alto nivel para supervisar la salud foliar, el gasto acumulado y el punto de equilibrio financiero, conectándolos directamente con las representaciones analíticas inferiores (gráfico de evolución vegetal NDVI y distribución circular de costos). A nivel de diseño inclusivo y accesibilidad (*a11y*), garantizamos áreas táctiles mínimas de 48 px en los botones de acción rápida (*View Satellite Map*, *View My Expenses* y el CTA primario *View All My Lots*), reforzando una jerarquía visual clara mediante contenedores bien delimitados y contraste tipográfico que agilizan la lectura y toma de decisiones del productor en campo.
 
+A continuación, se presentan los wireframes principales de la aplicación web correspondientes:
+
+**«Mi Plots»**: en la vista inicial (*Dashboard*), la interfaz organiza la supervisión del cultivo mediante una fila de tres tarjetas métricas (*KPI Cards*) de alto nivel que sintetizan la salud foliar (NDVI), la inversión acumulada y el punto de equilibrio financiero, complementadas en la sección inferior por un gráfico de barras para la evolución temporal del vigor vegetal y un gráfico circular (*Donut Chart*) para el desglose porcentual de costos operativos. Seguidamente, el flujo de interacción transiciona hacia la vista de gestión de parcelas al interactuar con el llamado a la acción superior, donde el usuario accede a una retícula de administración con los cupos disponibles de su plan, permitiéndole supervisar el estado de sus lotes activos o incorporar un nuevo predio agrícola mediante un formulario asistido de georreferenciación y delimitación cartográfica por coordenadas GPS.
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plot.png"  width="592px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plot-config.png"  width="592px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-mi-new-plot-map.png"  width="592px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-new-plot-forms.png"  width="592px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-new-plot-modal.png"  width="592px" height="auto"/>
+</p>
 
 
 
