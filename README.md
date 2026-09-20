@@ -1,6 +1,65 @@
-# Dymbia - Project Report
+# SumaqAgro — Project Documentation Report
 
-Repositorio oficial del informe de proyecto del curso **1ASI0729 Desarrollo de Aplicaciones Open Source**.
+[![Build Status](https://img.shields.io/badge/Docs--as--Code-Pandoc%20%7C%20XeLaTeX-blue.svg)](Makefile)
+[![Course](https://img.shields.io/badge/UPC-1ASI0729%20Open%20Source-red.svg)](https://www.upc.edu.pe/)
+[![Milestone](https://img.shields.io/badge/Delivery-AV1%20Sprint%20Review-brightgreen.svg)](#tabla-de-contenidos---entregable-av1)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE.md)
+
+Repositorio oficial para la gestión, redacción colaborativa y compilación secuencial del **Informe de Proyecto Final** de la startup **Dymbia** y su plataforma SaaS **SumaqAgro**, desarrollado bajo el enfoque **Docs-as-Code**, GitFlow y Conventional Commits para el curso *1ASI0729 Desarrollo de Aplicaciones Open Source* (Ciclo 2026-20).
+
+---
+
+## Enlaces Rápidos del Proyecto
+
+- **Repositorio de Código del Landing Page:** [Landing Page - SumaqAgro](https://github.com/dymbia-opensource/sumaqAgro-landing-page)
+- **Enlace al Tablero del Product Backlog (Jira):** [Tablero Jira - SumaqAgro](https://sumaq-agro.atlassian.net/jira/software/c/projects/DSB/boards/2/backlog?epics=visible)
+- **Espacio de Trabajo Event Storming (Miro):** [Tablero de Event Storming en Miro](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHVPRUdrWUJzeGVtb1g5cE9UeGFKdjJBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=126689221129)
+
+
+---
+
+## Información Académica
+
+- **Institución:** Universidad Peruana de Ciencias Aplicadas (UPC)
+- **Facultad:** Facultad de Ingeniería
+- **Carrera:** Ingeniería de Software
+- **Curso:** 1ASI0729 - Desarrollo de Aplicaciones Open Source
+- **Ciclo Académico:** 2026-20
+- **Docente:** Velasquez Nuñez, Angel Augusto
+- **Fecha de Entrega:** Mayo, 2026 (Semana 4 - Hito AV1)
+
+---
+
+## Descripción del Proyecto
+
+**Nombre de la Startup:** Dymbia  
+**Nombre del Producto:** SumaqAgro
+
+**Dymbia** es una startup peruana de base tecnológica enfocada en cerrar la brecha de digitalización y tecnificación en el sector agroalimentario nacional, orientándose prioritariamente a pequeños y medianos productores independientes, cooperativas agrarias y asesores técnicos en las cadenas de valor de **papa andina** y **café de especialidad**.
+
+### Problemática Abordada
+- **Vulnerabilidad a Eventos Climáticos Extremos:** Dependencia del régimen de secano en la sierra y afectaciones por heladas y plagas que provocan pérdidas productivas de hasta un 40%.
+- **Informalidad Contable Rural:** Falta de registro de compras y jornales, impidiendo determinar el costo unitario de producción por saco o quintal.
+- **Asimetría Comercial y Falta de Trazabilidad:** Carencia de mecanismos accesibles para acreditar calibres oficiales o catación SCA ante compradores mayoristas.
+
+### Capacidades Centrales
+1. **Monitoreo Satelital sin Hardware:** Telemetría óptica Sentinel-2 para calcular vigor foliar (NDVI) y balance hídrico (NDWI) sin instalar sensores en tierra.
+2. **Bitácora Contable y Punto de Equilibrio:** Registro financiero ágil (con soporte offline) que calcula el precio mínimo de venta para proteger la inversión.
+3. **Certificación Digital con QR:** Generación de constancias PDF y sellos QR públicos auditables para trazabilidad de cosechas.
+
+---
+
+## Arquitectura de la Solución y Stack Tecnológico
+
+* **Domain-Driven Design (DDD):** Descomposición estratégica en 7 Bounded Contexts y modelado táctico en Agregados, Entidades y Objetos de Valor (Value Objects).
+* **Backend RESTful (Spring Boot 3 / Java 21):** Arquitectura en capas desacopladas (Interfaces, Aplicación, Dominio, Infraestructura) con persistencia Spring Data JPA sobre MySQL 8.0.
+* **Web Application (Angular 18 SPA):** Interfaz reactiva con Angular Material y arquitectura *Offline-First* (IndexedDB y Service Workers) para operar en parcelas sin señal.
+* **Landing Page:** Sitio web estático en HTML5, CSS3 y JavaScript vanilla optimizado para redes móviles rurales.
+* **Modelo C4 (Diagrams-as-Code):** Documentación arquitectónica de Contexto, Contenedores y Componentes formalizada mediante Structurizr DSL.
+
+> **Nota de Alcance:** El proyecto abarca exclusivamente software en la nube; no contempla sensores físicos ni dispositivos IoT de campo.
+
+---
 
 ## Tabla de Contenidos - Entregable AV1
 
@@ -89,3 +148,48 @@ Repositorio oficial del informe de proyecto del curso **1ASI0729 Desarrollo de A
   * [Anexo A: Student Outcome 3](annexes/annex-a-student-outcome.md)
   * [Anexo B: Performance Report (Team Leader)](annexes/annex-b-performance-report.md)
   * [Anexo C: Video About-the-Product & Sustentación](annexes/annex-c-videos.md)
+
+---
+
+## Arquitectura de Directorios y Nomenclatura
+
+El repositorio implementa la estructura modular de directorios para compilación con Pandoc y XeLaTeX:
+
+```text
+sumaqAgro-report/
+├── config/
+│   └── build.yaml                       # Configuración de compilación Pandoc / XeLaTeX
+├── report/                              # Directorio raíz del informe modular
+│   ├── front-matter/                    # Prefijos 01-09: Carátula, versiones y Student Outcome
+│   │   ├── 01-caratula.md
+│   │   ├── 02-version-history.md
+│   │   ├── 03-collaboration.md
+│   │   └── 04-student-outcome.md
+│   ├── 10-chapter-1-intro.md            # Prefijos 10-89: Capítulos principales
+│   ├── 20-chapter-2-requirements.md
+│   ├── 30-chapter-3-specification.md
+│   ├── 40-chapter-4-design.md
+│   ├── 50-chapter-5-implementation.md
+│   ├── 60-conclusions.md
+│   ├── 99-bibliography.md               # Prefijo 99: Referencias en formato APA
+│   ├── annexes/                         # Anexos aislados dentro de report/
+│   │   ├── annex-a-student-outcome.md
+│   │   ├── annex-b-performance-report.md
+│   │   └── annex-c-videos.md
+│   └── assets/                          # Imágenes, diagramas y recursos
+│       └── img/
+│           ├── c4/
+│           ├── chapter-II/
+│           ├── chapter-III/
+│           ├── chapter-IV/
+│           ├── chapter-V/
+│           ├── class-diagrams/
+│           ├── event-storming/
+│           ├── interview/
+│           ├── team/
+│           ├── lean-ux-canvas.png
+│           └── upc-logo.png
+├── .gitignore
+├── Makefile                             # Automatización de compilación (make pdf)
+├── metadata.yaml                        # Variables globales del reporte académico
+└── README.md                            # Portada digital e índice navegable
