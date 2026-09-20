@@ -791,11 +791,20 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 </p>
 
 
-
 ### CERTIFICATE
 
 <p align="center">
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-certificate.png"  width="600px" height="auto"/>
+</p>
+
+
+### AGRICULTURAL ALERTS
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-home.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-details.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-task.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-modal-check.png"  width="600px" height="auto"/>
+</p>
 </p>
 
 
