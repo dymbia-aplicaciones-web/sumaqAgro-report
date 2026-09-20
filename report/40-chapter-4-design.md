@@ -771,9 +771,54 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 </p>
 
 ### CROP HEALTH
+
 <p align="center">
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-our-plots.png"  width="600px" height="auto"/>
 </p>
+
+
+### FINANCES
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-finances.png"  width="600px" height="auto"/>
+</p>
+
+
+### CONSULT
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-finances.png"  width="600px" height="auto"/>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
