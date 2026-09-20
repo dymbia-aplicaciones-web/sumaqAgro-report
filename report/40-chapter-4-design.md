@@ -300,7 +300,7 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 ![event-storming-step-6-policies.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-6-policies.jpg)
 * El paso 6 define las reglas de negocio reactivas, políticas y automatizaciones que se desencadenan automáticamente tras la ocurrencia de uno o más eventos de dominio.
 #### Step 7: Read Models
-![event-storming-step 7-Readffiodels-refactorizado.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step 7-Readffiodels-refactorizado.jpg)
+![event-storming-step-7-Readffiodels-refactorizado.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-7-Readffiodels-refactorizado.jpg)
 * El paso 7 proyecta los modelos de lectura y vistas de datos necesarios para que los actores e interfaces puedan tomar decisiones informadas antes de ejecutar un comando.
 
 #### Step 8: Commands
