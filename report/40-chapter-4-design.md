@@ -694,8 +694,7 @@ A continuación, se presentan los wireframes principales de la aplicación web c
 
 ### 4.4.3. Web Applications Mock-ups
 
-
-
+En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
 
 
 
