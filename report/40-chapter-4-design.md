@@ -766,6 +766,18 @@ El flujo de interacción se inicia en el panel principal (dashboard) del agricul
   <img src="../assets/img/chapter-IV/wireflows/ug-4.png"  width="600px" height="auto"/>
 </p>
 
+**User Goal 5:** Usuario desea revisar alertas agrícolas y finalizar su plan de acción
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-5-resumido.png" width="600px" height="auto"/>
+</p>
+
+El flujo de interacción comienza en el módulo «Alertas Agrícolas» (Avisos y Riesgos Notificados), donde el usuario identifica un riesgo o aviso y hace clic en el botón «Medidas Detalladas»; esto lo redirige a la vista detallada del plan de acción donde revisa los indicadores y las recomendaciones sugeridas; tras ejecutar las tareas preventivas, presiona el botón «Finalizar Plan de Acción», lo que despliega una ventana modal con el informe de ejecución confirmado y un resumen visual del estado final de las medidas aplicadas.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-5.png" width="600px" height="auto"/>
+</p>
+
 
 
 
