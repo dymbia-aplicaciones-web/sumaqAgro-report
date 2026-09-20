@@ -14,7 +14,7 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 * **Propósito en el proyecto:** Gestión centralizada del Product Backlog, planificación y seguimiento de los Sprints, asignación de tareas (*work-items*), control de velocidad del equipo y visualización del flujo de trabajo en tableros Kanban/Scrum.
 * **Ruta de Referencia:** [https://www.atlassian.com/software/jira](https://www.atlassian.com/software/jira)
 
-![Jira Software](../assets/img/chapter-V/img-jira.png)
+![Jira Software](assets/img/chapter-V/img-jira.png)
 
 ---
 
@@ -25,14 +25,14 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 * **Propósito en el proyecto:** Modelado y documentación visual de los artefactos de investigación del usuario. Se utiliza para la elaboración de los *User Personas* (productores agrícolas, directivos de cooperativa y asesores agrónomos), *Empathy Maps*, *User Journey Maps* e *Impact Mapping*.
 * **Ruta de Referencia:** [https://uxpressia.com](https://uxpressia.com)
 
-![UXPressia](../assets/img/chapter-V/img-uxpressia.png)
+![UXPressia](assets/img/chapter-V/img-uxpressia.png)
 
 ##### **Miro**
 
 * **Propósito en el proyecto:** Facilitar las sesiones de modelado colaborativo de dominio en tiempo real. Permite la construcción del *Big Picture Event Storming* y el *Design-Level Event Storming*, mapeando eventos de dominio, comandos, agregados y *Bounded Contexts*.
 * **Ruta de Referencia:** [https://miro.com](https://miro.com)
 
-![Miro](../assets/img/chapter-V/img-miro.png)
+![Miro](assets/img/chapter-V/img-miro.png)
 
 ---
 
@@ -43,7 +43,7 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 * **Propósito en el proyecto:** Diseño de la arquitectura de información y experiencia de usuario. Permite la creación de la guía de estilos visuales (*Style Guide*), los *wireframes* de baja fidelidad, los *mockups* de alta fidelidad, los *wireflows* navegables y el prototipo interactivo de la Landing Page y la aplicación web.
 * **Ruta de Referencia:** [https://www.figma.com](https://www.figma.com)
 
-![Figma](../assets/img/chapter-V/img-figma.png)
+![Figma](assets/img/chapter-V/img-figma.png)
 
 ---
 
@@ -54,35 +54,35 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 * **Propósito en el proyecto:** Gestión de control de versiones distribuido (SCM), alojamiento del repositorio central del proyecto, revisión colaborativa de código mediante *Pull Requests*, integración del modelo de ramificación GitFlow y auditoría de *commits*.
 * **Ruta de Referencia:** [https://github.com](https://github.com)
 
-![GitHub](../assets/img/chapter-V/img-github.png)
+![GitHub](assets/img/chapter-V/img-github.png)
 
 ##### **IntelliJ IDEA**
 
 * **Propósito en el proyecto:** Entorno de Desarrollo Integrado (IDE) principal para la programación del backend. Se utiliza para la construcción de los servicios Web RESTful utilizando Java 21, Spring Boot Framework, Spring Data JPA y Spring Security.
 * **Ruta de Descarga:** [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)
 
-![IntelliJ IDEA](../assets/img/chapter-V/img-intellij-idea.png)
+![IntelliJ IDEA](assets/img/chapter-V/img-intellij-idea.png)
 
 ##### **WebStorm**
 
 * **Propósito en el proyecto:** IDE especializado para la implementación del frontend de la plataforma web. Proporciona soporte avanzado para TypeScript, Angular Framework, HTML5, CSS3/SASS y herramientas de depuración de código en el navegador.
 * **Ruta de Descarga:** [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm)
 
-![WebStorm](../assets/img/chapter-V/img-webstorm.png)
+![WebStorm](assets/img/chapter-V/img-webstorm.png)
 
 ##### **DataGrip**
 
 * **Propósito en el proyecto:** Entorno de desarrollo para bases de datos relacionales utilizado para la administración, modelado Entidad-Relación, gestión de esquemas y ejecución de consultas sobre el motor de base de datos MySQL.
 * **Ruta de Descarga:** [https://www.jetbrains.com/datagrip](https://www.jetbrains.com/datagrip)
 
-![DataGrip](../assets/img/chapter-V/img-datagrip.png)
+![DataGrip](assets/img/chapter-V/img-datagrip.png)
 
 ##### **Postman**
 
 * **Propósito en el proyecto:** Cliente API HTTP para la prueba, validación y documentación de las peticiones (`GET`, `POST`, `PUT`, `DELETE`) hacia los endpoints RESTful del backend, permitiendo verificar los códigos de estado HTTP y los objetos JSON de respuesta.
 * **Ruta de Descarga:** [https://www.postman.com/downloads](https://www.postman.com/downloads)
 
-![Postman](../assets/img/chapter-V/img-postman.png)
+![Postman](assets/img/chapter-V/img-postman.png)
 
 #### 5. Software Deployment
 
@@ -91,16 +91,16 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 * **Propósito en el proyecto:** Plataformas de alojamiento en la nube para el despliegue continuo (*Continuous Deployment*) automatizado del frontend estático de la Landing Page, garantizando alta disponibilidad a través de la red Edge global de servidores, certificado SSL/TLS (HTTPS) de renovación automática y tiempos de respuesta optimizados.
 * **Ruta de Referencia:** [https://pages.cloudflare.com](https://pages.cloudflare.com) / [https://pages.github.com](https://pages.github.com)
 
-![Cloudflare Pages](../assets/img/chapter-V/img-cloudflare.png)
+![Cloudflare Pages](assets/img/chapter-V/img-cloudflare.png)
 
-![GitHub Pages](../assets/img/chapter-V/img-github-pages.png)
+![GitHub Pages](assets/img/chapter-V/img-github-pages.png)
 
 ##### **Railway**
 
 * **Propósito en el proyecto:** Infraestructura Cloud PaaS utilizada para el despliegue continuo y alojamiento del backend RESTful desarrollado en Spring Boot, así como el aprovisionamiento del servidor de base de datos relacional MySQL en entorno de producción.
 * **Ruta de Referencia:** [https://railway.app](https://railway.app)
 
-![Railway](../assets/img/chapter-V/img-railway.png)
+![Railway](assets/img/chapter-V/img-railway.png)
 
 ---
 
@@ -111,14 +111,14 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 * **Propósito en el proyecto:** Generación automática de la documentación interactiva de la API RESTful. Permite a los desarrolladores explorar los endpoints, probar llamadas HTTP directamente desde el navegador y consultar los esquemas de petición y respuesta JSON.
 * **Ruta de Referencia:** [https://swagger.io/tools/swagger-ui](https://swagger.io/tools/swagger-ui)
 
-![Swagger UI](../assets/img/chapter-V/img-swagger.png)
+![Swagger UI](assets/img/chapter-V/img-swagger.png)
 
 ##### **Structurizr**
 
 * **Propósito en el proyecto:** Herramienta para el diagramado y documentación de la arquitectura de software bajo el estándar **C4 Model** (Contexto, Contenedores y Componentes), utilizando Structurizr DSL para mantener la arquitectura como código (*Architecture as Code*).
 * **Ruta de Referencia:** [https://structurizr.com](https://structurizr.com)
 
-![Structurizr](../assets/img/chapter-V/img-structurizr.png)
+![Structurizr](assets/img/chapter-V/img-structurizr.png)
 
 ### 5.1.2. Source Code Management
 
@@ -126,7 +126,7 @@ Para garantizar la integridad del código fuente, el trabajo colaborativo eficie
 
 A continuación, se especifican la estructura de la organización en GitHub, las URLs de los repositorios de cada producto digital, el flujo de trabajo con **GitFlow**, el esquema de versionado semántico (**Semantic Versioning**) y el estándar de mensajes mediante **Conventional Commits**.
 
-![GitFlow](../assets/img/chapter-V/img-git-flow.png)
+![GitFlow](assets/img/chapter-V/img-git-flow.png)
 
 ---
 
@@ -343,31 +343,31 @@ El Landing Page funciona como el portal público de presentación e ingreso a la
 
 Se ingresa a la consola de administración de Cloudflare en la sección *Workers &amp; Pages*, donde se visualiza el panel principal de control del proyecto, junto con las métricas de solicitudes y estado del servicio.
 
-![Paso 1](../assets/img/chapter-V/deployment-configuration/step-1.png)
+![Paso 1](assets/img/chapter-V/deployment-configuration/step-1.png)
 
 ##### Paso 2: Inicio del asistente de creación de aplicación
 
 En la cabecera superior del panel de *Workers &amp; Pages*, se selecciona el botón principal **"Create application"** para iniciar el flujo de aprovisionamiento de un nuevo sitio o servicio estático en la nube.
 
-![Paso 2](../assets/img/chapter-V/deployment-configuration/step-2.png)
+![Paso 2](assets/img/chapter-V/deployment-configuration/step-2.png)
 
 ##### Paso 3: Selección del método de integración con repositorio (GitHub)
 
 Dentro de la pantalla de opciones *Make something new*, se elige el método **"Continue with GitHub"**. Esto permite establecer una conexión directa mediante *webhooks* con el repositorio de control de versiones para habilitar la compilación e integración continua (CI/CD).
 
-![Paso 3](../assets/img/chapter-V/deployment-configuration/step-3.png)
+![Paso 3](assets/img/chapter-V/deployment-configuration/step-3.png)
 
 ##### Paso 4: Autenticación y autorización de la organización en GitHub
 
 Se autoriza a la plataforma Cloudflare Pages para acceder a la organización pública de GitHub, otorgando permisos de lectura sobre el código fuente para sincronizar las confirmaciones de cambios (*commits*).
 
-![Paso 4](../assets/img/chapter-V/deployment-configuration/step-4.png)
+![Paso 4](assets/img/chapter-V/deployment-configuration/step-4.png)
 
 ##### Paso 5: Selección del repositorio del Landing Page
 
 En el listado de repositorios vinculados de la organización, se selecciona el proyecto correspondiente al sitio estático: `sumaqAgro-landing-page`. Se confirma la elección presionando el botón **"Begin setup"**.
 
-![Paso 5](../assets/img/chapter-V/deployment-configuration/step-5.png)
+![Paso 5](assets/img/chapter-V/deployment-configuration/step-5.png)
 
 ##### Paso 6: Configuración de parámetros de build y rama de producción
 
@@ -381,19 +381,19 @@ Se configuran los ajustes fundamentales del despliegue:
 
 Se finaliza la configuración haciendo clic en **"Save and Deploy"**.
 
-![Paso 6](../assets/img/chapter-V/deployment-configuration/step-6.png)
+![Paso 6](assets/img/chapter-V/deployment-configuration/step-6.png)
 
 ##### Paso 7: Ejecución del pipeline de compilación y distribución Edge
 
 Cloudflare Pages inicia automáticamente el pipeline de entrega continua: clona el código fuente desde GitHub, valida la estructura de archivos estáticos (HTML/CSS/JS/Assets) y distribuye los artefactos en los más de 300 centros de datos de su red Edge global.
 
-![Paso 7](../assets/img/chapter-V/deployment-configuration/step-7.png) 
+![Paso 7](assets/img/chapter-V/deployment-configuration/step-7.png) 
 
 ##### Paso 8: Confirmación de despliegue exitoso y dominio público HTTPS
 
 Finalmente, se completa el proceso de publicación en producción de forma satisfactoria. Cloudflare genera la URL pública de acceso (`sumaqagro-landing-page.pages.dev`) con certificado SSL/TLS de encriptación automático, forzando la navegación segura mediante `HTTPS://`.
 
-![Paso 8](../assets/img/chapter-V/deployment-configuration/step-8.png)
+![Paso 8](assets/img/chapter-V/deployment-configuration/step-8.png)
 
 * **URL Oficial de Producción:** [https://sumaqagro-landing-page.pages.dev](https://sumaqagro-landing-page.pages.dev)
 
@@ -457,8 +457,8 @@ En esta sección se detalla el **Sprint Backlog** correspondiente al **Sprint 1*
 
 **Tablero de Control del Sprint (Jira Software):**
 
-![Enlace al tablero de Jira de Dymbia](../assets/img/chapter-V/sprint-1/sprint-11.png)
-![Enlace al tablero de Jira de Dymbia](../assets/img/chapter-V/sprint-1/sprint-1.png)
+![Enlace al tablero de Jira de Dymbia](assets/img/chapter-V/sprint-1/sprint-11.png)
+![Enlace al tablero de Jira de Dymbia](assets/img/chapter-V/sprint-1/sprint-1.png)
 
 
 **URL Público del Tablero:**
@@ -537,34 +537,34 @@ A continuación, se adjuntan las capturas de pantalla de las vistas principales 
 
 **Desktop View:**
 
-![landinpage-1](../assets/img/chapter-V/landing-page/landingpage-1.png)
-![landinpage-2](../assets/img/chapter-V/landing-page/landingpage-2.png)
-![landinpage-3](../assets/img/chapter-V/landing-page/landingpage-3.png)
-![landinpage-4](../assets/img/chapter-V/landing-page/landingpage-4.png)
-![landinpage-5](../assets/img/chapter-V/landing-page/landingpage-5.png)
-![landinpage-6](../assets/img/chapter-V/landing-page/landingpage-6.png)
-![landinpage-7](../assets/img/chapter-V/landing-page/landingpage-7.png)
-![landinpage-8](../assets/img/chapter-V/landing-page/landingpage-8.png)
-![landinpage-9](../assets/img/chapter-V/landing-page/landingpage-9.png)
+![landinpage-1](assets/img/chapter-V/landing-page/landingpage-1.png)
+![landinpage-2](assets/img/chapter-V/landing-page/landingpage-2.png)
+![landinpage-3](assets/img/chapter-V/landing-page/landingpage-3.png)
+![landinpage-4](assets/img/chapter-V/landing-page/landingpage-4.png)
+![landinpage-5](assets/img/chapter-V/landing-page/landingpage-5.png)
+![landinpage-6](assets/img/chapter-V/landing-page/landingpage-6.png)
+![landinpage-7](assets/img/chapter-V/landing-page/landingpage-7.png)
+![landinpage-8](assets/img/chapter-V/landing-page/landingpage-8.png)
+![landinpage-9](assets/img/chapter-V/landing-page/landingpage-9.png)
 
 **Mobile View:**
 
-![mobile-1](../assets/img/chapter-V/landing-page/mobile-1.png)
-![mobile-2](../assets/img/chapter-V/landing-page/mobile-2.png)
-![mobile-3](../assets/img/chapter-V/landing-page/mobile-3.png)
-![mobile-4](../assets/img/chapter-V/landing-page/mobile-4.png)
-![mobile-5](../assets/img/chapter-V/landing-page/mobile-5.png)
-![mobile-6](../assets/img/chapter-V/landing-page/mobile-6.png)
-![mobile-7](../assets/img/chapter-V/landing-page/mobile-7.png)
-![mobile-8](../assets/img/chapter-V/landing-page/mobile-8.png)
-![mobile-9](../assets/img/chapter-V/landing-page/mobile-9.png)
+![mobile-1](assets/img/chapter-V/landing-page/mobile-1.png)
+![mobile-2](assets/img/chapter-V/landing-page/mobile-2.png)
+![mobile-3](assets/img/chapter-V/landing-page/mobile-3.png)
+![mobile-4](assets/img/chapter-V/landing-page/mobile-4.png)
+![mobile-5](assets/img/chapter-V/landing-page/mobile-5.png)
+![mobile-6](assets/img/chapter-V/landing-page/mobile-6.png)
+![mobile-7](assets/img/chapter-V/landing-page/mobile-7.png)
+![mobile-8](assets/img/chapter-V/landing-page/mobile-8.png)
+![mobile-9](assets/img/chapter-V/landing-page/mobile-9.png)
 
 
 **Evidencia Funcional: Video Demostrativo de Navegación**
 Para evidenciar el correcto comportamiento de los componentes interactivos, el menú de navegación fijo (*sticky navbar*), el desplazamiento suave (*smooth scroll*) hacia las anclas de las secciones y el intercambio dinámico de idioma, se ha registrado la navegación real del producto operando en su entorno de producción.
 
 * **Vista Previa del Video:**
-  *(Inserta aquí un screenshot/captura de un cuadro de tu video reproduciéndose)*
+  ![Captura del Video Demostrativo de Navegación](assets/img/chapter-V/video-preview-landing-page.png)
 
 * **Enlace de Reproducción (Microsoft Stream):**
   [Video "Video de Exposición AV1"](https://goo.su/pK90M9)
@@ -587,7 +587,7 @@ Tal como se detalló anteriormente en la sección **5.1.4. Software Deployment C
 
 A través de la integración mediante *webhooks* con el repositorio en GitHub, cada actualización o *commit* verificado en la rama principal (`main`) dispara de forma automática la compilación y distribución del portal en la red global *Edge* de Cloudflare. Este proceso asegura un entorno de despliegue ágil, con alta disponibilidad y acceso inmediato bajo protocolo seguro `HTTPS`.
 
-![Cloudflare Pages](../assets/img/chapter-V/deployment-configuration/step-8.png)
+![Cloudflare Pages](assets/img/chapter-V/deployment-configuration/step-8.png)
 
 
 
@@ -597,15 +597,15 @@ A pesar de que el despliegue principal se gestionó a través de Cloudflare Page
 
 *   **Paso 1 (Preparación):** Se accedió a la configuración del repositorio (`Settings` > `Pages`) para establecer la fuente de publicación.
 
-![Paso 1](../assets/img/chapter-V/deployment-configuration/gitpages-1.png)
+![Paso 1](assets/img/chapter-V/deployment-configuration/gitpages-1.png)
 
 *   **Paso 2 (Configuración):** En la sección *Build and deployment*, se seleccionó la rama `main` y la carpeta raíz `/ (root)` como origen del código.
 
-![Paso 2](../assets/img/chapter-V/deployment-configuration/gitpages-2.png)
+![Paso 2](assets/img/chapter-V/deployment-configuration/gitpages-2.png)
 
 *   **Paso 3 (Publicación):** El sistema finalizó el proceso de compilación con éxito, confirmando el despliegue con el mensaje *"Your site is live"* y otorgando la URL pública.
 
-![Paso 3](../assets/img/chapter-V/deployment-configuration/gitpages-3.png)
+![Paso 3](assets/img/chapter-V/deployment-configuration/gitpages-3.png)
 
 
 
@@ -626,4 +626,4 @@ A pesar de que el despliegue principal se gestionó a través de Cloudflare Page
 
 Durante la ejecución de este Sprint, se emplearon las analíticas de **GitHub Insights** para auditar y monitorear la dinámica colaborativa del equipo **Dymbia**. Se registró una participación equitativa y constante de todos los integrantes en sus roles asignados, destacando un enfoque ágil basado en la revisión cruzada de código. Aunque las modificaciones en la Landing Page se concentraron en ajustes menores de contenido, diseño e internacionalización, la comunicación fluida, el alineamiento en las ceremonias y la retroalimentación constructiva permitieron mantener un flujo de trabajo altamente eficiente, garantizando la integración continua y el cumplimiento oportuno de los entregables del Sprint.
 
-![Insights](../assets/img/chapter-V/sprint-1/insigths.png)
+![Insights](assets/img/chapter-V/sprint-1/insigths.png)
