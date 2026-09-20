@@ -762,6 +762,16 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-our-plots.png"  width="600px" height="auto"/>
 </p>
 
+### REGISTER A PLOT OF LAND
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register-plots.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-maps-plots.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-modal-accept-plots.png"  width="600px" height="auto"/>
+</p>
+
+
+
 
 
 
