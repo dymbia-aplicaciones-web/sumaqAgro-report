@@ -594,6 +594,61 @@ En la vista móvil (**Mobile Web Browser**) del cierre de la página, los compon
 </p>
 
 ### 4.3.2. Landing Page Mock-up
+El mock-up de la página de aterrizaje de Dymbia plasma la apariencia visual definitiva, integrando la paleta cromática, los estilos tipográficos, el material gráfico y la iconografía finales. De este modo, traslada de forma coherente la identidad visual de SumaqAgro a lo largo de cada uno de los bloques y componentes del sitio.
+
+Hero — SumaqAgro
+
+Presenta una barra de navegación con el logotipo de la marca, enlaces de sección y botones de acceso junto al selector de idioma. De fondo incorpora una fotografía panorámica de campos agrícolas en hileras bajo un cielo con degradado oscuro. El contenido central destaca el titular "Farm with Insight / Decide with Precision" en blanco y verde, un subtítulo sobre el monitoreo satelital de cultivos y costos, y dos botones de acción: el principal "Explore →" y el secundario "How it works?".
+
+![mockup-hero.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-hero.png)
+
+Who We Are — SumaqAgro
+
+Presenta un diseño limpio sobre fondo blanco dividido en dos columnas. A la izquierda, incluye el antetítulo en verde "ABOUT SUMAQAGRO", el encabezado principal "Who We Are?" y el subtítulo "Democratizing precision agriculture in Peru", acompañados por un párrafo explicativo sobre el uso de imágenes satelitales libres para cerrar la brecha tecnológica en cultivos de papa y café sin sensores costosos. A la derecha, destaca una imagen de un campo con sistema de riego tecnificado y una mano sosteniendo un smartphone que visualiza las métricas y gráficos agronómicos de la plataforma.
+
+![mockup-who-do-we-help.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-who-do-we-help.png)
+
+Our Team — SumaqAgro
+
+Presenta un encabezado con el antetítulo en verde "THE PEOPLE BEHIND THE TECHNOLOGY", el título principal "Our Team" y una breve descripción sobre el compromiso de los integrantes con la agricultura de precisión en el Perú. En la parte inferior se organiza una cuadrícula horizontal de tarjetas con bordes redondeados sobre fondo blanco, mostrando las fotografías formales y los nombres completos de los cinco miembros del equipo de desarrollo: Benjamin Solorzano Sullca, Jose Carlos Vargas Enriquez, Drago Derick Duarte Ruffner, Yamil Jared Tejada Pumacayo y Miguel Sanca Condori.
+
+![mockup-our-team.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-our-team.png)
+
+Who do we help? — SumaqAgro
+
+Presenta el antetítulo en verde "OUR COMMUNITY", el encabezado principal "Who do we help?" y el mensaje de valor "We work with those who make the country's food security possible". En la zona inferior dispone tres tarjetas blancas con esquinas redondeadas orientadas a cada segmento clave: agricultores independientes , directivos de cooperativas , y asesores técnicos. Cada tarjeta integra un ícono representativo, un resumen de enfoque, una fotografía de campo alusiva y el enlace de acción "Join as an advisor →".
+
+![mockup-who-do-we-help.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-who-do-we-help.png)
+
+Solutions and Features — SumaqAgroPresenta
+
+El encabezado "Solutions and Features" acompañado del lema de valor para la toma de decisiones en campo. En una cuadrícula de cuatro tarjetas blancas con acentos verdes, detalla sus módulos clave: monitoreo satelital de vigor y humedad, costeo por lote, certificación digital de cosecha y alertas agronómicas, destacando en cada una sus métricas de impacto operativo y económico.
+
+![mockup-solutions-and-features.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-solutions-and-features.png)
+
+Product Demo — SumaqAgro
+
+Presenta un fondo verde corporativo que enmarca el antetítulo "PRODUCT DEMO", el encabezado central "See SumaqAgro in action" y el subtítulo "Demo video". En la zona inferior destaca un reproductor de video de esquinas redondeadas sobre fondo gris claro con un botón central de reproducción (play) en verde brillante para visualizar la demostración interactiva de la plataforma.
+
+![mockup-product-demo.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-product-demo.png)
+
+Plans — SumaqAgro
+
+Presenta el titular "Choose the plan that fits your needs" sobre el antetítulo "PLANS" y un conmutador de facturación mensual o anual con descuento. En la zona inferior dispone tres tarjetas de suscripción adaptadas a cada perfil: Seed Plan (gratuito, para 1 parcela con NDVI básico y registro de labores), Pro Cooperative (S/189/mes, destacado como el más popular para 50 productores con certificación y exportación de reportes) y Technical Advisor Plan (S/89/mes, para 20 fincas supervisadas con NDVI avanzado y recomendaciones), cada una con su respectivo botón de acción directo.
+
+![mockups-plans.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockups-plans.png)
+
+Impact — SumaqAgro
+
+Presenta el antetítulo en verde "REAL RESULTS", el título principal "Impact" y una breve descripción sobre las métricas que respaldan el compromiso de la plataforma con la pequeña agricultura. A la derecha, distribuye tres tarjetas métricas blancas con íconos de usuario y barras de acento en verde: más de 333 mil hectáreas de papa, más de 223 mil familias cafetaleras  y más del 40% de reducción en la falta de cobertura técnica .
+
+![mockup-impact.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-impact.png)
+
+Testimonials y Footer — SumaqAgro
+
+Presenta el bloque "What our users say ?" con dos tarjetas de testimonios de cinco estrellas de productores de papa y café. Le sigue una franja verde de llamado a la acción con el botón "Sign up for free" y un pie de página en fondo oscuro que agrupa el logotipo, enlaces a redes sociales, columnas de navegación (Products, Quick Links, Support) y los enlaces legales de privacidad y términos.
+
+![mockup-testimonials-footer.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-testimonials-footer.png)
 
 ## 4.4. Web Applications UX/UI Design
 
@@ -1238,7 +1293,7 @@ La orquestación entre los contextos delimitados se rige por políticas eventual
 
 En este apartado se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
 
-![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](../assets/img/c4/c4-system-context-diagram.svg)
+![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](../assets/img/c4/c4-system-context-diagram.png)
 
 #### Explicación del Diagrama de Contexto
 
@@ -1263,7 +1318,7 @@ El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distrib
 
 En esta sección se presenta y describe el Diagrama de Contenedores (Nivel 2 del modelo C4) de la plataforma **SumaqAgro**, el cual profundiza en la frontera del sistema para exponer su arquitectura técnica distribuida. Este diagrama muestra las unidades de despliegue y ejecución independientes que componen la solución, la distribución de responsabilidades entre ellas, las principales decisiones de tecnología adoptadas y los protocolos de red empleados para la comunicación interna y con sistemas externos. El modelado fue estructurado y generado formalmente mediante la especificación DSL de la herramienta **Structurizr**.
 
-![C4 Model - Diagrama de Contenedores (Nivel 2)](../assets/img/c4/c4-container-diagram.svg)
+![C4 Model - Diagrama de Contenedores (Nivel 2)](../assets/img/c4/c4-container-diagram.png)
 
 #### Asignación de Responsabilidades y Decisiones Tecnológicas
 
@@ -1299,7 +1354,7 @@ En esta sección se presentan y explican los Diagramas de Componentes (Nivel 3 d
 
 El contenedor de la Landing Page descompone la estructura del sitio web estático público, diseñado con una arquitectura liviana orientada a maximizar la velocidad de carga y la tasa de conversión en dispositivos móviles bajo redes rurales 3G/4G.
 
-![C4 Model - Diagrama de Componentes de la Landing Page (Nivel 3)](../assets/img/c4/c4-components-landing-diagram.svg)
+![C4 Model - Diagrama de Componentes de la Landing Page (Nivel 3)](../assets/img/c4/c4-components-landing-diagram.png)
 
 ##### Desglose de Componentes de la Landing Page:
 * **`Navigation & Hero Component`:** Bloque estructural desarrollado con HTML5 semántico y maquetado responsivo mediante CSS3 Flexbox. Administra la barra de navegación superior, la identidad visual corporativa de SumaqAgro, la propuesta de valor agroclimática orientada a café de especialidad y papa andina, y el llamado a la acción (CTA) que conduce al formulario de registro y demostración.
@@ -1313,7 +1368,7 @@ El contenedor de la Landing Page descompone la estructura del sitio web estátic
 
 El contenedor de la aplicación cliente SPA, implementado sobre el framework **Angular 18**, descompone sus módulos para brindar una experiencia de usuario interactiva y garantizar la persistencia local de datos en campo mediante capacidades desconectadas (*offline-first*).
 
-![C4 Model - Diagrama de Componentes de la Web Application (Nivel 3)](../assets/img/c4/c4-components-webapp-diagram.svg)
+![C4 Model - Diagrama de Componentes de la Web Application (Nivel 3)](../assets/img/c4/c4-components-webapp-diagram.png)
 
 ##### Desglose de Componentes de la Web Application:
 * **`Auth & Role Guard`:** Guardia funcional de enrutamiento (`CanActivateFn`) de Angular. Intercepta la navegación hacia rutas protegidas comprobando la vigencia del token JWT almacenado en `sessionStorage`, aplicando el control de acceso basado en roles (RBAC) para productores, directivos y agrónomos.
@@ -1331,7 +1386,7 @@ El contenedor de la aplicación cliente SPA, implementado sobre el framework **A
 
 El contenedor transaccional de backend, desarrollado en **Java 21 con Spring Boot 3.x**, implementa una arquitectura en capas desacopladas orientada al dominio (*Layered Architecture / DDD*), gobernando las reglas de negocio de los 7 Bounded Contexts y agregados de la solución.
 
-![C4 Model - Diagrama de Componentes del API Backend (Nivel 3)](../assets/img/c4/c4-components-backend-diagram.svg)
+![C4 Model - Diagrama de Componentes del API Backend (Nivel 3)](../assets/img/c4/c4-components-backend-diagram.png)
 
 ##### Desglose de Componentes del Backend por Capa Técnica:
 
