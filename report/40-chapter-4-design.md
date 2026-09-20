@@ -841,12 +841,6 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-modal-accept-plots.png"  width="600px" height="auto"/>
 </p>
 
-### CROP HEALTH
-
-<p align="center">
-  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-our-plots.png"  width="600px" height="auto"/>
-</p>
-
 ### FINANCES
 
 <p align="center">
@@ -859,6 +853,7 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 <p align="center">
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor.png" width="600px" height="auto"/>
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor-report-form-modal.png" width="600px" height="auto"/>
+    <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor-success-modal.png" width="600px" height="auto"/>
 </p>
 
 ### AGRICULTURAL ALERTS
