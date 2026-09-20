@@ -290,10 +290,12 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 #### Step 3: Paints Points
 ![event-storming-step-3-paint-points.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-3-paint-points.jpg)
 * El tercer paso tiene como función principal identificar y visibilizar de forma temprana las fricciones, riesgos, dudas y cuellos de botella existentes en el flujo operativo del negocio agrícola.
-#### Step 3: Paints Points
+#### Step 4: Pivotal Points
 ![event-storming-step-4-timelines-pivotal-points.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-4-timelines-pivotal-points.jpg)
 * El cuarto paso tiene como propósito identificar y marcar aquellos eventos de dominio transcendentales que representan cambios de estado irreversibles, puntos de inflexión de alto impacto o transiciones entre diferentes etapas del negocio agrícola.
-
+#### Step 5: Commands
+![event-storming-step-5-Commands.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-5-Commands.jpg)
+* El paso 5 modela las intenciones directas, acciones de usuario e invocaciones del sistema que provocan la ocurrencia de los eventos de dominio.
 
 #### Step 10: Bounded Contexts
 ![Evidencia integral de Design-Level Event Storming](../assets/img/event-storming/step-10-bounded-contexts.jpg)
