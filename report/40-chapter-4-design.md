@@ -593,36 +593,6 @@ En la vista móvil (**Mobile Web Browser**) del cierre de la página, los compon
   <img src="../assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-testimonials-and-footer.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 4.3.2. Landing Page Mock-up
 El mock-up de la página de aterrizaje de Dymbia plasma la apariencia visual definitiva, integrando la paleta cromática, los estilos tipográficos, el material gráfico y la iconografía finales. De este modo, traslada de forma coherente la identidad visual de SumaqAgro a lo largo de cada uno de los bloques y componentes del sitio.
 
@@ -681,12 +651,520 @@ Presenta el bloque "What our users say ?" con dos tarjetas de testimonios de cin
 ![mockup-testimonials-footer.png](../assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-testimonials-footer.png)
 
 ## 4.4. Web Applications UX/UI Design
+
+Esta sección presenta y sustenta la arquitectura de interacción y el diseño visual de la plataforma SaaS de SumaqAgro, desarrollada por la startup Dymbia.
 ### 4.4.1. Web Applications Wireframes
+
+### Desktop Web Browser
+
+**Aplicación de Principios de Diseño y Arquitectura de Información:** Para la conceptualización de este Wireframe (*Desktop Web Browser*), nos centramos en una Arquitectura de Información basada en el patrón de escaneo en "F" (*F-Pattern*), disponiendo la barra lateral (*Sidebar*) a la izquierda para organizar jerárquicamente los módulos de operación agrícola y configuración del sistema sin perder el contexto de navegación, mientras que la cabecera superior centraliza la búsqueda rápida y los indicadores de estado global (conectividad, notificaciones y perfil). Aplicamos el principio de Región Común y Proximidad de la Gestalt agrupando los datos clave en tres tarjetas de indicadores (*KPI Cards*) de alto nivel para supervisar la salud foliar, el gasto acumulado y el punto de equilibrio financiero, conectándolos directamente con las representaciones analíticas inferiores (gráfico de evolución vegetal NDVI y distribución circular de costos). A nivel de diseño inclusivo y accesibilidad (*a11y*), garantizamos áreas táctiles mínimas de 48 px en los botones de acción rápida (*View Satellite Map*, *View My Expenses* y el CTA primario *View All My Lots*), reforzando una jerarquía visual clara mediante contenedores bien delimitados y contraste tipográfico que agilizan la lectura y toma de decisiones del productor en campo.
+
+A continuación, se presentan los wireframes principales de la aplicación web correspondientes:
+
+**My Plot**: en la vista inicial (*Dashboard*), la interfaz organiza la supervisión del cultivo mediante una fila de tres tarjetas métricas (*KPI Cards*) de alto nivel que sintetizan la salud foliar (NDVI), la inversión acumulada y el punto de equilibrio financiero, complementadas en la sección inferior por un gráfico de barras para la evolución temporal del vigor vegetal y un gráfico circular (*Donut Chart*) para el desglose porcentual de costos operativos. Seguidamente, el flujo de interacción transiciona hacia la vista de gestión de parcelas al interactuar con el llamado a la acción superior, donde el usuario accede a una retícula de administración con los cupos disponibles de su plan, permitiéndole supervisar el estado de sus lotes activos o incorporar un nuevo predio agrícola mediante un formulario asistido de georreferenciación y delimitación cartográfica por coordenadas GPS.
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plot.png"  width="592px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plot-config.png"  width="592px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-mi-new-plot-map.png"  width="592px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-new-plot-forms.png"  width="592px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-new-plot-modal.png"  width="592px" height="auto"/>
+</p>
+
+**Crop Health:** Esta vista centraliza la inspección agronómica y espacial del predio mediante un visor cartográfico interactivo que proyecta el polígono georreferenciado del lote junto con capas multiespectrales (NDVI para vigor vegetal y NDWI para humedad de suelo), complementado por un panel lateral de diagnóstico técnico preliminar y recomendaciones de manejo en campo; asimismo, la interfaz integra en su cabecera un selector conmutador de predios (*«Cambiar Parcela»*) que permite alternar fluidamente entre los diferentes terrenos registrados del productor sin perder el contexto operativo ni reiniciar los filtros de supervisión.
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plots-health.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
+</p>
+
+
+**My Expenses and Earnings:** Este módulo organiza la gestión financiera del predio mediante una fila superior de tres tarjetas métricas (*KPI Cards*) que sintetizan el gasto total acumulado, el volumen proyectado de cosecha y el precio de equilibrio calculado para evitar pérdidas comerciales, complementadas en la sección inferior por una tabla detallada de desembolsos con opciones de filtrado cronológico y por categoría (insumos, jornales y flete); asimismo, incorpora en su cabecera el botón de acción primario *«Anotar Nuevo Gasto»*, el cual despliega el formulario de registro ágil de costos diarios para asegurar que ningún egreso operativo quede fuera de la contabilidad de la campaña.
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-earning.png"  width="600px" height="auto"/>
+</p>
+
+**Consult the Advisor:** La plataforma complementa la operación agrícola mediante la sección **Phytosanitary Assistance and Prescriptions**, la cual exhibe la prescripción técnica activa del agrónomo con su dosificación exacta y el historial cronológico de consultas, permitiendo reportar nuevas incidencias fitosanitarias mediante carga fotográfica; de manera complementaria, el módulo **My Harvest Certificates** organiza los expedientes de acreditación comercial del lote, reflejando el nombre del cultivo, el desglose de calibres de cosecha, el sello digital de respaldo cooperativo y el código QR de trazabilidad pública para respaldar el valor del producto ante intermediarios y compradores.
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-asesor.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-certificate.png"  width="600px" height="auto"/>
+</p>
+
+**Agricultural Alerts:** Este módulo centraliza la vigilancia agroclimática y sanitaria de las parcelas del productor (US-13, US-31)[cite: 3, 7], estructurándose a través de una secuencia de tarjetas informativas que detallan el incidente detectado (tales como caídas críticas de vigor foliar, estrés hídrico o riesgos de helada)[cite: 3, 7]; cada reporte integra un panel de medidas técnicas detalladas, la cronología temporal de tareas requeridas para mitigar la anomalía y un indicador de plan de acción finalizado con confirmación de cumplimiento en campo, permitiendo auditar y cerrar el ciclo de contingencia del cultivo de manera ordenada y oportuna.
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-statistics.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert-report.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert-modal.png"  width="600px" height="auto"/>
+</p>
+
+
+- **Settings and Help:** Esta vista técnica expone los parámetros operativos y de soporte del productor a través de un contenedor modal organizado en pestañas contextuales (*Tabs*), permitiendo la actualización de datos agronómicos del predio (nombre de la parcela, tipo de cultivo y área declarada), la gestión de información de contacto (teléfono y credenciales de acceso) y el acceso a manuales interactivos de usuario con línea directa de asistencia técnica; asimismo, el módulo integra la funcionalidad de **Offline Mode**, respaldada por la historia técnica TS-05, la cual permite al agricultor alternar conscientemente hacia un modo de trabajo en almacenamiento local para registrar labores e insumos en sectores profundos de la chacra donde la señal celular desaparece por completo, garantizando que los datos queden retenidos en la memoria del navegador y se sincronicen de manera diferida y automática una vez recuperada la cobertura de red.
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-config-account.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-offline.png"  width="600px" height="auto"/>
+</p>
+
+### Wireframes de la Aplicación Móvil
+
+##### W-01: Dashboard Principal ("Mi Parcela")
+Vista central de mando con lectura rápida de los indicadores operativos de la campaña en curso (vigor vegetal, inversión acumulada y punto de equilibrio comercial).
+
+![Wireframe W-01: Dashboard Mi Parcela](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-dashboard-mi-parcela.png)
+
+##### W-02: Monitoreo Satelital y Visor Multiespectral
+Visualizador georreferenciado que exhibe la reflectancia del predio mediante los índices multiespectrales NDVI y NDWI, permitiendo evaluar anomalías de vegetación y emitir solicitudes de asistencia fitosanitaria.
+
+![Wireframe W-02: Visor Satelital y Salud Vegetal](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-visor-satelital.png)
+
+##### W-03: Resumen Financiero y Punto de Equilibrio de Campaña
+Consolidado contable que clasifica los egresos en insumos, mano de obra y transporte, deduciendo el costo unitario de producción para respaldar negociaciones comerciales justas.
+
+![Wireframe W-03: Finanzas de Campaña](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-finanzas-campana.png)
+
+##### W-04: Centro de Alertas Agroclimáticas y Sanitarias
+Bandeja cronológica y categorizada que despacha advertencias tempranas ante caídas súbitas en el verdor foliar, estrés por sequía o pronósticos meteorológicos adversos (heladas).
+
+![Wireframe W-04: Alertas Agrícolas](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-alertas-agricolas.png)
+
+##### W-05: Bitácora de Registro Operativo en Campo
+Formulario optimizado para el asiento ágil de jornales, compra de fertilizantes o fletes rurales sin requerir conexión continua a internet, almacenando la información localmente.
+
+![Wireframe W-05: Registro de Operaciones y Costos](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-registro-operaciones.png)
+
+##### W-06: Acreditación de Calidad y Código QR de Trazabilidad
+Ficha técnica del lote cosechado que centraliza las evaluaciones de calidad física/sensorial y genera un código QR criptográfico para validación inmediata por parte de compradores y acopiadores.
+
+![Wireframe W-06: Ficha y Certificado QR](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-calidad-qr.png)
+
+##### W-07: Autenticación, Registro y Onboarding de Usuario
+Flujo de acceso e identificación institucional que permite a agricultores y asesores ingresar mediante credenciales seguras, seleccionando su rol y cooperativa de adscripción.
+
+![Wireframe W-07: Flujo de Autenticación e Identidad](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-autenticacion-iam.png)
+
+---
+
+#### 2. Sustento de Principios y Elementos de Diseño
+
+* **Jerarquía Visual y Patrón de Escaneo Vertical:** Dado el factor de forma compacto de las pantallas móviles, se organizó la información bajo un patrón de lectura vertical estricto. Los indicadores de mayor impacto para la toma de decisiones inmediatas (estado NDVI, costos acumulados y nivel de alerta) ocupan tarjetas prominentes en el tercio superior de la pantalla, relegando las series temporales y desgloses detallados hacia la zona de desplazamiento (*scroll*).
+* **Leyes de Proximidad y Región Común (Gestalt):** La interfaz utiliza contenedores modulares (*cards*) con bordes y espaciados homogéneos para vincular datos dependientes entre sí (por ejemplo, en el módulo financiero se asocia en una misma tarjeta el costo total invertido junto a los porcentajes de insumos y mano de obra).
+* **Convenciones Móviles y Zona Ergonómica del Pulgar (*Thumb Zone*):** Se sustituyó el menú lateral de escritorio (*sidebar*) por una barra de navegación inferior (*Bottom Navigation Bar*) permanente de 5 accesos directos principales. Asimismo, en la vista contable se adoptó un botón flotante de acción destacada (*Floating Action Button - FAB*) situado en la esquina inferior derecha para agilizar el registro recurrente de gastos.
+* **Contraste Tipográfico y Claridad Estructural:** A pesar de mantenerse en una escala de grises estricta para baja fidelidad, se establecieron diferencias marcadas de peso tipográfico (*Bold* para métricas cuantitativas e importes en soles, y *Regular* para etiquetas y leyendas descriptivas), garantizando un escaneo ágil bajo luz solar.
+
+---
+
+#### 3. Aplicación de Principios de Diseño Inclusivo y Accesibilidad
+
+* **Dimensionamiento de Áreas Táctiles (*Touch Targets*):** Conforme a las recomendaciones internacionales de accesibilidad móvil (WCAG / a11y), los botones de confirmación, campos de formulario y controles de navegación cuentan con dimensiones mínimas de 48 × 48 dp/px, evitando pulsaciones accidentales por parte de agricultores que operan el dispositivo con guantes o dedos fatigados por faenas de campo.
+* **Reducción de la Sobrecarga Cognitiva:** Se eliminaron las tablas extensas de escritorio, reemplazándolas por listas condensadas y estados cualitativos claros ("Óptimo", "Bajo Control", "Alerta") que acompañan a las cifras científicas (como el valor numérico de NDVI), facilitando la interpretación técnica a productores de baja escolaridad.
+* **Soporte de Arquitectura *Offline-First*:** Las pantallas de cabecera incorporan un indicador persistente de conectividad (*Connected / Offline Mode*). Esto brinda retroalimentación clara de que las anotaciones de jornales e insumos en la chacra se almacenan de forma local en la memoria del dispositivo y se transmitirán sin pérdida al recobrar cobertura celular.
+* **Simplificación en la Entrada de Datos:** Los formularios de campo priorizan campos numéricos automáticos, menús desplegables preestablecidos y captura fotográfica de recibos, disminuyendo al mínimo la necesidad de redactar textos extensos sobre el teclado virtual.
+
+---
+
+#### 4. Alineación con la Arquitectura de Información
+
+* **Sistemas de Organización (*Organization Systems*):** La aplicación implementa una estructura organizativa jerárquica y funcional orientada a tareas de campo. La pantalla raíz expone el balance general de la campaña agrícola, desde la cual se puede profundizar hacia subniveles analíticos (visor espectral, historial de transacciones o catálogo de alertas).
+* **Sistemas de Navegación (*Navigation Systems*):** Se articula una navegación global fija soportada en la *Bottom Navigation Bar* para conmutar entre los módulos principales (Inicio, Monitoreo, Finanzas, Alertas, Perfil), complementada con navegación jerárquica (flechas de retroceso en la barra superior *AppBar*) para regresar de formularios o vistas de detalle sin perder el estado previo.
+* **Sistemas de Rotulado (*Labeling Systems*):** Las etiquetas adoptadas derivan del Glosario de Lenguaje Ubicuo formalizado para el proyecto ("Mi Parcela", "Salud Foliar", "Insumos", "Jornales", "Punto de Equilibrio", "Certificado QR"), empleando terminología precisa y familiar para la comunidad agrícola.
+* **Sistemas de Búsqueda y Filtrado (*Searching Systems*):** Se integraron barras de búsqueda con autocompletado y selectores rápidos horizontales (*chips*) que permiten segmentar notificaciones y lotes históricos por fecha, nivel de riesgo o campaña fenológica activa.
+
 ### 4.4.2. Web Applications Wireflow Diagrams
+
+Un **wireflow** o flujo de pantallas es una representación visual que conecta distintos wireframes para mostrar el recorrido que sigue el usuario dentro de una aplicación hasta alcanzar un objetivo específico. Su propósito es explicar cómo se relacionan las diferentes pantallas y qué acciones debe realizar el usuario durante el proceso.
+
+Para construir un wireflow, primero se identifica el objetivo que el usuario desea lograr. Después, se establece la secuencia de tareas necesarias para completar dicho objetivo dentro de la aplicación. Finalmente, estas tareas se representan mediante las pantallas correspondientes y se conectan a través de las acciones disponibles en botones, enlaces u otros elementos interactivos del wireframe.
+
+**User Goal 1:** Usuario desea registrarse en la aplicación
+
+Flujo normal: 
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-1-resumido.png"  width="600px" height="auto"/>
+</p>
+
+El flujo de interacción inicia en la pantalla principal de la aplicación cuando el usuario selecciona la opción de registrarse, lo que lo dirige a la vista del formulario donde debe elegir su rol correspondiente (Agricultor, Cooperativa o Asesor) y completar los campos obligatorios de datos personales, correo electrónico y contraseña; una vez validados los campos y enviado el registro, el sistema genera las credenciales de acceso y redirige automáticamente al usuario hacia el panel de bienvenida de su módulo
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-1.png"  width="600px" height="auto"/>
+</p>
+
+**User Goal 2:** Usuario desea ingresar con su cuenta en la aplicación
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-2-resumido.png"  width="600px" height="auto"/>
+</p>
+
+El flujo de interacción inicia cuando el usuario registrado accede a la pantalla de autenticación (/login) e ingresa sus credenciales de acceso (correo electrónico y contraseña); tras enviar el formulario, el sistema valida la información mediante el servicio de autenticación (TS-02), genera el token de sesión JWT y redirige automáticamente al usuario hacia el panel principal (dashboard) correspondiente a su rol dentro de la plataforma.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-2.png"  width="600px" height="auto"/>
+</p>
+
+
+**User Goal 3:** Usuario desea cambiar su contraseña
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-3-resumido.png"  width="600px" height="auto"/>
+</p>
+
+El flujo de interacción comienza en la pantalla de inicio de sesión cuando el usuario hace clic en el enlace «¿Olvidaste tu contraseña?» (/forgot-password), desplegando el formulario de recuperación donde ingresa su correo electrónico registrado y presiona el botón de envío; tras validar la existencia de la cuenta, el sistema transiciona la pantalla a un estado de confirmación visual mediante un mensaje informativo en pantalla y despacha un correo con el enlace y token temporal para el restablecimiento seguro de sus credenciales.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-3.png"  width="600px" height="auto"/>
+</p>
+
+**User Goal 4:** Usuario desea revisar sus parcelas
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-4-resumido.png"  width="600px" height="auto"/>
+</p>
+
+El flujo de interacción se inicia en el panel principal (dashboard) del agricultor, donde visualiza las tarjetas de métricas generales y pulsa el botón de acción rápida «Ver Todos Mis Lotes»; en respuesta a este evento, el sistema efectúa la transición hacia la vista de catálogo general «Mis Parcelas Registradas» (/parcels), renderizando el listado completo de predios georreferenciados mediante tarjetas informativas que exponen el nombre del fundo, el cultivo monitoreado, el área calculada y los accesos para inspeccionar la salud satelital.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-4.png"  width="600px" height="auto"/>
+</p>
+
+**User Goal 5:** Usuario desea revisar alertas agrícolas y finalizar su plan de acción
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-5-resumido.png" width="600px" height="auto"/>
+</p>
+
+El flujo de interacción comienza en el módulo «Alertas Agrícolas» (Avisos y Riesgos Notificados), donde el usuario identifica un riesgo o aviso y hace clic en el botón «Medidas Detalladas»; esto lo redirige a la vista detallada del plan de acción donde revisa los indicadores y las recomendaciones sugeridas; tras ejecutar las tareas preventivas, presiona el botón «Finalizar Plan de Acción», lo que despliega una ventana modal con el informe de ejecución confirmado y un resumen visual del estado final de las medidas aplicadas.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-5.png" width="600px" height="auto"/>
+</p>
+
+**User Goal 6:** Usuario desea registrar un gasto de campo en finanzas de la campaña
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-6-resumido.png" width="600px" height="auto"/>
+</p>
+
+El flujo de interacción se inicia en el módulo «Finanzas de la Campaña» (Mis Gastos y Ganancias), donde el usuario hace clic en el botón de acción rápida «Añadir Nuevo Gasto»; tras este evento, el sistema lo redirige a la vista del formulario «Registrar Gasto de Campo» para seleccionar el tipo de costo operativo (Insumos y Abono, Mano de Obra o Flete), asignar la parcela correspondiente, ingresar el monto desembolsado y la fecha; finalmente, al pulsar el botón «Guardar Gasto», se procesa la información y se muestra una ventana modal de confirmación con el resumen del registro exitoso.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-6.png" width="600px" height="auto"/>
+</p>
+
+**User Goal 7:** Usuario desea enviar un reporte de plaga a su asesor
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-7-resumido.png" width="600px" height="auto"/>
+</p>
+
+El flujo de interacción se inicia en la sección «Asistencia Fitosanitaria y Recetas» (Consulta al Asesor), donde el usuario presiona el botón de acción rápida «Enviar Foto de Plaga»; tras este evento, se despliega una ventana modal con el formulario «Enviar Reporte de Plaga» donde selecciona su parcela, adjunta la fotografía de la evidencia y añade observaciones opcionales; finalmente, al hacer clic en «Enviar Reporte», el sistema procesa la solicitud y muestra una pantalla modal de confirmación informando que el reporte fue enviado con éxito al ingeniero asignado.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-7.png" width="600px" height="auto"/>
+</p>
+
+**User Goal 8:** Usuario desea cambiar de parcela en el visor satelital multispectral
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-8-resumido.png" width="600px" height="auto"/>
+</p>
+
+El flujo de interacción se inicia en el módulo «Visor Satelital Multispectral» (Salud del Cultivo), donde el usuario hace clic en el botón «Cambiar Parcela»; tras este evento, se despliega una ventana modal que muestra el listado de terrenos disponibles para que seleccione la parcela deseada; finalmente, el sistema solicita una confirmación mediante una ventana emergente y, al pulsar «Confirmar», la interfaz actualiza los datos e índices multiespectrales correspondientes al nuevo predio seleccionado.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-8.png" width="600px" height="auto"/>
+</p>
+
 ### 4.4.3. Web Applications Mock-ups
+
+En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
+
+
+### LOGIN / REGISTER 
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-login.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register.png"  width="600px" height="auto"/>
+</p>
+
+### MY PLOTS
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-my-plots.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-our-plots.png"  width="600px" height="auto"/>
+</p>
+
+### REGISTER A PLOT OF LAND
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register-plots.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-maps-plots.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-modal-accept-plots.png"  width="600px" height="auto"/>
+</p>
+
+### FINANCES
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-finances.png" width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-expense-success-modal.png" width="600px" height="auto"/>
+</p>
+
+### CONSULT
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor.png" width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor-report-form-modal.png" width="600px" height="auto"/>
+    <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor-success-modal.png" width="600px" height="auto"/>
+</p>
+
+### AGRICULTURAL ALERTS
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-home.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-details.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-task.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-modal-check.png"  width="600px" height="auto"/>
+</p>
+
+
+### SETTINGS
+
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-details-plot.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-account.png"  width="600px" height="auto"/>
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-help-manuals.png"  width="600px" height="auto"/>
+</p>
+
+### MODE OFFLINE
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-offline-mode.png"  width="600px" height="auto"/>
+</p>
+
+**User Goal 6:** Usuario desea registrar un gasto de campo en finanzas de la campaña
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-6-resumido.png" width="600px" height="auto"/>
+</p>
+
+El flujo de interacción se inicia en el módulo «Finanzas de la Campaña» (Mis Gastos y Ganancias), donde el usuario hace clic en el botón de acción rápida «Añadir Nuevo Gasto»; tras este evento, el sistema lo redirige a la vista del formulario «Registrar Gasto de Campo» para seleccionar el tipo de costo operativo (Insumos y Abono, Mano de Obra o Flete), asignar la parcela correspondiente, ingresar el monto desembolsado y la fecha; finalmente, al pulsar el botón «Guardar Gasto», se procesa la información y se muestra una ventana modal de confirmación con el resumen del registro exitoso.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-6.png" width="600px" height="auto"/>
+</p>
+
 ### 4.4.4. Web Applications User Flow Diagrams
 
+En esta sección se presentan los diagramas de flujo de usuario (*User Flows*) de la aplicación web de la plataforma **SumaqAgro**. De acuerdo con las directrices metodológicas del proyecto, los User Flows derivan de los Wireflows preliminares y formalizan la experiencia de interacción integrando tanto los Mock-ups de alta fidelidad con sus elementos interactivos como los diagramas lógicos resumidos de navegación.
+
+Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto con las rutas alternas o de contingencia (*unhappy paths*), vinculándolas a los User Persona oficiales del sistema (Guillermo Cortés como productor independiente y Cristian Santana como gestor cooperativo).
+
+---
+
+#### User Flow 01 (UG-01): Registro y Creación de Nueva Cuenta de Usuario
+
+* **User Goal:** Registrar una nueva cuenta de usuario en la plataforma seleccionando el rol correspondiente (productor independiente, directivo de cooperativa o asesor técnico) para acceder a los servicios de gestión agronómica.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente) / Cristian Santana (Directivo de Cooperativa).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-01 - Registro de Usuario](../assets/img/chapter-IV/wireflows/ug-1.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-01](../assets/img/chapter-IV/wireflows/ug-1-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. El visitante accede a la pantalla de bienvenida (*Welcome back!*) y, al carecer de credenciales, pulsa el enlace interactivo *"Sign up here"* ubicado en el pie del formulario.
+  2. La interfaz transiciona a la pantalla *Create your free account*, donde el usuario selecciona su rol funcional (`Farmer`), ingresa su nombre completo, correo electrónico, nombre de su predio o fundo y establece una contraseña segura de acceso.
+  3. Marca la casilla de aceptación de los Términos de Servicio y Políticas de Privacidad y pulsa el botón principal de confirmación.
+  4. El backend corrobora que los campos son válidos y que el correo no existe en el sistema, completando el registro y habilitando el ingreso a la aplicación web.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Validación sintáctica fallida:* Si el usuario omite campos requeridos, introduce un correo con formato no estándar o una contraseña menor a 8 caracteres, los campos se marcan en rojo con mensajes descriptivos impidiendo el avance del registro.
+  * *Correo electrónico preexistente:* Si la dirección ingresada ya figura en el sistema, la interfaz muestra una alerta informando que el correo ya está en uso y sugiere iniciar sesión o restablecer la contraseña.
+  * *Términos legales sin aceptar:* Si la casilla de términos y privacidad no es marcada, el botón de envío permanece inactivo o emite un aviso de obligatoriedad legal.
+
+---
+
+#### User Flow 02 (UG-02): Inicio de Sesión y Autenticación de Usuario
+
+* **User Goal:** Iniciar sesión en la plataforma web mediante credenciales de acceso registradas para ingresar al panel de control agronómico y financiero.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-02 - Inicio de Sesión](../assets/img/chapter-IV/wireflows/ug-2.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-02](../assets/img/chapter-IV/wireflows/ug-2-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. El agricultor se sitúa en la vista de acceso (*Welcome back!*), digita su correo electrónico institucional/personal y su contraseña registrada.
+  2. De forma opcional, marca la opción *"Remember my session for 30 days"* para mantener activa su sesión y presiona el botón interactivo verde **"Login"**.
+  3. El servicio de autenticación valida las credenciales contra la base de datos y genera el token Bearer JWT de autorización.
+  4. El sistema redirige automáticamente al usuario a su panel de control personalizado (*Good morning, Guillermo!*), desplegando las métricas en tiempo real de Salud Foliar (NDVI 0.74), Gasto Total Invertido (S/ 14,850.00) y el Precio de equilibrio para no perder (S/ 46.40).
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Credenciales no válidas:* Si el correo o la contraseña no coinciden con los registros del sistema, se despliega una notificación de error en color rojo (*"Usuario o contraseña incorrectos"*), manteniendo el correo ingresado pero vaciando el campo de clave para reintentar.
+  * *Exceso de reintentos fallidos:* Si se ingresan contraseñas incorrectas de manera reiterada, la plataforma bloquea temporalmente el formulario por seguridad y recomienda utilizar el flujo de recuperación de clave.
+
+---
+
+#### User Flow 03 (UG-03): Recuperación y Restablecimiento de Contraseña
+
+* **User Goal:** Recuperar el acceso a la cuenta del sistema mediante la solicitud y confirmación de un código numérico temporal enviado al correo electrónico registrado.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-03 - Recuperación de Contraseña](../assets/img/chapter-IV/wireflows/ug-3.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-03](../assets/img/chapter-IV/wireflows/ug-3-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. Desde la pantalla de Login (*¡Bienvenido de nuevo!*), el usuario que ha olvidado sus credenciales presiona el enlace interactivo **"¿Olvidaste tu clave?"**.
+  2. El sistema lo conduce al formulario *Recuperar Contraseña*, donde ingresa su dirección de correo electrónico registrada y presiona el botón **"Enviar"**.
+  3. El sistema comprueba que el usuario existe, despacha un token OTP temporal de 6 dígitos al buzón y navega a la pantalla *Mensaje de Confirmación*.
+  4. El agricultor revisa su bandeja de correo, digita los 6 dígitos en las casillas correspondientes y presiona confirmar; al ser validado con éxito, la plataforma le permite ingresar su nueva clave de acceso y reanudar sesión.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Correo electrónico no registrado:* Si el usuario introduce una dirección que no figura en la base de datos, el formulario permanece en la pantalla actual y despliega un mensaje de error indicando que no se encontró ninguna cuenta asociada.
+  * *Código de verificación incorrecto o expirado:* Si el código ingresado no coincide con el token despachado o si supera el tiempo límite de vigencia (10 minutos), las casillas se resaltan con borde rojo y se habilita un enlace para solicitar un reenvío del código OTP.
+
+---
+
+#### User Flow 04 (UG-04): Consulta y Administración del Inventario de Parcelas Registradas
+
+* **User Goal:** Consultar desde el Dashboard operativo la totalidad de parcelas agrícolas dadas de alta en el sistema para monitorear su estado y verificar los cupos disponibles de nuevos lotes.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-04 - Consulta de Parcelas](../assets/img/chapter-IV/wireflows/ug-4.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-04](../assets/img/chapter-IV/wireflows/ug-4-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. En el Dashboard principal (*¡Buen día, Guillermo!*), el productor examina los indicadores de su predio activo y pulsa el botón **"Ver Todos Mis Lotes"** en la cabecera superior.
+  2. La aplicación abre la vista de administración *Mis Parcelas Registradas*, cargando el inventario de lotes bajo monitoreo satelital.
+  3. El usuario observa la tarjeta de la *PARCELA #1* (Fundo Los Pinos, cultivo Papa Canchan, área de 3.5 ha y estado NDVI 0.74 Óptimo) con acceso a su visor satelital.
+  4. Asimismo, el sistema muestra las tarjetas de la *PARCELA #2* y *PARCELA #3* identificadas como *Cupo Disponible*, acompañadas del botón interactivo **"Registrar Nueva Parcela"** dentro de los márgenes del plan gratuito activo.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Límite de cupos de parcelas alcanzado:* Si el usuario cuenta con los 3 lotes registrados y pulsa sobre agregar uno nuevo, el sistema no abre el catastro GPS; en su lugar, despliega un cuadro modal informando que ha copado el límite de su plan gratuito y ofrece un botón de actualización hacia el plan comercial.
+  * *Ausencia total de registros (Empty State):* Si el agricultor aún no hubiera configurado su primer lote o hubiera borrado sus datos, la pantalla reemplaza las tarjetas activas por una guía informativa orientada al trazado inicial del polígono georreferenciado.
+
+---
+
+#### User Flow 05 (UG-05): Gestión y Ejecución de Medidas por Alerta Climática Crítica
+
+* **User Goal:** Revisar una notificación de emergencia agroclimática (ej. Helada Severa), evaluar las medidas técnicas de contingencia requeridas y confirmar la culminación del plan de acción en campo.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-05 - Alerta y Plan de Acción](../assets/img/chapter-IV/wireflows/ug-5.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-05](../assets/img/chapter-IV/wireflows/ug-5-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. El productor ingresa al módulo de alertas desde el menú lateral (*Avisos y Riesgos Notificados*) y visualiza el banner crítico en rojo correspondiente a la **"Alerta de Helada Severa [Clima]"**.
+  2. Hace clic sobre el botón **"Medidas Detalladas"**, navegando a la pantalla técnica *Medidas Detalladas: Helada Severa (Clima)*.
+  3. En esta vista, el usuario examina las tres fases estructuradas: (1) Riego de Emergencia, (2) Cobertura de Cultivo y (3) Monitoreo de Microclima.
+  4. Una vez implementadas las recomendaciones en su predio, pulsa el botón **"Finalizar Plan de Acción"** ubicado al final de la cronología.
+  5. La interfaz superpone el modal *Plan de Acción Finalizado - Informe de Ejecución*, exhibiendo la barra de progreso al 100% y los tres checks de cumplimiento completados en verde.
+  6. El agricultor presiona **"Volver a Alertas Agrícolas"**, regresando al panel donde el aviso pasa a estado de evento mitigado.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Intento de finalización prematura:* Si el agricultor pulsa "Finalizar Plan de Acción" sin haber marcado o registrado el cumplimiento de las labores de campo (como el riego de emergencia o la colocación de coberturas), el sistema despliega un mensaje modal de confirmación advirtiendo que aún existen labores críticas sin verificar antes de archivar la alerta.
+  * *Pérdida de enlace al sincronizar:* Si el cierre de la alerta se efectúa en condiciones de baja señal móvil, la acción se registra en la memoria local (*IndexedDB*) y se programa para su envío diferido cuando el dispositivo restablezca la conectividad.
+
+---
+
+#### User Flow 06 (UG-06): Registro Contable de Costos Operativos de Campo
+
+* **User Goal:** Registrar un desembolso económico en campo (compra de insumos/abonos, pago de jornales o transporte/flete) para mantener actualizado el historial de costos y recalcular el precio mínimo de venta de equilibrio.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-06 - Registro de Gasto de Campo](../assets/img/chapter-IV/wireflows/ug-6.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-06](../assets/img/chapter-IV/wireflows/ug-6-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. El agricultor navega a la sección *Finanzas de la Campaña* y presiona el botón interactivo **"+ Anotar Nuevo Gasto"** ubicado en la cabecera superior.
+  2. La plataforma lo dirige al formulario estructurado *Registrar Gasto de Campo*:
+    * **Paso 1:** Selecciona el tipo de costo operativo mediante chips de selección rápida (`Insumos y Abono`, `Mano de Obra / Jornal` o `Flete`).
+    * **Paso 2:** Selecciona la parcela asignada (`Fundo Los Pinos`), digita el nombre del insumo o labor, especifica la cantidad, introduce el monto total pagado en soles (`S/ 1,240.00`), la fecha de desembolso y, de forma opcional, adjunta el número de comprobante o recibo y notas adicionales de campo.
+  3. El usuario pulsa el botón **"Guardar Gasto"**. El sistema valida la integridad de los datos monetarios y registra el asiento en el backend transaccional.
+  4. La aplicación superpone la ventana modal de confirmación *Registro Gasto de Campo Exitoso* con check circular verde, resumiendo el desglose: concepto guardado, fecha y monto final (`S/ 1,240.00`).
+  5. Al hacer clic en **"Regresar a registrar gastos"** o volver al panel principal, el nuevo registro se incorpora a la tabla del *Historial de desembolsos registrados*, actualizando automáticamente el Total Gastado y recalculando el **Precio Mínimo de Venta** por saco para no incurrir en pérdidas comerciales.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Datos contables incompletos o no válidos:* Si el usuario omite seleccionar el tipo de costo, deja el monto vacío o ingresa una cifra numérica menor o igual a cero (`S/ 0.00`), la interfaz muestra alertas visuales de validación en rojo debajo de los campos afectados y deshabilita el envío hasta subsanar la entrada.
+  * *Pérdida de conectividad en parcela (Offline-First):* Si el desembolso se anota directamente en campo sin cobertura 4G/WiFi, el *Service Worker* captura la transacción y persiste el registro en *IndexedDB*. La aplicación muestra un banner informativo indicando que el gasto se guardó en el dispositivo y se sincronizará con la base de datos central al detectar conexión, visualizándose temporalmente en el historial con un icono ámbar de sincronización pendiente.
+
+
 ## 4.5. Web Applications Prototyping
+
+En esta sección se presentan y sustentan los prototipos interactivos de alta fidelidad (*high-fidelity*) desarrollados para la plataforma **SumaqAgro**, abarcando las experiencias de usuario para **Desktop Web Browser** y **Mobile Web Browser**. La interactividad simula las rutas principales (*happy paths*) y rutas alternativas formalizadas en los diagramas de flujos de usuario (*User Flow Diagrams*).
+
+---
+
+#### 1. Criterios para las Decisiones de Interacción
+
+Las decisiones de interacción se fundamentan en los diferentes entornos de uso y perfiles operacionales de los tres segmentos de usuario de la plataforma:
+
+* **Contexto de Uso Diferenciado:** La versión Desktop se diseñó para la gestión administrativa, auditoría y análisis en oficina (empleada por directivos de cooperativas y agrónomos frente a monitores estándar), mientras que la versión Mobile Web se optimizó para la operación táctil en campo bajo condiciones de alta luminosidad y conectividad intermitente (productores agrícolas y técnicos en terreno).
+* **Tipos de Interacciones Seleccionadas:**
+  * *En Desktop:* Se implementaron interacciones basadas en cursor (*hover states*, menús desplegables contextuales, tablas dinámicas y clics directos sobre gráficos multiespectrales), agilizando el acceso a herramientas de supervisión masiva.
+  * *En Mobile:* Se restringieron los eventos a pulsaciones simples (*on tap*), evitando gestos complejos propensos a error en campo. Se incorporaron microinteracciones con retroalimentación visual inmediata (transiciones *Instant* y *Dissolve* de 200 ms) en selectores de lote, botones de acción flotante (FAB) y filtros rápidos (*chips*).
+* **Simulación de Comportamiento Desconectado (*Offline-First*):** En la experiencia móvil, las interacciones en formularios de bitácora y egresos simulan la persistencia local inmediata mediante avisos de confirmación en pantalla, actualizando la cabecera con el estado de cola de sincronización diferida hasta simular la reconexión a la red.
+
+---
+
+#### 2. Relación con la Arquitectura de Información
+
+La navegación interactiva traduce de manera directa las decisiones de Arquitectura de Información establecidas en el proyecto:
+
+* **Sistema de Navegación (*Navigation System*):**
+  * *Desktop:* Mantiene un menú lateral fijo (*sidebar*) con navegación jerárquica permanente, permitiendo alternar entre el catálogo de parcelas, módulo contable y reportes consolidados sin perder contexto de trabajo.
+  * *Mobile:* La navegación global se traslada íntegramente a una barra inferior (*Bottom Navigation Bar*) con 5 destinos clave (Inicio, Monitoreo, Finanzas, Alertas y Perfil) dentro de la zona ergonómica del pulgar (*thumb zone*), combinada con navegación jerárquica mediante botones de retroceso en el *AppBar*.
+* **Sistema de Organización (*Organization System*):** Ambas interfaces aplican una organización jerárquica orientada a tareas. El punto de entrada es un panel de control consolidado (*Dashboard* con indicadores de salud vegetal NDVI y costos), desde el cual las tarjetas (*cards*) funcionan como disparadores interactivos para profundizar en vistas de detalle analítico o formularios transaccionales.
+* **Sistema de Rotulado (*Labeling System*):** La rotulación interactiva mantiene una correspondencia biunívoca con el Lenguaje Ubicuo del dominio ("Mi Parcela", "Salud Foliar", "Insumos", "Jornales", "Punto de Equilibrio", "Certificado QR"), garantizando que cada botón o enlace anticipe con exactitud el resultado de la acción.
+* **Sistema de Búsqueda y Filtrado (*Searching System*):** Las vistas de alertas y bitácoras contables integran selectores horizontales (*chips*) e interacciones de filtrado instantáneo por severidad, fecha o campaña fenológica, reduciendo la fricción en la localización de anomalías agronómicas.
+
+---
+
+#### 3. Prototipo y Demostración en Video: Desktop Web Browser
+
+* **Enlace al Prototipo Interactivo en Figma (Desktop):**  
+  [Visualizar Prototipo Desktop SumaqAgro en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=7-55&t=zJ6zOatR2rSsKo7x-1)
+
+##### Demostración Audiovisual en Microsoft Stream (Desktop)
+
+* **Plataforma de Alojamiento:** Microsoft Stream 
+* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-desktop-sprint-1.mp4`
+* **Duración:** 04:15 minutos
+* **Enlace de Reproducción:** [Reproducir Demostración Desktop en Microsoft Stream](https://goo.su/MEGQ9O9)
+
+![Captura de Reproducción del Video Desktop en Microsoft Stream](../assets/img/chapter-IV/applications-design/prototypes/video-prototype-desktop.png)
+
+*Figura 4.5.1: Cuadro representativo de la sesión en video demostrando la navegación del prototipo Desktop en Microsoft Stream.*
+
+---
+
+#### 4. Prototipo y Demostración en Video: Mobile Web Browser
+
+* **Enlace al Prototipo Interactivo en Figma (Mobile):**  
+  [Visualizar Prototipo Mobile SumaqAgro en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=7-56&t=zJ6zOatR2rSsKo7x-1)
+
+##### Demostración Audiovisual en Microsoft Stream (Mobile)
+
+* **Plataforma de Alojamiento:** Microsoft Stream 
+* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-mobile-sprint-1.mp4`
+* **Duración:** 04:30 minutos
+* **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://goo.su/XRcWU)
+
+![Captura de Reproducción del Video Mobile en Microsoft Stream](../assets/img/chapter-IV/applications-design/prototypes/video-prototype-mobile.png)
 
 ## 4.6. Domain-Driven Software Architecture
 En esta sección se traslada la comprensión del negocio obtenida en el Big Picture Event Storming hacia el diseño de arquitectura de software guiado por el dominio (Domain-Driven Design - DDD) y el modelo de abstracción y comunicación visual C4 Model en sus niveles de Contexto, Contenedores y Componentes. A través de esta aproximación arquitectónica, se divide el espacio del problema en Bounded Contexts independientes y de bajo acoplamiento, estableciendo sus agregados transaccionales (Aggregates), comandos, eventos de dominio, modelos de consulta (Read Models) y políticas de automatización reactivas. Asimismo, se formaliza la topología técnica y modular de la solución distribuida, articulando la aplicación web de cara al usuario, el servicio de backend RESTful en Spring Boot, la base de datos relacional y las interfaces de integración con servicios externos.
