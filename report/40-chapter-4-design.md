@@ -677,17 +677,69 @@ A continuación, se presentan los wireframes principales de la aplicación web c
   <img src="../assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-offline.png"  width="600px" height="auto"/>
 </p>
 
+### Wireframes de la Aplicación Móvil
 
+##### W-01: Dashboard Principal ("Mi Parcela")
+Vista central de mando con lectura rápida de los indicadores operativos de la campaña en curso (vigor vegetal, inversión acumulada y punto de equilibrio comercial).
 
+![Wireframe W-01: Dashboard Mi Parcela](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-dashboard-mi-parcela.png)
 
+##### W-02: Monitoreo Satelital y Visor Multiespectral
+Visualizador georreferenciado que exhibe la reflectancia del predio mediante los índices multiespectrales NDVI y NDWI, permitiendo evaluar anomalías de vegetación y emitir solicitudes de asistencia fitosanitaria.
 
+![Wireframe W-02: Visor Satelital y Salud Vegetal](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-visor-satelital.png)
 
+##### W-03: Resumen Financiero y Punto de Equilibrio de Campaña
+Consolidado contable que clasifica los egresos en insumos, mano de obra y transporte, deduciendo el costo unitario de producción para respaldar negociaciones comerciales justas.
 
+![Wireframe W-03: Finanzas de Campaña](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-finanzas-campana.png)
 
+##### W-04: Centro de Alertas Agroclimáticas y Sanitarias
+Bandeja cronológica y categorizada que despacha advertencias tempranas ante caídas súbitas en el verdor foliar, estrés por sequía o pronósticos meteorológicos adversos (heladas).
 
+![Wireframe W-04: Alertas Agrícolas](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-alertas-agricolas.png)
 
+##### W-05: Bitácora de Registro Operativo en Campo
+Formulario optimizado para el asiento ágil de jornales, compra de fertilizantes o fletes rurales sin requerir conexión continua a internet, almacenando la información localmente.
 
-### Mobile Web Browser
+![Wireframe W-05: Registro de Operaciones y Costos](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-registro-operaciones.png)
+
+##### W-06: Acreditación de Calidad y Código QR de Trazabilidad
+Ficha técnica del lote cosechado que centraliza las evaluaciones de calidad física/sensorial y genera un código QR criptográfico para validación inmediata por parte de compradores y acopiadores.
+
+![Wireframe W-06: Ficha y Certificado QR](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-calidad-qr.png)
+
+##### W-07: Autenticación, Registro y Onboarding de Usuario
+Flujo de acceso e identificación institucional que permite a agricultores y asesores ingresar mediante credenciales seguras, seleccionando su rol y cooperativa de adscripción.
+
+![Wireframe W-07: Flujo de Autenticación e Identidad](../assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-autenticacion-iam.png)
+
+---
+
+#### 2. Sustento de Principios y Elementos de Diseño
+
+* **Jerarquía Visual y Patrón de Escaneo Vertical:** Dado el factor de forma compacto de las pantallas móviles, se organizó la información bajo un patrón de lectura vertical estricto. Los indicadores de mayor impacto para la toma de decisiones inmediatas (estado NDVI, costos acumulados y nivel de alerta) ocupan tarjetas prominentes en el tercio superior de la pantalla, relegando las series temporales y desgloses detallados hacia la zona de desplazamiento (*scroll*).
+* **Leyes de Proximidad y Región Común (Gestalt):** La interfaz utiliza contenedores modulares (*cards*) con bordes y espaciados homogéneos para vincular datos dependientes entre sí (por ejemplo, en el módulo financiero se asocia en una misma tarjeta el costo total invertido junto a los porcentajes de insumos y mano de obra).
+* **Convenciones Móviles y Zona Ergonómica del Pulgar (*Thumb Zone*):** Se sustituyó el menú lateral de escritorio (*sidebar*) por una barra de navegación inferior (*Bottom Navigation Bar*) permanente de 5 accesos directos principales. Asimismo, en la vista contable se adoptó un botón flotante de acción destacada (*Floating Action Button - FAB*) situado en la esquina inferior derecha para agilizar el registro recurrente de gastos.
+* **Contraste Tipográfico y Claridad Estructural:** A pesar de mantenerse en una escala de grises estricta para baja fidelidad, se establecieron diferencias marcadas de peso tipográfico (*Bold* para métricas cuantitativas e importes en soles, y *Regular* para etiquetas y leyendas descriptivas), garantizando un escaneo ágil bajo luz solar.
+
+---
+
+#### 3. Aplicación de Principios de Diseño Inclusivo y Accesibilidad
+
+* **Dimensionamiento de Áreas Táctiles (*Touch Targets*):** Conforme a las recomendaciones internacionales de accesibilidad móvil (WCAG / a11y), los botones de confirmación, campos de formulario y controles de navegación cuentan con dimensiones mínimas de 48 × 48 dp/px, evitando pulsaciones accidentales por parte de agricultores que operan el dispositivo con guantes o dedos fatigados por faenas de campo.
+* **Reducción de la Sobrecarga Cognitiva:** Se eliminaron las tablas extensas de escritorio, reemplazándolas por listas condensadas y estados cualitativos claros ("Óptimo", "Bajo Control", "Alerta") que acompañan a las cifras científicas (como el valor numérico de NDVI), facilitando la interpretación técnica a productores de baja escolaridad.
+* **Soporte de Arquitectura *Offline-First*:** Las pantallas de cabecera incorporan un indicador persistente de conectividad (*Connected / Offline Mode*). Esto brinda retroalimentación clara de que las anotaciones de jornales e insumos en la chacra se almacenan de forma local en la memoria del dispositivo y se transmitirán sin pérdida al recobrar cobertura celular.
+* **Simplificación en la Entrada de Datos:** Los formularios de campo priorizan campos numéricos automáticos, menús desplegables preestablecidos y captura fotográfica de recibos, disminuyendo al mínimo la necesidad de redactar textos extensos sobre el teclado virtual.
+
+---
+
+#### 4. Alineación con la Arquitectura de Información
+
+* **Sistemas de Organización (*Organization Systems*):** La aplicación implementa una estructura organizativa jerárquica y funcional orientada a tareas de campo. La pantalla raíz expone el balance general de la campaña agrícola, desde la cual se puede profundizar hacia subniveles analíticos (visor espectral, historial de transacciones o catálogo de alertas).
+* **Sistemas de Navegación (*Navigation Systems*):** Se articula una navegación global fija soportada en la *Bottom Navigation Bar* para conmutar entre los módulos principales (Inicio, Monitoreo, Finanzas, Alertas, Perfil), complementada con navegación jerárquica (flechas de retroceso en la barra superior *AppBar*) para regresar de formularios o vistas de detalle sin perder el estado previo.
+* **Sistemas de Rotulado (*Labeling Systems*):** Las etiquetas adoptadas derivan del Glosario de Lenguaje Ubicuo formalizado para el proyecto ("Mi Parcela", "Salud Foliar", "Insumos", "Jornales", "Punto de Equilibrio", "Certificado QR"), empleando terminología precisa y familiar para la comunidad agrícola.
+* **Sistemas de Búsqueda y Filtrado (*Searching Systems*):** Se integraron barras de búsqueda con autocompletado y selectores rápidos horizontales (*chips*) que permiten segmentar notificaciones y lotes históricos por fecha, nivel de riesgo o campaña fenológica activa.
 
 
 ### 4.4.2. Web Applications Wireflow Diagrams
