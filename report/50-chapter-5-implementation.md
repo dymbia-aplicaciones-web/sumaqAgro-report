@@ -567,7 +567,7 @@ Para evidenciar el correcto comportamiento de los componentes interactivos, el m
   *(Inserta aquí un screenshot/captura de un cuadro de tu video reproduciéndose)*
 
 * **Enlace de Reproducción (Microsoft Stream):**
-  [Video de Navegación del Landing Page - Sprint 1](INSERTA_TU_LINK_DE_STREAM_AQUI)
+  [Video "Video de Exposición AV1"](https://goo.su/pK90M9)
 
 ---
 
