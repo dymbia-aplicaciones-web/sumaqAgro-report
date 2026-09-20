@@ -1,0 +1,22 @@
+# IntelliJ IDEA / JetBrains
+.idea/
+*.iml
+*.iws
+out/
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Directorios de salida y compilación (Pandoc / PDF)
+dist/
+build/
+
+# Archivos temporales de XeLaTeX / TeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
