@@ -302,7 +302,9 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 #### Step 7: Read Models
 ![event-storming-step-7-read-models.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-7-read-models.jpg)
 * El paso 7 proyecta los modelos de lectura y vistas de datos necesarios para que los actores e interfaces puedan tomar decisiones informadas antes de ejecutar un comando.
-#### Step 8: Commands
+#### Step 8: External Systems
+![event-storming-step-8-external-systems-refactorizado.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-8-external-systems-refactorizado.jpg)
+* El paso 8 identifica e integra los sistemas externos y servicios de terceros que interactúan con el dominio, enviando comandos o reaccionando a los eventos generados.
 
 #### Step 9: Commands
 
