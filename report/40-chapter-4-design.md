@@ -778,6 +778,18 @@ El flujo de interacción comienza en el módulo «Alertas Agrícolas» (Avisos y
   <img src="../assets/img/chapter-IV/wireflows/ug-5.png" width="600px" height="auto"/>
 </p>
 
+**User Goal 6:** Usuario desea registrar un gasto de campo en finanzas de la campaña
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-6-resumido.png" width="600px" height="auto"/>
+</p>
+
+El flujo de interacción se inicia en el módulo «Finanzas de la Campaña» (Mis Gastos y Ganancias), donde el usuario hace clic en el botón de acción rápida «Añadir Nuevo Gasto»; tras este evento, el sistema lo redirige a la vista del formulario «Registrar Gasto de Campo» para seleccionar el tipo de costo operativo (Insumos y Abono, Mano de Obra o Flete), asignar la parcela correspondiente, ingresar el monto desembolsado y la fecha; finalmente, al pulsar el botón «Guardar Gasto», se procesa la información y se muestra una ventana modal de confirmación con el resumen del registro exitoso.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-6.png" width="600px" height="auto"/>
+</p>
+
 
 
 
