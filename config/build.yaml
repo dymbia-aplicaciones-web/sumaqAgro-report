@@ -1,8 +1,15 @@
+from: markdown-yaml_metadata_block
+
+file-scope: true
+metadata-file: metadata.yaml
+
 input-files:
+  # Preliminares (Front-Matter)
   - report/front-matter/01-caratula.md
   - report/front-matter/02-version-history.md
   - report/front-matter/03-collaboration.md
   - report/front-matter/04-student-outcome.md
+  # Capítulos del Informe
   - report/10-chapter-1-intro.md
   - report/20-chapter-2-requirements.md
   - report/30-chapter-3-specification.md
@@ -10,12 +17,18 @@ input-files:
   - report/50-chapter-5-implementation.md
   - report/60-conclusions.md
   - report/99-bibliography.md
-  - report/annexes/annex-a-student-outcome.md
-  - report/annexes/annex-b-performance-report.md
-  - report/annexes/annex-c-videos.md
+  # Anexos (Ruta real en la raíz del proyecto)
+  - annexes/annex-b-performance-report.md
+  - annexes/annex-c-videos.md
 
-file-scope: true
-resource-path: ['.', 'report', 'assets', 'assets/img', 'report/assets', 'report/assets/img']
+resource-path:
+  - "."
+  - "report"
+  - "report/assets"
+  - "report/assets/img"
+  - "assets"
+  - "annexes"
+
 output-file: dist/upc-pre-202620-1asi0729-dymbia-report-av1.pdf
 pdf-engine: xelatex
 number-sections: true

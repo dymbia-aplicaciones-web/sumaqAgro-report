@@ -75,7 +75,7 @@ A partir de estas metas, se vincularon como Actors/Personas los arquetipos ofici
 
 A continuación, se presenta la evidencia gráfica del Impact Mapping exportado en alta resolución desde UXPressia:
 
-![Impact Mapping del Sistema SumaqAgro](../assets/img/chapter-III/impact-mapping.png)
+![Impact Mapping del Sistema SumaqAgro](assets/img/chapter-III/impact-mapping.png)
 
 ## 3.3. Product Backlog
 
@@ -83,7 +83,7 @@ La tabla siguiente muestra el Product Backlog de **SumaqAgro** ordenado conforme
 
 En la parte superior se listan los elementos de alcance público orientados al visitante para el despliegue del Landing Page en el Sprint 1; a continuación, se priorizan las funcionalidades operativas del núcleo del sistema para el productor agrícola, directivos de cooperativa y asesores técnicos; y en seguida, las historias técnicas de infraestructura API RESTful y seguridad backend en Spring Boot. La columna de identificadores utiliza las nomenclaturas `US` (User Story) y `TS` (Technical Story) según la convención establecida en la sección 3.1.
 
-![Jira Product Backlog](../assets/img/chapter-III/jira-product-backlog.png)
+![Jira Product Backlog](assets/img/chapter-III/jira-product-backlog.png)
 
 **Enlace al Tablero del Product Backlog (Jira):** [Tablero Jira - SumaqAgro](https://sumaq-agro.atlassian.net/jira/software/c/projects/DSB/boards/2/backlog?epics=visible)
 

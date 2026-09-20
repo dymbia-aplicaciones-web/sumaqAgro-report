@@ -23,19 +23,19 @@ Para asegurar una captura de datos estructurada y de alto valor, se han elaborad
     <td colspan="2" style="text-align: center;"><b>Competidores</b></td>
     <td style="text-align: center; vertical-align: middle; width: 20%;">
       <b style="display: block; margin-bottom: 6px;">SumaqAgro</b>
-      <img src="../assets/img/chapter-II/sumaqagro-logo-chapter2.png" alt="SumaqAgro" width="100"/>
+      <img src="assets/img/chapter-II/sumaqagro-logo-chapter2.png" alt="SumaqAgro" width="100"/>
     </td>
     <td style="text-align: center; vertical-align: middle; width: 20%;">
       <b style="display: block; margin-bottom: 6px;">SpaceAG</b>
-      <img src="../assets/img/chapter-II/spaceag-logo-chapter2.png" alt="SpaceAG" width="100"/>
+      <img src="assets/img/chapter-II/spaceag-logo-chapter2.png" alt="SpaceAG" width="100"/>
     </td>
     <td style="text-align: center; vertical-align: middle; width: 20%;">
       <b style="display: block; margin-bottom: 6px;">Kilimo</b>
-      <img src="../assets/img/chapter-II/kilimo-logo-chapter2.png" alt="Kilimo" width="100"/>
+      <img src="assets/img/chapter-II/kilimo-logo-chapter2.png" alt="Kilimo" width="100"/>
     </td>
     <td style="text-align: center; vertical-align: middle; width: 20%;">
       <b style="display: block; margin-bottom: 6px;">Auravant</b>
-      <img src="../assets/img/chapter-II/auravant-logo-chapter2.png" alt="Auravant" width="100"/>
+      <img src="assets/img/chapter-II/auravant-logo-chapter2.png" alt="Auravant" width="100"/>
     </td>
   </tr>
   <tr>
@@ -348,7 +348,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Flores Huamán </td></tr>
   <tr><td>Edad</td><td> 26 </td></tr>
   <tr><td>Distrito</td><td> Huancayo - Junín </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-one-01-Mateo-Florez.png" alt="Entrevista - Mateo Florez" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="assets/img/interview/interview-segment-one-01-Mateo-Florez.png" alt="Entrevista - Mateo Florez" width="420"/></td></tr>
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 0:00 min </td></tr>
   <tr><td>Duración de la entrevista</td><td> 4:51 min </td></tr>
@@ -376,7 +376,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Gutierrez Quispe </td></tr>
   <tr><td>Edad</td><td> 21 </td></tr>
   <tr><td>Distrito</td><td> Quillabamba - Cusco </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-one-02-Joquin-Gutierrez.png" alt="Entrevista - Joaquin Gutierrez" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="assets/img/interview/interview-segment-one-02-Joquin-Gutierrez.png" alt="Entrevista - Joaquin Gutierrez" width="420"/></td></tr>
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 4:54 min</td></tr>
   <tr><td>Duración de la entrevista</td><td> 12:17 min</td></tr>
@@ -404,7 +404,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Palomino Sánchez </td></tr>
   <tr><td>Edad</td><td> 27 </td></tr>
   <tr><td>Distrito</td><td> Andahuaylas - Apurímac </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-one-03-Marco-Palomino.png" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="assets/img/interview/interview-segment-one-03-Marco-Palomino.png" alt="Entrevista - name" width="420"/></td></tr>
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 12:19 min</td></tr>
   <tr><td>Duración de la entrevista</td><td> 19:42 min</td></tr>
@@ -434,7 +434,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Nina Condori </td></tr>
   <tr><td>Edad</td><td> 28 </td></tr>
   <tr><td>Distrito</td><td> Ocongate - Cusco </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-01-Nina-Condori.png" alt="Entrevista - Nina Condori" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="assets/img/interview/interview-segment-two-01-Nina-Condori.png" alt="Entrevista - Nina Condori" width="420"/></td></tr>
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 19:45 min</td></tr>
   <tr><td>Duración de la entrevista</td><td> 26:03 min</td></tr>
@@ -461,7 +461,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Quispe </td></tr>
   <tr><td>Edad</td><td> 27 </td></tr>
   <tr><td>Distrito</td><td> Arequipa - San Martin </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-02-Caleb-Quispe.png" alt="Entrevista - Caleb Quispe" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="assets/img/interview/interview-segment-two-02-Caleb-Quispe.png" alt="Entrevista - Caleb Quispe" width="420"/></td></tr>
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 26:05 min</td></tr>
   <tr><td>Duración de la entrevista</td><td>29:46 min</td></tr>
@@ -486,7 +486,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Aquise Chauca </td></tr>
   <tr><td>Edad</td><td> 27 </td></tr>
   <tr><td>Distrito</td><td> San Antonio - Cañete </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-03-Cristo-Aquise.png" alt="Entrevista - Cristo Valentino" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="assets/img/interview/interview-segment-two-03-Cristo-Aquise.png" alt="Entrevista - Cristo Valentino" width="420"/></td></tr>
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 29:52 min </td></tr>
   <tr><td>Duración de la entrevista</td><td> 34:07 min </td></tr>
@@ -514,7 +514,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Mapelli </td></tr>
   <tr><td>Edad</td><td> 50 </td></tr>
   <tr><td>Distrito</td><td> Pasco - Oxapampa </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-three-01-Erly-Mapelli.png" alt="Entrevista - Erly Mapelli" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="assets/img/interview/interview-segment-three-01-Erly-Mapelli.png" alt="Entrevista - Erly Mapelli" width="420"/></td></tr>
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 34:12 min</td></tr>
   <tr><td>Duración de la entrevista</td><td> 47:06 min</td></tr>
@@ -539,7 +539,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Torres Martinez </td></tr>
   <tr><td>Edad</td><td> 30 </td></tr>
   <tr><td>Distrito</td><td> Mala - Cañete </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-three-02-Eddy-Alberto.png" alt="Entrevista - Eddy Alberto" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="assets/img/interview/interview-segment-three-02-Eddy-Alberto.png" alt="Entrevista - Eddy Alberto" width="420"/></td></tr>
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 47:18 min </td></tr>
   <tr><td>Duración de la entrevista</td><td> 51:52 min </td></tr>
@@ -565,7 +565,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Rodríguez Espinoza </td></tr>
   <tr><td>Edad</td><td> 30 </td></tr>
   <tr><td>Distrito</td><td> Piura </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-03-Jorge-Rodriguez.png" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="assets/img/interview/interview-segment-two-03-Jorge-Rodriguez.png" alt="Entrevista - name" width="420"/></td></tr>
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 51:53 min </td></tr>
   <tr><td>Duración de la entrevista</td><td> 56:29 min </td></tr>
@@ -668,17 +668,17 @@ A continuación, se presentan los tres arquetipos de usuario elaborados en UXPre
 ##### Segmento 1: Pequeños y medianos agricultores independientes
 El arquetipo "Guillermo Cortés" representa al agricultor familiar tradicional que conduce parcelas de café y papa bajo métodos empíricos y sin conectividad continua, demandando una arquitectura móvil fuera de línea y monitoreo satelital sin inversión en sensores costosos en tierra para defender precios justos frente a intermediarios.
 
-![user-persona-segmento-1-guillermo-cortes.jpeg](../assets/img/chapter-II/user-persona-segmento-1-guillermo-cortes.jpeg)
+![user-persona-segmento-1-guillermo-cortes.jpeg](assets/img/chapter-II/user-persona-segmento-1-guillermo-cortes.jpeg)
 
 ##### Segmento 2: Productores organizados y directivos de cooperativas/asociaciones
 El arquetipo "Cristian Santana" sintetiza las necesidades de los administradores y directivos de acopio cooperativo, quienes requieren digitalizar los análisis de calidad en almacén, asegurar la trazabilidad de origen y agilizar los expedientes de auditoría para proteger las primas comerciales y de exportación.
 
-![user-persona-segmento-2-cristian-santana.jpeg](../assets/img/chapter-II/user-persona-segmento-2-cristian-santana.jpeg)
+![user-persona-segmento-2-cristian-santana.jpeg](assets/img/chapter-II/user-persona-segmento-2-cristian-santana.jpeg)
 
 ##### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
 El arquetipo "Juan Antonio Morales" consolida al consultor fitosanitario cuya cobertura se ve restringida por la dispersión geográfica en quebradas y por métodos visuales subjetivos, requiriendo teledetección multiespectral para priorizar predios y sustentar prescripciones técnicas ante la gerencia.
 
-![user-persona-segmento-3-juan-antonio-morales.jpeg](../assets/img/chapter-II/user-persona-segmento-3-juan-antonio-morales.jpeg)
+![user-persona-segmento-3-juan-antonio-morales.jpeg](assets/img/chapter-II/user-persona-segmento-3-juan-antonio-morales.jpeg)
 
 
 ### 2.3.2. User Task Matrix
@@ -724,30 +724,30 @@ El **User Task Matrix** evalúa las tareas clave que realizan los tres arquetipo
 Con el User Journey Map (disponible en: https://uxpressia.com/w/v8FzI/t/eqZxS) reconstruimos paso a paso lo que viven y sienten el administrador y la familia durante el proceso. Al hacer visibles sus principales dificultades y puntos de dolor, podemos dirigir nuestra solución tecnológica justo donde más se necesita, convirtiendo una mala experiencia en un proceso simple y eficiente.
 ### Segmento 1: Pequeño agricultor independiente de café (Guillermo Cortés)
 
-![User Journey Mapping-segmento-01](../assets/img/chapter-II/User-Journey-Mapping-segment-01.png)
+![User Journey Mapping-segmento-01](assets/img/chapter-II/User-Journey-Mapping-segment-01.png)
 
 ### Segmento 2: Gerente de operaciones de cooperativa agraria (Cristian Santana)
 
-![User Journey Mapping-segmento-02](../assets/img/chapter-II/User-Journey-Mapping-segment-02.png)
+![User Journey Mapping-segmento-02](assets/img/chapter-II/User-Journey-Mapping-segment-02.png)
 
 ### Segmento 3: Asesor técnico de campo (Juan Antonio Morales)
 
-![User Journey Mapping-segmento-03](../assets/img/chapter-II/User-Journey-Mapping-segment-03.png)
+![User Journey Mapping-segmento-03](assets/img/chapter-II/User-Journey-Mapping-segment-03.png)
 
 ### 2.3.4. Empathy Mapping
 
 Crear un producto con impacto real exige mirar más allá de las conductas visibles y conectar con el aspecto emocional del usuario. Mediante el mapa de empatía (disponible en: https://uxpressia.com/w/v8FzI/t/eqZxS), superamos la simple segmentación demográfica para comprender su contexto interno. Desglosar lo que administradores y familias perciben, expresan y experimentan en su día a día nos permite descubrir tanto sus temores como sus expectativas clave.
 ### Segmento 1: Pequeño agricultor independiente de café (Guillermo Cortés)
 
-![Empathy-Mapping-segmet-01.png](../assets/img/chapter-II/Empathy-Mapping-segmet-01.png)
+![Empathy-Mapping-segmet-01.png](assets/img/chapter-II/Empathy-Mapping-segmet-01.png)
 
 ### Segmento 2: Gerente de operaciones de cooperativa agraria (Cristian Santana)
 
-![Empathy-Mapping-segmet-02.png](../assets/img/chapter-II/Empathy-Mapping-segmet-02.png)
+![Empathy-Mapping-segmet-02.png](assets/img/chapter-II/Empathy-Mapping-segmet-02.png)
 
 ### Segmento 3: Asesor técnico de campo (Juan Antonio Morales)
 
-![Empathy-Mapping-segmet-03.png](../assets/img/chapter-II/Empathy-Mapping-segmet-03.png)
+![Empathy-Mapping-segmet-03.png](assets/img/chapter-II/Empathy-Mapping-segmet-03.png)
 
 ## 2.4. Big Picture Event Storming
 
@@ -756,12 +756,12 @@ En una sesión colaborativa sincrónica mediante la herramienta Miro, el equipo 
 ### Exploración No Estructurada de Eventos (Domain Events)
 El taller inició con una lluvia de ideas abierta en la que cada integrante aportó hechos consumados de relevancia agronómica, financiera y de certificación. Estos eventos se formularon estrictamente en tiempo pasado participio mediante notas adhesivas de color naranja, abarcando desde la delimitación del predio y el cálculo de índices satelitales, hasta la anotación diaria de jornales y la emisión de certificados de calidad:
 
-![Exploración no estructurada de eventos de dominio](../assets/img/chapter-II/step-1-unstructured-exploration.jpg)
+![Exploración no estructurada de eventos de dominio](assets/img/chapter-II/step-1-unstructured-exploration.jpg)
 
 ### Línea de Tiempo, Puntos de Dolor e Hitos del Negocio
 Posteriormente, los eventos se organizaron en una secuencia cronológica de izquierda a derecha sobre una línea de tiempo continua. A partir de este ordenamiento, se superpusieron los puntos de dolor (*pain points*) identificados durante el Needfinding mediante notas moradas en rombo (resistencia cultural al celular, desconexión móvil en quebradas, registros en papel extraviados y castigos arbitrarios de precio). Asimismo, se establecieron líneas divisorias verticales para demarcar los eventos fundamentales (*pivotal points*) que delimitan las fases operativas de SumaqAgro:
 
-![Línea de tiempo con puntos de dolor e hitos fundamentales](../assets/img/chapter-II/step-2-timelines-pivotal-points.jpg)
+![Línea de tiempo con puntos de dolor e hitos fundamentales](assets/img/chapter-II/step-2-timelines-pivotal-points.jpg)
 
 * **Enlace al tablero interactivo:** [Acceso al espacio de trabajo de Event Storming en Miro]([https://miro.com/app/board/uXjVHPEmUbl=/](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHZ6UXVkOHlsNXRlcVBQd24wVS92ZWN3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=946708686416))
 
