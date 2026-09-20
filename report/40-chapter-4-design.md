@@ -758,6 +758,30 @@ El flujo de interacción inicia en la pantalla principal de la aplicación cuand
   <img src="../assets/img/chapter-IV/wireflows/ug-1.png"  width="600px" height="auto"/>
 </p>
 
+**User Goal 2:** Usuario desea ingresar con su cuenta en la aplicación
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-2-resumido.png"  width="600px" height="auto"/>
+</p>
+
+El flujo de interacción inicia cuando el usuario registrado accede a la pantalla de autenticación (/login) e ingresa sus credenciales de acceso (correo electrónico y contraseña); tras enviar el formulario, el sistema valida la información mediante el servicio de autenticación (TS-02), genera el token de sesión JWT y redirige automáticamente al usuario hacia el panel principal (dashboard) correspondiente a su rol dentro de la plataforma.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-2.png"  width="600px" height="auto"/>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
