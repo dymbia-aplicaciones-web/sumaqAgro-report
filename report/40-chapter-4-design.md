@@ -799,6 +799,7 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 
 
 ### AGRICULTURAL ALERTS
+
 <p align="center">
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-home.png"  width="600px" height="auto"/>
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-details.png"  width="600px" height="auto"/>
@@ -808,11 +809,19 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 
 
 ### SETTINGS
+
 <p align="center">
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-details-plot.png"  width="600px" height="auto"/>
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-account.png"  width="600px" height="auto"/>
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-help-manuals.png"  width="600px" height="auto"/>
 </p>
+
+### MODE OFFLINE
+<p align="center">
+  <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-offline-mode.png"  width="600px" height="auto"/>
+</p>
+
+
 
 
 
