@@ -781,7 +781,16 @@ El flujo de interacción comienza en la pantalla de inicio de sesión cuando el 
   <img src="../assets/img/chapter-IV/wireflows/ug-3.png"  width="600px" height="auto"/>
 </p>
 
+**User Goal 4:** Usuario desea revisar sus parcelas
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-4-resumido.png"  width="600px" height="auto"/>
+</p>
 
+El flujo de interacción se inicia en el panel principal (dashboard) del agricultor, donde visualiza las tarjetas de métricas generales y pulsa el botón de acción rápida «Ver Todos Mis Lotes»; en respuesta a este evento, el sistema efectúa la transición hacia la vista de catálogo general «Mis Parcelas Registradas» (/parcels), renderizando el listado completo de predios georreferenciados mediante tarjetas informativas que exponen el nombre del fundo, el cultivo monitoreado, el área calculada y los accesos para inspeccionar la salud satelital.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-4.png"  width="600px" height="auto"/>
+</p>
 
 
 
