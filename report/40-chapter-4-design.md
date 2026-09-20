@@ -802,23 +802,6 @@ El flujo de interacción se inicia en la sección «Asistencia Fitosanitaria y R
   <img src="../assets/img/chapter-IV/wireflows/ug-7.png" width="600px" height="auto"/>
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 4.4.3. Web Applications Mock-ups
 
 En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
@@ -889,60 +872,173 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="../assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-offline-mode.png"  width="600px" height="auto"/>
 </p>
 
+**User Goal 6:** Usuario desea registrar un gasto de campo en finanzas de la campaña
 
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-6-resumido.png" width="600px" height="auto"/>
+</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+El flujo de interacción se inicia en el módulo «Finanzas de la Campaña» (Mis Gastos y Ganancias), donde el usuario hace clic en el botón de acción rápida «Añadir Nuevo Gasto»; tras este evento, el sistema lo redirige a la vista del formulario «Registrar Gasto de Campo» para seleccionar el tipo de costo operativo (Insumos y Abono, Mano de Obra o Flete), asignar la parcela correspondiente, ingresar el monto desembolsado y la fecha; finalmente, al pulsar el botón «Guardar Gasto», se procesa la información y se muestra una ventana modal de confirmación con el resumen del registro exitoso.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-6.png" width="600px" height="auto"/>
+</p>
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
+En esta sección se presentan los diagramas de flujo de usuario (*User Flows*) de la aplicación web de la plataforma **SumaqAgro**. De acuerdo con las directrices metodológicas del proyecto, los User Flows derivan de los Wireflows preliminares y formalizan la experiencia de interacción integrando tanto los Mock-ups de alta fidelidad con sus elementos interactivos como los diagramas lógicos resumidos de navegación.
+
+Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto con las rutas alternas o de contingencia (*unhappy paths*), vinculándolas a los User Persona oficiales del sistema (Guillermo Cortés como productor independiente y Cristian Santana como gestor cooperativo).
+
+---
+
+#### User Flow 01 (UG-01): Registro y Creación de Nueva Cuenta de Usuario
+
+* **User Goal:** Registrar una nueva cuenta de usuario en la plataforma seleccionando el rol correspondiente (productor independiente, directivo de cooperativa o asesor técnico) para acceder a los servicios de gestión agronómica.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente) / Cristian Santana (Directivo de Cooperativa).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-01 - Registro de Usuario](../assets/img/chapter-IV/wireflows/ug-1.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-01](../assets/img/chapter-IV/wireflows/ug-1-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. El visitante accede a la pantalla de bienvenida (*Welcome back!*) y, al carecer de credenciales, pulsa el enlace interactivo *"Sign up here"* ubicado en el pie del formulario.
+  2. La interfaz transiciona a la pantalla *Create your free account*, donde el usuario selecciona su rol funcional (`Farmer`), ingresa su nombre completo, correo electrónico, nombre de su predio o fundo y establece una contraseña segura de acceso.
+  3. Marca la casilla de aceptación de los Términos de Servicio y Políticas de Privacidad y pulsa el botón principal de confirmación.
+  4. El backend corrobora que los campos son válidos y que el correo no existe en el sistema, completando el registro y habilitando el ingreso a la aplicación web.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Validación sintáctica fallida:* Si el usuario omite campos requeridos, introduce un correo con formato no estándar o una contraseña menor a 8 caracteres, los campos se marcan en rojo con mensajes descriptivos impidiendo el avance del registro.
+  * *Correo electrónico preexistente:* Si la dirección ingresada ya figura en el sistema, la interfaz muestra una alerta informando que el correo ya está en uso y sugiere iniciar sesión o restablecer la contraseña.
+  * *Términos legales sin aceptar:* Si la casilla de términos y privacidad no es marcada, el botón de envío permanece inactivo o emite un aviso de obligatoriedad legal.
+
+---
+
+#### User Flow 02 (UG-02): Inicio de Sesión y Autenticación de Usuario
+
+* **User Goal:** Iniciar sesión en la plataforma web mediante credenciales de acceso registradas para ingresar al panel de control agronómico y financiero.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-02 - Inicio de Sesión](../assets/img/chapter-IV/wireflows/ug-2.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-02](../assets/img/chapter-IV/wireflows/ug-2-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. El agricultor se sitúa en la vista de acceso (*Welcome back!*), digita su correo electrónico institucional/personal y su contraseña registrada.
+  2. De forma opcional, marca la opción *"Remember my session for 30 days"* para mantener activa su sesión y presiona el botón interactivo verde **"Login"**.
+  3. El servicio de autenticación valida las credenciales contra la base de datos y genera el token Bearer JWT de autorización.
+  4. El sistema redirige automáticamente al usuario a su panel de control personalizado (*Good morning, Guillermo!*), desplegando las métricas en tiempo real de Salud Foliar (NDVI 0.74), Gasto Total Invertido (S/ 14,850.00) y el Precio de equilibrio para no perder (S/ 46.40).
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Credenciales no válidas:* Si el correo o la contraseña no coinciden con los registros del sistema, se despliega una notificación de error en color rojo (*"Usuario o contraseña incorrectos"*), manteniendo el correo ingresado pero vaciando el campo de clave para reintentar.
+  * *Exceso de reintentos fallidos:* Si se ingresan contraseñas incorrectas de manera reiterada, la plataforma bloquea temporalmente el formulario por seguridad y recomienda utilizar el flujo de recuperación de clave.
+
+---
+
+#### User Flow 03 (UG-03): Recuperación y Restablecimiento de Contraseña
+
+* **User Goal:** Recuperar el acceso a la cuenta del sistema mediante la solicitud y confirmación de un código numérico temporal enviado al correo electrónico registrado.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-03 - Recuperación de Contraseña](../assets/img/chapter-IV/wireflows/ug-3.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-03](../assets/img/chapter-IV/wireflows/ug-3-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. Desde la pantalla de Login (*¡Bienvenido de nuevo!*), el usuario que ha olvidado sus credenciales presiona el enlace interactivo **"¿Olvidaste tu clave?"**.
+  2. El sistema lo conduce al formulario *Recuperar Contraseña*, donde ingresa su dirección de correo electrónico registrada y presiona el botón **"Enviar"**.
+  3. El sistema comprueba que el usuario existe, despacha un token OTP temporal de 6 dígitos al buzón y navega a la pantalla *Mensaje de Confirmación*.
+  4. El agricultor revisa su bandeja de correo, digita los 6 dígitos en las casillas correspondientes y presiona confirmar; al ser validado con éxito, la plataforma le permite ingresar su nueva clave de acceso y reanudar sesión.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Correo electrónico no registrado:* Si el usuario introduce una dirección que no figura en la base de datos, el formulario permanece en la pantalla actual y despliega un mensaje de error indicando que no se encontró ninguna cuenta asociada.
+  * *Código de verificación incorrecto o expirado:* Si el código ingresado no coincide con el token despachado o si supera el tiempo límite de vigencia (10 minutos), las casillas se resaltan con borde rojo y se habilita un enlace para solicitar un reenvío del código OTP.
+
+---
+
+#### User Flow 04 (UG-04): Consulta y Administración del Inventario de Parcelas Registradas
+
+* **User Goal:** Consultar desde el Dashboard operativo la totalidad de parcelas agrícolas dadas de alta en el sistema para monitorear su estado y verificar los cupos disponibles de nuevos lotes.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-04 - Consulta de Parcelas](../assets/img/chapter-IV/wireflows/ug-4.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-04](../assets/img/chapter-IV/wireflows/ug-4-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. En el Dashboard principal (*¡Buen día, Guillermo!*), el productor examina los indicadores de su predio activo y pulsa el botón **"Ver Todos Mis Lotes"** en la cabecera superior.
+  2. La aplicación abre la vista de administración *Mis Parcelas Registradas*, cargando el inventario de lotes bajo monitoreo satelital.
+  3. El usuario observa la tarjeta de la *PARCELA #1* (Fundo Los Pinos, cultivo Papa Canchan, área de 3.5 ha y estado NDVI 0.74 Óptimo) con acceso a su visor satelital.
+  4. Asimismo, el sistema muestra las tarjetas de la *PARCELA #2* y *PARCELA #3* identificadas como *Cupo Disponible*, acompañadas del botón interactivo **"Registrar Nueva Parcela"** dentro de los márgenes del plan gratuito activo.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Límite de cupos de parcelas alcanzado:* Si el usuario cuenta con los 3 lotes registrados y pulsa sobre agregar uno nuevo, el sistema no abre el catastro GPS; en su lugar, despliega un cuadro modal informando que ha copado el límite de su plan gratuito y ofrece un botón de actualización hacia el plan comercial.
+  * *Ausencia total de registros (Empty State):* Si el agricultor aún no hubiera configurado su primer lote o hubiera borrado sus datos, la pantalla reemplaza las tarjetas activas por una guía informativa orientada al trazado inicial del polígono georreferenciado.
+
+---
+
+#### User Flow 05 (UG-05): Gestión y Ejecución de Medidas por Alerta Climática Crítica
+
+* **User Goal:** Revisar una notificación de emergencia agroclimática (ej. Helada Severa), evaluar las medidas técnicas de contingencia requeridas y confirmar la culminación del plan de acción en campo.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-05 - Alerta y Plan de Acción](../assets/img/chapter-IV/wireflows/ug-5.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-05](../assets/img/chapter-IV/wireflows/ug-5-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. El productor ingresa al módulo de alertas desde el menú lateral (*Avisos y Riesgos Notificados*) y visualiza el banner crítico en rojo correspondiente a la **"Alerta de Helada Severa [Clima]"**.
+  2. Hace clic sobre el botón **"Medidas Detalladas"**, navegando a la pantalla técnica *Medidas Detalladas: Helada Severa (Clima)*.
+  3. En esta vista, el usuario examina las tres fases estructuradas: (1) Riego de Emergencia, (2) Cobertura de Cultivo y (3) Monitoreo de Microclima.
+  4. Una vez implementadas las recomendaciones en su predio, pulsa el botón **"Finalizar Plan de Acción"** ubicado al final de la cronología.
+  5. La interfaz superpone el modal *Plan de Acción Finalizado - Informe de Ejecución*, exhibiendo la barra de progreso al 100% y los tres checks de cumplimiento completados en verde.
+  6. El agricultor presiona **"Volver a Alertas Agrícolas"**, regresando al panel donde el aviso pasa a estado de evento mitigado.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Intento de finalización prematura:* Si el agricultor pulsa "Finalizar Plan de Acción" sin haber marcado o registrado el cumplimiento de las labores de campo (como el riego de emergencia o la colocación de coberturas), el sistema despliega un mensaje modal de confirmación advirtiendo que aún existen labores críticas sin verificar antes de archivar la alerta.
+  * *Pérdida de enlace al sincronizar:* Si el cierre de la alerta se efectúa en condiciones de baja señal móvil, la acción se registra en la memoria local (*IndexedDB*) y se programa para su envío diferido cuando el dispositivo restablezca la conectividad.
+
+---
+
+#### User Flow 06 (UG-06): Registro Contable de Costos Operativos de Campo
+
+* **User Goal:** Registrar un desembolso económico en campo (compra de insumos/abonos, pago de jornales o transporte/flete) para mantener actualizado el historial de costos y recalcular el precio mínimo de venta de equilibrio.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-06 - Registro de Gasto de Campo](../assets/img/chapter-IV/wireflows/ug-6.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-06](../assets/img/chapter-IV/wireflows/ug-6-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. El agricultor navega a la sección *Finanzas de la Campaña* y presiona el botón interactivo **"+ Anotar Nuevo Gasto"** ubicado en la cabecera superior.
+  2. La plataforma lo dirige al formulario estructurado *Registrar Gasto de Campo*:
+    * **Paso 1:** Selecciona el tipo de costo operativo mediante chips de selección rápida (`Insumos y Abono`, `Mano de Obra / Jornal` o `Flete`).
+    * **Paso 2:** Selecciona la parcela asignada (`Fundo Los Pinos`), digita el nombre del insumo o labor, especifica la cantidad, introduce el monto total pagado en soles (`S/ 1,240.00`), la fecha de desembolso y, de forma opcional, adjunta el número de comprobante o recibo y notas adicionales de campo.
+  3. El usuario pulsa el botón **"Guardar Gasto"**. El sistema valida la integridad de los datos monetarios y registra el asiento en el backend transaccional.
+  4. La aplicación superpone la ventana modal de confirmación *Registro Gasto de Campo Exitoso* con check circular verde, resumiendo el desglose: concepto guardado, fecha y monto final (`S/ 1,240.00`).
+  5. Al hacer clic en **"Regresar a registrar gastos"** o volver al panel principal, el nuevo registro se incorpora a la tabla del *Historial de desembolsos registrados*, actualizando automáticamente el Total Gastado y recalculando el **Precio Mínimo de Venta** por saco para no incurrir en pérdidas comerciales.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Datos contables incompletos o no válidos:* Si el usuario omite seleccionar el tipo de costo, deja el monto vacío o ingresa una cifra numérica menor o igual a cero (`S/ 0.00`), la interfaz muestra alertas visuales de validación en rojo debajo de los campos afectados y deshabilita el envío hasta subsanar la entrada.
+  * *Pérdida de conectividad en parcela (Offline-First):* Si el desembolso se anota directamente en campo sin cobertura 4G/WiFi, el *Service Worker* captura la transacción y persiste el registro en *IndexedDB*. La aplicación muestra un banner informativo indicando que el gasto se guardó en el dispositivo y se sincronizará con la base de datos central al detectar conexión, visualizándose temporalmente en el historial con un icono ámbar de sincronización pendiente.
 
 
 ## 4.5. Web Applications Prototyping
