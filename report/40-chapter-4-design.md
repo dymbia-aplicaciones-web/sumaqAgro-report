@@ -743,9 +743,28 @@ Flujo de acceso e identificación institucional que permite a agricultores y ase
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
+Un **wireflow** o flujo de pantallas es una representación visual que conecta distintos wireframes para mostrar el recorrido que sigue el usuario dentro de una aplicación hasta alcanzar un objetivo específico. Su propósito es explicar cómo se relacionan las diferentes pantallas y qué acciones debe realizar el usuario durante el proceso.
+
+Para construir un wireflow, primero se identifica el objetivo que el usuario desea lograr. Después, se establece la secuencia de tareas necesarias para completar dicho objetivo dentro de la aplicación. Finalmente, estas tareas se representan mediante las pantallas correspondientes y se conectan a través de las acciones disponibles en botones, enlaces u otros elementos interactivos del wireframe.
+
+**User Goal 1:** Usuario desea registrarse en la aplicación
+Flujo normal: 
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-1-resumido.png"  width="600px" height="auto"/>
+</p>
+
+El flujo de interacción inicia en la pantalla principal de la aplicación cuando el usuario selecciona la opción de registrarse, lo que lo dirige a la vista del formulario donde debe elegir su rol correspondiente (Agricultor, Cooperativa o Asesor) y completar los campos obligatorios de datos personales, correo electrónico y contraseña; una vez validados los campos y enviado el registro, el sistema genera las credenciales de acceso y redirige automáticamente al usuario hacia el panel de bienvenida de su módulo
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-1.png"  width="600px" height="auto"/>
+</p>
+
+
+
+
 ### 4.4.3. Web Applications Mock-ups
 
 En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
+
 
 ### LOGIN / REGISTER 
 
@@ -866,13 +885,15 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 
 
 
-### Desktop Web Browser
+
 
 
 
 
 
 ### 4.4.4. Web Applications User Flow Diagrams
+
+
 
 ## 4.5. Web Applications Prototyping
 
