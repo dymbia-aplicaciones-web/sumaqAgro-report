@@ -790,6 +790,17 @@ El flujo de interacción se inicia en el módulo «Finanzas de la Campaña» (Mi
   <img src="../assets/img/chapter-IV/wireflows/ug-6.png" width="600px" height="auto"/>
 </p>
 
+**User Goal 7:** Usuario desea enviar un reporte de plaga a su asesor
+
+Flujo normal:
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-7-resumido.png" width="600px" height="auto"/>
+</p>
+
+El flujo de interacción se inicia en la sección «Asistencia Fitosanitaria y Recetas» (Consulta al Asesor), donde el usuario presiona el botón de acción rápida «Enviar Foto de Plaga»; tras este evento, se despliega una ventana modal con el formulario «Enviar Reporte de Plaga» donde selecciona su parcela, adjunta la fotografía de la evidencia y añade observaciones opcionales; finalmente, al hacer clic en «Enviar Reporte», el sistema procesa la solicitud y muestra una pantalla modal de confirmación informando que el reporte fue enviado con éxito al ingeniero asignado.
+<p align="center">
+  <img src="../assets/img/chapter-IV/wireflows/ug-7.png" width="600px" height="auto"/>
+</p>
 
 
 
