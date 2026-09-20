@@ -289,7 +289,10 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 * El segundo paso de Event Storming transforma la lluvia de ideas caótica del Paso 1 en una narrativa operativa coherente, secuenciada cronológicamente de izquierda a derecha bajo el escenario principal o Happy Path.
 #### Step 3: Paints Points
 ![event-storming-step-3-paint-points.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-3-paint-points.jpg)
-* El Paso 3 (Paint Points / Pain Points) en la metodología de Event Storming tiene como función principal identificar y visibilizar de forma temprana las fricciones, riesgos, dudas y cuellos de botella existentes en el flujo operativo del negocio agrícola.
+* El tercer paso tiene como función principal identificar y visibilizar de forma temprana las fricciones, riesgos, dudas y cuellos de botella existentes en el flujo operativo del negocio agrícola.
+#### Step 3: Paints Points
+![event-storming-step-4-timelines-pivotal-points.jpg](../assets/img/chapter-IV/domain-drive-design/event-storming-step-4-timelines-pivotal-points.jpg)
+* El cuarto paso tiene como propósito identificar y marcar aquellos eventos de dominio transcendentales que representan cambios de estado irreversibles, puntos de inflexión de alto impacto o transiciones entre diferentes etapas del negocio agrícola.
 
 
 #### Step 10: Bounded Contexts
