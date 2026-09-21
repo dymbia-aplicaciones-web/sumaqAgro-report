@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="./assets/img/upc-logo.png" width="60" alt="UPC Logo">
+<img src="../assets/img/upc-logo.png" width="60" alt="UPC Logo">
 
 Universidad Peruana de Ciencias Aplicadas
 
 Carrera de Ingeniería de Software
 
-**1ASI0729**
+**1ASI0730**
 
-**Desarrollo de Aplicaciones Open Source**
+**Aplicaciones Web**
 
 NRC
 
@@ -18,7 +18,7 @@ NRC
 
 Docente
 
-**Velásquez Núñez, Ángel Augusto**
+**Villafuerte Bazán, Óscar Iván**
 
 Equipo
 
