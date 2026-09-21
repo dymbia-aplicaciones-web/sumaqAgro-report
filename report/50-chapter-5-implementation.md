@@ -58,14 +58,14 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 
 ##### **IntelliJ IDEA**
 
-* **Propósito en el proyecto:** Entorno de Desarrollo Integrado (IDE) principal para la programación del backend. Se utiliza para la construcción de los servicios Web RESTful utilizando Java 21, Spring Boot Framework, Spring Data JPA y Spring Security.
+* **Propósito en el proyecto:** Entorno de Desarrollo Integrado (IDE) principal para la programación del backend. Se utiliza para la construcción de los servicios Web RESTful utilizando C# y ASP.NET Core.
 * **Ruta de Descarga:** [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)
 
 ![IntelliJ IDEA](assets/img/chapter-V/img-intellij-idea.png)
 
 ##### **WebStorm**
 
-* **Propósito en el proyecto:** IDE especializado para la implementación del frontend de la plataforma web. Proporciona soporte avanzado para TypeScript, Angular Framework, HTML5, CSS3/SASS y herramientas de depuración de código en el navegador.
+* **Propósito en el proyecto:** IDE especializado para la implementación del frontend de la plataforma web. Proporciona soporte avanzado para Vue Framework, HTML5, CSS3/SASS y herramientas de depuración de código en el navegador.
 * **Ruta de Descarga:** [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm)
 
 ![WebStorm](assets/img/chapter-V/img-webstorm.png)
@@ -97,7 +97,7 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 
 ##### **Railway**
 
-* **Propósito en el proyecto:** Infraestructura Cloud PaaS utilizada para el despliegue continuo y alojamiento del backend RESTful desarrollado en Spring Boot, así como el aprovisionamiento del servidor de base de datos relacional MySQL en entorno de producción.
+* **Propósito en el proyecto:** Infraestructura Cloud PaaS utilizada para el despliegue continuo y alojamiento del backend RESTful desarrollado en ASP.NET Core, así como el aprovisionamiento del servidor de base de datos relacional SQL Server en entorno de producción.
 * **Ruta de Referencia:** [https://railway.app](https://railway.app)
 
 ![Railway](assets/img/chapter-V/img-railway.png)
@@ -212,7 +212,7 @@ El equipo aplica estrictamente la especificación **Conventional Commits** para 
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
-Para mantener un código fuente legible, mantenible, uniforme y alineado con los estándares internacionales de ingeniería de software, el equipo de desarrollo ha adoptado guías oficiales de estilo y convenciones de codificación para cada lenguaje y tecnología utilizada en la solución **SumaqAgro** (HTML5, CSS3, JavaScript, TypeScript, Angular, Java y Spring Boot), así como las especificaciones de comportamiento en Gherkin.
+Para mantener un código fuente legible, mantenible, uniforme y alineado con los estándares internacionales de ingeniería de software, el equipo de desarrollo ha adoptado guías oficiales de estilo y convenciones de codificación para cada lenguaje y tecnología utilizada en la solución **SumaqAgro** (HTML5, CSS3, JavaScript, Vue, C# y .NET), así como las especificaciones de comportamiento en Gherkin.
 
 #### Regla General de Nomenclatura en Inglés
 En cumplimiento estricto de las normas del proyecto y los estándares globales de software, **todas las identificaciones de elementos de código** (nombres de archivos, clases, interfaces, métodos, funciones, variables, constantes, parámetros, llaves de objetos JSON, rutas de endpoints REST y comentarios técnicos) **se redactan obligatoriamente en idioma inglés**. Los textos explicativos y la documentación del informe se mantienen en español.
@@ -252,63 +252,72 @@ Se adoptan la **HTML Style Guide and Coding Conventions**, la **Google HTML/CSS 
 
 ---
 
-#### 2. Guía de Estilo para TypeScript y Angular Framework (Frontend Web Application)
+#### 2. Guía de Estilo para JavaScript y Vue Framework (Frontend Web Application)
 
 #### Normas de Referencia
-Se adopta la **Official Angular Coding Style Guide** en conjunto con la **Google TypeScript Style Guide**.
+Se adopta la **Vue Style Guide** (prioridad A y B) en conjunto con la **Google JavaScript Style Guide**, las **MDN JavaScript guidelines** y la **W3C JavaScript Style Guide**. Se prioriza el paradigma de **Composition API** con la sintaxis `<script setup>`.
 
 #### Convenciones para el Nombrado de Archivos
-Todos los nombres de archivos en el proyecto Angular deben utilizar `kebab-case` en inglés y especificar el tipo de artefacto como sufijo antes de la extensión:
-* **Componentes:** `name.component.ts` *(Ejemplo: `parcel-monitoring.component.ts`)*
-* **Servicios:** `name.service.ts` *(Ejemplo: `satellite-data.service.ts`)*
-* **Modelos / Interfaces:** `name.model.ts` *(Ejemplo: `crop-evaluation.model.ts`)*
-* **Módulos / Rutas:** `name.routes.ts` *(Ejemplo: `app.routes.ts`)*
+Todos los nombres de archivos y carpetas del proyecto Vue deben redactarse en inglés bajo las siguientes convenciones:
+* **Componentes de Archivo Único (SFC):** Deben nombrarse en `PascalCase` y constar de varias palabras para evitar colisiones con elementos HTML estándar *(Ejemplo: `ParcelMonitoring.vue`, `CropEvaluationCard.vue`)*.
+* **Componentes Base o UI Genéricos:** Deben llevar el prefijo `App`, `Base` o `V` *(Ejemplo: `BaseButton.vue`, `AppModal.vue`)*.
+* **Componentes de Instancia Única:** Componentes que solo se renderizan una vez por página llevan el prefijo `The` *(Ejemplo: `TheNavbar.vue`, `TheSidebar.vue`)*.
+* **Composables (Lógica reutilizable):** Se ubican en `src/composables/`, usan `camelCase` e inician con el prefijo `use` *(Ejemplo: `useSatelliteData.js`)*.
+* **Servicios API:** `name.service.js` en `kebab-case` *(Ejemplo: `satellite-data.service.js`)*.
+* **Enrutamiento y Estado:** `router/index.js` y stores de Pinia nombrados como `name.store.js` *(Ejemplo: `auth.store.js`)*.
 
 #### Convenciones de Nombres en Código
-* **Clases, Interfaces y Decoradores:** Se redactan en `PascalCase` e inglés.  
-  *Ejemplo:* `export class ParcelDetailComponent implements OnInit`
-* **Variables, Métodos y Propiedades:** Se redactan en `camelCase` e inglés.  
-  *Ejemplo:* `currentNdviScore: number = 0.78;`
+* **Clases y Objetos Constructores:** Se redactan en `PascalCase` e inglés.
+* **Variables, Funciones, Propiedades y Métodos:** Se redactan en `camelCase` e inglés.  
+  *Ejemplo:* `const currentNdviScore = ref(0.78);`
+* **Nombres de Props y Emits en Plantillas:** En las plantillas HTML se declaran en `kebab-case` y dentro de `<script setup>` en `camelCase`.  
+  *Ejemplo template:* `<parcel-item :crop-id="item.id" @select-crop="onSelect" />`
 * **Constantes Globales:** Se redactan en `UPPER_SNAKE_CASE` e inglés.  
   *Ejemplo:* `export const DEFAULT_LANGUAGE = 'en';`
 
-#### Reglas de Calidad TypeScript
-* **Tipado Estricto (Strict Mode):** Se habilita la propiedad `"strict": true` en el archivo `tsconfig.json`. Queda expresamente prohibido el uso del tipo implícito o explícito `any`; todo dato debe contar con un tipo explícito o una interfaz bien definida.
-* **Inyección de Dependencias:** Se promueve el uso de la función `inject()` de Angular en lugar de la inyección por constructor para mantener la concisión.
-* **Manejo de Reactividad (RxJS):** La desuscripción de `Observables` debe manejarse mediante la tubería `async` en las plantillas HTML o mediante el operador `takeUntilDestroyed()` para prevenir fugas de memoria (*memory leaks*).
+#### Reglas de Calidad JavaScript y Vue
+* **Estándar ES6+:** Queda prohibido el uso de `var`; se debe utilizar exclusivamente `const` (por defecto) y `let` (solo si el valor reasignará). Promover el uso de *arrow functions*, *template literals* y *destructuring*.
+* **Definición de Props y Emits:** Al utilizar JavaScript, las props deben definirse explícitamente utilizando la sintaxis de objetos de Vue, detallando el `type`, `required` y `default` para validar correctamente los datos de entrada en tiempo de desarrollo.
+* **Manejo de Reactividad:** Se prefiere `ref()` sobre `reactive()` para estandarizar el manejo y trazabilidad tanto de tipos primitivos como de objetos complejos. Toda propiedad derivada de un estado debe definirse con `computed()`.
+* **Ciclo de Vida y Limpieza:** Todo listener manual, intervalo (`setInterval`) o consumo de eventos del DOM debe limpiarse explícitamente dentro de `onUnmounted()` para evitar fugas de memoria (*memory leaks*).
 
 ---
 
-#### 3. Guía de Estilo para Java 21 y Spring Boot (Backend RESTful API)
+#### 3. Guía de Estilo para C# y ASP.NET Core Framework (Backend RESTful API)
 
 #### Normas de Referencia
-Se adopta la **Google Java Style Guide** complementada con las convenciones oficiales del **Spring Boot Features / Standards**.
+Se adoptan las guías oficiales exigidas para el proyecto: **C# Coding Conventions** y **Microsoft ASP.NET Core Coding Guidelines**[cite: 5].
 
-#### Estructura de Paquetes
-La estructura del paquete base sigue la nomenclatura de dominio inverso en minúsculas y sin guiones, con identificadores en inglés:  
-`com.dymbia.sumaqagro.<bounded-context>.<layer>`
+#### Estructura de Namespaces
+La estructura de la solución no utiliza paquetes invertidos, sino **Namespaces** redactados en `PascalCase` e inglés, separados por puntos, siguiendo el patrón:  
+`SumaqAgro.<BoundedContext>.<Layer>`
 
 *Ejemplo de capas:*
-* `com.dymbia.sumaqagro.monitoring.domain.model`
-* `com.dymbia.sumaqagro.monitoring.infrastructure.persistence`
-* `com.dymbia.sumaqagro.monitoring.interfaces.rest`
+* `SumaqAgro.Monitoring.Domain.Models`
+* `SumaqAgro.Monitoring.Infrastructure.Persistence`
+* `SumaqAgro.Monitoring.Interfaces.REST`
 
-#### Convenciones de Nombres
-* **Clases e Interfaces:** Se redactan en `PascalCase` e inglés utilizando sustantivos claros y descriptivos.  
-  *Ejemplos:* `CropParcel`, `ParcelRepository`, `CalculateBreakEvenUseCase`.
-* **Métodos y Variables de Instancia:** Se redactan en `camelCase` e inglés utilizando verbos o frases verbales para los métodos.  
-  *Ejemplos:* `calculateNdviAverage()`, `totalCostPerHectare`.
-* **Constantes:** Se definen como `public static final` y se redactan en `UPPER_SNAKE_CASE` e inglés.  
-  *Ejemplo:* `public static final int MAX_PARCEL_HECTARES = 500;`
+#### Convenciones de Nombres en C#
+* **Clases y Records:** Se redactan en `PascalCase` e inglés utilizando sustantivos claros.  
+  *Ejemplos:* `CropParcel`, `CalculateBreakEvenUseCase`.
+* **Interfaces:** Se redactan en `PascalCase` e inglés, y es obligatorio que inicien con la letra mayúscula **I**.  
+  *Ejemplo:* `IParcelRepository`, `ICropService`.
+* **Métodos y Propiedades Públicas:** A diferencia de otros lenguajes, en C# se redactan en `PascalCase` e inglés.  
+  *Ejemplos:* `CalculateNdviAverage()`, `TotalCostPerHectare { get; set; }`.
+* **Variables Locales y Parámetros:** Se redactan en `camelCase` e inglés.  
+  *Ejemplo:* `int maxHectares = 500;`
+* **Campos Privados (Private Fields):** Deben utilizar `camelCase` pero obligatoriamente precedidos por un guion bajo (`_`).  
+  *Ejemplo:* `private readonly IParcelRepository _parcelRepository;`
 
 #### Estándares de Ingeniería Backend y REST API
-* **Formato de Código:** Indentación obligatoria de 4 espacios (configurada en IntelliJ IDEA). No se permiten comodines (`*`) en las sentencias `import` (ej. importar `java.util.List` explícitamente en lugar de `java.util.*`).
-* **Uso de DTOs (Data Transfer Objects):** La capa REST no debe exponer directamente entidades `@Entity` de JPA. Se exige el uso de patrones DTO (`Record` en Java 21) para las peticiones (`RequestDTO`) y respuestas (`ResponseDTO`).
-* **Anotaciones Lombok:** Se requiere el uso de `@Getter`, `@Setter`, `@Builder` y `@RequiredArgsConstructor` para reducir la verbosidad de métodos accesores y constructores.
+* **Persistencia de Datos:** Se utilizará exclusivamente **Entity Framework Core** para el mapeo relacional[cite: 5]. No se permite escribir consultas SQL en texto plano dentro de los controladores.
+* **Uso de DTOs (Data Transfer Objects):** La capa REST no debe exponer directamente entidades de Entity Framework Core. Se exige el uso de `Records` o clases DTO simples para las peticiones (`RequestDTO`) y respuestas (`ResponseDTO`).
+* **Propiedades Autoinmplementadas:** En C# no se usan librerías externas (como Lombok en Java) para getters y setters. Se exige el uso de propiedades nativas: `public string Name { get; set; }`.
+* **Documentación:** Es obligatorio que todos los Endpoints estén documentados aplicando **OpenAPI Specification vía Swagger**[cite: 5].
 * **Diseño de Endpoints RESTful:**
-    * URIs en minúsculas, plurales, en idioma inglés y versionadas: `/api/v1/parcels`, `/api/v1/certificates`.
-    * Verbos HTTP adecuados: `GET` (lectura), `POST` (creación), `PUT` (actualización completa), `DELETE` (eliminación).
-* **Manejo Global de Excepciones:** Se implementa la anotación `@RestControllerAdvice` para capturar excepciones de negocio y retornar respuestas estructuradas bajo el estándar RFC 7807 (*Problem Details for HTTP APIs*) con el código de estado HTTP correspondiente.
+  * URIs en minúsculas, plurales (o `kebab-case`), en idioma inglés y versionadas: `/api/v1/parcels`, `/api/v1/crop-certificates`.
+  * Verbos HTTP adecuados: `GET` (lectura), `POST` (creación), `PUT` (actualización completa), `PATCH` (actualización parcial), `DELETE` (eliminación)[cite: 5].
+* **Manejo Global de Excepciones:** Se implementará un Middleware o Filtro de Excepciones Global para capturar errores de negocio y retornar respuestas estructuradas nativas de ASP.NET Core utilizando la clase `ProblemDetails` (estándar RFC 7807), junto con el código de estado HTTP correspondiente.
 
 ---
 
@@ -614,10 +623,10 @@ A pesar de que el despliegue principal se gestionó a través de Cloudflare Page
 
 ##### Enlaces Oficiales del Landing Page
 
-| Recurso / Plataforma | Descripción | Dirección / Enlace Oficial                                                                                                                                                                               |
-| :--- | :--- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Repositorio GitHub** | Código fuente del sitio estático (HTML5, CSS3, JavaScript) | [https://dymbia-opensource.github.io/sumaqAgro-landing-page](https://dymbia-opensource.github.io/sumaqAgro-landing-page)                                                                                 |
-| **Cloudflare Pages** | Portal oficial publicado y activo en producción | [https://sumaqagro-landing-page.pages.dev](https://sumaqagro-landing-page.pages.dev)                                                                                                                     |
+| Recurso / Plataforma | Descripción | Dirección / Enlace Oficial                                                                                                                                                                                     |
+| :--- | :--- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Repositorio GitHub** | Código fuente del sitio estático (HTML5, CSS3, JavaScript) | [https://dymbia-aplicaciones-web.github.io/sumaqAgro-landing-page](https://dymbia-aplicaciones-web.github.io/sumaqAgro-landing-page)                                                                                 |
+| **Cloudflare Pages** | Portal oficial publicado y activo en producción | [https://sumaqagro-landing-page.pages.dev](https://sumaqagro-landing-page.pages.dev)                                                                                                                           |
 
 
 ---

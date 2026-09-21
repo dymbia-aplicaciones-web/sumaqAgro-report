@@ -109,7 +109,7 @@ Para asegurar una captura de datos estructurada y de alto valor, se han elaborad
   </tr>
   <tr>
     <td><b>Canales de distribución</b></td>
-    <td>Plataforma Web responsiva (Angular) optimizada para conexiones móviles 3G/4G rurales.</td>
+    <td>Plataforma Web responsiva (Vue) optimizada para conexiones móviles 3G/4G rurales.</td>
     <td>App Web de escritorio y Aplicación Móvil nativa para hardware de gama alta.</td>
     <td>App Web y App Móvil de consulta rápida en campo para operarios de riego.</td>
     <td>Plataforma Web integral y Aplicación Móvil multiplataforma para registro de muestras.</td>
@@ -288,12 +288,12 @@ A través de este análisis, establecemos tácticas ofensivas para explotar nues
     <td>
       <b>Estrategia (DO) — Reorientación</b><br><br>
       1. Aprovechar a las cooperativas agrícolas como un "caballo de Troya" comercial para diluir el costo de adquisición de usuarios individuales, compensando el bajo presupuesto de marketing (D1, O4).<br>
-      2. Mitigar la falta de aplicación nativa implementando tecnologías de almacenamiento en caché en la Web App (Angular), permitiendo registro de jornales offline en la sierra (D3, O3).<br>
+      2. Mitigar la falta de aplicación nativa implementando tecnologías de almacenamiento en caché en la Web App (Vue), permitiendo registro de jornales offline en la sierra (D3, O3).<br>
       3. Utilizar las pruebas Lean UX tempranas para generar casos de éxito y testimonios publicables que doten de autoridad y validen la herramienta frente a nuevos socios (D1, O1).
     </td>
     <td>
       <b>Estrategia (DA) — Supervivencia</b><br><br>
-      1. Diseñar el backend (Spring Boot) con un patrón de adaptador (Adapter Pattern) que soporte a múltiples proveedores de imágenes satelitales como respaldo (fallback) en caso de que una API externa falle o cambie su política gratuita (D2, A4).<br>
+      1. Diseñar el backend (ASP.NET Core) con un patrón de adaptador (Adapter Pattern) que soporte a múltiples proveedores de imágenes satelitales como respaldo (fallback) en caso de que una API externa falle o cambie su política gratuita (D2, A4).<br>
       2. Proteger agresivamente el núcleo financiero (motor de costos) como propuesta irreemplazable, ya que incluso si hay nubosidad severa que bloquee satélites, el productor siga dependiendo de la contabilidad (D2, A2).<br>
       3. Evitar entrar a una guerra de precios directos. Posicionar la plataforma exclusivamente por su valor integrado hasta ganar madurez de datos e ingresos (D1, A3).
     </td>
