@@ -1,17 +1,17 @@
 # SumaqAgro — Project Documentation Report
 
 [![Build Status](https://img.shields.io/badge/Docs--as--Code-Pandoc%20%7C%20XeLaTeX-blue.svg)](Makefile)
-[![Course](https://img.shields.io/badge/UPC-1ASI0729%20Open%20Source-red.svg)](https://www.upc.edu.pe/)
+[![Course](https://img.shields.io/badge/UPC-1ASI0730%20Aplicaciones%20Web-red.svg)](https://www.upc.edu.pe/)
 [![Milestone](https://img.shields.io/badge/Delivery-AV1%20Sprint%20Review-brightgreen.svg)](#tabla-de-contenidos---entregable-av1)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE.md)
 
-Repositorio oficial para la gestión, redacción colaborativa y compilación secuencial del **Informe de Proyecto Final** de la startup **Dymbia** y su plataforma SaaS **SumaqAgro**, desarrollado bajo el enfoque **Docs-as-Code**, GitFlow y Conventional Commits para el curso *1ASI0729 Desarrollo de Aplicaciones Open Source* (Ciclo 2026-20).
+Repositorio oficial para la gestión, redacción colaborativa y compilación secuencial del **Informe de Proyecto Final** de la startup **Dymbia** y su plataforma SaaS **SumaqAgro**, desarrollado bajo el enfoque **Docs-as-Code**, GitFlow y Conventional Commits para el curso *1ASI0730 Aplicaciones Web* (Ciclo 2026-20).
 
 ---
 
 ## Enlaces Rápidos del Proyecto
 
-- **Repositorio de Código del Landing Page:** [Landing Page - SumaqAgro](https://github.com/dymbia-opensource/sumaqAgro-landing-page)
+- **Repositorio de Código del Landing Page:** [Landing Page - SumaqAgro](https://dymbia-aplicaciones-web.github.io/sumaqAgro-landing-page/)
 - **Enlace al Tablero del Product Backlog (Jira):** [Tablero Jira - SumaqAgro](https://sumaq-agro.atlassian.net/jira/software/c/projects/DSB/boards/2/backlog?epics=visible)
 - **Espacio de Trabajo Event Storming (Miro):** [Tablero de Event Storming en Miro](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHVPRUdrWUJzeGVtb1g5cE9UeGFKdjJBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=126689221129)
 
@@ -23,9 +23,9 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
 - **Institución:** Universidad Peruana de Ciencias Aplicadas (UPC)
 - **Facultad:** Facultad de Ingeniería
 - **Carrera:** Ingeniería de Software
-- **Curso:** 1ASI0729 - Desarrollo de Aplicaciones Open Source
+- **Curso:** 1ASI0730 - Aplicaciones Web
 - **Ciclo Académico:** 2026-20
-- **Docente:** Velasquez Nuñez, Angel Augusto
+- **Docente:** Villafuerte Bazán, Óscar Iván
 - **Fecha de Entrega:** Mayo, 2026 (Semana 4 - Hito AV1)
 
 ---
@@ -52,8 +52,8 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
 ## Arquitectura de la Solución y Stack Tecnológico
 
 * **Domain-Driven Design (DDD):** Descomposición estratégica en 7 Bounded Contexts y modelado táctico en Agregados, Entidades y Objetos de Valor (Value Objects).
-* **Backend RESTful (Spring Boot 3 / Java 21):** Arquitectura en capas desacopladas (Interfaces, Aplicación, Dominio, Infraestructura) con persistencia Spring Data JPA sobre MySQL 8.0.
-* **Web Application (Angular 18 SPA):** Interfaz reactiva con Angular Material y arquitectura *Offline-First* (IndexedDB y Service Workers) para operar en parcelas sin señal.
+* **Backend RESTful API (C# / ASP.NET Core Framework):** Servicios del lado servidor bajo arquitectura en capas desacopladas, utilizando **C#** y **Entity Framework Core** para la persistencia de datos relacional sobre **MySQL Server**.
+* **Web Application (Vue Framework):** Aplicación web reactiva desarrollada con **Vue Framework**, adoptando el sistema de diseño **Material Design** y la biblioteca de componentes UI **PrimeVue**.
 * **Landing Page:** Sitio web estático en HTML5, CSS3 y JavaScript vanilla optimizado para redes móviles rurales.
 * **Modelo C4 (Diagrams-as-Code):** Documentación arquitectónica de Contexto, Contenedores y Componentes formalizada mediante Structurizr DSL.
 
