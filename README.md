@@ -144,10 +144,10 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
       * [5.2.1.8. Team Collaboration Insights during Sprint](report/50-chapter-5-implementation.md#5218-team-collaboration-insights-during-sprint)
 * [Conclusiones](report/60-conclusions.md)
 * [Bibliografía](report/99-bibliography.md)
-* [Anexos](annexes/annex-c-videos.md)
-  * [Anexo A: Student Outcome 3](annexes/annex-a-student-outcome.md)
-  * [Anexo B: Performance Report (Team Leader)](annexes/annex-b-performance-report.md)
-  * [Anexo C: Video About-the-Product & Sustentación](annexes/annex-c-videos.md)
+* [Anexos](report/annexes/annex-c-videos.md)
+  * [Anexo A: Student Outcome 3](report/annexes/annex-a-student-outcome.md)
+  * [Anexo B: Performance Report (Team Leader)](report/annexes/annex-b-performance-report.md)
+  * [Anexo C: Video About-the-Product & Sustentación](report/annexes/annex-c-videos.md)
 
 ---
 
