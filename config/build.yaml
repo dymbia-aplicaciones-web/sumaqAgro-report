@@ -18,8 +18,8 @@ input-files:
   - report/60-conclusions.md
   - report/99-bibliography.md
   # Anexos (Ruta real en la raíz del proyecto)
-  - annexes/annex-b-performance-report.md
-  - annexes/annex-c-videos.md
+  - report/annexes/annex-b-performance-report.md
+  - report/annexes/annex-c-videos.md
 
 resource-path:
   - "."
