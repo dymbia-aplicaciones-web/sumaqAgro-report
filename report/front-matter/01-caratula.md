@@ -1,6 +1,6 @@
-<div align="center">
+::: {.center}
 
-<img src="../assets/img/upc-logo.png" width="60" alt="UPC Logo">
+![UPC Logo](../assets/img/upc-logo.png){width=60px}
 
 Universidad Peruana de Ciencias Aplicadas
 
@@ -12,13 +12,13 @@ Carrera de Ingeniería de Software
 
 NRC
 
-**7742**
+**8130**
 
 **Informe del Trabajo Final**
 
 Docente
 
-**Villafuerte Bazán, Óscar Iván**
+**Villafuerte Bazan, Oscar Ivan**
 
 Equipo
 
@@ -30,21 +30,17 @@ Proyecto
 
 **Integrantes**
 
-<table style="border-collapse: collapse; border: none;" >
-  <tr>
-    <th style="border: none; text-align: left;">Código</th>
-    <th style="border: none; text-align: left;">Apellidos y Nombres</th>
-  </tr>
-  <tr><td style="border: none;">U202315120</td><td style="border: none;">Duarte Ruffner, Drago Derick</td></tr>
-  <tr><td style="border: none;">U20241e057</td><td style="border: none;">Sanca Condori, Miguel</td></tr>
-  <tr><td style="border: none;">U202422816</td><td style="border: none;">Solorzano Sullca, Benjamin</td></tr>
-  <tr><td style="border: none;">U20241h037</td><td style="border: none;">Tejada Pumacayo, Yamil Jared</td></tr>
-  <tr><td style="border: none;">U202422128</td><td style="border: none;">Vargas Enriquez, Jose Carlos</td></tr>
-</table>
+| Código | Apellidos y Nombres |
+|---|---|
+| U202315120 | Duarte Ruffner, Drago Derick |
+| U20241E057 | Sanca Condori, Miguel |
+| U202422816 | Solorzano Sullca, Benjamin |
+| U20241H037 | Tejada Pumacayo, Yamil Jared |
+| U202422128 | Vargas Enriquez, Jose Carlos |
 
 **Período 202620**
 
-**Septiembre 2026**
-</div>
+**Octubre 2026**
+:::
 
-<div style="page-break-after: always;"></div>
+\newpage
