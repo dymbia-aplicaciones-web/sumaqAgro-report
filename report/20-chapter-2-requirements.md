@@ -435,8 +435,8 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 | Nombre | Eddy Alberto |
 | Apellidos | Torres Martinez |
 | Edad | 30 |
-| Distrito | M![interview-segment-three-02-Eddy-Alberto.png](assets/img/interview/interview-segment-three-02-Eddy-Alberto.png)ala - Cañete |
-| Evidencia | |
+| Distrito | Mala - Cañete |
+| Evidencia | ![interview-segment-three-02-Eddy-Alberto.png](assets/img/interview/interview-segment-three-02-Eddy-Alberto.png)|
 | Link | https://lix.li/l3F5 |
 | Timing donde inicia la entrevista | 47:18 min |
 | Duración de la entrevista | 51:52 min |
