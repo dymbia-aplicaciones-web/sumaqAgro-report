@@ -718,3 +718,387 @@ En esta sección se detalla la descomposición técnica de las seis historias re
 | **US-51** | Emisión y consulta de recetas agronómicas | **TSK-22** | Demostración integrada de asistencia técnica | Verificar con datos coherentes el circuito productor–ingeniero: reporte, visita, resultados y receta visible para el productor. | 4 h | Solorzano Sullca, Benjamin | Pendiente de validación |
 | **US-51** | Emisión y consulta de recetas agronómicas | **TSK-23** | Rutas, traducciones y datos relacionados | Mantener rutas y diccionarios ES/EN; preparar relaciones consistentes entre parcelas, socios, ingeniero, reportes, visitas y recetas. | 5 h | Vargas Enriquez, Jose Carlos | Parcial |
 
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+En esta sección se presenta la evidencia de los commits de la Web Application de SumaqAgro correspondientes al **Sprint 2**, registrados el **9 de octubre de 2026**. Los cambios incluyen la estructura inicial de la aplicación Vue, las entidades y assemblers de Salud del Cultivo, los componentes de consulta y asistencia agronómica, la configuración de idiomas, Pinia y rutas, los estilos globales y la documentación del repositorio.
+
+A continuación, se detalla la evidencia de los commits mostrados en el historial proporcionado:
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Web Application de SumaqAgro | `---` | `baff3f1` | `docs(license): add documentation license` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `09b3ced` | `docs(contributing): add documentation contributing` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `36488ef` | `docs(changelog): add documentation changelog` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `develop` | `04b0469` | `Merge branch 'feature/configuration' into develop` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `0d409a4` | `feat: add global styles and design tokens for SumaqAgro` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `1cb473c` | `feat: add i18n configuration, Pinia store setup, and router with lazy-loaded components` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `develop` | `b73aab5` | `Merge branch 'feature/crop-health' into develop` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `0322455` | `feat: add environment configuration files for development and production` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `44d176f` | `feat: add components for plot selection, field inspections, technical prescriptions, and agricultural alerts` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `879012b` | `feat: add assemblers for agroclimatic alerts, pest reports, satellite observations, and technical prescriptions` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `3d07bbd` | `feat: add entity classes for agroclimatic alerts, field inspections, pest reports, satellite observations, and validation rules` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `c17e659` | `refactor: replace HelloWorld component with layout structure and remove unused files` | `---` | 09/10/2026 |
+| Web Application de SumaqAgro | `---` | `eb93fc2` | `initial commit` | `---` | 09/10/2026 |
+
+*Nota: la captura no muestra el nombre exacto del repositorio, las ramas de los commits individuales ni sus cuerpos. Se utiliza la denominación del producto para el repositorio y `---` para los datos no visibles; `develop` corresponde a la rama de destino indicada en los mensajes de merge.*
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+En esta sección se presentan las evidencias de ejecución de la Web Application de SumaqAgro desarrollada durante el Sprint 2. Las capturas muestran las interfaces y los flujos de uso de la aplicación en un entorno local, utilizando datos de demostración.
+
+Las evidencias se organizan en tres segmentos según el perfil del usuario: agricultor independiente, director de cooperativa e ingeniero agrónomo. A continuación, se documenta el primer segmento, correspondiente al agricultor independiente.
+
+---
+
+##### 1. Agricultor independiente
+
+El perfil del agricultor independiente, representado por Guillermo, reúne las interfaces para consultar el estado de sus cultivos, revisar los gastos de campaña, gestionar sus parcelas y acceder a la asistencia agronómica. Las capturas presentan la navegación de la aplicación con el idioma inglés seleccionado.
+
+###### 1.1. Dashboard principal — Mi parcela
+
+La pantalla My Plot presenta un resumen de la parcela seleccionada y de su campaña agrícola. Se muestran el índice NDVI registrado, la inversión acumulada y el precio de equilibrio por saco. Además, incluye un gráfico de evolución del vigor vegetal y la distribución de costos entre insumos, mano de obra y transporte.
+
+En la evidencia se observa la parcela de demostración de Ayacucho, con un NDVI de 0.76, una inversión de S/ 4,870.00 y un punto de equilibrio de S/ 16.23 por saco.
+
+![Dashboard principal — Mi parcela](assets/img/chapter-V/app-vue/img-1.1.png)
+
+###### 1.2. Salud del cultivo — Parcela de Apurímac
+
+La pantalla Crop Health muestra los límites de la parcela de Apurímac sobre un mapa con fondo satelital. El usuario dispone de un selector de parcela, controles de zoom y opciones para alternar entre NDVI y NDWI, así como entre las vistas de satélite híbrido y mapa.
+
+El panel lateral presenta la fecha de captura y los valores de demostración: NDVI de 0.58, NDWI de 0.18 y 0.9 hectáreas de estrés registrado. También se muestran una recomendación y los botones para consultar al asesor y descargar una ficha en formato PNG. El texto de la interfaz aclara que el color del polígono identifica el índice seleccionado y no representa un mapa de calor calculado.
+
+![Salud del cultivo — Parcela de Apurímac](assets/img/chapter-V/app-vue/img-1.2.png)
+
+###### 1.3. Gastos de campaña y precio de equilibrio
+
+La pantalla My Expenses and Earnings organiza los gastos de la campaña por categorías y presenta una tabla con la fecha, el tipo de gasto, la descripción, la cantidad, el precio unitario y el total de cada registro.
+
+Para la parcela de Apurímac se muestra una inversión de S/ 4,670.00, distribuida en S/ 3,000.00 de insumos, S/ 1,320.00 de mano de obra y S/ 350.00 de transporte. El panel de equilibrio presenta un rendimiento esperado de 280 sacos y un precio mínimo calculado de S/ 16.68 por saco. La interfaz incluye las acciones para registrar gastos y actualizar el rendimiento esperado.
+![Gastos de campaña y precio de equilibrio](assets/img/chapter-V/app-vue/img-1.3.png)
+
+###### 1.4. Bandeja de reportes de plagas
+
+La pantalla Diagnosis Inbox presenta los reportes asociados a las parcelas del agricultor. Cada tarjeta identifica la parcela, el número del reporte, su estado, la descripción de los síntomas y la severidad.
+
+La captura muestra el reporte #1 de la parcela de Apurímac, con estado Pending y severidad Low. También se observan las acciones para agregar un reporte, eliminar el registro y acceder a las inspecciones de campo o al historial de recetas.
+
+![Bandeja de reportes de plagas](assets/img/chapter-V/app-vue/img-1.4.png)
+
+###### 1.5. Consulta de certificados de cosecha
+
+La pantalla Official Quality and Origin Certificates presenta un certificado asociado al lote BATCH-2026-08. La tarjeta muestra el cultivo, el predio de origen, la fecha de emisión y la distribución de la clasificación técnica de la cosecha.
+
+La interfaz ofrece las opciones para mostrar el código QR al comprador, descargar el certificado en PDF y consultar su registro web. Esta captura documenta la presentación del certificado y sus acciones disponibles.
+![Consulta de certificados de cosecha](assets/img/chapter-V/app-vue/img-1.5.png)
+
+###### 1.6. Consulta de alertas agrícolas
+
+La pantalla Agricultural Alerts permite seleccionar una parcela y consultar las alertas correspondientes a su región. En la captura se encuentra seleccionada la parcela de Ayacucho y se presenta el mensaje “No alerts are recorded for this region”.
+
+Esta evidencia muestra el estado de la interfaz cuando no existen alertas registradas para la región consultada.
+
+![Consulta de alertas agrícolas](assets/img/chapter-V/app-vue/img-1.6.png)
+
+###### 1.7. Configuración de la cuenta
+
+La pantalla Account Settings and Farmer Support presenta los datos de contacto del agricultor, mediante campos de teléfono y correo electrónico, junto con el botón Save.
+
+La sección de seguridad muestra los campos de contraseña deshabilitados y un mensaje que indica que el cambio de contraseña estará disponible cuando se incorpore la autenticación de la plataforma.
+
+![Configuración de la cuenta](assets/img/chapter-V/app-vue/img-1.7.png)
+
+###### 1.8. Consulta de parcelas registradas
+
+La pantalla My Registered Plots presenta las parcelas del agricultor mediante tarjetas con su nombre, cultivo, superficie, ubicación y acceso al monitoreo.
+
+En la evidencia se muestran las parcelas de demostración de Ayacucho y Apurímac, además de Parcela San Jerónimo – Lote 1, con superficies de 4.83, 4.82 y 2.81 hectáreas, respectivamente. La interfaz también informa que se han utilizado los tres espacios del plan gratuito.
+
+![Consulta de parcelas registradas](assets/img/chapter-V/app-vue/img-1.8.png)
+
+###### 1.9. Registro de una nueva parcela — Datos del cultivo
+
+El primer paso del registro presenta un formulario para ingresar el nombre de la parcela, el tipo y la variedad del cultivo, la región o valle, la fecha estimada de siembra, el rendimiento esperado y el área declarada.
+
+La captura muestra el registro de Parcela San Jerónimo – Lote 1, con cultivo Papa Canchán, ubicación en Apurímac – Valle de Chumbao, rendimiento esperado de 450 sacos y área declarada de 1.5 hectáreas. El botón Next permite continuar hacia la delimitación del terreno.
+
+![Registro de una nueva parcela — Datos del cultivo](assets/img/chapter-V/app-vue/img-1.9.png)
+
+###### 1.10. Delimitación geográfica y cálculo de superficie
+
+El segundo paso presenta un mapa para marcar los vértices del terreno. El panel lateral muestra las coordenadas registradas, el estado del polígono y la superficie calculada.
+
+En la captura se observa un perímetro cerrado de cuatro vértices y un área calculada de 2.81 hectáreas, diferenciada del área declarada de 1.5 hectáreas. La interfaz incluye controles para deshacer el último punto, limpiar el mapa y guardar la parcela, además de opciones para ingresar coordenadas o solicitar la ubicación GPS del dispositivo.
+
+![Delimitación geográfica y cálculo de superficie](assets/img/chapter-V/app-vue/img-1.10.png)
+
+###### 1.11. Confirmación del registro de parcela
+
+Tras guardar la delimitación, la aplicación presenta el cuadro de confirmación “Plot Saved Successfully!”. Este resume el nombre de la parcela, el cultivo, el área calculada y los espacios utilizados del plan.
+
+La evidencia muestra la parcela San Jerónimo – Lote 1, con cultivo Papa Canchán y superficie de 2.81 hectáreas. El diálogo ofrece accesos para consultar la salud del cultivo o regresar a la gestión de parcelas. El indicador de sincronización satelital forma parte de la presentación de la demo.
+
+![Confirmación del registro de parcela](assets/img/chapter-V/app-vue/img-1.11.png)
+
+###### 1.12. Salud del cultivo — Selección de NDWI
+
+La última captura muestra la parcela de Ayacucho con la opción NDWI seleccionada. El límite de la parcela se presenta en azul sobre el fondo satelital, mientras el panel lateral conserva los valores registrados: NDVI de 0.76, NDWI de 0.42 y 0.3 hectáreas de estrés registrado.
+
+Esta evidencia documenta la selección del índice NDWI y la consulta de los datos simulados de la parcela, junto con las acciones de consulta al asesor y descarga de la ficha PNG.
+
+![Salud del cultivo — Selección de NDWI](assets/img/chapter-V/app-vue/img-1.12.png)
+
+
+---
+
+##### 2. Director de cooperativa
+
+El perfil del director de cooperativa, representado por Cristian Santana, presenta una interfaz orientada a la supervisión de socios, parcelas, costos y calidad de la producción. Este segmento continúa en desarrollo; la evidencia documenta el avance de su panel y las opciones de navegación disponibles.
+
+###### 2.1. Panel de control de la cooperativa
+
+La pantalla Panel de Control – Cooperativa Agraria Valle del Mantaro muestra un resumen de 3 socios activos y 7.8 hectáreas bajo monitoreo. Incluye tarjetas de acopio total, estado vegetativo y costo promedio por hectárea, junto con accesos al padrón de socios, mapa de riesgo y matriz de costos.
+
+En la captura se presenta un acopio de 19.4 toneladas, frente a una meta de 210 toneladas, y un costo promedio de S/ 2,432.05 por hectárea. También se observa un espacio para la tendencia temporal del NDVI, todavía sin una serie dibujada, y un resumen de calidad de 4 lotes evaluados.
+
+El menú lateral organiza los accesos a padrón, salud de parcelas, costos, certificados, alertas y reportes de plagas. Los indicadores corresponden al entorno de demostración; la integración y validación de los flujos de este perfil siguen en desarrollo.
+
+![Panel de control de la cooperativa](../report/assets/img/chapter-V/app-vue/img-2.1.png)
+
+---
+
+##### 3. Ingeniero agrónomo
+
+El perfil del ingeniero agrónomo, representado por Ing. Juan A. Morales, presenta una interfaz orientada a la atención de reportes de plagas, inspecciones de campo y prescripciones técnicas. Este segmento continúa en desarrollo; la captura muestra su navegación y el estado inicial de la bandeja de atención.
+
+###### 3.1. Bandeja de diagnóstico
+
+La pantalla Diagnosis Inbox presenta la bandeja de reportes del ingeniero agrónomo. En la evidencia se muestra el mensaje “No reports”, correspondiente al estado de la interfaz cuando no hay reportes disponibles para mostrar.
+
+La pantalla incluye accesos a Field Inspections y Prescription History. El menú lateral reúne las opciones de reportes de plagas, inspecciones, prescripciones técnicas, salud del cultivo y alertas agrícolas.
+
+Esta captura documenta la estructura del perfil y su estado vacío. La evidencia de atención de casos, registro de inspecciones y emisión de prescripciones se incorporará conforme avance el desarrollo.
+![Bandeja de diagnóstico](../report/assets/img/chapter-V/app-vue/img-3.1.png)
+
+##### Evidencia Funcional: Video Demostrativo de Navegación
+
+Para evidenciar el funcionamiento de la Web Application de SumaqAgro, se presenta un video demostrativo de la navegación entre las vistas de Vue y la interacción con los componentes de la aplicación. El recorrido muestra el dashboard del agricultor independiente, la gestión y delimitación de parcelas, la consulta de indicadores NDVI/NDWI, los gastos de campaña y la bandeja de reportes de plagas. También presenta el cambio de idioma y los avances de las interfaces del director de cooperativa y del ingeniero agrónomo.
+
+* **Enlace de Reproducción (Microsoft Stream):** [Video "Video de Exposición AV1"](https://upcedupe-my.sharepoint.com/personal/u202422128_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202422128%5Fupc%5Fedu%5Fpe%2FDocuments%2FRecording%2D20261009%5F092557%2Ewebm&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E418bacb5%2D22ff%2D4d75%2Daa54%2Db24e02149c8b)
+
+
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+
+En esta sección se presenta la documentación de los servicios utilizados por la Web Application de **SumaqAgro** durante el **Sprint 2**. Para esta iteración se empleó una **Fake REST API implementada con `json-server`**, que administra los datos de demostración almacenados en `server/db.json`.
+
+```bash
+npm run api
+```
+
+Este comando ejecuta:
+
+```bash
+json-server --watch server/db.json --routes server/routes.json --port 3000
+```
+
+El archivo `server/routes.json` establece el prefijo de acceso a los recursos:
+
+```json
+{
+  "/api/v1/*": "/$1"
+}
+```
+
+Las direcciones de conexión configuradas en el proyecto son:
+
+| Entorno | URL base | Archivo de configuración |
+| :--- | :--- | :--- |
+| Desarrollo local | `http://localhost:3000/api/v1` | `src/environments/environment.development.ts` |
+| Producción | `https://sumaqagro-fake-api.onrender.com/api/v1` | `src/environments/environment.ts` |
+
+La aplicación Vue se ejecuta en una terminal independiente mediante `npm start`.
+
+##### Documentación de endpoints
+
+Los endpoints se organizan según los Bounded Contexts del proyecto. Las rutas indicadas son relativas a la URL base y los métodos corresponden a las operaciones expuestas por las fachadas de infraestructura del frontend.
+
+| Bounded Context | Endpoint | Métodos HTTP | Descripción |
+| :--- | :--- | :--- | :--- |
+| Profiles | `/profiles` | GET, PUT | Consulta y actualización del perfil del agricultor. |
+| Profiles | `/cooperatives` | GET, PUT | Consulta y actualización de la cooperativa. |
+| Profiles | `/cooperative-members` | GET | Consulta de socios de una cooperativa. |
+| Profiles | `/cooperative-dashboards` | GET | Consulta de los datos del panel institucional. |
+| Profiles | `/agronomist-assignments` | GET, POST, PUT, DELETE | Consulta y gestión de asignaciones de ingenieros agrónomos. |
+| Field Management | `/field-plots` | GET, POST, PUT, DELETE | Consulta, registro, actualización y eliminación de parcelas. |
+| Field Management | `/crop-campaigns` | GET, POST, PUT | Consulta, registro y actualización de campañas agrícolas. |
+| Field Management | `/campaign-ledgers` | GET, POST, PUT | Consulta, registro y actualización del libro de gastos de una campaña. |
+| Crop Health | `/satellite-observations` | GET | Consulta de observaciones e indicadores registrados por parcela. |
+| Crop Health | `/agroclimatic-alerts` | GET | Consulta de alertas agroclimáticas por región. |
+| Crop Health | `/climate-forecasts` | GET | Consulta de pronósticos climáticos por región. |
+| Crop Health | `/pest-reports` | GET, POST, PUT, DELETE | Consulta, registro, actualización y eliminación de reportes de plagas. |
+| Crop Health | `/field-inspections` | GET, POST, PUT | Consulta, programación y actualización de inspecciones de campo. |
+| Crop Health | `/technical-prescriptions` | GET, POST | Consulta y emisión de prescripciones técnicas. |
+| Harvest Certification | `/harvest-batches` | GET, POST, PUT | Consulta, registro y actualización de lotes de cosecha. |
+| Harvest Certification | `/quality-certificates` | GET, POST | Consulta y emisión de certificados de calidad, incluyendo búsqueda por token. |
+
+Las operaciones sobre registros individuales utilizan el identificador del recurso en la ruta, por ejemplo, `PUT /api/v1/pest-reports/{id}` y `DELETE /api/v1/pest-reports/{id}`.
+
+La trazabilidad pública se construye en Vue mediante la consulta del certificado por su token y del lote de cosecha asociado. En la implementación actual no se utiliza una colección independiente `/public-traceability` en `server/db.json`.
+
+##### Consultas mediante parámetros
+
+El frontend utiliza parámetros de consulta para recuperar los registros asociados a un propietario, parcela, campaña, región o reporte.
+
+| Petición | Descripción |
+| :--- | :--- |
+| `GET /api/v1/field-plots?ownerUserId=1` | Consulta las parcelas de un propietario. |
+| `GET /api/v1/crop-campaigns?plotId=1` | Consulta las campañas de una parcela. |
+| `GET /api/v1/campaign-ledgers?campaignId=1` | Consulta el libro de gastos de una campaña. |
+| `GET /api/v1/satellite-observations?plotId=1` | Consulta las observaciones registradas de una parcela. |
+| `GET /api/v1/pest-reports?plotId=1` | Consulta los reportes de plagas de una parcela. |
+| `GET /api/v1/agroclimatic-alerts?region=Ayacucho` | Consulta las alertas registradas para Ayacucho. |
+| `GET /api/v1/field-inspections?reportId=1` | Consulta las inspecciones asociadas a un reporte. |
+| `GET /api/v1/technical-prescriptions?reportId=1` | Consulta las prescripciones asociadas a un reporte. |
+
+##### Estructura de los datos intercambiados
+
+Los recursos se intercambian en formato **JSON**. Las consultas a colecciones retornan arreglos, mientras que la consulta mediante `/{id}` retorna un objeto individual. Cuando una consulta no contiene registros, la API retorna un arreglo vacío `[]`.
+
+El siguiente objeto corresponde a un registro de demostración existente en la colección `satellite-observations` de `server/db.json`:
+
+```json
+{
+  "id": 1,
+  "plotId": 1,
+  "date": "2026-09-12T10:00:00Z",
+  "ndviMean": 0.74,
+  "ndwiMean": 0.65,
+  "surfaceTempKelvin": 295.15,
+  "cloudCoveragePercent": 5,
+  "stressAreaHectares": 0.4,
+  "recommendation": "Check the area for signs of the onset of wilting."
+}
+```
+
+Este registro relaciona una observación con una parcela e incluye la fecha de captura, los indicadores NDVI y NDWI, la temperatura superficial, la cobertura nubosa, el área de estrés y una recomendación.
+
+Los valores son datos simulados para la demostración. En el archivo revisado, las colecciones `agroclimatic-alerts`, `climate-forecasts`, `field-inspections` y `technical-prescriptions` se encuentran vacías.
+
+##### Integración con el frontend Vue
+
+El archivo `app.config.ts` habilita la comunicación HTTP mediante `provideHttpClient(withFetch())`. Las fachadas `ProfilesApi`, `FieldManagementApi`, `CropHealthApi` y `HarvestCertificationApi` agrupan las operaciones de acceso a datos de sus respectivos contextos.
+
+La clase compartida `BaseApiEndpoint` implementa las operaciones generales de consulta, creación, actualización y eliminación. Los **assemblers** convierten los recursos JSON recibidos en entidades de dominio y transforman las entidades en recursos para enviarlos a la API.
+
+Por ejemplo, el método `CropHealthApi.getObservationsByPlot(plotId)` delega la consulta al endpoint de observaciones satelitales. Este envía una petición GET con el parámetro `plotId` y transforma los registros recibidos en entidades `SatelliteObservation`.
+
+La documentación presentada corresponde a la configuración y los contratos implementados en el proyecto para la Fake REST API del Sprint 2.
+
+---
+
+
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+Durante el **Sprint 2**, el equipo **Dymbia** realizó la configuración y publicación de la **Web Application de SumaqAgro** en **Firebase Hosting** y de la **Fake REST API** en **Render**. Estas actividades permitieron disponer de un entorno publicado para presentar las funcionalidades desarrolladas y consumir los datos de demostración.
+
+El proceso incluyó la configuración de los recursos en ambos proveedores, la vinculación del proyecto con GitHub, la definición de los comandos de compilación y ejecución, y la configuración de la conexión entre el frontend y la API.
+
+El alcance de despliegue de esta iteración comprende la **Web Application** y la **Fake REST API**. La Landing Page corresponde al Sprint 1, mientras que el backend definitivo en .NET se desarrollará en una iteración posterior.
+
+##### Despliegue de la Web Application en Firebase Hosting
+
+  Se configuró el proyecto **`sumaqagro-appweb`** en Firebase y se habilitó **Firebase Hosting** para publicar los archivos generados por Vue.
+
+La vinculación del proyecto local se encuentra definida en `.firebaserc`. Por su parte, `firebase.json` establece el directorio de publicación `dist/sumaqAgro-appweb/browser` y una redirección hacia `index.html`, necesaria para que Vue gestione sus rutas internas al ingresar directamente a una vista o recargar la página.
+
+El procedimiento de despliegue documentado en el repositorio utiliza **Firebase CLI**. La preparación del entorno requiere instalar la herramienta y autenticar una cuenta con acceso al proyecto:
+
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+Posteriormente, la aplicación se compila y publica mediante:
+
+```bash
+npm run build
+firebase deploy --only hosting
+```
+
+La Web Application dispone de los siguientes dominios:
+
+| Tipo | Dirección |
+| :--- | :--- |
+| Dominio principal | https://sumaqagro-appweb.web.app |
+| Dominio alternativo | https://sumaqagro-appweb.firebaseapp.com |
+
+###### Evidencia de publicación en Firebase Hosting
+
+La captura del panel de Firebase Hosting muestra el proyecto `sumaqagro-appweb`, sus dominios y el historial de versiones publicadas. Se observan publicaciones realizadas el **8 y 9 de octubre de 2026**, con la versión **`4e43fc`** identificada como la versión actual en la evidencia.
+
+![Firebase](assets/img/chapter-5/sprint-2/firebase-vue.jpeg)
+
+##### Despliegue de la Fake REST API en Render
+
+Se configuró un **Web Service** denominado **`sumaqAgro-fake-api`** en Render, utilizando el entorno de ejecución **Node** y una instancia gratuita.
+
+El servicio se vinculó con el repositorio **`dymbia-opensource/sumaqAgro-appweb`** y la rama **`develop`**. La configuración documentada en el proyecto es la siguiente:
+
+| Parámetro | Configuración |
+| :--- | :--- |
+| Tipo de servicio | Web Service |
+| Nombre | `sumaqAgro-fake-api` |
+| Repositorio | `dymbia-opensource/sumaqAgro-appweb` |
+| Rama | `develop` |
+| Entorno de ejecución | Node |
+| Comando de instalación | `npm install --include=dev` |
+| Comando de inicio | `npx json-server server/db.json --routes server/routes.json --host 0.0.0.0 --port $PORT` |
+| Tipo de instancia | Free |
+| Actualización | Auto-Deploy |
+
+El comando de inicio utiliza el puerto asignado por Render y permite atender peticiones externas. La Fake REST API administra los datos de `server/db.json` y utiliza `server/routes.json` para exponer los recursos bajo el prefijo `/api/v1`.
+
+La URL base configurada para el servicio es:
+
+**https://sumaqagro-fake-api.onrender.com/api/v1/db**
+
+![fake-api](assets/img/chapter-5/sprint-2/img-fake-api.png)
+
+###### Evidencia de publicación en Render
+
+La captura presenta el servicio en estado **Live**, vinculado a la rama `develop` y al commit **`227c66d`**. El historial muestra despliegues activados mediante **Auto-Deploy**, asociados a la integración de funcionalidades en el repositorio.
+
+Esta evidencia permite observar la automatización del despliegue de la Fake REST API a partir de las actualizaciones de la rama configurada.
+
+![Render](assets/img/chapter-5/sprint-2/render-vue.jpeg)
+
+##### Integración del frontend con la API publicada
+
+El archivo `src/environments/environment.ts` establece la dirección utilizada por Vue para consumir la Fake REST API en producción:
+
+```typescript
+platformProviderApiBaseUrl: 
+  'https://sumaqagro-fake-api.onrender.com/api/v1'
+``` 
+
+Esta configuración conecta la Web Application alojada en **Firebase Hosting** con el servicio publicado en **Render**. Para el desarrollo local, `environment.development.ts` utiliza la dirección `http://localhost:3000/api/v1`.
+
+La publicación del frontend se realiza mediante Firebase CLI, mientras que la actualización de la Fake REST API se automatiza mediante la integración de Render con GitHub.
+
+---
+
+
+#### 5.2.1.8. Team Collaboration Insights during Sprint
+
+
+En esta sección se describe la colaboración del equipo **Dymbia** durante la implementación de la **Web Application de SumaqAgro** correspondiente al **Sprint 2**. Se presentan las evidencias de participación mediante el historial de commits y los analíticos de contribución disponibles en GitHub.
+
+Las actividades se distribuyeron entre la configuración de Vue, los componentes compartidos, el modelado de entidades, la integración con la Fake REST API y el desarrollo de las interfaces de los Bounded Contexts **Profiles**, **Field Management**, **Crop Health** y **Harvest Certification**.
+
+El trabajo se organizó mediante ramas `feature/*`, cuyas implementaciones se integraron en `develop`. Posteriormente, la versión del producto se consolidó en `main` mediante la integración de la rama `release/v1.0.0`. Este flujo permitió desarrollar funcionalidades en paralelo y mantener la trazabilidad de las entregas.
+
+
+En la imagen se evidencia las contribuciones registradas por cada integrante. Esta evidencia se utiliza para identificar la participación del equipo en la implementación y complementar la distribución de responsabilidades definida en la matriz Leadership-and-Collaboration Matrix del sprint.
+
+![Insights → Contributors](../report/assets/img/chapter-V/sprint-2/img-collaboration.png)
