@@ -330,7 +330,7 @@ Esta descripción sintetiza el propósito de la herramienta destacando sus benef
 Un conjunto seleccionado de palabras clave que abarca los perfiles de usuario objetivo (agricultores, cooperativas, agrónomos) y las funcionalidades centrales de la solución (NDVI, control de gastos, trazabilidad y alertas de riesgo).
 
 - **Meta Author:**  
-  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
+  `<meta name="author" content="Equipo de Aplicaciones Web – Dymbia">`
 
 Identifica al equipo responsable del diseño, desarrollo y arquitectura de información del sitio web, reforzando la transparencia y la atribución del proyecto.
 
@@ -354,7 +354,7 @@ Redactado con un enfoque funcional y operativo que detalla las acciones inmediat
 Palabras clave orientadas a la experiencia interna de la aplicación, utilizando términos específicos de uso continuo en la plataforma (ej. “dashboard agrícola”, “mapas NDVI”, “recetas técnicas”).
 
 - **Meta Author:**  
-  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
+  `<meta name="author" content="Equipo de Aplicaciones Web – Dymbia">`
 
 Especifica el equipo de desarrollo web responsable del proyecto para asegurar la vigencia y atribución tecnológica de la aplicación.
 <br>
@@ -1142,7 +1142,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 ##### Demostración Audiovisual en Microsoft Stream (Desktop)
 
 * **Plataforma de Alojamiento:** Microsoft Stream 
-* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-desktop-sprint-1.mp4`
+* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0730-7742-dymbia-prototype-desktop-sprint-1.mp4`
 * **Duración:** 04:15 minutos
 * **Enlace de Reproducción:** [Reproducir Demostración Desktop en Microsoft Stream](https://goo.su/MEGQ9O9)
 
@@ -1160,7 +1160,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 ##### Demostración Audiovisual en Microsoft Stream (Mobile)
 
 * **Plataforma de Alojamiento:** Microsoft Stream 
-* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-mobile-sprint-1.mp4`
+* **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0730-7742-dymbia-prototype-mobile-sprint-1.mp4`
 * **Duración:** 04:30 minutos
 * **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://goo.su/XRcWU)
 
@@ -1371,27 +1371,27 @@ El contenedor de la aplicación cliente SPA, implementado sobre el framework **V
 ![C4 Model - Diagrama de Componentes de la Web Application (Nivel 3)](assets/img/c4/c4-components-webapp-diagram.png)
 
 ##### Desglose de Componentes de la Web Application:
-* **`Auth & Role Guard`:** Guardia funcional de enrutamiento (`CanActivateFn`) de Vue. Intercepta la navegación hacia rutas protegidas comprobando la vigencia del token JWT almacenado en `sessionStorage`, aplicando el control de acceso basado en roles (RBAC) para productores, directivos y agrónomos.
-* **`Plot Management View Component`:** Interfaz gráfica desarrollada con Vue y Formularios Reactivos (`ReactiveFormsModule`). Permite la georreferenciación de predios, la captura interactiva de vértices perimetrales GPS y el registro botánico y fenológico de las campañas agrícolas.
+* **`Auth & Role Guard`:** Guardia de navegación de Vue Router mediante `router.beforeEach` y metadatos de ruta. Intercepta la navegación hacia rutas protegidas comprobando la vigencia del token JWT almacenado en `sessionStorage`, aplicando el control de acceso basado en roles (RBAC) para productores, directivos y agrónomos.
+* **`Plot Management View Component`:** Interfaz gráfica desarrollada con Vue y formularios basados en `v-model`, `ref` y `reactive`. Permite la georreferenciación de predios, la captura interactiva de vértices perimetrales GPS y el registro botánico y fenológico de las campañas agrícolas.
 * **`Vegetation & Alerting View Component`:** Componente analítico que integra la biblioteca Leaflet.js con Vue. Renderiza capas de calor satelitales con series temporales de reflectancia foliar (NDVI y NDWI), canalizando el buzón de alertas agroclimáticas y recetas fitosanitarias emitidas por el extensionista.
 * **`Field Cost Ledger View Component`:** Módulo de captura contable rural que provee formularios reactivos para el asiento inmediato de compras de fertilizantes, jornales diarios y fletes, alimentando los paneles de estimación de costos unitarios y punto de equilibrio.
 * **`Harvest & Traceability View Component`:** Vistas de calificación física de calibres de tubérculo (norma técnica MIDAGRI) y protocolos de catación sensorial de café (estándar SCA). Incluye el visor público accesible mediante el escaneo del código QR para la auditoría de procedencia de los lotes.
-* **`Client State & Offline Store`:** Capa de almacenamiento transaccional local implementada con *IndexedDB* (mediante Dexie.js) coordinada con estados reactivos basados en `BehaviorSubject` de RxJS. Retiene las operaciones efectuadas en parcelas sin señal de red celular y orquesta la sincronización automática diferida en lote al detectar conectividad a internet.
-* **`Service Worker Cache Engine`:** Módulo de Progressive Web App provisto por `@vue/pwa`. Almacena en caché los artefactos estáticos compilados (HTML, CSS, JavaScript e iconografía vectorial), asegurando la operatividad continua de la interfaz web en entornos rurales sin conexión.
-* **`REST API Client Service`:** Servicio Vue centralizado (`@Injectable`) que encapsula la comunicación HTTPS con el backend mediante `HttpClient`. Emplea un `HttpInterceptor` que inyecta automáticamente el encabezado `Authorization: Bearer <JWT>` en cada solicitud saliente y unifica la gestión de excepciones HTTP de red.
+* **`Client State & Offline Store`:** Capa de almacenamiento transaccional local implementada con *IndexedDB* (mediante Dexie.js) coordinada con estados reactivos basados en `ref` y `reactive` de la Composition API de Vue. Retiene las operaciones efectuadas en parcelas sin señal de red celular y orquesta la sincronización automática diferida en lote al detectar conectividad a internet.
+* **`Service Worker Cache Engine`:** Módulo de Progressive Web App basado en un Service Worker registrado desde la aplicación Vue. Almacena en caché los artefactos estáticos compilados (HTML, CSS, JavaScript e iconografía vectorial), asegurando la operatividad continua de la interfaz web en entornos rurales sin conexión.
+* **`REST API Client Service`:** Módulo JavaScript centralizado utilizado por los componentes y composables de Vue, que encapsula la comunicación HTTPS con el backend mediante `fetch`. Utiliza una función común para incorporar el encabezado `Authorization: Bearer <JWT>` en cada solicitud saliente y unifica la gestión de excepciones HTTP de red.
 
 ---
 
 #### 4.6.4.3. RESTful API Backend Container Components Diagram (ASP.NET Core)
 
-El contenedor transaccional de backend, desarrollado en **C# con ASP.NET Core 3.x**, implementa una arquitectura en capas desacopladas orientada al dominio (*Layered Architecture / DDD*), gobernando las reglas de negocio de los 7 Bounded Contexts y agregados de la solución.
+El contenedor transaccional de backend, desarrollado en **C# con ASP.NET Core**, implementa una arquitectura en capas desacopladas orientada al dominio (*Layered Architecture / DDD*), gobernando las reglas de negocio de los 7 Bounded Contexts y agregados de la solución.
 
 ![C4 Model - Diagrama de Componentes del API Backend (Nivel 3)](assets/img/c4/c4-components-backend-diagram.png)
 
 ##### Desglose de Componentes del Backend por Capa Técnica:
 
 * **Capa de Controladores REST (Inbound Controllers):**
-  Controladores anotados con `@RestController` que exponen los endpoints del sistema sobre HTTPS/JSON, interceptan las peticiones desde el cliente Vue, validan los DTOs de entrada mediante Bean Validation (`@Valid`) y delegan la ejecución hacia los servicios de aplicación:
+  Controladores derivados de `ControllerBase`, con los atributos `[ApiController]` y `[Route]` que exponen los endpoints del sistema sobre HTTPS/JSON, interceptan las peticiones desde el cliente Vue, validan los DTOs de entrada mediante Data Annotations y la validación de modelos de ASP.NET Core y delegan la ejecución hacia los servicios de aplicación:
   * `IamController`: Expone `/api/v1/auth` y `/api/v1/users` para registro, inicio de sesión seguro, emisión de JWT y gestión de perfiles institucionales.
   * `SubscriptionController`: Expone `/api/v1/subscriptions` para consulta de membresías y confirmación transaccional de planes comerciales.
   * `PlotController`: Expone `/api/v1/plots` para catastro de coordenadas GPS, delimitación perimetral y calendarios de siembra.
@@ -1401,7 +1401,7 @@ El contenedor transaccional de backend, desarrollado en **C# con ASP.NET Core 3.
   * `SettlementController`: Expone `/api/v1/settlements` para publicación comercial de lotes y liquidaciones de venta.
 
 * **Capa de Servicios de Aplicación (Domain Application Services):**
-  Servicios anotados con `@Service` que orquestan las transacciones atómicas, validan las reglas de invariante de cada Agregado y coordinan las llamadas hacia los adaptadores salientes:
+  Servicios registrados en el contenedor de inyección de dependencias de ASP.NET Core mediante `AddScoped` que orquestan las transacciones atómicas, validan las reglas de invariante de cada Agregado y coordinan las llamadas hacia los adaptadores salientes:
   * `UserAccountService`: Administra el ciclo de vida del agregado `UserAccount`, gestionando el hashing seguro de claves y la asignación de permisos.
   * `SubscriptionService`: Gobierna el agregado `Subscription`, controlando la vigencia de membresías y cuotas de predios asignados.
   * `FieldPlotService`: Administra el agregado `FieldPlot`, validando que los polígonos perimetrales no presenten autointersecciones.
@@ -1411,7 +1411,7 @@ El contenedor transaccional de backend, desarrollado en **C# con ASP.NET Core 3.
   * `CommercialSettlementService`: Gobierna el agregado `CommercialSettlement`, protegiendo que la postura comercial aceptada cubra el margen mínimo de ganancia sobre el costo acumulado.
 
 * **Capa de Adaptadores de Infraestructura (Outbound Adapters):**
-  Componentes de integración desacoplados anotados con `@Component` que encapsulan la comunicación técnica con plataformas externas o compilan artefactos binarios:
+  Componentes de integración desacoplados registrados mediante la inyección de dependencias de ASP.NET Core que encapsulan la comunicación técnica con plataformas externas o compilan artefactos binarios:
   * `StripeClientAdapter`: Consume mediante cliente REST la API de Stripe/Niubiz para la tokenización de cobros y facturación recurrente.
   * `MidagriClientAdapter`: Consulta el servicio gubernamental del Padrón de Productores Agrarios (PPA) para verificar la titularidad catastral.
   * `SatelliteClientAdapter`: Descarga baldosas ópticas multiespectrales (Bandas B4, B8 y B8A) desde la API abierta de Sentinel-2 (ESA).
@@ -1419,8 +1419,8 @@ El contenedor transaccional de backend, desarrollado en **C# con ASP.NET Core 3.
   * `TwilioNotificationAdapter`: Invoca la API de Twilio para remitir notificaciones prioritarias de emergencia vía SMS y WhatsApp.
   * `PdfQrGeneratorAdapter`: Compila dinámicamente constancias técnicas en formato PDF y codifica el código QR de validación criptográfica pública.
 
-* **Capa de Persistencia (ASP.NET Core Data Repositories):**
-  Interfaces que extienden de `IRepository` para mapear los agregados hacia las tablas de la base de datos MySQL 8.0 vía JDBC sobre el puerto TCP 3306:
+* **Capa de Persistencia (Entity Framework Core Repositories):**
+  Repositorios que implementan los contratos de `IRepository` y utilizan `DbContext` y Entity Framework Core, con un proveedor compatible con MySQL 8.0, para mapear los agregados hacia las tablas y gestionar las operaciones de persistencia:
   * `UserAccountRepository`, `SubscriptionRepository`, `FieldPlotRepository`, `VegetationAnalysisRepository`, `CostLedgerRepository`, `HarvestBatchRepository` y `CommercialSettlementRepository`.
 ---
 
