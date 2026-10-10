@@ -10,11 +10,11 @@ En esta sección, detallaremos cada uno de los elementos visuales y de estilo qu
 **Branding**
 
 El logo principal de **SumaqAgro**, un nombre que evoca la unión entre la naturaleza y la tecnología aplicada al sector agrícola. Nuestro propósito es ser un puente tecnológico para el campo, ofreciendo una solución integral de monitoreo satelital de precisión para agricultores, cooperativas e ingenieros agrónomos. El branding se enfoca en transmitir innovación, sostenibilidad, confianza y cercanía, valores esenciales para quienes buscan integrar la tecnología en el desarrollo del sector agrotecnológico.
+<br>
 
-![SumaqAgro-Logo](assets/img/chapter-IV/logo-sumaqagro.png)
-
-**Imagotipo Horizontal (Versión Web / Sidebar):** Diseñado específicamente para integrarse en la barra lateral (*sidebar*) e interfaz principal de la plataforma web, esta versión organiza de manera lineal el isotipo de la marca, el tipograma **SumaqAgro** y el eslogan *"Cultivando un mejor mañana"*, optimizando el espacio horizontal para garantizar máxima legibilidad, elegancia y un reconocimiento de marca inmediato en pantallas de alta resolución.
-![SumaqAgro-LogoWeb](assets/img/chapter-IV/logo SumaqAgro Web.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/logo-sumaqagro.png" alt="SumaqAgro-Logo" width="350px" height="auto"/>
+</p>
 
 **Typography**
 
@@ -36,10 +36,13 @@ Se utiliza en bloques de lectura, etiquetas, botones, formularios y componentes 
 - **Botones y llamadas a la acción (Button Text / CTA):** Inter SemiBold, 16 px.
 - **Etiquetas de formularios o elementos de interfaz (Labels):** Inter Medium, 14 px.
 
-![typography-poppins](assets/img/chapter-IV/typography-poppins.png)
-![typography-inter](assets/img/chapter-IV/typography-inter.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/typography-poppins.png" alt="typography-poppins" width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/typography-inter.png" alt="typography-inter" width="600px" height="auto"/>
+</p>
 
 Esta combinación y jerarquía tipográfica permite mantener una experiencia de usuario consistente, altamente accesible, clara y profesional a través de los distintos dispositivos y secciones de la plataforma.
+
 
 **Colors**
 
@@ -56,17 +59,22 @@ La interfaz web utilizará una paleta de colores basada principalmente en tonos 
 - **Navegación:** el menú lateral mantendrá una apariencia clara, utilizando fondo blanco y colores verdes o teal para identificar opciones seleccionadas, iconos y elementos interactivos.
 
 - **Estados del sistema:** se utilizarán colores específicos para comunicar información importante:
-  - **Rojo:** errores, acciones incorrectas o situaciones que requieren atención inmediata.
-  - **Amarillo:** advertencias o situaciones que necesitan precaución.
-  - **Verde:** estados correctos, disponibles, saludables o confirmaciones exitosas.
+    - **Rojo:** errores, acciones incorrectas o situaciones que requieren atención inmediata.
+    - **Amarillo:** advertencias o situaciones que necesitan precaución.
+    - **Verde:** estados correctos, disponibles, saludables o confirmaciones exitosas.
 
 - **Contraste y legibilidad:** los colores oscuros serán utilizados principalmente para textos y elementos destacados, mientras que los tonos claros servirán como fondos y superficies, buscando mantener un contraste adecuado y una lectura sencilla en toda la aplicación.
 
-![color-pallete](assets/img/chapter-IV/colors.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/colors.png" alt="color-pallete" width="600px" height="auto"/>
+</p>
+
+
+
 
 **Spacing**
 
-SumaqAgro utiliza un sistema de espaciado basado en múltiplos de 8 px, permitiendo mantener una interfaz ordenada, consistente y fácil de adaptar a diferentes tamaños de pantalla. Este sistema se aplica en márgenes, paddings, separación entre componentes y distribución de contenido.
+SumaqAgro utiliza un sistema de espaciado basado en múltiplos de 8 px, permitiendo mantener una interfaz ordenada, consistente y fácil de adaptar a diferentes tamaños de pantalla[cite: 1]. Este sistema se aplica en márgenes, paddings, separación entre componentes y distribución de contenido[cite: 1].
 
 *   **4 px – Extra Small (XS):** Separaciones mínimas entre elementos relacionados, como iconos y texto.
 *   **8 px – Small (S):** Espaciado interno pequeño, utilizado en botones, etiquetas y elementos compactos.
@@ -76,6 +84,7 @@ SumaqAgro utiliza un sistema de espaciado basado en múltiplos de 8 px, permitie
 *   **48 px – 2XL:** Utilizado para separar bloques importantes dentro de una misma sección.
 *   **64 px – 3XL:** Recomendado para la separación vertical entre secciones principales de la página.
 *   **80 px – 4XL:** Puede utilizarse en secciones amplias como Hero, Features o Call to Action en versión Desktop.
+
 
 **Tono de Comunicación**
 
@@ -89,24 +98,15 @@ La voz y el tono de SumaqAgro están diseñados para ser tan claros, cercanos y 
 
 * **Voz: Experta y facilitadora.** Posicionamos a SumaqAgro como una herramienta moderna para la transformación agrícola, manteniendo siempre una comunicación accesible que prioriza los beneficios prácticos que la plataforma ofrece en el día a día.
 
-**Dimensiones del tono de voz**
-
-Siguiendo las cuatro dimensiones del tono de voz, SumaqAgro se ubica de la siguiente manera:
-
-* **Divertido / Serio → Serio.** Las decisiones del productor afectan su cosecha y sus ingresos, por lo que se evitan los chistes y el lenguaje informal en alertas, costos y recomendaciones.
-* **Formal / Casual → Casual.** Se usa un trato cercano y en segunda persona (“Tu cultivo tiene buen vigor”, “¡Buen día, Guillermo!”), con frases cortas y sin tecnicismos innecesarios.
-* **Respetuoso / Irreverente → Respetuoso.** Se reconoce el conocimiento y la experiencia del agricultor, y los mensajes de error explican cómo corregir el problema sin culpar al usuario.
-* **Entusiasta / Sereno → Sereno.** Las alertas de helada o plaga se comunican con calma y con pasos claros a seguir; el entusiasmo se reserva para confirmar logros, como un registro exitoso o un cultivo en estado “Óptimo”.
-
 Este enfoque comunicacional busca generar confianza y lealtad, asegurando a los productores y organizaciones agrícolas que cuentan con un aliado tecnológico claro y efectivo para optimizar la gestión de sus cultivos.
 
 ### 4.1.2. Web Style Guidelines
 
-Esta sección define las pautas visuales, de maquetación y de componentes de interfaz para el desarrollo del sitio web estático (**Landing Page en HTML5/CSS3/JS**) y la aplicación web orientada a la gestión agrícola en **Angular**, utilizando **Angular Material** como biblioteca principal de componentes de UI.
+Esta sección define las pautas visuales, de maquetación y de componentes de interfaz para el desarrollo del sitio web estático (**Landing Page en HTML5/CSS3/JS**) y la aplicación web orientada a la gestión agrícola en **Vue**, utilizando **PrimeVue** como librería principal de componentes de UI.
 
 El enfoque está centrado en garantizar una experiencia visual y de interacción consistente, accesible (**a11y**) y adaptable a cualquier dispositivo utilizado en campo u oficina.
 
-#### Responsive Design
+### Responsive Design
 
 La interfaz de **SumaqAgro** se adapta de forma fluida a las pantallas de teléfonos móviles, tabletas y computadoras de escritorio mediante un sistema de cuadrícula (*Grid System*) y puntos de interrupción (*breakpoints*) estandarizados:
 
@@ -120,22 +120,22 @@ La interfaz de **SumaqAgro** se adapta de forma fluida a las pantallas de teléf
 
 Para el **Landing Page**, la adaptabilidad se logra mediante *CSS Flexbox*, *CSS Grid* y *Media Queries* nativas.
 
-Para la **Web Application en Angular**, la maquetación se gestiona mediante directivas de diseño responsivo y bibliotecas de componentes adaptables.
+Para la **Web Application en Vue**, la maquetación se gestiona mediante directivas de diseño responsivo y librerías de componentes adaptables.
 
-#### Componentes y patrones compatibles
+### Componentes y patrones compatibles
 
 - **Navegación (*Navbar / Menu*):** En la aplicación web se utiliza `<mat-toolbar>` en combinación con `<mat-menu>` o `<mat-sidenav>` para la barra lateral responsiva, integrada con el módulo de enrutamiento mediante `routerLink`. En el Landing Page se emplea una barra superior fija (*sticky*) construida con elementos semánticos `<header>` y `<nav>`.
 
 - **Tarjetas (*Cards*):** Implementación de `<mat-card>` para estructurar contenedores de información clave como el resumen de lotes, mapas de vigor foliar (*NDVI*), estados de alertas fitosanitarias y balances financieros de campaña.
 
-- **Botones de acción:** Uso de variantes de Angular Material según la jerarquía del elemento:
+- **Botones de acción:** Uso de variantes de Vue Material según la jerarquía del elemento:
   - `<button mat-raised-button>` para llamadas a la acción principales, como **“Registrar Parcela”** y **“Consultar al Asesor”**.
   - `<button mat-button>` para acciones secundarias.
   - `<button mat-icon-button>` para controles en visores de mapas satelitales.
 
 - **Diálogos y Notificaciones:** Uso de `MatSnackBar` para la confirmación de registros de gastos o avisos preventivos, y `MatDialog` para el despliegue contextual de fichas técnicas de lotes, recetas fitosanitarias o vista previa de certificados de cosecha en PDF.
 
-#### Accesibilidad (a11y)
+### Accesibilidad (a11y)
 
 Con el fin de asegurar que la plataforma sea inclusiva para todos los perfiles de usuario, incluyendo agricultores, dirigentes de cooperativas y agrónomos, se consideran las siguientes pautas:
 
@@ -145,35 +145,7 @@ Con el fin de asegurar que la plataforma sea inclusiva para todos los perfiles d
 
 - **Contraste y escalabilidad:** Cumplimiento de los niveles de contraste de color según la norma **WCAG 2.1 AA**, con un ratio mínimo de **4.5:1** para texto normal, y uso de unidades relativas como `rem` y `em` para garantizar el escalado de tipografías sin distorsión de la interfaz.
 
-### 4.1.3. Mobile Style Guidelines
 
-Esta sección define las pautas de la aplicación móvil de **SumaqAgro**, diseñada en Figma para Android (frame de 360 × 800 px) y pensada para el uso en campo con una sola mano. Hereda la identidad visual de las secciones anteriores. [Ver diseño en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332).
-
-**a) Patrones de navegación:** Se emplea una *Bottom Navigation Bar* fija con cinco destinos (Inicio, Monitoreo, Finanzas, Alertas y Perfil), con íconos y etiquetas visibles, complementada con un botón de acción flotante (*FAB*) para la acción principal de Finanzas (“Anotar gasto”). Las vistas de detalle y los formularios usan una flecha de retroceso en la barra superior.
-
-![bottom-navigation.png](assets/img/chapter-IV/mobile-style-guidelines/bottom-navigation.png)
-
-**b) Componentes nativos:**
-- Botones primarios rellenos en teal (`#00796B`) con texto blanco y ancho completo en formularios; botones secundarios con borde teal.
-- Tarjetas (*cards*) de 16 px de radio para los indicadores clave, con la tarjeta de *Salud Foliar* en teal oscuro (`#004D40`) para dar jerarquía.
-- *Bottom sheets* para selectores (*Cambiar Parcela*, *Enviar foto de plaga*) y modales o diálogos para confirmaciones (guardar gasto, finalizar plan, cerrar sesión).
-- Chips de selección (*Insumos y Abono*, *Mano de Obra / Jornal*, *Flete*) y banners ámbar para avisos de sincronización pendiente.
-
-**c) Tipografía:** Poppins para títulos y cifras clave (Display 32 px, H1 28 px, H2 24 px, H3 20 px) e Inter para texto e interfaz (cuerpo 16 px, texto secundario 14 px, etiquetas y *captions* 12 px).
-
-![typography.png](assets/img/chapter-IV/mobile-style-guidelines/typography.png)
-
-**d) Colores:** Escala Material en teal (primario), verde (confirmaciones y estado “Óptimo”) y grises (fondos y bordes); rojo `#D32F2F` para errores y alertas críticas y ámbar `#FFC107` para avisos. El texto blanco solo se usa sobre teal `#00796B` o más oscuro (contraste AA ≥ 4.5:1).
-
-![mobile-colors.png](assets/img/chapter-IV/mobile-style-guidelines/mobile-colors.png)
-
-**e) Espaciado:** Base de 8 px (4, 8, 16, 24, 32 y 48 px), con márgenes laterales de 16 px y radios de 8, 12, 16 y 24 px.
-
-**f) Gestos y accesibilidad:** Solo se usan toques simples (*tap*), sin gestos complejos. Las áreas táctiles son de al menos 48 × 48 px, y los estados se comunican con ícono y texto, no solo con color.
-
-**g) Iconografía:** Se utilizan íconos *Material Symbols Rounded* de 24 × 24 px, siempre acompañados de una etiqueta.
-
-![iconography.png](assets/img/chapter-IV/mobile-style-guidelines/iconography.png)
 
 ## 4.2. Information Architecture
 
@@ -187,6 +159,7 @@ La organización jerárquica del Landing Page de "SumaqAgro" ha sido diseñada c
 
 - **Contenido**: Propuesta de valor en el banner principal y llamadas a la acción directas.
 
+
 **Información explicativa**
 
 - **Nosotros:** Presentación del propósito de la plataforma y el equipo detrás de la solución.
@@ -197,21 +170,28 @@ La organización jerárquica del Landing Page de "SumaqAgro" ha sido diseñada c
 
 - **Demo del Producto:** Video demostrativo sobre el funcionamiento en campo de la plataforma.
 
+
 **Conversión y Validación**
 
 - **Planes:** Detalle de las opciones de suscripción diseñadas para cada perfil (Plan Semilla, Cooperativa Pro y Plan Asesor Técnico).
 
 - **Impacto y Testimonios:** Presentación de métricas de alcance y testimonios reales de clientes que validan la experiencia.
 
-![organization-landing-page](assets/img/chapter-IV/organization-landing-page.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/organization-landing-page.png">
+</p>
 
-> Organización en el landing page
+> <p align="center">Organización en el landing page</p>
+
 
 Además, la arquitectura jerárquica en la interfaz de la aplicación web de "SumaqAgro" ha sido diseñada para facilitar el acceso y gestión eficiente de las múltiples funcionalidades del sistema. Esta estructura permite una distribución lógica del contenido, reduciendo la carga cognitiva del usuario en campo y mejorando su capacidad para encontrar rápidamente las herramientas que necesita.
 
-![organization-web-app](assets/img/chapter-IV/organization-web-app.png)
 
-> Organización en la aplicación
+<p align="center">
+  <img src="assets/img/chapter-IV/organization-web-app.png">
+</p>
+
+> <p align="center">Organización en la aplicación</p>
 
 **Pantalla de inicio (Mi Parcela)**
 
@@ -263,19 +243,6 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 
 - **Funcionalidades destacadas:** Revisión de fotografías de plagas enviadas por agricultores, emisión de recetas técnicas y seguimiento de avisos de riesgo.
 
-**Organización visual del contenido**
-
-- **Jerárquica (*visual hierarchy*):** Se aplica en el Landing Page (de la propuesta de valor a los planes) y en los dashboards, donde el indicador más importante, como la salud foliar, se destaca sobre los demás y los detalles quedan en niveles inferiores.
-- **Secuencial (*step-by-step*):** Se aplica en las tareas que se completan en pasos ordenados: el registro de cuenta, la recuperación de contraseña con código OTP, el registro de una parcela (mapa, datos del cultivo y confirmación) y el plan de acción de una alerta.
-- **Matricial:** Se aplica en cuadrículas de tarjetas, como las parcelas registradas con sus cupos disponibles, los indicadores clave del dashboard y la comparación de planes de suscripción en el Landing Page.
-
-**Esquemas de categorización del contenido**
-
-- **Por tópicos:** Los módulos de la aplicación se agrupan por tema (Principal, Operación agrícola y Sistema), al igual que los gastos (Insumos y Abono, Mano de Obra y Flete) y las alertas (clima y fitosanitarias).
-- **Cronológico:** El historial de gastos, las alertas, las consultas al asesor y los certificados se ordenan del más reciente al más antiguo.
-- **Alfabético:** Se aplica en las listas de selección, como parcelas y cultivos, para encontrar un elemento sin esfuerzo.
-- **Según audiencia:** Se desarrolla a continuación en *Segmentación por audiencia*.
-
 **Segmentación por audiencia**
 
 **a. Agricultores independientes**
@@ -295,18 +262,19 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 - Enfoque en la asistencia técnica distribuida, optimización de visitas a terreno e intervención precisa ante plagas o heladas.
 
 - Canal de comunicación directo para dictar diagnósticos, recomendar dosificación de insumos y mantener un historial clínico por cada parcela.
-
+  <br>
+  <br>
 ### 4.2.2. Labeling Systems
 
 El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, directo y fácil de entender por agricultores, cooperativas y agrónomos, usando palabras clave con un número mínimo de términos sin perder precisión. Las etiquetas evitan tecnicismos innecesarios y buscan reducir la carga cognitiva del usuario en el campo.
 
-#### Principios
+### Principios
 
 - **Consistencia:** Se usan las mismas etiquetas en botones, menús y mensajes relacionados. Por ejemplo: **“Ver todos mis lotes”**, **“Consultar con el Asesor”** y **“Descargar Ficha PDF”**.
 
 - **Simplicidad:** Se evita el uso de jergas técnicas complejas, empleando términos agrícolas cotidianos. Ejemplos: **“Vigor del Follaje (NDVI)”**, **“Déficit de Humedad”** y **“Precio para no perder”**.
 
-#### Etiquetado en el Landing Page
+### Etiquetado en el Landing Page
 
 - **Inicio:** Es la primera sección que el usuario ve al entrar. Presenta la propuesta de valor **“Cultiva con Información. Decide con Precisión”** y botones directos.
 
@@ -324,8 +292,7 @@ El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, dire
 
 - **Testimonios:** Muestra **“Testimonios de Clientes”** y opiniones de productores que validan el uso de la solución.
 
-- **Footer:** Contiene el logotipo de **SumaqAgro**, enlaces de navegación, redes sociales y accesos a información de soporte y aspectos legales.
-#### Etiquetado en la Aplicación Web
+### Etiquetado en la Aplicación Web
 
 - **Mi Parcela:** Vista principal del dashboard con métricas clave como **“Salud Foliar”**, **“Gasto Total”**, **“Precio para no perder”** y accesos a **“Ver todos mis lotes”**.
 
@@ -341,15 +308,6 @@ El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, dire
 
 - **Configuración y Ayuda:** Sección para gestionar **“Datos de mi parcela”**, **“Cuenta”**, **“Manuales de ayuda”** y el botón directo **“Llamar a Soporte SumaqAgro”**.
 
-#### Etiquetado en la Aplicación Móvil
-
-La aplicación móvil mantiene las mismas etiquetas del Lenguaje Ubicuo, con textos más cortos para pantallas de 360 px:
-
-- **Barra de navegación inferior:** **Inicio** (*Home*), **Monitoreo** (*Monitoring*), **Finanzas** (*Finances*), **Alertas** (*Alerts*) y **Perfil** (*Profile*).
-- **Tarjetas del Inicio:** **Salud Foliar** (*Leaf Health*), **Gasto Total** (*Total Spend*) y **Precio para no perder** (*Break-even Price*).
-- **Acciones principales:** **Anotar gasto** (*Log expense*), **Enviar foto de plaga** (*Send pest photo*) y **Registrar parcela** (*Register new plot*).
-- **Estados:** **Conectado** (*Connected*), **Óptimo** (*Optimal*) y **pendientes** (*pending*) para los datos por sincronizar.
-
 ### 4.2.3. SEO Tags and Meta Tags
 
 Con el objetivo de mejorar la visibilidad de "SumaqAgro" en los motores de búsqueda y facilitar su descubrimiento tanto por agricultores independientes, líderes de cooperativas y asesores técnicos agrónomos interesados en optimizar el rendimiento y la gestión de sus cultivos, se ha establecido una estrategia SEO que incluye el uso adecuado de etiquetas HTML para los principales elementos informativos del sitio web estático (Landing Page) y la aplicación web.
@@ -357,46 +315,50 @@ Con el objetivo de mejorar la visibilidad de "SumaqAgro" en los motores de búsq
 **Landing Page**
 
 - **Title:**  
-  `<title>SumaqAgro – Satellite Monitoring and Precision Agriculture Management</title>`
+  `<title>SumaqAgro – Monitoreo Satelital y Gestión Agrícola de Precisión</title>`
 
 Una frase concisa que refleja la propuesta de valor de la plataforma e integra palabras clave estratégicas como "monitoreo satelital", "gestión agrícola" y "precisión", términos frecuentemente utilizados por productores y profesionales del sector agrotecnológico al buscar soluciones digitales.
 
 - **Meta Description:**  
-  `<meta name="description" content="Agrotechnology platform for Peruvian agriculture. Optimize crop performance with NDVI maps, plot cost management, QR traceability, and phytosanitary risk alerts.">`
+  `<meta name="description" content="Plataforma de agrotecnología para el campo peruano. Optimiza el rendimiento de tus cultivos con mapas NDVI, control de costos por lote, trazabilidad con QR y alertas de riesgo fitosanitario.">`
 
 Esta descripción sintetiza el propósito de la herramienta destacando sus beneficios diferenciadores (salud foliar NDVI, control financiero y certificación digital), incorporando términos de búsqueda de alta relevancia como “agrotecnología”, “alertas fitosanitarias” y “código QR”.
 
 - **Meta Keywords:**  
-  `<meta name="keywords" content="SumaqAgro, agricultural satellite monitoring, NDVI index, precision agriculture Peru, agricultural cooperative management, agricultural cost control, QR harvest certification, phytosanitary alerts">`
+  `<meta name="keywords" content="SumaqAgro, monitoreo satelital agrícola, índice NDVI, agricultura de precisión Perú, gestión de cooperativas agrícolas, control de gastos agrícolas, certificado QR cosecha, alertas fitosanitarias">`
 
 Un conjunto seleccionado de palabras clave que abarca los perfiles de usuario objetivo (agricultores, cooperativas, agrónomos) y las funcionalidades centrales de la solución (NDVI, control de gastos, trazabilidad y alertas de riesgo).
 
 - **Meta Author:**  
-  `<meta name="author" content="Dymbia team – Aplicaciones Web">`
+  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
 
 Identifica al equipo responsable del diseño, desarrollo y arquitectura de información del sitio web, reforzando la transparencia y la atribución del proyecto.
+
+---
 
 **Web Application – Dashboard Principal**
 
 - **Title:**  
-  `<title>My Plot – SumaqAgro | Crop Monitoring and Management Dashboard</title>`
+  `<title>Mi Parcela – SumaqAgro | Panel de Control y Monitoreo de Cultivos</title>`
 
 Este título complementa la identidad de la plataforma con una llamada a la acción orientada a la gestión operativa, enfocándose en la centralización y monitoreo de predios agrícolas desde la vista principal de la aplicación.
 
 - **Meta Description:**  
-  `<meta name="description" content="Access your main SumaqAgro dashboard. View NDVI crop health maps for your plots, record campaign expenses, check the break-even price, and manage phytosanitary requests with your technical advisor.">`
+  `<meta name="description" content="Accede a tu panel principal en SumaqAgro. Visualiza el mapa de salud foliar (NDVI) de tus lotes, registra gastos de campaña, consulta el precio de equilibrio y gestiona solicitudes fitosanitarias con tu asesor técnico.">`
 
 Redactado con un enfoque funcional y operativo que detalla las acciones inmediatas que el usuario puede realizar en la interfaz, destacando la interacción entre agricultor, agrónomo y datos geoespaciales.
 
 - **Meta Keywords:**  
-  `<meta name="keywords" content="agricultural dashboard, my plot, NDVI maps, crop health, agricultural cost control, technical prescriptions, risk alerts, SumaqAgro platform">`
+  `<meta name="keywords" content="dashboard agrícola, mi parcela, mapas NDVI, salud del cultivo, control de gastos agrícolas, recetas técnicas, alertas de riesgo, plataforma SumaqAgro">`
 
-Palabras clave orientadas a la experiencia interna de la aplicación, utilizando términos específicos de uso continuo en la plataforma (ej. “agricultural dashboard”, “NDVI maps”, “technical prescriptions”).
+Palabras clave orientadas a la experiencia interna de la aplicación, utilizando términos específicos de uso continuo en la plataforma (ej. “dashboard agrícola”, “mapas NDVI”, “recetas técnicas”).
 
 - **Meta Author:**  
-  `<meta name="author" content="Dymbia team – Aplicaciones Web">`
+  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
 
 Especifica el equipo de desarrollo web responsable del proyecto para asegurar la vigencia y atribución tecnológica de la aplicación.
+<br>
+<br>
 
 ### 4.2.4. Searching Systems
 
@@ -404,7 +366,9 @@ Dentro de la sección **Mi Parcela** de la aplicación web, el sistema de búsqu
 
 Este campo permite buscar por nombre de parcela, tipo de cultivo o sector. Por ejemplo: **“Papa Canchán”** o **“Lote 2”**.
 
-![Searching System SumaqAgro](assets/img/chapter-IV/searching-sumaqagro.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/searching-sumaqagro.png" alt="Searching System SumaqAgro">
+</p>
 
 #### Búsqueda en la parcela
 
@@ -474,15 +438,6 @@ Entre las principales opciones se encuentran:
 - Filtrado según severidad del riesgo.
 - Consulta del historial de diagnósticos.
 - Consulta de recetas fitosanitarias emitidas por predio.
-
-#### Búsqueda en la Aplicación Móvil
-
-En la aplicación móvil la búsqueda se simplifica para el uso con una sola mano:
-
-- **Barra de búsqueda** en la parte superior de las pantallas de Inicio y Finanzas (por ejemplo, "Buscar en mi parcela").
-- **Chips de filtro** bajo la barra, como **Todos**, **Insumos**, **Mano de obra** y **Flete** en el historial de gastos.
-- **Resultados en tarjetas** de una sola columna, con el estado indicado por color, ícono y texto.
-
 ### 4.2.5. Navigation Systems
 
 La navegación en **SumaqAgro** está diseñada para facilitar el recorrido del usuario de manera clara y rápida. En la Landing Page se implementa una barra de navegación fija (header) en la parte superior que contiene el isotipo de la marca, enlaces directos a las secciones principales, botones de acción y selector de idioma. Estas secciones son:
@@ -495,79 +450,88 @@ La navegación en **SumaqAgro** está diseñada para facilitar el recorrido del 
 - **Sign In / Register:** Botones de acceso y registro a la plataforma.
 - **Selector de Idioma (EN):** Opción para cambiar la localización del sitio.
 
-![navigation-landing-page](assets/img/chapter-IV/navigation-landing-page.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/navigation-landing-page.png">
+</p>
 
-> Navegación del sitio web (Landing Page)
+> <p align="center">Navegación del sitio web (Landing Page)</p>
+
 
 Además, en la aplicación web se implementa un menú lateral fijo (sidenav) organizado por categorías principales, el cual permite el acceso directo a las funcionalidades de gestión y monitoreo del sistema:
 
 - **Principal:**
-  - **Mi Parcela:** Vista del panel general del predio.
+    - **Mi Parcela:** Vista del panel general del predio.
 - **Operación agrícola:**
-  - **Salud del Cultivo:** Visor con mapas de vigor foliar y métricas del predio.
-  - **Mis Gastos y Ganancias:** Gestión contable e historial financiero de campaña.
-  - **Consulta al Asesor:** Canal directo de atención fitosanitaria y recetas técnicas.
-  - **Mis Certificados de Cosecha:** Emisión y consulta de certificados trazables con QR.
+    - **Salud del Cultivo:** Visor con mapas de vigor foliar y métricas del predio.
+    - **Mis Gastos y Ganancias:** Gestión contable e historial financiero de campaña.
+    - **Consulta al Asesor:** Canal directo de atención fitosanitaria y recetas técnicas.
+    - **Mis Certificados de Cosecha:** Emisión y consulta de certificados trazables con QR.
 - **Sistema:**
-  - **Alertas Agrícolas:** Centro de avisos de riesgo y boletín fitosanitario.
-  - **Configuración y Ayuda:** Ajustes de la cuenta, datos de parcelas y soporte.
-  - **Modo Sin Conexión:** Estado operativo para sincronización de datos en campo.
-  - **Cerrar Sesión:** Salida segura de la plataforma.
+    - **Alertas Agrícolas:** Centro de avisos de riesgo y boletín fitosanitario.
+    - **Configuración y Ayuda:** Ajustes de la cuenta, datos de parcelas y soporte.
+    - **Modo Sin Conexión:** Estado operativo para sincronización de datos en campo.
+    - **Cerrar Sesión:** Salida segura de la plataforma.
 
 Cada sección está representada con un ícono claro y una etiqueta visible, asegurando una navegación fluida e intuitiva dentro de la consola de trabajo.
 
-![navigation-web-app](assets/img/chapter-IV/navigation-web-app.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/navigation-web-app.png">
+</p>
 
-> Navegación de la aplicación web (Sidenav)
+> <p align="center">Navegación de la aplicación web (Sidenav)</p>
 
-En la **aplicación móvil** el menú lateral se sustituye por una barra de navegación inferior (*Bottom Navigation Bar*) con cinco destinos fijos, ubicada en la zona del pulgar:
-
-- **Inicio:** Panel de Mi Parcela con salud foliar, gasto total y precio para no perder.
-- **Monitoreo:** Visor satelital con las capas de vigor foliar (NDVI) y humedad (NDWI).
-- **Finanzas:** Gastos y ganancias de la campaña, con acceso al registro de un nuevo gasto.
-- **Alertas:** Avisos de riesgo y plan de acción.
-- **Perfil:** Configuración, ayuda, modo sin conexión y cierre de sesión.
-
-Las vistas de detalle y los formularios se recorren con una flecha de retroceso en la barra superior, y las acciones frecuentes aparecen como accesos rápidos en el Inicio (*Consultar con el Asesor*, *Mis Certificados* y *Enviar foto de plaga*).
+<br>
 
 ## 4.3. Landing Page UI Design
 El landing page representa el primer punto de contacto entre los usuarios y la plataforma, por lo que su diseño debe comunicar de manera clara el propósito y los principales beneficios del servicio. En esta sección se presenta el diseño de la interfaz del landing page, considerando una organización visual atractiva, una navegación sencilla y elementos que faciliten la comprensión de la información y orienten al usuario hacia las acciones principales.
 
 ### 4.3.1. Landing Page Wireframe
-#### Desktop Web Browser
+### Desktop Web Browser
 El wireframe del landing page de **SumaqAgro** muestra la estructura inicial de la página y la forma en que se organizan sus principales elementos antes de aplicar el diseño visual definitivo. Su propósito es definir una distribución ordenada y funcional que sirva como base para el desarrollo posterior de la interfaz.
 
 **Nav y Hero**
 
 La sección Hero de la Landing Page presenta en su cabecera superior (Navbar) el isotipo y nombre de marca a la izquierda, los enlaces de anclaje (*Inicio*, *Nosotros*, *Soluciones*, *Planes*, *Impacto*), los botones de acceso (*Iniciar sesión* y *Registrarse*) y el selector de internacionalización (*ES*); seguidamente, el área principal de impacto despliega el subtítulo en mayúsculas *«AGRICULTURA INTELIGENTE PARA UN MEJOR MAÑANA»*, el encabezado principal (H1) *«Cultiva con Información. Decide con Precisión»*, un párrafo descriptivo que sintetiza la transformación de datos satelitales para el monitoreo de cultivos, costos y valor de la producción, y dos llamados a la acción primarios representados por los botones *Explorar* y *Cómo funciona* sobre un fondo fotográfico agrícola de campo.
 
-![wireframe-hero](assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-hero.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-hero.png" alt="wireframe-hero" width="600px" height="auto"/>
+</p>
 
 **About**
 
 La sección **Nosotros** (*About Us*) presenta una distribución asimétrica compuesta por un bloque textual a la izquierda y un recurso gráfico a la derecha; el área informativa incluye el kicker superior en mayúsculas *«SOBRE SUMAQAGRO»*, el encabezado de sección (H2) *«Nosotros»*, el subtítulo destacado (H3) *«Democratizamos la agricultura de precisión en el Perú»* y un párrafo institucional que detalla la misión de reducir la brecha de tecnificación en las cuencas de papa y café mediante datos satelitales abiertos y herramientas accesibles de monitoreo, costeo y certificación; mientras que a la derecha se exhibe una composición fotográfica con esquinas redondeadas que muestra una parcela de cultivo tecnificado junto a una mano sosteniendo un smartphone con la interfaz móvil del sistema desplegada.
 
-![wireframe-about](assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-about.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-about.png" alt="wireframe-about" width="600px" height="auto"/>
+</p>
+
 
 **Solutions**
 
 La sección **¿A quién ayudamos?** organiza la propuesta de valor mediante tres tarjetas (*cards*) de autoselección por perfil orientadas a *Agricultores independientes*, *Líderes de cooperativas* y *Asesores técnicos y agrónomos*, detallando en cada una su enfoque productivo, una fotografía representativa de campo y un botón de llamado a la acción específico (*Registrar mi parcela*, *Gestionar cooperativa* y *Unirme como asesor*); inmediatamente después, la sección **Soluciones y Características** expone las cuatro capacidades tecnológicas clave del sistema mediante una grilla de tarjetas que describen el monitoreo satelital de vigor y humedad (*Satellite Monitoring of Vigor and Moisture*), la contabilidad de costos por lote (*Batch Cost Accounting*), la certificación digital de cosecha (*Digital Certification of Harvest Quality*) y el sistema de prescripciones agronómicas (*Agronomic Prescriptions and Alerts*), complementando cada bloque funcional con un indicador del impacto operativo directo que genera en campo.
 
-![wireframe-solutions](assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-solutions.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-solutions.png" alt="wireframe-solutions" width="600px" height="auto"/>
+</p>
 
 **Video and Plans**
 
 La sección **Conoce SumaqAgro en acción** presenta un contenedor central con fondo verde oscuro que alberga el reproductor del video demostrativo (*About-the-Product*) para evidenciar el funcionamiento en campo; inmediatamente después, la sección **Planes** (*Pricing*) introduce un conmutador de facturación mensual y anual (*«Ahorra 2 meses con el plan anual»*) junto a una grilla de tres tarjetas de suscripción que estructuran el modelo SaaS freemium y B2B: el **Plan Semilla** (S/ 0 para 1 parcela con NDVI básico y botón *«Empezar gratis»*), el **Plan Cooperativa Pro** (destacado con la etiqueta *«Más popular»* a S/ 189/mes para 50 productores con certificación de calidad y botón *«Suscribir cooperativa»*), y el **Plan Asesor Técnico** (S/ 89/mes para supervisar 20 fundos con recetas técnicas y botón *«Prueba de 14 días»*).
 
-![wireframe-plans](assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-plans.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-plans.png" alt="wireframe-plans" width="600px" height="auto"/>
+</p>
 
 **Testimonials , Impact and Footer**
 
 La sección **Impacto** y el cierre del Landing Page se estructuran en tres bloques consecutivos orientados a la credibilidad y la conversión: en primer lugar, el área de métricas cuantitativas presenta tres tarjetas superiores con indicadores clave de respaldo agrario (*333k+ Has. de papa*, *223k+ Familias cafeteras* y *>40% Sin cobertura técnica*), acompañadas en la parte inferior por el bloque testimonial *«Lo que dicen nuestros usuarios»* con tarjetas que incluyen avatar, calificación por estrellas y citas de validación de Juan Huamán (productor de papa) y Elena Vargas (cooperativa cafetalera); a continuación, se ubica el banner final de conversión (*Bottom CTA*) en verde oscuro con el titular *«Empieza a decidir con precisión hoy»*, un texto de apoyo y el botón principal de acción *Registrarse gratis*; finalmente, el pie de página (*Footer*) organiza sobre fondo oscuro el isotipo horizontal de SumaqAgro con su propuesta de valor a la izquierda, junto a una distribución de navegación en tres columnas de enlaces (*Products*, *Quick Links* y *Support*) para centralizar recursos, documentación y canales de soporte de la plataforma.
 
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-testimonials-impact-footer.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/desktop/wireframe-testimonials-impact-footer.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
+</p>
 
-#### Mobile Web Browser
+
+### Mobile Web Browser
 Para garantizar una experiencia de usuario inclusiva y accesible, el diseño responsivo de la Landing Page de SumaqAgro se fundamenta en un sistema de rejilla fluido adaptado a dispositivos móviles (*Mobile Web Browser*), utilizando una retícula de 4 columnas y una escala de espaciado basada en múltiplos de 8 px.
 
 En esta vista, los componentes de escritorio se reorganizan de manera progresiva en una sola columna (*single-column layout*), condensando la barra de navegación superior en un menú colapsable tipo hamburguesa (*nav-toggle*) y apilando los bloques informativos, tarjetas de segmentos, matrices de soluciones y llamados a la acción (CTAs) de forma lineal para facilitar el desplazamiento continuo (*scrolling*) y la interacción con una sola mano sin pérdida de contexto ni funcionalidad.
@@ -576,153 +540,169 @@ En esta vista, los componentes de escritorio se reorganizan de manera progresiva
 
 En la vista móvil, la cabecera superior compacta el menú de navegación horizontal bajo un botón tipo hamburguesa (`nav-toggle`) ubicado en el extremo superior derecho, manteniendo a la izquierda el isotipo circular y el nombre de marca SumaqAgro; inmediatamente abajo, el área principal apila el contenido verticalmente en una sola columna centrada de cuatro retículas, encabezada por el *kicker* introductorio en mayúsculas, el titular principal (H1) distribuido en dos líneas de alto impacto y un bloque de tres líneas de texto descriptivo con la propuesta de valor satelital; finalmente, la zona inferior de interacción organiza dos botones de llamado a la acción (CTAs) de ancho adaptativo dispuestos lado a lado en posición horizontal para facilitar el acceso táctil inmediato con una sola mano.
 
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-hero.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-hero.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
+</p>
+
 
 **About**
 
 En la vista móvil (**Mobile Web Browser**) de las secciones institucionales, el contenido se reorganiza en una columna lineal: el bloque superior **Nosotros** (*About Us*) apila verticalmente el kicker, el encabezado principal, el subtítulo y el texto de la propuesta de valor junto al contenedor de la imagen representativa del cultivo tecnificado; inmediatamente abajo, la sección **Nuestro equipo** sitúa el titular y su párrafo descriptivo para dar paso a una disposición adaptada en dos columnas que agrupa las cinco tarjetas (*cards*) con fotografía, nombre de cada integrante y un icono de acción rápida en la esquina superior derecha, rematando con el último perfil centrado al pie para optimizar el espacio vertical en pantallas compactas.
 
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-about.png) 
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-about.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
+</p>
+
 
 **Solutions**
 
-En la vista móvil (**Mobile Web Browser**) de las secciones comerciales y funcionales, el contenido se adapta a una columna única vertical: en la parte superior, la sección **¿A quién ayudamos?** apila secuencialmente las tres tarjetas de autoselección por rol (*Agricultores independientes*, *Líderes de cooperativas* y *Asesores técnicos*), situando en cada una su icono, titular, descripción de enfoque, vista previa gráfica y el botón de acción (*CTA*) con ancho completo al pie para facilitar el toque con una sola mano; a continuación, la sección **Soluciones y Características** transforma la grilla de escritorio en un apilamiento lineal de cuatro tarjetas de funcionalidades (monitoreo satelital NDVI, costos por lote, certificación de calidad y prescripciones agronómicas), cada una con su barra decorativa superior, icono de módulo, título, párrafo descriptivo y una tarjeta inferior de impacto cuantificable orientada al valor en campo.
+En la vista móvil (**Mobile Web Browser**) de las secciones comerciales y funcionales, el contenido se adapta a una columna única vertical: en la parte superior, la sección **¿A quién ayudamos?** apila secuencialmente las tres tarjetas de autoselección por rol (*Agricultores independientes*, *Líderes de cooperativas* y *Asesores técnicos*), situando en cada una su icono, titular, descripción de enfoque, vista previa gráfica y el botón de acción (*CTA*) con ancho completo al pie para facilitar el toque con una sola mano[cite: 1, 3]; a continuación, la sección **Soluciones y Características** transforma la grilla de escritorio en un apilamiento lineal de cuatro tarjetas de funcionalidades (monitoreo satelital NDVI, costos por lote, certificación de calidad y prescripciones agronómicas), cada una con su barra decorativa superior, icono de módulo, título, párrafo descriptivo y una tarjeta inferior de impacto cuantificable orientada al valor en campo.
 
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-help.png)
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-solutions.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-help.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
+ 
+</p>
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-solutions.png" alt="wireframe-testimonials-impact-footer" width="592px" height="auto"/>
+</p>
+
 
 **Video and Plans**
 
 En la vista móvil (**Mobile Web Browser**) de los bloques de demostración y monetización, la interfaz se compacta en una sola columna vertical: en la parte superior, la sección **Conoce SumaqAgro en acción** (*About-the-Product*) enmarca el contenedor del reproductor de video demostrativo centrado sobre un bloque de fondo verde oscuro (#233413) que incluye el botón de reproducción (*Play*) para evidenciar el funcionamiento en campo; inmediatamente después, la sección **Planes** (*Pricing*) sitúa el encabezado de sección, el texto descriptivo y un conmutador de facturación mensual/anual (*switch toggle*), dando paso al apilamiento secuencial de las tres tarjetas de suscripción (*Plan Semilla*, *Plan Cooperativa Pro* y *Plan Asesor Técnico*), donde cada una presenta su nombre de plan, tarifa destacada en Soles, resumen de características y su botón de llamado a la acción (*CTA*) en ancho completo al pie para una pulsación táctil accesible con una sola mano.
 
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-video.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-video.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
 
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-plans.png)
+</p>
+
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-plans.png" alt="wireframe-testimonials-impact-footer" width="592px" height="auto"/>
+</p>
+
 
 **Impact, Testimonials and Footer**
 
 En la vista móvil (**Mobile Web Browser**) del cierre de la página, los componentes se reorganizan en una secuencia vertical de cuatro bloques lineales: en la parte superior, la sección **Impacto** apila las tres tarjetas de métricas agrarias (*333k+ Has. de papa*, *223k+ Familias cafeteras* y *>40% Sin cobertura técnica*); inmediatamente después, el bloque de testimonios (*«Lo que dicen nuestros usuarios»*) presenta de forma vertical las dos tarjetas de validación social con el avatar, nombre, rol y cita de cada usuario; a continuación, el banner final de conversión (*Bottom CTA*) condensa el titular, el texto de apoyo y el botón de acción *«Registrarse gratis»* adaptado a pantalla completa para facilitar la pulsación táctil con una sola mano; finalmente, el pie de página (*Footer*) sobre fondo oscuro (#031416) apila el isotipo de la marca, la descripción institucional y una botonera de enlaces sociales, rematando con tres columnas colapsadas verticalmente (*Products*, *Quick Links* y *Support*) que distribuyen el acceso a los recursos y enlaces ético-legales del sistema.
 
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-impact.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-impact.png" alt="wireframe-testimonials-impact-footer" width="592px" height="auto"/>
+</p>
 
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-testimonials-and-footer.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-testimonials-and-footer.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
+</p>
 
 ### 4.3.2. Landing Page Mock-up
 El mock-up de la página de aterrizaje de Dymbia plasma la apariencia visual definitiva, integrando la paleta cromática, los estilos tipográficos, el material gráfico y la iconografía finales. De este modo, traslada de forma coherente la identidad visual de SumaqAgro a lo largo de cada uno de los bloques y componentes del sitio.
 
-**Hero — SumaqAgro**
+Hero — SumaqAgro
 
 Presenta una barra de navegación con el logotipo de la marca, enlaces de sección y botones de acceso junto al selector de idioma. De fondo incorpora una fotografía panorámica de campos agrícolas en hileras bajo un cielo con degradado oscuro. El contenido central destaca el titular "Farm with Insight / Decide with Precision" en blanco y verde, un subtítulo sobre el monitoreo satelital de cultivos y costos, y dos botones de acción: el principal "Explore →" y el secundario "How it works?".
 
 ![mockup-hero.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-hero.png)
 
-**About Us — SumaqAgro**
+Who We Are — SumaqAgro
 
-Presenta un diseño limpio sobre fondo blanco dividido en dos columnas. A la izquierda, incluye el antetítulo en verde "ABOUT SUMAQAGRO", el encabezado principal "About Us?" y el subtítulo "Democratizing precision agriculture in Peru", acompañados por un párrafo explicativo sobre el uso de imágenes satelitales libres para cerrar la brecha tecnológica en cultivos de papa y café sin sensores costosos. A la derecha, destaca una imagen de un campo con sistema de riego tecnificado y una mano sosteniendo un smartphone que visualiza las métricas y gráficos agronómicos de la plataforma.
-
-![mockup-about-us.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-about-us.png)
-
-**Who do we help? — SumaqAgro**
-
-Presenta el antetítulo en verde "OUR COMMUNITY", el encabezado principal "Who do we help?" y el mensaje de valor "We work with those who make the country's food security possible". En la zona inferior dispone tres tarjetas blancas con esquinas redondeadas orientadas a cada segmento clave: agricultores independientes, directivos de cooperativas y asesores técnicos. Cada tarjeta integra un ícono representativo, un resumen de enfoque, una fotografía de campo alusiva y el enlace de acción "Join as an advisor →".
+Presenta un diseño limpio sobre fondo blanco dividido en dos columnas. A la izquierda, incluye el antetítulo en verde "ABOUT SUMAQAGRO", el encabezado principal "Who We Are?" y el subtítulo "Democratizing precision agriculture in Peru", acompañados por un párrafo explicativo sobre el uso de imágenes satelitales libres para cerrar la brecha tecnológica en cultivos de papa y café sin sensores costosos. A la derecha, destaca una imagen de un campo con sistema de riego tecnificado y una mano sosteniendo un smartphone que visualiza las métricas y gráficos agronómicos de la plataforma.
 
 ![mockup-who-do-we-help.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-who-do-we-help.png)
 
-**Solutions and Features — SumaqAgro**
-
-Presenta el encabezado "Solutions and Features" acompañado del lema de valor para la toma de decisiones en campo. En una cuadrícula de cuatro tarjetas blancas con acentos verdes, detalla sus módulos clave: monitoreo satelital de vigor y humedad, costeo por lote, certificación digital de cosecha y alertas agronómicas, destacando en cada una sus métricas de impacto operativo y económico.
-
-![mockup-solutions-and-features.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-solutions-and-features.png)
-
-**Product Demo — SumaqAgro**
-
-Presenta un fondo verde corporativo que enmarca el antetítulo "PRODUCT DEMO", el encabezado central "See SumaqAgro in action" y el subtítulo "Demo video". En la zona inferior destaca un reproductor de video de esquinas redondeadas sobre fondo gris claro con un botón central de reproducción (play) en verde brillante para visualizar la demostración interactiva de la plataforma.
-
-![mockup-product-demo.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-product-demo.png)
-
-**Plans — SumaqAgro**
-
-Presenta el titular "Choose the plan that fits your needs" sobre el antetítulo "PLANS" y un conmutador de facturación mensual o anual con descuento. En la zona inferior dispone tres tarjetas de suscripción adaptadas a cada perfil: Seed Plan (gratuito, para 1 parcela con NDVI básico y registro de labores), Pro Cooperative (S/189/mes, destacado como el más popular para 50 productores con certificación y exportación de reportes) y Technical Advisor Plan (S/89/mes, para 20 fincas supervisadas con NDVI avanzado y recomendaciones), cada una con su respectivo botón de acción directo.
-
-![mockup-plans.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-plans.png)
-
-**Impact — SumaqAgro**
-
-Presenta el antetítulo en verde "REAL RESULTS", el título principal "Impact" y una breve descripción sobre las métricas que respaldan el compromiso de la plataforma con la pequeña agricultura. A la derecha, distribuye tres tarjetas métricas blancas con íconos de usuario y barras de acento en verde: más de 333 mil hectáreas de papa, más de 223 mil familias cafetaleras y más del 40 % de reducción en la falta de cobertura técnica.
-
-![mockup-impact.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-impact.png)
-
-**Testimonials — SumaqAgro**
-
-Presenta el bloque "What our users say?" con dos tarjetas de testimonios de cinco estrellas correspondientes a productores de papa y café. Cada testimonio incorpora la experiencia y valoración de los usuarios sobre el uso de SumaqAgro para mejorar la gestión y el monitoreo de sus cultivos.
-
-![mockup-what-our-users-say.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-what-our-users-say.png)
-
-**Our Team — SumaqAgro**
+Our Team — SumaqAgro
 
 Presenta un encabezado con el antetítulo en verde "THE PEOPLE BEHIND THE TECHNOLOGY", el título principal "Our Team" y una breve descripción sobre el compromiso de los integrantes con la agricultura de precisión en el Perú. En la parte inferior se organiza una cuadrícula horizontal de tarjetas con bordes redondeados sobre fondo blanco, mostrando las fotografías formales y los nombres completos de los cinco miembros del equipo de desarrollo: Benjamin Solorzano Sullca, Jose Carlos Vargas Enriquez, Drago Derick Duarte Ruffner, Yamil Jared Tejada Pumacayo y Miguel Sanca Condori.
 
 ![mockup-our-team.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-our-team.png)
 
-**Video About the Team — SumaqAgro**
+Who do we help? — SumaqAgro
 
-Presenta un encabezado con el antetítulo en verde "Video About the Team", el título principal "Video About the Team" y una breve descripción sobre la presentación de los integrantes, sus roles y las responsabilidades asumidas durante el desarrollo de SumaqAgro. En la parte inferior se muestra un área de reproducción con bordes redondeados y un botón central para iniciar el video de presentación del equipo.
+Presenta el antetítulo en verde "OUR COMMUNITY", el encabezado principal "Who do we help?" y el mensaje de valor "We work with those who make the country's food security possible". En la zona inferior dispone tres tarjetas blancas con esquinas redondeadas orientadas a cada segmento clave: agricultores independientes , directivos de cooperativas , y asesores técnicos. Cada tarjeta integra un ícono representativo, un resumen de enfoque, una fotografía de campo alusiva y el enlace de acción "Join as an advisor →".
 
-![mockup-video-about-the-team.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-video-about-the-team.png)
+![mockup-who-do-we-help.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-who-do-we-help.png)
 
-**Registration — SumaqAgro**
+Solutions and Features — SumaqAgroPresenta
 
-Presenta una franja de color verde corporativo orientada a incentivar el registro de nuevos usuarios. El bloque incorpora un mensaje de invitación y el botón principal "Sign up for free", facilitando el acceso directo a la plataforma desde la página de aterrizaje.
+El encabezado "Solutions and Features" acompañado del lema de valor para la toma de decisiones en campo. En una cuadrícula de cuatro tarjetas blancas con acentos verdes, detalla sus módulos clave: monitoreo satelital de vigor y humedad, costeo por lote, certificación digital de cosecha y alertas agronómicas, destacando en cada una sus métricas de impacto operativo y económico.
 
-![mockup-registration.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-registration.png)
+![mockup-solutions-and-features.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-solutions-and-features.png)
 
-**Footer — SumaqAgro**
+Product Demo — SumaqAgro
 
-Presenta un pie de página sobre fondo oscuro que agrupa el logotipo de SumaqAgro, enlaces a redes sociales y diferentes columnas de navegación organizadas en las categorías "Products", "Quick Links" y "Support". Finalmente, incorpora los enlaces correspondientes a las políticas legales de privacidad y términos de servicio.
+Presenta un fondo verde corporativo que enmarca el antetítulo "PRODUCT DEMO", el encabezado central "See SumaqAgro in action" y el subtítulo "Demo video". En la zona inferior destaca un reproductor de video de esquinas redondeadas sobre fondo gris claro con un botón central de reproducción (play) en verde brillante para visualizar la demostración interactiva de la plataforma.
 
-![mockup-footer.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-footer.png)
+![mockup-product-demo.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-product-demo.png)
+
+Plans — SumaqAgro
+
+Presenta el titular "Choose the plan that fits your needs" sobre el antetítulo "PLANS" y un conmutador de facturación mensual o anual con descuento. En la zona inferior dispone tres tarjetas de suscripción adaptadas a cada perfil: Seed Plan (gratuito, para 1 parcela con NDVI básico y registro de labores), Pro Cooperative (S/189/mes, destacado como el más popular para 50 productores con certificación y exportación de reportes) y Technical Advisor Plan (S/89/mes, para 20 fincas supervisadas con NDVI avanzado y recomendaciones), cada una con su respectivo botón de acción directo.
+
+![mockups-plans.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockups-plans.png)
+
+Impact — SumaqAgro
+
+Presenta el antetítulo en verde "REAL RESULTS", el título principal "Impact" y una breve descripción sobre las métricas que respaldan el compromiso de la plataforma con la pequeña agricultura. A la derecha, distribuye tres tarjetas métricas blancas con íconos de usuario y barras de acento en verde: más de 333 mil hectáreas de papa, más de 223 mil familias cafetaleras  y más del 40% de reducción en la falta de cobertura técnica .
+
+![mockup-impact.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-impact.png)
+
+Testimonials y Footer — SumaqAgro
+
+Presenta el bloque "What our users say ?" con dos tarjetas de testimonios de cinco estrellas de productores de papa y café. Le sigue una franja verde de llamado a la acción con el botón "Sign up for free" y un pie de página en fondo oscuro que agrupa el logotipo, enlaces a redes sociales, columnas de navegación (Products, Quick Links, Support) y los enlaces legales de privacidad y términos.
+
+![mockup-testimonials-footer.png](assets/img/chapter-IV/landing-page/mock-up/desktop/mockup-testimonials-footer.png)
 
 ## 4.4. Web Applications UX/UI Design
 
 Esta sección presenta y sustenta la arquitectura de interacción y el diseño visual de la plataforma SaaS de SumaqAgro, desarrollada por la startup Dymbia.
 ### 4.4.1. Web Applications Wireframes
 
-#### Desktop Web Browser
+### Desktop Web Browser
 
 **Aplicación de Principios de Diseño y Arquitectura de Información:** Para la conceptualización de este Wireframe (*Desktop Web Browser*), nos centramos en una Arquitectura de Información basada en el patrón de escaneo en "F" (*F-Pattern*), disponiendo la barra lateral (*Sidebar*) a la izquierda para organizar jerárquicamente los módulos de operación agrícola y configuración del sistema sin perder el contexto de navegación, mientras que la cabecera superior centraliza la búsqueda rápida y los indicadores de estado global (conectividad, notificaciones y perfil). Aplicamos el principio de Región Común y Proximidad de la Gestalt agrupando los datos clave en tres tarjetas de indicadores (*KPI Cards*) de alto nivel para supervisar la salud foliar, el gasto acumulado y el punto de equilibrio financiero, conectándolos directamente con las representaciones analíticas inferiores (gráfico de evolución vegetal NDVI y distribución circular de costos). A nivel de diseño inclusivo y accesibilidad (*a11y*), garantizamos áreas táctiles mínimas de 48 px en los botones de acción rápida (*View Satellite Map*, *View My Expenses* y el CTA primario *View All My Lots*), reforzando una jerarquía visual clara mediante contenedores bien delimitados y contraste tipográfico que agilizan la lectura y toma de decisiones del productor en campo.
 
 A continuación, se presentan los wireframes principales de la aplicación web correspondientes:
 
 **My Plot**: en la vista inicial (*Dashboard*), la interfaz organiza la supervisión del cultivo mediante una fila de tres tarjetas métricas (*KPI Cards*) de alto nivel que sintetizan la salud foliar (NDVI), la inversión acumulada y el punto de equilibrio financiero, complementadas en la sección inferior por un gráfico de barras para la evolución temporal del vigor vegetal y un gráfico circular (*Donut Chart*) para el desglose porcentual de costos operativos. Seguidamente, el flujo de interacción transiciona hacia la vista de gestión de parcelas al interactuar con el llamado a la acción superior, donde el usuario accede a una retícula de administración con los cupos disponibles de su plan, permitiéndole supervisar el estado de sus lotes activos o incorporar un nuevo predio agrícola mediante un formulario asistido de georreferenciación y delimitación cartográfica por coordenadas GPS.
-![wireframe-app-my-plot](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plot.png)
-![wireframe-app-my-plot-config](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plot-config.png)
-![wireframe-app-mi-new-plot-map](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-mi-new-plot-map.png)
-![wireframe-app-my-new-plot-forms](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-new-plot-forms.png)
-![wireframe-app-my-new-plot-modal](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-new-plot-modal.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plot.png"  width="592px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plot-config.png"  width="592px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-mi-new-plot-map.png"  width="592px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-new-plot-forms.png"  width="592px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-new-plot-modal.png"  width="592px" height="auto"/>
+</p>
 
 **Crop Health:** Esta vista centraliza la inspección agronómica y espacial del predio mediante un visor cartográfico interactivo que proyecta el polígono georreferenciado del lote junto con capas multiespectrales (NDVI para vigor vegetal y NDWI para humedad de suelo), complementado por un panel lateral de diagnóstico técnico preliminar y recomendaciones de manejo en campo; asimismo, la interfaz integra en su cabecera un selector conmutador de predios (*«Cambiar Parcela»*) que permite alternar fluidamente entre los diferentes terrenos registrados del productor sin perder el contexto operativo ni reiniciar los filtros de supervisión.
-![wireframe-testimonials-impact-footer](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plots-health.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-my-plots-health.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
+</p>
+
 
 **My Expenses and Earnings:** Este módulo organiza la gestión financiera del predio mediante una fila superior de tres tarjetas métricas (*KPI Cards*) que sintetizan el gasto total acumulado, el volumen proyectado de cosecha y el precio de equilibrio calculado para evitar pérdidas comerciales, complementadas en la sección inferior por una tabla detallada de desembolsos con opciones de filtrado cronológico y por categoría (insumos, jornales y flete); asimismo, incorpora en su cabecera el botón de acción primario *«Anotar Nuevo Gasto»*, el cual despliega el formulario de registro ágil de costos diarios para asegurar que ningún egreso operativo quede fuera de la contabilidad de la campaña.
-![wireframe-app-earning](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-earning.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-earning.png"  width="600px" height="auto"/>
+</p>
 
 **Consult the Advisor:** La plataforma complementa la operación agrícola mediante la sección **Phytosanitary Assistance and Prescriptions**, la cual exhibe la prescripción técnica activa del agrónomo con su dosificación exacta y el historial cronológico de consultas, permitiendo reportar nuevas incidencias fitosanitarias mediante carga fotográfica; de manera complementaria, el módulo **My Harvest Certificates** organiza los expedientes de acreditación comercial del lote, reflejando el nombre del cultivo, el desglose de calibres de cosecha, el sello digital de respaldo cooperativo y el código QR de trazabilidad pública para respaldar el valor del producto ante intermediarios y compradores.
-![wireframe-app-asesor](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-asesor.png)
-![wireframe-app-certificate](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-certificate.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-asesor.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-certificate.png"  width="600px" height="auto"/>
+</p>
 
-**Agricultural Alerts:** Este módulo centraliza la vigilancia agroclimática y sanitaria de las parcelas del productor (US-13, US-31), estructurándose a través de una secuencia de tarjetas informativas que detallan el incidente detectado (tales como caídas críticas de vigor foliar, estrés hídrico o riesgos de helada); cada reporte integra un panel de medidas técnicas detalladas, la cronología temporal de tareas requeridas para mitigar la anomalía y un indicador de plan de acción finalizado con confirmación de cumplimiento en campo, permitiendo auditar y cerrar el ciclo de contingencia del cultivo de manera ordenada y oportuna.
-![wireframe-app-alert](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert.png)
-![wireframe-app-statistics](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-statistics.png)
-![wireframe-app-alert-report](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert-report.png)
-![wireframe-app-alert-modal](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert-modal.png)
+**Agricultural Alerts:** Este módulo centraliza la vigilancia agroclimática y sanitaria de las parcelas del productor (US-13, US-31)[cite: 3, 7], estructurándose a través de una secuencia de tarjetas informativas que detallan el incidente detectado (tales como caídas críticas de vigor foliar, estrés hídrico o riesgos de helada)[cite: 3, 7]; cada reporte integra un panel de medidas técnicas detalladas, la cronología temporal de tareas requeridas para mitigar la anomalía y un indicador de plan de acción finalizado con confirmación de cumplimiento en campo, permitiendo auditar y cerrar el ciclo de contingencia del cultivo de manera ordenada y oportuna.
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-statistics.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert-report.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-alert-modal.png"  width="600px" height="auto"/>
+</p>
+
 
 - **Settings and Help:** Esta vista técnica expone los parámetros operativos y de soporte del productor a través de un contenedor modal organizado en pestañas contextuales (*Tabs*), permitiendo la actualización de datos agronómicos del predio (nombre de la parcela, tipo de cultivo y área declarada), la gestión de información de contacto (teléfono y credenciales de acceso) y el acceso a manuales interactivos de usuario con línea directa de asistencia técnica; asimismo, el módulo integra la funcionalidad de **Offline Mode**, respaldada por la historia técnica TS-05, la cual permite al agricultor alternar conscientemente hacia un modo de trabajo en almacenamiento local para registrar labores e insumos en sectores profundos de la chacra donde la señal celular desaparece por completo, garantizando que los datos queden retenidos en la memoria del navegador y se sincronicen de manera diferida y automática una vez recuperada la cobertura de red.
-  ![wireframe-app-config-account](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-config-account.png)
-  ![wireframe-app-offline](assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-offline.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-config-account.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/wireframe/desktop/wireframe-app-offline.png"  width="600px" height="auto"/>
+</p>
 
-#### Mobile Web Browser
-
-**Aplicación de Principios de Diseño y Arquitectura de Información:** Los wireframes móviles adaptan los módulos de la aplicación de escritorio a una sola columna de 360 × 800 px, pensada para el uso con una mano en campo. El menú lateral se reemplaza por una barra de navegación inferior de cinco destinos, las tablas se convierten en listas y tarjetas, y los indicadores más importantes se ubican en el primer tercio de la pantalla. Los wireframes W-01 a W-07 cubren los flujos del productor.
+### Wireframes de la Aplicación Móvil
 
 ##### W-01: Dashboard Principal ("Mi Parcela")
 Vista central de mando con lectura rápida de los indicadores operativos de la campaña en curso (vigor vegetal, inversión acumulada y punto de equilibrio comercial).
@@ -759,21 +739,27 @@ Flujo de acceso e identificación institucional que permite a agricultores y ase
 
 ![Wireframe W-07: Flujo de Autenticación e Identidad](assets/img/chapter-IV/applications-design/wireframe/mobile/wireframe-autenticacion-iam.png)
 
-#### Sustento de Principios y Elementos de Diseño
+---
+
+#### 2. Sustento de Principios y Elementos de Diseño
 
 * **Jerarquía Visual y Patrón de Escaneo Vertical:** Dado el factor de forma compacto de las pantallas móviles, se organizó la información bajo un patrón de lectura vertical estricto. Los indicadores de mayor impacto para la toma de decisiones inmediatas (estado NDVI, costos acumulados y nivel de alerta) ocupan tarjetas prominentes en el tercio superior de la pantalla, relegando las series temporales y desgloses detallados hacia la zona de desplazamiento (*scroll*).
 * **Leyes de Proximidad y Región Común (Gestalt):** La interfaz utiliza contenedores modulares (*cards*) con bordes y espaciados homogéneos para vincular datos dependientes entre sí (por ejemplo, en el módulo financiero se asocia en una misma tarjeta el costo total invertido junto a los porcentajes de insumos y mano de obra).
 * **Convenciones Móviles y Zona Ergonómica del Pulgar (*Thumb Zone*):** Se sustituyó el menú lateral de escritorio (*sidebar*) por una barra de navegación inferior (*Bottom Navigation Bar*) permanente de 5 accesos directos principales. Asimismo, en la vista contable se adoptó un botón flotante de acción destacada (*Floating Action Button - FAB*) situado en la esquina inferior derecha para agilizar el registro recurrente de gastos.
 * **Contraste Tipográfico y Claridad Estructural:** A pesar de mantenerse en una escala de grises estricta para baja fidelidad, se establecieron diferencias marcadas de peso tipográfico (*Bold* para métricas cuantitativas e importes en soles, y *Regular* para etiquetas y leyendas descriptivas), garantizando un escaneo ágil bajo luz solar.
 
-#### Aplicación de Principios de Diseño Inclusivo y Accesibilidad
+---
+
+#### 3. Aplicación de Principios de Diseño Inclusivo y Accesibilidad
 
 * **Dimensionamiento de Áreas Táctiles (*Touch Targets*):** Conforme a las recomendaciones internacionales de accesibilidad móvil (WCAG / a11y), los botones de confirmación, campos de formulario y controles de navegación cuentan con dimensiones mínimas de 48 × 48 dp/px, evitando pulsaciones accidentales por parte de agricultores que operan el dispositivo con guantes o dedos fatigados por faenas de campo.
 * **Reducción de la Sobrecarga Cognitiva:** Se eliminaron las tablas extensas de escritorio, reemplazándolas por listas condensadas y estados cualitativos claros ("Óptimo", "Bajo Control", "Alerta") que acompañan a las cifras científicas (como el valor numérico de NDVI), facilitando la interpretación técnica a productores de baja escolaridad.
 * **Soporte de Arquitectura *Offline-First*:** Las pantallas de cabecera incorporan un indicador persistente de conectividad (*Connected / Offline Mode*). Esto brinda retroalimentación clara de que las anotaciones de jornales e insumos en la chacra se almacenan de forma local en la memoria del dispositivo y se transmitirán sin pérdida al recobrar cobertura celular.
 * **Simplificación en la Entrada de Datos:** Los formularios de campo priorizan campos numéricos automáticos, menús desplegables preestablecidos y captura fotográfica de recibos, disminuyendo al mínimo la necesidad de redactar textos extensos sobre el teclado virtual.
 
-#### Alineación con la Arquitectura de Información
+---
+
+#### 4. Alineación con la Arquitectura de Información
 
 * **Sistemas de Organización (*Organization Systems*):** La aplicación implementa una estructura organizativa jerárquica y funcional orientada a tareas de campo. La pantalla raíz expone el balance general de la campaña agrícola, desde la cual se puede profundizar hacia subniveles analíticos (visor espectral, historial de transacciones o catálogo de alertas).
 * **Sistemas de Navegación (*Navigation Systems*):** Se articula una navegación global fija soportada en la *Bottom Navigation Bar* para conmutar entre los módulos principales (Inicio, Monitoreo, Finanzas, Alertas, Perfil), complementada con navegación jerárquica (flechas de retroceso en la barra superior *AppBar*) para regresar de formularios o vistas de detalle sin perder el estado previo.
@@ -786,264 +772,187 @@ Un **wireflow** o flujo de pantallas es una representación visual que conecta d
 
 Para construir un wireflow, primero se identifica el objetivo que el usuario desea lograr. Después, se establece la secuencia de tareas necesarias para completar dicho objetivo dentro de la aplicación. Finalmente, estas tareas se representan mediante las pantallas correspondientes y se conectan a través de las acciones disponibles en botones, enlaces u otros elementos interactivos del wireframe.
 
-**Wireflow 1: Georreferenciación y delimitación cartográfica de parcela**
-* User Persona: Guillermo Cortés (Segmento 1: Pequeño agricultor independiente)
-* User Goal 1: Registrar y delimitar los vértices geográficos de un nuevo predio agrícola mediante coordenadas GPS/mapa interactivo para habilitar el cálculo de superficie y la sincronización de analítica satelital.
+**User Goal 1:** Usuario desea registrarse en la aplicación
 
-![Wireflow User Goal 1](assets/img/chapter-IV/wireflows/wireflow-ug1.png)
+Flujo normal: 
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-1-resumido.png"  width="600px" height="auto"/>
+</p>
 
-El flujo comienza en el módulo Registro de Parcelas, donde el agricultor presiona el botón «Registrar Parcela» para acceder al formulario de datos agronómicos e ingresar el nombre, cultivo y fecha de siembra. A continuación, el usuario pasa a la etapa de delimitación y traza los vértices del predio sobre un mapa cartográfico interactivo, permitiendo validar la geometría y calcular la superficie del terreno. Finalmente, tras confirmar la operación, el sistema guarda la información, despliega una notificación de éxito y redirige al listado general de parcelas actualizado.
+El flujo de interacción inicia en la pantalla principal de la aplicación cuando el usuario selecciona la opción de registrarse, lo que lo dirige a la vista del formulario donde debe elegir su rol correspondiente (Agricultor, Cooperativa o Asesor) y completar los campos obligatorios de datos personales, correo electrónico y contraseña; una vez validados los campos y enviado el registro, el sistema genera las credenciales de acceso y redirige automáticamente al usuario hacia el panel de bienvenida de su módulo
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-1.png"  width="600px" height="auto"/>
+</p>
 
-**Wireflow 2: Registro de egresos operacionales y cálculo de punto de equilibrio**
-* User Persona: Guillermo Cortés (Segmento 1: Pequeño agricultor independiente)
-* User Goal 2: Anotar los desembolsos de la campaña (compra de fertilizantes/insumos, pago de peones/jornales o flete) para actualizar automáticamente el costo total acumulado y consultar el precio de venta mínimo sugerido por saco/kilo para negociar en el mercado.
+**User Goal 2:** Usuario desea ingresar con su cuenta en la aplicación
 
-![Wireflow User Goal 2](assets/img/chapter-IV/wireflows/wireflow-ug2.png)
+Flujo normal:
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-2-resumido.png"  width="600px" height="auto"/>
+</p>
 
-El flujo inicia en el panel financiero, donde el agricultor revisa su resumen de gastos y presiona la opción para registrar un nuevo egreso. A continuación, completa un formulario con la categoría, parcela, concepto y monto correspondiente; en caso de no contar con internet en el campo, la información se guarda localmente para sincronizarse después, y si olvida ingresar datos obligatorios, el sistema le solicitará corregirlos. Finalmente, al guardar la información, el gasto se añade al historial y los indicadores clave del panel principal se actualizan de forma automática, permitiendo al usuario visualizar el impacto inmediato en sus finanzas.
+El flujo de interacción inicia cuando el usuario registrado accede a la pantalla de autenticación (/login) e ingresa sus credenciales de acceso (correo electrónico y contraseña); tras enviar el formulario, el sistema valida la información mediante el servicio de autenticación (TS-02), genera el token de sesión JWT y redirige automáticamente al usuario hacia el panel principal (dashboard) correspondiente a su rol dentro de la plataforma.
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-2.png"  width="600px" height="auto"/>
+</p>
 
-**Wireflow 3: Recepción e inspección de alertas agrícolas (Clima y Riesgo Sanitario)**
-* User Persona: Guillermo Cortés (Segmento 1: Pequeño agricultor independiente)
-* User Goal 3: Consultar la seccion avisos climáticos (heladas/sequías) para tomar medidas preventivas antes de sufrir pérdidas en la cosecha.
 
-![Wireflow User Goal 3](assets/img/chapter-IV/wireflows/wireflow-ug3.png)
+**User Goal 3:** Usuario desea cambiar su contraseña
 
-El flujo inicia en el módulo Alertas Agrícolas, donde el usuario revisa los avisos emitidos y accede a la sección de Medidas Detalladas. En este apartado, encuentra toda la información técnica necesaria para tomar acciones inmediatas ante la problemática detectada. Una vez completadas las recomendaciones, el usuario presiona el botón «Finalizar Plan de Acción», lo que despliega una ventana modal con el resumen general de las actividades realizadas y la opción para retornar a la bandeja principal de alertas.
+Flujo normal:
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-3-resumido.png"  width="600px" height="auto"/>
+</p>
 
-**Wireflow 1: Consulta y auditoría del padrón consolidado de socios**
-* User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
-* User Goal 1: Explorar, filtrar y auditar la lista general de productores afiliados y sus predios registrados para supervisar el alcance territorial de la organización y planificar las metas de acopio de la campaña.
+El flujo de interacción comienza en la pantalla de inicio de sesión cuando el usuario hace clic en el enlace «¿Olvidaste tu contraseña?» (/forgot-password), desplegando el formulario de recuperación donde ingresa su correo electrónico registrado y presiona el botón de envío; tras validar la existencia de la cuenta, el sistema transiciona la pantalla a un estado de confirmación visual mediante un mensaje informativo en pantalla y despacha un correo con el enlace y token temporal para el restablecimiento seguro de sus credenciales.
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-3.png"  width="600px" height="auto"/>
+</p>
 
-![Wireflow2 User Goal 1](assets/img/chapter-IV/wireflows/wireflow2-ug1.png)
+**User Goal 4:** Usuario desea revisar sus parcelas
 
-El flujo inicia en la sección Padrón de Socios, donde se muestra una tabla con los socios registrados. Al presionar el botón “Ver” de un socio, se accede a su expediente, donde se pueden visualizar las parcelas que tiene asignadas actualmente. Posteriormente, al seleccionar el botón “Añadir lote del socio”, se despliega un formulario para ingresar los datos del nuevo lote. Una vez completada la información, al presionar “Registrar”, el usuario avanza a la siguiente etapa, donde podrá delimitar gráficamente el lote mediante la creación de polígonos sobre la parcela.
+Flujo normal:
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-4-resumido.png"  width="600px" height="auto"/>
+</p>
 
-**Wireflow 2: Registro e incorporación de un nuevo socio al padrón digital**
-* User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
-* User Goal 2: Registrar los datos personales y de contacto de un nuevo productor para otorgarle alta oficial en el padrón de la cooperativa y habilitar la posterior vinculación de sus terrenos.
+El flujo de interacción se inicia en el panel principal (dashboard) del agricultor, donde visualiza las tarjetas de métricas generales y pulsa el botón de acción rápida «Ver Todos Mis Lotes»; en respuesta a este evento, el sistema efectúa la transición hacia la vista de catálogo general «Mis Parcelas Registradas» (/parcels), renderizando el listado completo de predios georreferenciados mediante tarjetas informativas que exponen el nombre del fundo, el cultivo monitoreado, el área calculada y los accesos para inspeccionar la salud satelital.
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-4.png"  width="600px" height="auto"/>
+</p>
 
-![Wireflow2 User Goal 2](assets/img/chapter-IV/wireflows/wireflow2-ug2.png)
+**User Goal 5:** Usuario desea revisar alertas agrícolas y finalizar su plan de acción
 
-El flujo inicia en la sección Padrón de Socios, donde se muestra una tabla con todos los socios registrados. Al seleccionar el botón “Asignar o agregar socio”, se despliega un formulario que permite ingresar y completar los datos correspondientes al nuevo socio para su posterior registro en el sistema.
+Flujo normal:
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-5-resumido.png" width="600px" height="auto"/>
+</p>
 
-**Wireflow 3: Auditoría de la matriz consolidada de costos por hectárea y balance de campaña**
-* User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
-* User Goal 3: Analizar la matriz comparativa de egresos operacionales de todos los socios afiliados para identificar desviaciones financieras en insumos/jornales y exportar el balance contable consolidado para la asamblea general.
+El flujo de interacción comienza en el módulo «Alertas Agrícolas» (Avisos y Riesgos Notificados), donde el usuario identifica un riesgo o aviso y hace clic en el botón «Medidas Detalladas»; esto lo redirige a la vista detallada del plan de acción donde revisa los indicadores y las recomendaciones sugeridas; tras ejecutar las tareas preventivas, presiona el botón «Finalizar Plan de Acción», lo que despliega una ventana modal con el informe de ejecución confirmado y un resumen visual del estado final de las medidas aplicadas.
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-5.png" width="600px" height="auto"/>
+</p>
 
-![Wireflow2 User Goal 3](assets/img/chapter-IV/wireflows/wireflow2-ug3.png)
+**User Goal 6:** Usuario desea registrar un gasto de campo en finanzas de la campaña
 
-El flujo inicia en la sección Costos, donde se muestra una tabla con los datos registrados. Al seleccionar la opción “Auditar usuario”, se accede a una vista que presenta el listado completo de los últimos asientos contables reportados. Posteriormente, al presionar el botón “Ver” en la columna “Comprobante” del registro correspondiente, se despliega una ventana modal que permite revisar y configurar la información necesaria para gestionar correctamente el balance financiero.
+Flujo normal:
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-6-resumido.png" width="600px" height="auto"/>
+</p>
 
-**Wireflow 4: Monitoreo de salud foliar y despacho de alerta agroclimática en SMS**
-* User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
-* User Goal 4: Supervisar la salud vegetativa de los predios afiliados mediante mapas satelitales y despachar avisos preventivos por SMS a los socios para mitigar pérdidas por sequías o plagas.
+El flujo de interacción se inicia en el módulo «Finanzas de la Campaña» (Mis Gastos y Ganancias), donde el usuario hace clic en el botón de acción rápida «Añadir Nuevo Gasto»; tras este evento, el sistema lo redirige a la vista del formulario «Registrar Gasto de Campo» para seleccionar el tipo de costo operativo (Insumos y Abono, Mano de Obra o Flete), asignar la parcela correspondiente, ingresar el monto desembolsado y la fecha; finalmente, al pulsar el botón «Guardar Gasto», se procesa la información y se muestra una ventana modal de confirmación con el resumen del registro exitoso.
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-6.png" width="600px" height="auto"/>
+</p>
 
-![Wireflow2 User Goal 4](assets/img/chapter-IV/wireflows/wireflow2-ug4.png)
+**User Goal 7:** Usuario desea enviar un reporte de plaga a su asesor
 
-El flujo inicia en la sección Salud de Parcelas, donde se muestra un mapa con las parcelas y sus respectivos estados. Al seleccionar una parcela marcada en rojo, se despliega su información, incluyendo los datos del socio y el estado actual de su terreno. Posteriormente, al presionar el botón “Despachar Alerta SMS a Socio”, se abre una ventana donde se muestra el mensaje que será enviado al socio. Finalmente, al seleccionar “Enviar Alerta SMS Ahora”, se envía la notificación y se muestra un mensaje de confirmación, indicando que la alerta fue enviada correctamente.
+Flujo normal:
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-7-resumido.png" width="600px" height="auto"/>
+</p>
 
-**Wireflow 1: Emisión y transmisión de boletín fitosanitario regional**
-* User Persona: Juan Antonio Morales (Segmento 3: Asesor Agrónomo y Técnico de Campo).
-* User Goal 1: Redactar y despachar masivamente un boletín fitosanitario de alerta regional a todos los productores de un valle o cuenca para prevenir la propagación de plagas epidémicas.
+El flujo de interacción se inicia en la sección «Asistencia Fitosanitaria y Recetas» (Consulta al Asesor), donde el usuario presiona el botón de acción rápida «Enviar Foto de Plaga»; tras este evento, se despliega una ventana modal con el formulario «Enviar Reporte de Plaga» donde selecciona su parcela, adjunta la fotografía de la evidencia y añade observaciones opcionales; finalmente, al hacer clic en «Enviar Reporte», el sistema procesa la solicitud y muestra una pantalla modal de confirmación informando que el reporte fue enviado con éxito al ingeniero asignado.
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-7.png" width="600px" height="auto"/>
+</p>
 
-![Wireflow3 User Goal 1](assets/img/chapter-IV/wireflows/wireflow3-ug1.png)
+**User Goal 8:** Usuario desea cambiar de parcela en el visor satelital multispectral
 
-El flujo inicia en el panel principal del tercer segmento, donde el usuario selecciona la opción “Nuevo Boletín Informativo”. Al ingresar, se despliega una ventana con un formulario en el que deberá completar la información solicitada. Finalmente, una vez ingresados todos los datos, el usuario presiona el botón “Registrar” para guardar la información.
+Flujo normal:
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-8-resumido.png" width="600px" height="auto"/>
+</p>
 
-**Wireflow 2: Agendamiento y confirmación de visitas de inspección en campo**
-* User Persona: Juan Antonio Morales (Segmento 3: Asesor Agrónomo y Técnico de Campo).
-* User Goal 2: Programar salidas de inspección técnica presencial en un calendario interactivo para estructurar las rutas de viaje entre fundos rurales y notificar automáticamente al agricultor la fecha y hora de la visita.
-
-![Wireflow3 User Goal 2](assets/img/chapter-IV/wireflows/wireflow3-ug2.png)
-
-El flujo inicia en la sección **Agendamiento de Visitas de Campo**, donde el asesor puede visualizar sus visitas programadas y seleccionar la opción para agregar una nueva. Al hacerlo, se abre un formulario donde deberá completar los datos del productor, la parcela, el motivo de la visita, la fecha, el horario y la ubicación. Finalmente, al confirmar el registro, se envía una notificación por SMS al agricultor y la nueva visita aparece en la lista de visitas programadas.
+El flujo de interacción se inicia en el módulo «Visor Satelital Multispectral» (Salud del Cultivo), donde el usuario hace clic en el botón «Cambiar Parcela»; tras este evento, se despliega una ventana modal que muestra el listado de terrenos disponibles para que seleccione la parcela deseada; finalmente, el sistema solicita una confirmación mediante una ventana emergente y, al pulsar «Confirmar», la interfaz actualiza los datos e índices multiespectrales correspondientes al nuevo predio seleccionado.
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-8.png" width="600px" height="auto"/>
+</p>
 
 ### 4.4.3. Web Applications Mock-ups
 
 En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
 
-**Aplicación del Design System, principios de diseño e inclusión:** Los mock-ups aplican el Design System de la sección 4.1 (paleta teal/verde/neutros, tipografía Poppins e Inter, espaciado base 8 px y componentes de Angular Material). Se aplica jerarquía visual con tarjetas de indicadores (*KPI Cards*) y el principio de proximidad y región común de la Gestalt para agrupar datos relacionados. Los estados se comunican con color, ícono y texto, y se mantienen contrastes AA y áreas táctiles de al menos 48 px. La navegación lateral (*sidebar*) y las etiquetas siguen la arquitectura de información de la sección 4.2.
 
-#### Desktop Web Browser
+### LOGIN / REGISTER 
 
-##### LOGIN / REGISTER
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-login.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register.png"  width="600px" height="auto"/>
+</p>
 
-![mockup-app-login-segment-1](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-login-segment-1.png)
-![mockup-app-register](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register.png)
+### MY PLOTS
 
-##### SEGMENTO 1
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-my-plots.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-our-plots.png"  width="600px" height="auto"/>
+</p>
 
-###### PLOTS
+### REGISTER A PLOT OF LAND
 
-![mockup-app-dashboard](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-dashboard.png)
-![mockup-app-plot-report1](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-plot-report1.png)
-![mockup-app-plot-report2](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-plot-report2.png)
-![mockup-app-plot-report3](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-plot-report3.png)
-![mockup-app-plot-report4](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-plot-report4.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register-plots.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-maps-plots.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-modal-accept-plots.png"  width="600px" height="auto"/>
+</p>
 
-###### CROP HEALTH
+### FINANCES
 
-![mockup-app-crog-report2](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-crog-report2.png)
-![mockup-app-crog-report3](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-crog-report3.png)
-![mockup-app-crog-report4](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-crog-report4.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-finances.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-expense-success-modal.png" width="600px" height="auto"/>
+</p>
 
-###### EARNING
+### CONSULT
 
-![mockup-app-earning-report1](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-earning-report1.png)
-![mockup-app-earning-report2](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-earning-report2.png)
-![mockup-app-earning-report3](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-earning-report3.png)
-![mockup-app-earning-report4](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-earning-report4.png)
-![mockup-app-earning-report5](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-earning-report5.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor-report-form-modal.png" width="600px" height="auto"/>
+    <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-asesor-success-modal.png" width="600px" height="auto"/>
+</p>
 
-###### CONSULT
+### AGRICULTURAL ALERTS
 
-![mockup-app-consult-report1](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-consult-report1.png)
-![mockup-app-consult-report2](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-consult-report2.png)
-![mockup-app-consult-report3](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-consult-report3.png)
-![mockup-app-consult-report4](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-consult-report4.png)
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-home.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-details.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-task.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alert-modal-check.png"  width="600px" height="auto"/>
+</p>
 
-###### CERTIFICATE
 
-![mockup-app-certificate-report1](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-certificate-report1.png)
-![mockup-app-certificate-report2](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-certificate-report2.png)
+### SETTINGS
 
-###### AGRICULTURAL ALERTS
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-details-plot.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-account.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-help-manuals.png"  width="600px" height="auto"/>
+</p>
 
-![mockup-app-alerta-report1](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alerta-report1.png)
-![mockup-app-alerta-report2](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alerta-report2.png)
-![mockup-app-alerta-report3](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alerta-report3.png)
+### MODE OFFLINE
+<p align="center">
+  <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-offline-mode.png"  width="600px" height="auto"/>
+</p>
 
-###### SETTINGS
+**User Goal 6:** Usuario desea registrar un gasto de campo en finanzas de la campaña
 
-![mockup-app-setting-report1](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-report1.png)
-![mockup-app-setting-report2](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-report2.png)
-![mockup-app-setting-report3](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-report3.png)
+Flujo normal:
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-6-resumido.png" width="600px" height="auto"/>
+</p>
 
-###### OFFLINE MODE
-
-![mockup-app-offline-report1](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-offline-report1.png)
-
-##### Semento 2
-
-###### LOGIN / REGISTER
-
-![mockup-app-login.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-login.png)
-![mockup-app-register.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register.png)
-
-###### Dashboard
-
-![mockup-app-dashboard.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-dashboard.png)
-![mockup-app-dashboard-conrol-panel.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-dashboard-conrol-panel.png)
-![mockup-app-dashboard-rapid.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-dashboard-rapid.png)
-
-###### member directory
-![mockup-app-member-directory.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-member-directory.png)
-![mockup-app-member-directory-register-plots.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-member-directory-register-plots.png)
-![mockup-app-member-directory-register-new.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-member-directory-register-new.png)
-![mockup-app-register-satellite-polygon.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register-satellite-polygon.png)
-![mockup-app-register-satellite-polygon-mapping.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register-satellite-polygon-mapping.png)
-![mockup-app-register-edite-memeber.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-register-edite-memeber.png)
-
-###### Plots Health
-![mockup-app-plot-health.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-plot-health.png)
-![mockup-app-plot-health-satellite-map-zoommed.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-plot-health-satellite-map-zoommed.png)
-![mockup-app-plot-health-rural-sms-agro.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-plot-health-rural-sms-agro.png)
-
-###### Costs
-![mockup-app-costs.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-costs.png)
-![mockup-app-costs-disbursement-audit.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-costs-disbursement-audit.png)
-![mockup-app-costs-export-season-financial-satatement.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-costs-export-season-financial-satatement.png)
-
-###### certificates
-![mockup-app-certificates.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-certificates.png)
-![mockup-app-certificates-technical-quality.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-certificates-technical-quality.png)
-![mockup-app-certificates-technical-quality-assessment.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-certificates-technical-quality-assessment.png)
-
-###### Alerts
-![mockup-app-alerts.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alerts.png)
-![mockup-app-alerts-regional-agro.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alerts-regional-agro.png)
-![mockup-app-alerts-critical-incident-detail.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-alerts-critical-incident-detail.png)
-
-###### Settings
-![mockup-app-settings.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-settings.png)
-![mockup-app-setting-institutional-config.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-institutional-config.png)
-![mockup-app-setting-sending-of-credential.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-sending-of-credential.png)
-![mockup-app-setting-corparte.png](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-setting-corparte.png)
-
-##### SEGMENTO 3
-
-###### DASHBOARD
-![mockup-app-dash](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-dash.png)
-![mockup-app-bol](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-bol.png)
-
-###### PLOTS
-
-![mockup-app-plots](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-plots.png)
-![mockup-app-plots2](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-plots2.png)
-
-###### REPORT
-
-![mockup-app-report](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-report.png)
-![mockup-app-report-diagnostic](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-report-diagnostic.png)
-
-###### VISITOR
-
-![mockup-app-visitor](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-visitor.png)
-![mockup-app-visitor-schedule](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-visitor-schedule.png)
-
-###### AGRONOMIC
-
-![mockup-app-agronomic](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-agronomic.png)
-
-###### REGIONAL
-
-![mockup-app-regional](assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-regional.png)
-
-#### Mobile Web Browser
-
-Los mock-ups de la aplicación móvil se elaboraron en Figma (página *Mobile*) sobre un frame Android de 360 × 800 px, a partir de los wireframes móviles y aplicando las Mobile Style Guidelines de la sección 4.1.3. A continuación se presentan las pantallas principales del productor.
-
-[Ver página Mobile en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332)
-
-**Aplicación del Design System, principios de diseño e inclusión:** Se usa la misma paleta teal/verde, las tipografías Poppins e Inter y el espaciado base 8 px de la web. La jerarquía visual destaca la tarjeta de *Salud Foliar* en teal oscuro, seguida de *Gasto Total* y *Precio para no perder*. Las tarjetas agrupan los datos relacionados (proximidad y región común), la navegación inferior de cinco destinos queda en la zona del pulgar y las acciones principales usan botones de ancho completo. Para la inclusión se emplean áreas táctiles de 48 px, contraste AA, estados cualitativos junto a las cifras (por ejemplo "Optimal"), formularios con chips y foto de recibo en lugar de texto largo, y un indicador de conexión visible para el modo sin conexión. Las etiquetas respetan la arquitectura de información de la sección 4.2.
-
-##### LOGIN, REGISTER AND HOME
-
-![Mobile mock-up - Login](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-login.png)
-![Mobile mock-up - Sign up](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-signup.png)
-![Mobile mock-up - Home - My Plot](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-home.png)
-
-##### MY PLOTS, REGISTER A PLOT AND MONITORING
-
-![Mobile mock-up - My Plots](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-my-plots.png)
-![Mobile mock-up - Register plot - map](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-register-plot-map.png)
-![Mobile mock-up - Monitoring - NDVI viewer](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-monitoring-ndvi.png)
-
-##### FINANCES
-
-![Mobile mock-up - Campaign Finances](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-finances.png)
-![Mobile mock-up - Log expense](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-log-expense.png)
-
-##### AGRICULTURAL ALERTS
-
-![Mobile mock-up - Agricultural Alerts](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-alerts.png)
-![Mobile mock-up - Detailed Measures](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-detailed-measures.png)
-
-##### ADVISOR AND HARVEST CERTIFICATES
-
-![Mobile mock-up - Advisor Consultation](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-advisor.png)
-![Mobile mock-up - Harvest Certificates](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-certificates.png)
-
-##### SETTINGS AND OFFLINE MODE
-
-![Mobile mock-up - Profile - Settings & Help](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-settings.png)
-![Mobile mock-up - Offline mode](assets/img/chapter-IV/applications-design/mockups/mobile/mockup-mobile-offline.png)
+El flujo de interacción se inicia en el módulo «Finanzas de la Campaña» (Mis Gastos y Ganancias), donde el usuario hace clic en el botón de acción rápida «Añadir Nuevo Gasto»; tras este evento, el sistema lo redirige a la vista del formulario «Registrar Gasto de Campo» para seleccionar el tipo de costo operativo (Insumos y Abono, Mano de Obra o Flete), asignar la parcela correspondiente, ingresar el monto desembolsado y la fecha; finalmente, al pulsar el botón «Guardar Gasto», se procesa la información y se muestra una ventana modal de confirmación con el resumen del registro exitoso.
+<p align="center">
+  <img src="assets/img/chapter-IV/wireflows/ug-6.png" width="600px" height="auto"/>
+</p>
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
 En esta sección se presentan los diagramas de flujo de usuario (*User Flows*) de la aplicación web de la plataforma **SumaqAgro**. De acuerdo con las directrices metodológicas del proyecto, los User Flows derivan de los Wireflows preliminares y formalizan la experiencia de interacción integrando tanto los Mock-ups de alta fidelidad con sus elementos interactivos como los diagramas lógicos resumidos de navegación.
 
 Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto con las rutas alternas o de contingencia (*unhappy paths*), vinculándolas a los User Persona oficiales del sistema (Guillermo Cortés como productor independiente y Cristian Santana como gestor cooperativo).
+
+---
 
 #### User Flow 01 (UG-01): Registro y Creación de Nueva Cuenta de Usuario
 
@@ -1068,6 +977,8 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
   * *Correo electrónico preexistente:* Si la dirección ingresada ya figura en el sistema, la interfaz muestra una alerta informando que el correo ya está en uso y sugiere iniciar sesión o restablecer la contraseña.
   * *Términos legales sin aceptar:* Si la casilla de términos y privacidad no es marcada, el botón de envío permanece inactivo o emite un aviso de obligatoriedad legal.
 
+---
+
 #### User Flow 02 (UG-02): Inicio de Sesión y Autenticación de Usuario
 
 * **User Goal:** Iniciar sesión en la plataforma web mediante credenciales de acceso registradas para ingresar al panel de control agronómico y financiero.
@@ -1089,6 +1000,8 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
 * **Unhappy Paths (Rutas alternativas y de excepción):**
   * *Credenciales no válidas:* Si el correo o la contraseña no coinciden con los registros del sistema, se despliega una notificación de error en color rojo (*"Usuario o contraseña incorrectos"*), manteniendo el correo ingresado pero vaciando el campo de clave para reintentar.
   * *Exceso de reintentos fallidos:* Si se ingresan contraseñas incorrectas de manera reiterada, la plataforma bloquea temporalmente el formulario por seguridad y recomienda utilizar el flujo de recuperación de clave.
+
+---
 
 #### User Flow 03 (UG-03): Recuperación y Restablecimiento de Contraseña
 
@@ -1112,6 +1025,8 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
   * *Correo electrónico no registrado:* Si el usuario introduce una dirección que no figura en la base de datos, el formulario permanece en la pantalla actual y despliega un mensaje de error indicando que no se encontró ninguna cuenta asociada.
   * *Código de verificación incorrecto o expirado:* Si el código ingresado no coincide con el token despachado o si supera el tiempo límite de vigencia (10 minutos), las casillas se resaltan con borde rojo y se habilita un enlace para solicitar un reenvío del código OTP.
 
+---
+
 #### User Flow 04 (UG-04): Consulta y Administración del Inventario de Parcelas Registradas
 
 * **User Goal:** Consultar desde el Dashboard operativo la totalidad de parcelas agrícolas dadas de alta en el sistema para monitorear su estado y verificar los cupos disponibles de nuevos lotes.
@@ -1133,6 +1048,8 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
 * **Unhappy Paths (Rutas alternativas y de excepción):**
   * *Límite de cupos de parcelas alcanzado:* Si el usuario cuenta con los 3 lotes registrados y pulsa sobre agregar uno nuevo, el sistema no abre el catastro GPS; en su lugar, despliega un cuadro modal informando que ha copado el límite de su plan gratuito y ofrece un botón de actualización hacia el plan comercial.
   * *Ausencia total de registros (Empty State):* Si el agricultor aún no hubiera configurado su primer lote o hubiera borrado sus datos, la pantalla reemplaza las tarjetas activas por una guía informativa orientada al trazado inicial del polígono georreferenciado.
+
+---
 
 #### User Flow 05 (UG-05): Gestión y Ejecución de Medidas por Alerta Climática Crítica
 
@@ -1158,6 +1075,8 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
   * *Intento de finalización prematura:* Si el agricultor pulsa "Finalizar Plan de Acción" sin haber marcado o registrado el cumplimiento de las labores de campo (como el riego de emergencia o la colocación de coberturas), el sistema despliega un mensaje modal de confirmación advirtiendo que aún existen labores críticas sin verificar antes de archivar la alerta.
   * *Pérdida de enlace al sincronizar:* Si el cierre de la alerta se efectúa en condiciones de baja señal móvil, la acción se registra en la memoria local (*IndexedDB*) y se programa para su envío diferido cuando el dispositivo restablezca la conectividad.
 
+---
+
 #### User Flow 06 (UG-06): Registro Contable de Costos Operativos de Campo
 
 * **User Goal:** Registrar un desembolso económico en campo (compra de insumos/abonos, pago de jornales o transporte/flete) para mantener actualizado el historial de costos y recalcular el precio mínimo de venta de equilibrio.
@@ -1174,8 +1093,8 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
 * **Happy Path (Ruta de éxito esperada):**
   1. El agricultor navega a la sección *Finanzas de la Campaña* y presiona el botón interactivo **"+ Anotar Nuevo Gasto"** ubicado en la cabecera superior.
   2. La plataforma lo dirige al formulario estructurado *Registrar Gasto de Campo*:
-  * **Paso 1:** Selecciona el tipo de costo operativo mediante chips de selección rápida (`Insumos y Abono`, `Mano de Obra / Jornal` o `Flete`).
-  * **Paso 2:** Selecciona la parcela asignada (`Fundo Los Pinos`), digita el nombre del insumo o labor, especifica la cantidad, introduce el monto total pagado en soles (`S/ 1,240.00`), la fecha de desembolso y, de forma opcional, adjunta el número de comprobante o recibo y notas adicionales de campo.
+    * **Paso 1:** Selecciona el tipo de costo operativo mediante chips de selección rápida (`Insumos y Abono`, `Mano de Obra / Jornal` o `Flete`).
+    * **Paso 2:** Selecciona la parcela asignada (`Fundo Los Pinos`), digita el nombre del insumo o labor, especifica la cantidad, introduce el monto total pagado en soles (`S/ 1,240.00`), la fecha de desembolso y, de forma opcional, adjunta el número de comprobante o recibo y notas adicionales de campo.
   3. El usuario pulsa el botón **"Guardar Gasto"**. El sistema valida la integridad de los datos monetarios y registra el asiento en el backend transaccional.
   4. La aplicación superpone la ventana modal de confirmación *Registro Gasto de Campo Exitoso* con check circular verde, resumiendo el desglose: concepto guardado, fecha y monto final (`S/ 1,240.00`).
   5. Al hacer clic en **"Regresar a registrar gastos"** o volver al panel principal, el nuevo registro se incorpora a la tabla del *Historial de desembolsos registrados*, actualizando automáticamente el Total Gastado y recalculando el **Precio Mínimo de Venta** por saco para no incurrir en pérdidas comerciales.
@@ -1183,50 +1102,12 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
   * *Datos contables incompletos o no válidos:* Si el usuario omite seleccionar el tipo de costo, deja el monto vacío o ingresa una cifra numérica menor o igual a cero (`S/ 0.00`), la interfaz muestra alertas visuales de validación en rojo debajo de los campos afectados y deshabilita el envío hasta subsanar la entrada.
   * *Pérdida de conectividad en parcela (Offline-First):* Si el desembolso se anota directamente en campo sin cobertura 4G/WiFi, el *Service Worker* captura la transacción y persiste el registro en *IndexedDB*. La aplicación muestra un banner informativo indicando que el gasto se guardó en el dispositivo y se sincronizará con la base de datos central al detectar conexión, visualizándose temporalmente en el historial con un icono ámbar de sincronización pendiente.
 
-#### User Flow 07 (UG-07): Envío de Reporte de Plaga al Asesor
-
-* **User Goal:** Reportar una incidencia fitosanitaria con evidencia fotográfica para que el asesor técnico asignado emita un diagnóstico.
-* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
-* **Herramienta utilizada:** Figma / FigJam.
-
-##### Mock-up Flow Diagram (Alta Fidelidad)
-![User Flow Mock-ups UG-07 - Reporte de Plaga](assets/img/chapter-IV/wireflows/ug-7.png)
-
-##### Resumed Flow Diagram (Flujo Lógico Resumido)
-![Flujo Resumido UG-07](assets/img/chapter-IV/wireflows/ug-7-resumido.png)
-
-##### Explicación de flujos y condiciones
-* **Happy Path (Ruta de éxito esperada):**
-  1. En la sección *Consulta al Asesor* (*Asistencia Fitosanitaria y Recetas*), el productor presiona **"Enviar Foto de Plaga"**.
-  2. Se despliega el formulario *Enviar Reporte de Plaga*, donde selecciona la parcela, adjunta la fotografía de la evidencia y agrega observaciones opcionales.
-  3. Presiona **"Enviar Reporte"**; el sistema registra la consulta y muestra una confirmación de que el reporte fue enviado al ingeniero asignado.
-* **Unhappy Paths (Rutas alternativas y de excepción):**
-  * *Sin foto adjunta:* el formulario resalta el campo de evidencia y no permite el envío hasta adjuntar una imagen.
-  * *Sin señal:* el reporte se guarda en el dispositivo, se muestra el estado "Reporte en cola" y se envía automáticamente al recuperar la conexión.
-
-#### User Flow 08 (UG-08): Cambio de Parcela en el Visor Satelital Multiespectral
-
-* **User Goal:** Alternar entre las parcelas registradas dentro del visor satelital para revisar los índices NDVI y NDWI de cada una.
-* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
-* **Herramienta utilizada:** Figma / FigJam.
-
-##### Mock-up Flow Diagram (Alta Fidelidad)
-![User Flow Mock-ups UG-08 - Cambio de Parcela](assets/img/chapter-IV/wireflows/ug-8.png)
-
-##### Resumed Flow Diagram (Flujo Lógico Resumido)
-![Flujo Resumido UG-08](assets/img/chapter-IV/wireflows/ug-8-resumido.png)
-
-##### Explicación de flujos y condiciones
-* **Happy Path (Ruta de éxito esperada):**
-  1. En el módulo *Salud del Cultivo* (visor satelital), el productor presiona **"Cambiar Parcela"**.
-  2. El sistema muestra la lista de parcelas disponibles y el usuario selecciona la deseada.
-  3. Se solicita una confirmación y, al pulsar **"Confirmar"**, el visor actualiza el polígono y los índices multiespectrales del nuevo predio.
-* **Unhappy Paths (Rutas alternativas y de excepción):**
-  * *Parcela sin imagen reciente (nubosidad):* el visor muestra un aviso indicando que no hay una imagen satelital utilizable para esa parcela.
 
 ## 4.5. Web Applications Prototyping
 
 En esta sección se presentan y sustentan los prototipos interactivos de alta fidelidad (*high-fidelity*) desarrollados para la plataforma **SumaqAgro**, abarcando las experiencias de usuario para **Desktop Web Browser** y **Mobile Web Browser**. La interactividad simula las rutas principales (*happy paths*) y rutas alternativas formalizadas en los diagramas de flujos de usuario (*User Flow Diagrams*).
+
+---
 
 #### 1. Criterios para las Decisiones de Interacción
 
@@ -1237,6 +1118,8 @@ Las decisiones de interacción se fundamentan en los diferentes entornos de uso 
   * *En Desktop:* Se implementaron interacciones basadas en cursor (*hover states*, menús desplegables contextuales, tablas dinámicas y clics directos sobre gráficos multiespectrales), agilizando el acceso a herramientas de supervisión masiva.
   * *En Mobile:* Se restringieron los eventos a pulsaciones simples (*on tap*), evitando gestos complejos propensos a error en campo. Se incorporaron microinteracciones con retroalimentación visual inmediata (transiciones *Instant* y *Dissolve* de 200 ms) en selectores de lote, botones de acción flotante (FAB) y filtros rápidos (*chips*).
 * **Simulación de Comportamiento Desconectado (*Offline-First*):** En la experiencia móvil, las interacciones en formularios de bitácora y egresos simulan la persistencia local inmediata mediante avisos de confirmación en pantalla, actualizando la cabecera con el estado de cola de sincronización diferida hasta simular la reconexión a la red.
+
+---
 
 #### 2. Relación con la Arquitectura de Información
 
@@ -1249,6 +1132,8 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 * **Sistema de Rotulado (*Labeling System*):** La rotulación interactiva mantiene una correspondencia biunívoca con el Lenguaje Ubicuo del dominio ("Mi Parcela", "Salud Foliar", "Insumos", "Jornales", "Punto de Equilibrio", "Certificado QR"), garantizando que cada botón o enlace anticipe con exactitud el resultado de la acción.
 * **Sistema de Búsqueda y Filtrado (*Searching System*):** Las vistas de alertas y bitácoras contables integran selectores horizontales (*chips*) e interacciones de filtrado instantáneo por severidad, fecha o campaña fenológica, reduciendo la fricción en la localización de anomalías agronómicas.
 
+---
+
 #### 3. Prototipo y Demostración en Video: Desktop Web Browser
 
 * **Enlace al Prototipo Interactivo en Figma (Desktop):**  
@@ -1256,7 +1141,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 
 ##### Demostración Audiovisual en Microsoft Stream (Desktop)
 
-* **Plataforma de Alojamiento:** Microsoft Stream
+* **Plataforma de Alojamiento:** Microsoft Stream 
 * **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-desktop-sprint-1.mp4`
 * **Duración:** 04:15 minutos
 * **Enlace de Reproducción:** [Reproducir Demostración Desktop en Microsoft Stream](https://goo.su/MEGQ9O9)
@@ -1265,17 +1150,16 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 
 *Figura 4.5.1: Cuadro representativo de la sesión en video demostrando la navegación del prototipo Desktop en Microsoft Stream.*
 
+---
+
 #### 4. Prototipo y Demostración en Video: Mobile Web Browser
 
 * **Enlace al Prototipo Interactivo en Figma (Mobile):**  
   [Visualizar Prototipo Mobile SumaqAgro en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=7-56&t=zJ6zOatR2rSsKo7x-1)
 
-* **Enlace al Prototipo Mobile (Android 360 × 800):**  
-  [Visualizar Prototipo Mobile en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332). Cada flujo de usuario (UG-01 a UG-08) se abre desde su punto de inicio (botón de reproducir) en el panel *Prototype*.
-
 ##### Demostración Audiovisual en Microsoft Stream (Mobile)
 
-* **Plataforma de Alojamiento:** Microsoft Stream
+* **Plataforma de Alojamiento:** Microsoft Stream 
 * **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-mobile-sprint-1.mp4`
 * **Duración:** 04:30 minutos
 * **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://goo.su/XRcWU)
@@ -1283,9 +1167,9 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 ![Captura de Reproducción del Video Mobile en Microsoft Stream](assets/img/chapter-IV/applications-design/prototypes/video-prototype-mobile.png)
 
 ## 4.6. Domain-Driven Software Architecture
+En esta sección se traslada la comprensión del negocio obtenida en el Big Picture Event Storming hacia el diseño de arquitectura de software guiado por el dominio (Domain-Driven Design - DDD) y el modelo de abstracción y comunicación visual C4 Model en sus niveles de Contexto, Contenedores y Componentes. A través de esta aproximación arquitectónica, se divide el espacio del problema en Bounded Contexts independientes y de bajo acoplamiento, estableciendo sus agregados transaccionales (Aggregates), comandos, eventos de dominio, modelos de consulta (Read Models) y políticas de automatización reactivas. Asimismo, se formaliza la topología técnica y modular de la solución distribuida, articulando la aplicación web de cara al usuario, el servicio de backend RESTful en ASP.NET Core Framework con C#, la base de datos relacional y las interfaces de integración con servicios externos.
 
-En esta sección se traslada la comprensión del negocio obtenida en el Big Picture Event Storming hacia el diseño de arquitectura de software guiado por el dominio (Domain-Driven Design - DDD) y el modelo de abstracción y comunicación visual C4 Model en sus niveles de Contexto, Contenedores y Componentes. A través de esta aproximación arquitectónica, se divide el espacio del problema en Bounded Contexts independientes y de bajo acoplamiento, estableciendo sus agregados transaccionales (Aggregates), comandos, eventos de dominio, modelos de consulta (Read Models) y políticas de automatización reactivas. Asimismo, se formaliza la topología técnica y modular de la solución distribuida, articulando la aplicación web de cara al usuario, el servicio de backend RESTful en Spring Boot, la base de datos relacional y las interfaces de integración con servicios externos.
-
+---
 ### 4.6.1. Design-Level Event Storming
 El equipo llevó a cabo una sesión sincrónica de trabajo colaborativo en Miro siguiendo las pautas metodológicas de la guía Design-Level EventStorming (<https://bit.ly/dles-guide>). La dinámica se enfocó en profundizar y refinar el modelo general del dominio de las cadenas de café de especialidad y papa andina, definiendo las reglas de invariante transaccional y la mecánica de ejecución del sistema.
 
@@ -1300,199 +1184,116 @@ Durante la dinámica colaborativa, el equipo ejecutó las siguientes actividades
 * **Mapeo de sistemas externos (External Systems - Rosa):** Identificación de pasarelas y servicios satelitales o gubernamentales ajenos a la solución que interactúan como emisores o receptores de datos.
 * **Definición de reglas de negocio e invariantes (Aggregates - Amarillo):** Agrupación de datos y comportamientos transaccionales atómicos bajo raíces de agregación (Aggregate Roots) para garantizar la consistencia del estado del sistema en todo momento.
 
+---
 #### Evidencia del Modelado en Miro
-A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 10 pasos de la técnica Design-Level Event Storming y la organización de los elementos de modelado por colores y categorías.
-
-#### Step 1: Unstructured Exploration
-
-![event-storming-step-1-unstructured-exploration.jpg](assets/img/chapter-IV/domain-driven-design/event-storming-step-1-unstructured-exploration.jpg)
-
-* En este paso se colocan los eventos de dominio del negocio sin un orden definido, escritos en inglés y en tiempo pasado. Son 67 eventos que van desde el registro del usuario hasta la certificación de la cosecha, por ejemplo *User Signed Up*, *Field Plot Registered*, *Frost Risk Detected* y *Quality Certificate Issued*. También aparecen algunos eventos de venta del lote, que quedan fuera del alcance del MVP.
-
+A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 10 pasos de la metodología Design-Level Event Storming y la organización de los elementos de modelado por colores y categorías.
+#### Step 1: Domain Events
+![event-storming-step-1-bainstrome.jpg](assets/img/chapter-IV/domain-drive-design/event-storming-step-1-bainstrome.jpg)
+* Dentro de la metodología de Event Storming consiste en realizar una lluvia de ideas intensiva para capturar todos los acontecimientos relevantes que ocurren dentro del dominio del negocio.
 #### Step 2: Timelines
-
-![event-storming-step-2-timelines.jpg](assets/img/chapter-IV/domain-driven-design/event-storming-step-2-timelines.jpg)
-
-* Los eventos se ordenan de izquierda a derecha según cómo ocurren en una campaña: registro del usuario, registro de la parcela, inicio de la campaña, monitoreo satelital, registro de gastos y certificación de la cosecha. En la fila principal está el camino feliz y debajo los escenarios alternativos, como *Subscription Cancelled*, *Cloudy Imagery Discarded* o *Frost Risk Detected*.
-
-#### Step 3: Pain Points
-
-![event-storming-step-3-paint-points.jpg](assets/img/chapter-IV/domain-driven-design/event-storming-step-3-paint-points.jpg)
-
-* Los rombos morados marcan los puntos de dolor sobre la línea de tiempo. Son nueve preguntas que salieron de las entrevistas, por ejemplo cómo superar la resistencia de los adultos mayores al celular, cómo mapear parcelas sin un catastro formal, qué pasa si la parcela mide menos de 1 hectárea, cómo medir con nubosidad extrema, cómo emitir alertas de helada sin señal móvil y cómo controlar los costos si se pierden los registros en papel.
-
+![event-storming-step-2-timelines.jpg](assets/img/chapter-IV/domain-drive-design/event-storming-step-2-timelines.jpg)
+* El segundo paso de Event Storming transforma la lluvia de ideas caótica del Paso 1 en una narrativa operativa coherente, secuenciada cronológicamente de izquierda a derecha bajo el escenario principal o Happy Path.
+#### Step 3: Paints Points
+![event-storming-step-3-paint-points.jpg](assets/img/chapter-IV/domain-drive-design/event-storming-step-3-paint-points.jpg)
+* El tercer paso tiene como función principal identificar y visibilizar de forma temprana las fricciones, riesgos, dudas y cuellos de botella existentes en el flujo operativo del negocio agrícola.
 #### Step 4: Pivotal Points
-
-![event-storming-step-4-timelines-pivotal-points.jpg](assets/img/chapter-IV/domain-driven-design/event-storming-step-4-timelines-pivotal-points.jpg)
-
-* Las barras verticales marcan los eventos que cambian la etapa del negocio y dividen la línea de tiempo en seis secciones: registro, organizaciones y suscripciones; configuración de la parcela y la campaña; monitoreo del cultivo y alertas; asesoría agronómica; contabilidad de costos de campo; y calidad y certificación de la cosecha. Por ejemplo, *Subscription Activated* cierra el registro y *Crop Campaign Started* inicia el seguimiento del cultivo. La última sección, comercialización del lote, queda fuera del alcance del MVP.
-
+![event-storming-step-4-timelines-pivotal-points.jpg](assets/img/chapter-IV/domain-drive-design/event-storming-step-4-timelines-pivotal-points.jpg)
+* El cuarto paso tiene como propósito identificar y marcar aquellos eventos de dominio transcendentales que representan cambios de estado irreversibles, puntos de inflexión de alto impacto o transiciones entre diferentes etapas del negocio agrícola.
 #### Step 5: Commands
-
-![event-storming-step-5-Commands.jpg](assets/img/chapter-IV/domain-driven-design/event-storming-step-5-Commands.jpg)
-
-* Las notas azules son los comandos, escritos en imperativo, y cada uno está junto al evento que provoca y al actor que lo ejecuta. Por ejemplo, el agricultor ejecuta *Register Field Plot* y se produce *Field Plot Registered*, y el agrónomo ejecuta *Issue Technical Prescription* y se produce *Technical Prescription Issued*. Los actores son el visitante, el usuario registrado, el agricultor, el gerente de la cooperativa, el agrónomo, el calificador de calidad, el catador de café y el programador del sistema, que ejecuta tareas automáticas como *Fetch Satellite Imagery*.
-
+![event-storming-step-5-Commands.jpg](assets/img/chapter-IV/domain-drive-design/event-storming-step-5-Commands.jpg)
+* El paso 5 modela las intenciones directas, acciones de usuario e invocaciones del sistema que provocan la ocurrencia de los eventos de dominio.
 #### Step 6: Policies
-
-![event-storming-step-6-policies.jpg](assets/img/chapter-IV/domain-driven-design/event-storming-step-6-policies.jpg)
-
-* Las notas moradas son las políticas: comandos que el sistema ejecuta solo cuando ocurre un evento, con la forma *Whenever [evento] Then [comando]*. Son once, por ejemplo: cuando un usuario se registra se le asigna el Plan Semilla, cuando se registra la fecha de siembra se programa el monitoreo satelital, cuando se detecta una anomalía de vegetación, estrés hídrico o riesgo de helada se emite una alerta agroclimática, y cuando se inicia una campaña se abre su libro de costos.
-
+![event-storming-step-6-policies.jpg](assets/img/chapter-IV/domain-drive-design/event-storming-step-6-policies.jpg)
+* El paso 6 define las reglas de negocio reactivas, políticas y automatizaciones que se desencadenan automáticamente tras la ocurrencia de uno o más eventos de dominio.
 #### Step 7: Read Models
-
-![event-storming-step-7-read-models.jpg](assets/img/chapter-IV/domain-driven-design/event-storming-step-7-read-models.jpg)
-
-* Las notas verdes son los modelos de lectura, es decir, la información que el actor revisa antes de ejecutar un comando. Por ejemplo, el agricultor revisa *My Plots and Plan Quota* antes de registrar una parcela, el agrónomo revisa *Phytosanitary Diagnosis Inbox* antes de emitir una receta y el productor consulta el *Breakeven Report* para conocer su precio mínimo de venta. Estos modelos corresponden a las pantallas de la aplicación web.
-
+![event-storming-step-7-read-models.jpg](assets/img/chapter-IV/domain-drive-design/event-storming-step-7-read-models.jpg)
+* El paso 7 proyecta los modelos de lectura y vistas de datos necesarios para que los actores e interfaces puedan tomar decisiones informadas antes de ejecutar un comando.
 #### Step 8: External Systems
-
-![event-storming-step-8-external-systems-refactorizado.jpg](assets/img/chapter-IV/domain-driven-design/event-storming-step-8-external-systems.jpg)
-
-* Las notas rosadas son los sistemas externos con los que se comunica la plataforma. Son tres: la API de AgroMonitoring, que entrega las imágenes satelitales de Sentinel-2 y Landsat-8, los índices NDVI y NDWI y el pronóstico del clima; la pasarela de pagos Niubiz, que confirma el pago de las suscripciones; y Twilio, que envía las alertas por SMS y WhatsApp.
-
+![event-storming-step-8-external-systems-refactorizado.jpg](assets/img/chapter-IV/domain-drive-design/event-storming-step-8-external-systems-refactorizado.jpg)
+* El paso 8 identifica e integra los sistemas externos y servicios de terceros que interactúan con el dominio, enviando comandos o reaccionando a los eventos generados.
 #### Step 9: Aggregates
-
-![event-storming-step-9-aggregates.jpg](assets/img/chapter-IV/domain-driven-design/event-storming-step-9-aggregates.jpg)
-
-* Los rectángulos amarillos son los agregados, que agrupan los comandos y eventos que comparten las mismas reglas de negocio. Son 17, entre ellos *FieldPlot*, *CropCampaign*, *CampaignLedger*, *SatelliteObservation*, *PestReport* y *HarvestBatch*. Por ejemplo, *CropCampaign* no permite abrir una segunda campaña en la misma parcela mientras la anterior siga activa, y *CampaignLedger* no permite registrar gastos en una campaña cerrada.
-
+![event-storming-step-9-aggregates.jpg](assets/img/chapter-IV/domain-drive-design/event-storming-step-9-aggregates.jpg)
+* El paso 9 encapsula la lógica de negocio, las entidades y sus reglas de consistencia en agregados, garantizando la integridad transaccional del sistema.
 #### Step 10: Bounded Contexts
-
-![Evidencia integral de Design-Level Event Storming](assets/img/chapter-IV/domain-driven-design/event-storming-step-10-bounded-contexts.jpg)
-
-* Los agregados que trabajan con la misma información y el mismo lenguaje se agrupan en seis bounded contexts: *Identity and Access Management*, *Profiles*, *Subscriptions and Payments*, *Field Management*, *Crop Health* y *Harvest Certification*. A estos se suma el contexto *Shared*, que no tiene eventos propios y reúne las clases base que usan todos los demás. Las flechas que cruzan de un contexto a otro son las políticas que los conectan; por ejemplo, cuando se registra la fecha de siembra en *Field Management*, *Crop Health* programa el monitoreo satelital de esa parcela.
+![Evidencia integral de Design-Level Event Storming](assets/img/event-storming/step-10-bounded-contexts.jpg)
 
 * **Enlace interactivo al espacio de trabajo:** [Tablero de Event Storming en Miro](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHVPRUdrWUJzeGVtb1g5cE9UeGFKdjJBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=126689221129)
 
+---
 #### Alineación con Subdominios SaaS y Bounded Contexts
 
-Considerando la estructura de subdominios recomendada para plataformas SaaS de servicios (gestión de identidades, suscripciones, recursos, ejecución de servicios y analítica) y adaptándola al *Ubiquitous Language* de la cadena de valor agroalimentaria, el dominio se estructuró en 6 Bounded Contexts y un contexto compartido (*Shared Kernel*):
+Considerando la estructura de subdominios recomendada para plataformas SaaS de servicios (gestión de identidades, suscripciones, recursos, ejecución de servicios y analítica) y adaptándola al *Ubiquitous Language* de la cadena de valor agroalimentaria, el dominio se estructuró en 7 Bounded Contexts:
 
-**1. Identity and Access Management (IAM) Context (Generic Subdomain)**
+**1. Identity & Access Management (IAM) Context (Generic Subdomain)**
+* **Responsabilidad:** Administrar el ciclo de vida de identidades, perfiles, asignación de roles institucionales y provisión de credenciales seguras mediante tokens criptográficos JWT.
+* **Agregado `UserAccount`:**
+    * *Commands:* `CreateProducerAccount`, `RegisterCooperativeAccount`, `UpdateUserProfile`, `AssignCooperativeRole`, `InviteAgronomistToCooperative`.
+    * *Events:* `ProducerAccountCreated`, `CooperativeAccountRegistered`, `UserProfileUpdated`, `CooperativeRoleAssigned`, `AgronomistInvitationSent`.
+    * *Read Models:* `UserProfileDashboard`, `CooperativeMemberDirectory`.
 
-* **Responsabilidad:** Registrar a los usuarios, autenticarlos mediante tokens JWT y controlar el acceso a la plataforma.
-* **Agregado `User`:**
-  * *Commands:* `SignUp`, `SignIn`.
-  * *Events:* `UserSignedUp`, `UserSignedIn`.
-  * *Read Models:* `PlansCatalog`.
-  * *External System:* Brevo Email Service (correo de recuperación de contraseña).
-
-**2. Profiles Context (Supporting Subdomain)**
-
-* **Responsabilidad:** Gestionar los datos de contacto de cada usuario, el registro de las cooperativas con su padrón de socios y la asignación de agrónomos a las parcelas.
-* **Agregado `Profile`:**
-  * *Commands:* `UpdateProfile`.
-  * *Events:* `ProfileUpdated`.
-  * *Read Models:* `ProfileAndPreferences`.
-* **Agregado `Cooperative`:**
-  * *Commands:* `RegisterCooperative`, `AddCooperativeMember`, `InviteAgronomist`.
-  * *Events:* `CooperativeRegistered`, `CooperativeMemberAdded`, `AgronomistInvited`.
-  * *Read Models:* `MemberDirectory`.
-  * *External System:* Brevo Email Service (correo de invitación al agrónomo).
-* **Agregado `AgronomistAssignment`:**
-  * *Commands:* `AssignAgronomistToPlot`.
-  * *Events:* `AgronomistAssignedToPlot`.
-  * *Read Models:* `MembersPlotsList`.
-
-**3. Subscriptions and Payments Context (Generic Subdomain)**
-
-* **Responsabilidad:** Controlar los planes de suscripción (Semilla, Cooperativa Pro y Asesor Técnico), el cobro mediante la pasarela de pagos y la cuota de parcelas que permite cada plan.
+**2. Subscriptions & Payments Context (Generic Subdomain)**
+* **Responsabilidad:** Controlar la monetización SaaS, selección de planes comerciales (Semilla, Cooperativa Pro, Asesor Técnico), validación de transacciones y cuotas activas de parcelas.
 * **Agregado `Subscription`:**
-  * *Commands:* `AssignSeedPlan`, `SelectSubscriptionPlan`, `SubmitPayment`, `ActivateSubscription`, `CancelSubscription`.
-  * *Events:* `SeedPlanAssigned`, `SubscriptionPlanSelected`, `PaymentConfirmed`, `SubscriptionActivated`, `SubscriptionCancelled`.
-  * *Read Models:* `PlansCatalog`, `BillingSummary`.
-  * *External System:* Niubiz Payment Gateway.
+    * *Commands:* `SelectSubscriptionPlan`, `SubmitPaymentTransaction`, `ActivateSubscriptionPro`, `CancelSubscriptionPlan`.
+    * *Events:* `SubscriptionPlanSelected`, `PaymentTransactionProcessed`, `SubscriptionProActivated`, `SubscriptionPlanCancelled`.
+    * *Read Models:* `PricingCatalogView`, `BillingStatusLedger`.
+    * *External System:* Stripe / Niubiz Payment Gateway.
 
-**4. Field Management Context (Core Subdomain)**
-
-* **Responsabilidad:** Registrar las parcelas con su polígono GPS, gestionar las campañas agrícolas y llevar el libro de costos de cada campaña (insumos, jornales y fletes) para calcular el punto de equilibrio. Los gastos también se pueden registrar sin conexión y se sincronizan después.
+**3. Plot & Crop Management Context (Supporting Subdomain)**
+* **Responsabilidad:** Administrar la georreferenciación física de fundos y parcelas mediante coordenadas perimetrales continuas (polígonos GPS), caracterización de suelo e inicio fenológico.
 * **Agregado `FieldPlot`:**
-  * *Commands:* `RegisterFieldPlot`, `DelineatePlotBoundary`, `LinkPlotPolygon`, `RecordSoilBaseline`.
-  * *Events:* `FieldPlotRegistered`, `PlotBoundaryDelineated`, `PlotAreaCalculated`, `PlotPolygonLinked`, `SoilBaselineRecorded`.
-  * *Read Models:* `MyPlotsAndPlanQuota`, `SatelliteMapAndCadastreViewer`.
-  * *External System:* AgroMonitoring API (registro del polígono).
-* **Agregado `CropCampaign`:**
-  * *Commands:* `StartCropCampaign`, `SelectCropType`, `SpecifySeedVariety`, `RecordSowingDate`, `CloseCropCampaign`.
-  * *Events:* `CropCampaignStarted`, `CropTypeSelected`, `SeedVarietySpecified`, `SowingDateRecorded`, `CropCampaignClosed`.
-  * *Read Models:* `SeedVarietyCatalog`, `CampaignSummary`.
-* **Agregado `CampaignLedger`:**
-  * *Commands:* `OpenCampaignLedger`, `RecordInputExpense`, `RecordDailyLaborExpense`, `RecordFieldFreightExpense`, `SetExpectedYield`, `RecalculateBreakevenPrice`, `RecordActualYield`, `ExportCampaignCostReport`.
-  * *Events:* `CampaignLedgerOpened`, `InputExpenseRecorded`, `DailyLaborExpenseRecorded`, `FieldFreightExpenseRecorded`, `ExpectedYieldSet`, `TotalInvestmentCalculated`, `BreakevenPriceCalculated`, `ActualYieldRecorded`, `CampaignCostReportExported`.
-  * *Read Models:* `ExpenseHistory`, `BreakevenReport`, `CostPerHectareReport`.
+    * *Commands:* `RegisterFieldPlot`, `DelineatePerimeterCoordinates`, `RecordSoilBaseline`, `SelectCropType`, `SpecifySeedVariety`, `RecordSowingDate`.
+    * *Events:* `FieldPlotRegistered`, `PerimeterCoordinatesDelineated`, `SoilBaselineRecorded`, `CropTypeSelected`, `SeedVarietySpecified`, `SowingDateRecorded`.
+    * *Read Models:* `CadastralGISMap`, `CropPhenologyTimeline`.
+    * *External System:* MIDAGRI Padrón de Productores (PPA) API.
 
-**5. Crop Health Context (Core Subdomain)**
+**4. Satellite Analytics & Alerting Context (Core Subdomain)**
+* **Responsabilidad:** Orquestar la observación terrestre multiespectral mediante Sentinel-2 para deducir vigor foliar (NDVI) y estrés hídrico (NDWI), despachar alertas preventivas y gestionar recetas técnicas de campo.
+* **Agregado `VegetationAnalysis`:**
+    * *Commands:* `FetchMultispectralTiles`, `ComputeVegetationIndexes`, `TriggerAgroclimaticAlert`, `UploadPestEvidencePhoto`, `ScheduleFieldInspection`, `RecordDamageAssessment`, `IssueTechnicalPrescription`, `ConfirmTreatmentApplication`.
+    * *Events:* `MultispectralTilesIngested`, `NDVIIndexComputed`, `NDWIIndexComputed`, `VegetationAnomalyDetected`, `AgroclimaticAlertDispatched`, `PestEvidencePhotoUploaded`, `FieldInspectionScheduled`, `DamageAssessmentRecorded`, `TechnicalPrescriptionIssued`, `TreatmentApplicationConfirmed`.
+    * *Read Models:* `SatelliteVegetationMap`, `MultispectralIndexDashboard`, `PhytosanitaryDiagnosisInbox`.
+    * *External Systems:* Sentinel-2 Open Access API (ESA), SENAMHI Weather API, Twilio SMS / WhatsApp Gateway.
 
-* **Responsabilidad:** Monitorear la salud del cultivo con imágenes satelitales (NDVI y NDWI) y el pronóstico del clima, emitir alertas ante anomalías, estrés hídrico o heladas, y gestionar la asesoría del agrónomo: reportes de plagas, visitas de campo y recetas técnicas.
-* **Agregado `SatelliteObservation`:**
-  * *Commands:* `ScheduleSatelliteMonitoring`, `FetchSatelliteImagery`, `RecordVegetationIndexes`.
-  * *Events:* `SatelliteMonitoringScheduled`, `SatelliteImageryIngested`, `CloudyImageryDiscarded`, `NDVIIndexComputed`, `NDWIIndexComputed`, `VegetationAnomalyDetected`, `WaterStressDetected`.
-  * *Read Models:* `LeafHealthDashboard`.
-* **Agregado `ClimateForecast`:**
-  * *Commands:* `FetchClimateForecast`.
-  * *Events:* `ClimateForecastUpdated`, `FrostRiskDetected`.
-* **Agregado `AgroclimaticAlert`:**
-  * *Commands:* `RaiseAgroclimaticAlert`, `NotifyFarmerAndAgronomist`, `CompleteActionStep`, `CloseAlert`.
-  * *Events:* `AgroclimaticAlertRaised`, `AlertNotificationSent`, `ActionStepCompleted`, `AlertMitigated`.
-  * *Read Models:* `AlertDetailAndActionPlan`.
-* **Agregado `RegionalBulletin`:**
-  * *Commands:* `IssueRegionalBulletin`.
-  * *Events:* `RegionalBulletinIssued`.
-  * *Read Models:* `MultiPlotDashboardByUrgency`.
-* **Agregado `PestReport`:**
-  * *Commands:* `UploadPestEvidencePhoto`, `NotifyAssignedAgronomist`, `RecordDamageAssessment`.
-  * *Events:* `PestEvidencePhotoUploaded`, `AgronomistNotified`, `DamageAssessmentRecorded`.
-  * *Read Models:* `AdvisorConsultation`, `PhytosanitaryDiagnosisInbox`.
-* **Agregado `FieldInspection`:**
-  * *Commands:* `ScheduleFieldInspection`, `CompleteFieldInspection`.
-  * *Events:* `FieldInspectionScheduled`, `FieldInspectionCompleted`.
-  * *Read Models:* `VisitSchedule`.
-* **Agregado `TechnicalPrescription`:**
-  * *Commands:* `IssueTechnicalPrescription`, `ConfirmTreatmentApplication`, `ReportFoliageRecovery`, `EvaluateTreatmentEffectiveness`.
-  * *Events:* `TechnicalPrescriptionIssued`, `TreatmentApplicationConfirmed`, `FoliageRecoveryReported`, `TreatmentEffectivenessEvaluated`.
-  * *Read Models:* `MultispectralIndexDashboard`, `ActivePrescriptions`.
-* *External Systems:* AgroMonitoring API (imágenes, índices y clima), Twilio SMS / WhatsApp Gateway.
+**5. Field Cost Accounting Context (Core Subdomain)**
+* **Responsabilidad:** Proveer una bitácora contable rural para asentar compras de insumos, jornales diarios y fletes (con soporte de persistencia local desconectada), determinando el costo unitario por lote y el punto de equilibrio financiero.
+* **Agregado `LotFinancialLedger`:**
+    * *Commands:* `RecordAgrochemicalExpense`, `RecordDailyLaborExpense`, `RecordFieldFreightExpense`, `LogOfflineFieldExpense`, `SynchronizeFieldLedger`, `ConsolidateLotExpenses`, `CalculateBreakevenPrice`.
+    * *Events:* `AgrochemicalExpenseRecorded`, `DailyLaborExpenseRecorded`, `FieldFreightExpenseRecorded`, `OfflineFieldExpenseLogged`, `FieldLedgerSynchronized`, `TotalLotInvestmentCalculated`, `BreakevenPriceCalculated`.
+    * *Read Models:* `LotExpenseLogView`, `BreakevenAnalysisReport`.
 
-**6. Harvest Certification Context (Core Subdomain)**
-
-* **Responsabilidad:** Registrar los lotes de cosecha que llegan al acopio, calificar su calidad (calibres de papa según MIDAGRI y catación de café según SCA) y emitir certificados digitales con código QR que cualquier persona puede verificar.
+**6. Harvest Quality & Certification Context (Core Subdomain)**
+* **Responsabilidad:** Controlar la recolección, pesaje formal de acopio, calificación de calibres de tubérculo (MIDAGRI) y protocolos de catación sensorial SCA, emitiendo certificados digitales inmutables con código QR público.
 * **Agregado `HarvestBatch`:**
-  * *Commands:* `RegisterHarvestBatch`, `WeighDeliveredBatch`, `ExtractRepresentativeSample`, `GradePotatoCalibers`, `PerformCoffeeCupping`, `AssignQualityScore`.
-  * *Events:* `HarvestBatchRegistered`, `DeliveredBatchWeighed`, `RepresentativeSampleExtracted`, `PotatoCalibersGraded`, `CoffeeCuppingCompleted`, `QualityScoreAssigned`.
-  * *Read Models:* `MemberDirectory`, `HarvestGradingSheet`.
-* **Agregado `QualityCertificate`:**
-  * *Commands:* `IssueQualityCertificate`, `VerifyCertificate`.
-  * *Events:* `QualityCertificateIssued`, `TraceabilityQRCodeCreated`, `CertificateVerified`.
-  * *Read Models:* `CertificateAndQRCodePreview`, `PublicTraceabilityView`.
+    * *Commands:* `RegisterHarvestYield`, `WeighDeliveredLot`, `ExtractRepresentativeSample`, `GradePotatoCaliber`, `PerformCoffeeCuppingSCA`, `AssignQualityScore`, `GenerateDigitalQualityCertificate`, `VerifyLotTraceability`.
+    * *Events:* `HarvestYieldRegistered`, `DeliveredLotWeighed`, `RepresentativeSampleExtracted`, `PotatoCaliberGraded`, `CoffeeCuppingCompleted`, `QualityScoreAssigned`, `DigitalQualityCertificateGenerated`, `TraceabilityQRCodeCreated`, `LotTraceabilityVerified`.
+    * *Read Models:* `HarvestGradingSheet`, `PublicTraceabilityQRView`.
+    * *External System:* Public QR Verification Gateway.
 
-**7. Shared Context (Shared Kernel)**
+**7. Commercial Settlement Context (Core Subdomain)**
+* **Responsabilidad:** Publicar lotes certificados en el catálogo comercial, gestionar las posturas de oferta de compradores mayoristas y liquidar la venta garantizando un margen por encima del costo de producción.
+* **Agregado `CommercialSettlement`:**
+    * *Commands:* `SetBaseSettlementPrice`, `PublishCertifiedLot`, `SubmitPurchaseOffer`, `AcceptLotSaleAndLiquidate`, `CalculateFinalNetMargin`.
+    * *Events:* `BaseSettlementPriceSet`, `CertifiedLotPublished`, `PurchaseOfferReceived`, `LotSaleRegistered`, `NetIncomeCalculated`.
+    * *Read Models:* `CertifiedLotCatalog`, `CommercialSettlementLedger`.
 
-* **Responsabilidad:** Reunir los elementos comunes que reutilizan todos los bounded contexts. No tiene comandos ni eventos de dominio propios.
-* **Contenido:** clases base `AuditableAbstractAggregateRoot` y `AuditableModel`, los value objects `EmailAddress` y `Money`, la estrategia de nombres *snake_case* para la base de datos, el manejo global de excepciones, la configuración de OpenAPI, los mensajes i18n y el adaptador común de notificaciones.
-
+---
 #### Políticas de Automatización Reactivas (Policies)
-
 La orquestación entre los contextos delimitados se rige por políticas eventuales bajo el estándar *Whenever [Domain Event] Then [Command]*:
-
-* **P1:** `Whenever UserSignedUp Then AssignSeedPlan` (IAM → Subscriptions and Payments)
-* **P2:** `Whenever PaymentConfirmed Then ActivateSubscription` (Subscriptions and Payments)
-* **P3:** `Whenever PlotBoundaryDelineated Then LinkPlotPolygon` (Field Management)
-* **P4:** `Whenever SowingDateRecorded Then ScheduleSatelliteMonitoring` (Field Management → Crop Health)
-* **P5:** `Whenever VegetationAnomalyDetected, WaterStressDetected or FrostRiskDetected Then RaiseAgroclimaticAlert` (Crop Health)
-* **P6:** `Whenever AgroclimaticAlertRaised Then NotifyFarmerAndAgronomist` (Crop Health)
-* **P7:** `Whenever PestEvidencePhotoUploaded Then NotifyAssignedAgronomist` (Crop Health)
-* **P8:** `Whenever CropCampaignStarted Then OpenCampaignLedger` (Field Management)
-* **P9:** `Whenever InputExpenseRecorded, DailyLaborExpenseRecorded, FieldFreightExpenseRecorded or ExpectedYieldSet Then RecalculateBreakevenPrice` (Field Management)
-* **P10:** `Whenever DeliveredBatchWeighed Then RecordActualYield` (Harvest Certification → Field Management)
-* **P11:** `Whenever PotatoCalibersGraded or CoffeeCuppingCompleted Then AssignQualityScore` (Harvest Certification)
+* **P1:** `Whenever ProducerAccountCreated Then SelectSubscriptionPlan`
+* **P2:** `Whenever SubscriptionProActivated Then RegisterFieldPlot`
+* **P3:** `Whenever SowingDateRecorded Then FetchMultispectralTiles`
+* **P4:** `Whenever VegetationAnomalyDetected Then TriggerAgroclimaticAlert`
+* **P5:** `Whenever TreatmentApplicationConfirmed Then RecordAgrochemicalExpense`
+* **P6:** `Whenever DeliveredLotWeighed Then ConsolidateLotExpenses`
+* **P7:** `Whenever DigitalQualityCertificateGenerated Then PublishCertifiedLot`
+* **P8:** `Whenever BreakevenPriceCalculated Then SetBaseSettlementPrice`
 
 ### 4.6.2. Software Architecture Context Diagram
 
-En esta sección se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
+En este apartado se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
 
-**Herramienta utilizada:** Structurizr (*Diagrams as Code*, mediante Structurizr DSL).
-
-![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](assets/img/chapter-IV/c4/c4-system-context-diagram.png)
+![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](assets/img/c4/c4-system-context-diagram.png)
 
 #### Explicación del Diagrama de Contexto
 
@@ -1502,906 +1303,833 @@ El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distrib
 * **Agricultural Producer (Productor Agrícola):** Agricultor que accede mediante navegadores web o dispositivos móviles para registrar la delimitación geográfica de sus parcelas, monitorear el vigor foliar satelital (NDVI/NDWI) y registrar sus compras de insumos, jornales y fletes en la bitácora de costos.
 * **Cooperative Manager (Directivo de Cooperativa):** Usuario administrativo que utiliza la plataforma desde terminales de escritorio para auditar el volumen de acopio de los socios, monitorear los balances financieros por hectárea y aprobar formalmente la emisión de los certificados de calidad de cosecha.
 * **Technical Field Advisor (Asesor Técnico de Campo):** Ingeniero agrónomo que hace seguimiento a las alertas satelitales tempranas de estrés hídrico o plagas para priorizar sus visitas presenciales en parcelas críticas, emitiendo recetas agronómicas y dosis correctivas desde la aplicación.
-* **Visitor (Visitante):** Persona que no necesita una cuenta. Consulta la landing page para conocer la propuesta de valor y los planes, o escanea el código QR de un saco o lote para verificar en línea su procedencia, su variedad y su puntaje de calidad certificado.
+* **Wholesale Buyer (Comprador Mayorista / Exportador):** Usuario comercial que interactúa con la plataforma de forma abierta y sin necesidad de credenciales, escaneando el código QR público de los sacos o lotes para verificar en línea la procedencia geográfica, la variedad botánica y el perfil de calidad certificado.
 
 ##### 2. Sistemas Externos e Integraciones
-* **AgroMonitoring API:** Servicio de OpenWeather que recibe el polígono de cada parcela y entrega, mediante HTTPS/JSON, las imágenes satelitales de Sentinel-2 y Landsat-8, los índices NDVI y NDWI y el pronóstico del clima. Con esta información el sistema calcula el vigor foliar, detecta estrés hídrico y anticipa heladas sin depender de sensores instalados en campo.
+* **Sentinel-2 Open Access API (ESA):** Proveedor satelital que suministra de manera periódica baldosas ópticas multiespectrales. El sistema consume este servicio vía peticiones HTTPS/JSON para computar los índices biofísicos de reflectancia vegetal sin depender de sensores IoT instalados en campo.
+* **SENAMHI Weather API:** Servicio meteorológico nacional consultado por HTTPS/JSON para sincronizar pronósticos climáticos y emitir advertencias tempranas ante eventos de heladas meteorológicas o sequías estacionales en los valles productivos.
 * **Twilio SMS / WhatsApp Gateway:** Pasarela de mensajería externa utilizada por SumaqAgro para remitir notificaciones prioritarias y alertas agroclimáticas urgentes a productores ubicados en zonas rurales con baja cobertura móvil de datos.
-* **Niubiz Payment Gateway:** Pasarela de procesamiento de pagos electrónicos integrada mediante API REST (HTTPS/JSON) para la gestión y cobro transaccional de los planes de suscripción de cooperativas agrarias y asesores técnicos.
-* **Brevo Email Service:** Servicio de correo transaccional que SumaqAgro usa, mediante SMTP o HTTPS, para enviar el enlace de recuperación de contraseña y la invitación que recibe un agrónomo cuando una cooperativa lo agrega a su equipo.
+* **Stripe / Niubiz Payment Gateway:** Pasarela de procesamiento de pagos electrónicos integrada mediante API REST (HTTPS/JSON) para la gestión y cobro transaccional de los planes de suscripción de cooperativas agrarias y asesores técnicos.
+* **MIDAGRI PPA API:** Servicio gubernamental del Padrón de Productores Agrarios consumido mediante HTTPS/JSON para validar la titularidad catastral de predios y la condición formal de los socios agrícolas.
+* **Public QR Verification Gateway:** Punto de acceso web público y liviano que resuelve las peticiones de validación iniciadas por los compradores mayoristas al escanear los códigos QR, certificando la autenticidad e inmutabilidad del lote evaluado.
 
+---
 ### 4.6.3. Software Architecture Container Diagrams
 
 En esta sección se presenta y describe el Diagrama de Contenedores (Nivel 2 del modelo C4) de la plataforma **SumaqAgro**, el cual profundiza en la frontera del sistema para exponer su arquitectura técnica distribuida. Este diagrama muestra las unidades de despliegue y ejecución independientes que componen la solución, la distribución de responsabilidades entre ellas, las principales decisiones de tecnología adoptadas y los protocolos de red empleados para la comunicación interna y con sistemas externos. El modelado fue estructurado y generado formalmente mediante la especificación DSL de la herramienta **Structurizr**.
 
-**Herramienta utilizada:** Structurizr (*Diagrams as Code*, mediante Structurizr DSL).
-
-![C4 Model - Diagrama de Contenedores (Nivel 2)](assets/img/chapter-IV/c4/c4-container-diagram.png)
+![C4 Model - Diagrama de Contenedores (Nivel 2)](assets/img/c4/c4-container-diagram.png)
 
 #### Asignación de Responsabilidades y Decisiones Tecnológicas
 
-La topología de ejecución del sistema está conformada por cinco contenedores:
-
-* **Static Content Container:**
-  Carpeta con los archivos compilados de la Web Application (HTML, CSS, JavaScript e imágenes), publicada en Cloudflare Pages. Desde aquí el navegador del productor, del directivo y del agrónomo descarga la aplicación Angular. El visitante también la usa para abrir la vista pública del certificado al escanear un código QR.
+La topología de ejecución del sistema está conformada por cuatro contenedores independientes:
 
 * **Landing Page Container:**
-  Sitio web público estático desarrollado con HTML5, CSS3 y JavaScript vanilla, alojado en un servicio cloud de distribución estática. Diseñado con una carga ligera para garantizar un rendimiento óptimo en terminales móviles bajo redes rurales 3G/4G. Su propósito es exponer la propuesta de valor del producto, presentar los planes de suscripción comercial (Semilla, Cooperativa Pro y Asesor Técnico) y llevar al visitante al registro de la Web Application. No se comunica con el backend: es un sitio estático.
+  Sitio web público estático desarrollado con HTML5, CSS3 y JavaScript vanilla, alojado en un servicio cloud de distribución estática. Diseñado con una carga ligera para garantizar un rendimiento óptimo en terminales móviles bajo redes rurales 3G/4G. Su propósito es exponer la propuesta de valor del producto, presentar los planes de suscripción comercial (Semilla, Cooperativa Pro y Asesor Técnico) y canalizar prospectos comerciales hacia el backend mediante llamadas asíncronas HTTPS/JSON.
 
 * **Web Application Container (Single Page Application - SPA):**
-  Aplicación web cliente desarrollada sobre el framework Angular 18, utilizando TypeScript y la biblioteca Angular Material. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de gastos de campo y de reportes de plagas en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un visitante escanea el código QR impreso.
+  Aplicación web cliente desarrollada sobre el framework Vue, utilizando TypeScript y la biblioteca PrimeVue. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de jornales, compras e insumos en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un comprador escanea el código QR impreso.
 
 * **RESTful API Backend Container:**
-  Servidor de aplicaciones distribuido implementado en Java 21 utilizando el framework Spring Boot 3.x (Spring MVC, Spring Security y Spring Data JPA). Representa el núcleo transaccional del sistema y aloja la lógica de negocio basada en DDD para los 6 Bounded Contexts identificados y el Shared Kernel que todos reutilizan. Sus responsabilidades abarcan la emisión y validación de tokens criptográficos JWT para el control de accesos, el cómputo de las matrices financieras de costo unitario y punto de equilibrio rural, el procesamiento de las imágenes e índices satelitales y la exposición de endpoints documentados formalmente bajo OpenAPI 3.0 (Swagger UI).
+  Servidor de aplicaciones distribuido implementado en C# utilizando ASP.NET Core Framework con Entity Framework Core para el acceso y la persistencia de datos. Representa el núcleo transaccional del sistema y aloja la lógica de negocio basada en DDD para los 7 Bounded Contexts identificados. Sus responsabilidades abarcan la emisión y validación de tokens criptográficos JWT para el control de accesos, el cómputo de las matrices financieras de costo unitario y punto de equilibrio rural, el procesamiento de reflectancia satelital desacoplado y la exposición de endpoints documentados formalmente bajo OpenAPI 3.0 (Swagger UI).
 
-* **Database Container:**
-  Base de datos relacional MySQL 8.0 (`sumaqagro_db`). Guarda en una sola base las tablas de los 6 bounded contexts, con transacciones ACID y claves primarias y foráneas que mantienen la integridad referencial. Los vértices del polígono de cada parcela se guardan como pares de latitud y longitud.
+* **Database Engine Container:**
+  Motor relacional MySQL 8.0 configurado como la unidad de persistencia de datos. Almacena las tablas normalizadas del dominio asegurando transacciones atómicas bajo el estándar ACID, soporte de integridad referencial mediante claves foráneas y compatibilidad con tipos de datos espaciales para el resguardo de las geometrías perimetrales de las parcelas agrícolas.
 
 #### Protocolos de Interoperabilidad y Comunicación
 
-* **Acceso de Usuarios:** Los usuarios entran por HTTPS. El visitante navega la *Landing Page*, y desde ella pasa al registro de la *Web Application*. Los usuarios registrados cargan la *Web Application* desde el *Static Content*.
-* **Cliente Web a Backend:** La Web Application llama a los endpoints REST del backend con JSON sobre HTTPS, enviando el token Bearer JWT en cada petición. Por este mismo canal sincroniza los datos guardados sin conexión.
-* **Backend a Base de Datos:** El backend lee y escribe los agregados mediante el controlador JDBC de MySQL, sobre el puerto 3306.
-* **Backend a Servicios Externos:** El backend se comunica con AgroMonitoring API, Twilio y Niubiz con JSON sobre HTTPS. Niubiz, además, confirma cada pago llamando a un webhook del backend. Los correos de recuperación de contraseña e invitación de agrónomos se envían a Brevo mediante SMTP.
+* **Acceso de Usuarios:** Los usuarios finales interactúan con los contenedores web (*Landing Page* y *Web Application*) mediante peticiones seguras sobre el protocolo HTTPS.
+* **Cliente Web a Backend:** La Single Page Application consume la lógica de negocio y envía datos locales sincronizados mediante llamadas asíncronas RESTful sobre HTTPS, transmitiendo datos estructurados en formato JSON protegidos con tokens de autorización Bearer JWT.
+* **Backend a Base de Datos:** Las operaciones transaccionales y de persistencia de los agregados se ejecutan directamente a través de una conexión TCP protegida sobre el puerto 3306 mediante el controlador JDBC de MySQL.
+* **Backend a Servicios Externos:** Las consultas salientes hacia Sentinel-2 API, SENAMHI Weather API, Twilio Gateway, Stripe/Niubiz y MIDAGRI PPA se realizan mediante clientes HTTP desacoplados bajo peticiones seguras HTTPS/JSON.
+---
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-En esta sección se presentan y explican los Diagramas de Componentes (Nivel 3 del modelo C4) correspondientes a cada uno de los contenedores de software ejecutables que integran la plataforma **SumaqAgro**: la **Landing Page**, la **Web Application (Single Page Application en Angular 18)** y el **RESTful API Backend (Spring Boot 3.x)**. A través de estos diagramas se detalla la descomposición estructural interna de cada unidad de despliegue, identificando la naturaleza de sus componentes, sus responsabilidades de negocio asignadas, los detalles de implementación tecnológica y sus flujos de interacción internos y externos. El modelado fue desarrollado en **Structurizr** siguiendo la especificación formal de Structurizr DSL.
+En esta sección se presentan y explican los Diagramas de Componentes (Nivel 3 del modelo C4) correspondientes a cada uno de los contenedores de software ejecutables que integran la plataforma **SumaqAgro**: la **Landing Page**, la **Web Application (Single Page Application en Vue 3)** y el **RESTful API Backend (ASP.NET Core)**. A través de estos diagramas se detalla la descomposición estructural interna de cada unidad de despliegue, identificando la naturaleza de sus componentes, sus responsabilidades de negocio asignadas, los detalles de implementación tecnológica y sus flujos de interacción internos y externos. El modelado fue desarrollado en **Structurizr** siguiendo la especificación formal de Structurizr DSL.
 
-**Herramienta utilizada:** Structurizr (*Diagrams as Code*, mediante Structurizr DSL).
+---
 
 #### 4.6.4.1. Landing Page Container Components Diagram
 
 El contenedor de la Landing Page descompone la estructura del sitio web estático público, diseñado con una arquitectura liviana orientada a maximizar la velocidad de carga y la tasa de conversión en dispositivos móviles bajo redes rurales 3G/4G.
 
-![C4 Model - Diagrama de Componentes de la Landing Page (Nivel 3)](assets/img/chapter-IV/c4/c4-components-landing-diagram.png)
+![C4 Model - Diagrama de Componentes de la Landing Page (Nivel 3)](assets/img/c4/c4-components-landing-diagram.png)
 
 ##### Desglose de Componentes de la Landing Page:
-* **`Navigation & Hero Component`:** Bloque estructural desarrollado con HTML5 semántico y maquetado responsivo mediante CSS3 Flexbox. Administra la barra de navegación superior, la identidad visual corporativa de SumaqAgro, la propuesta de valor agroclimática orientada a café de especialidad y papa andina, y el llamado a la acción (CTA) que lleva al visitante al registro de la Web Application.
+* **`Navigation & Hero Component`:** Bloque estructural desarrollado con HTML5 semántico y maquetado responsivo mediante CSS3 Flexbox. Administra la barra de navegación superior, la identidad visual corporativa de SumaqAgro, la propuesta de valor agroclimática orientada a café de especialidad y papa andina, y el llamado a la acción (CTA) que conduce al formulario de registro y demostración.
 * **`Pricing & Plans Catalog Component`:** Componente visual maquetado mediante CSS3 Grid. Presenta la matriz comparativa de los planes de suscripción comercial SaaS: el plan *Semilla* (gratuito para pequeños productores familiares), el plan *Cooperativa Pro* (para gremios con monitoreo consolidado de socios) y el plan *Asesor Técnico* (para agrónomos independientes con carteras de clientes).
+* **`Lead Capture Form Component`:** Módulo interactivo implementado en JavaScript vanilla. Intercepta los eventos de ingreso de datos para solicitudes de contacto y demostraciones técnicas, ejecutando validaciones sintácticas del lado del cliente (formato regex de correo electrónico, longitud de número celular y campos obligatorios) para prevenir envíos incompletos a la red.
+* **`Landing HTTP Client`:** Componente de comunicación asíncrona construido sobre la API nativa `Fetch` de JavaScript. Serializa las entradas del formulario hacia una carga útil JSON y despacha la petición POST sobre HTTPS hacia el endpoint `/api/v1/users` del backend transaccional, administrando los estados visuales de confirmación o alerta ante incidencias de conectividad.
 
-#### 4.6.4.2. Web Application Container Components Diagram (Angular SPA)
+---
 
-La Web Application, construida con **Angular 18**, se organiza por bounded context siguiendo DDD. Cada componente del diagrama es una carpeta de Angular dentro de `src/app` y todas tienen las mismas capas: `domain/model` (entidades), `application` (store con el estado), `infrastructure` (llamadas a la API) y `presentation` (vistas). Además existe una carpeta `shared` con lo que usan todos los contextos.
+#### 4.6.4.2. Web Application Container Components Diagram (Vue 3 SPA)
 
-![C4 Model - Diagrama de Componentes de la Web Application (Nivel 3)](assets/img/chapter-IV/c4/c4-components-webapp-diagram.png)
+El contenedor de la aplicación cliente SPA, implementado sobre el framework **Vue**, descompone sus módulos para brindar una experiencia de usuario interactiva y garantizar la persistencia local de datos en campo mediante capacidades desconectadas (*offline-first*).
+
+![C4 Model - Diagrama de Componentes de la Web Application (Nivel 3)](assets/img/c4/c4-components-webapp-diagram.png)
 
 ##### Desglose de Componentes de la Web Application:
-* **`IAM Component`:** Formularios de registro, inicio de sesión y recuperación de contraseña. Contiene el *guard* que protege las rutas privadas según la sesión y el rol, y el *interceptor* que agrega el token JWT a cada petición.
-* **`Profiles Component`:** Configuración del perfil, registro de la cooperativa, padrón de socios y asignación de agrónomos a las parcelas.
-* **`Subscriptions and Payments Component`:** Catálogo de planes, pago (*checkout*) e historial de cobros.
-* **`Field Management Component`:** Registro de parcelas con el mapa para marcar el polígono GPS (Leaflet.js), campañas agrícolas y bitácora de costos, donde los gastos se pueden registrar sin conexión.
-* **`Crop Health Component`:** Mapa con los índices NDVI y NDWI (Leaflet.js), alertas agroclimáticas, reportes de plagas, inspecciones y recetas técnicas.
-* **`Harvest Certification Component`:** Lotes de acopio, fichas de catación SCA para café y de calibres MIDAGRI para papa, certificados de calidad y la vista pública que se abre al escanear el código QR.
-* **`Shared Component`:** Lo que usan todos los contextos: el *layout* con el menú, el selector de idioma, las clases base para llamar a la API, la sincronización sin conexión con IndexedDB (Dexie.js) y la caché del Service Worker (`@angular/pwa`).
+* **`Auth & Role Guard`:** Guardia funcional de enrutamiento (`CanActivateFn`) de Vue. Intercepta la navegación hacia rutas protegidas comprobando la vigencia del token JWT almacenado en `sessionStorage`, aplicando el control de acceso basado en roles (RBAC) para productores, directivos y agrónomos.
+* **`Plot Management View Component`:** Interfaz gráfica desarrollada con Vue y Formularios Reactivos (`ReactiveFormsModule`). Permite la georreferenciación de predios, la captura interactiva de vértices perimetrales GPS y el registro botánico y fenológico de las campañas agrícolas.
+* **`Vegetation & Alerting View Component`:** Componente analítico que integra la biblioteca Leaflet.js con Vue. Renderiza capas de calor satelitales con series temporales de reflectancia foliar (NDVI y NDWI), canalizando el buzón de alertas agroclimáticas y recetas fitosanitarias emitidas por el extensionista.
+* **`Field Cost Ledger View Component`:** Módulo de captura contable rural que provee formularios reactivos para el asiento inmediato de compras de fertilizantes, jornales diarios y fletes, alimentando los paneles de estimación de costos unitarios y punto de equilibrio.
+* **`Harvest & Traceability View Component`:** Vistas de calificación física de calibres de tubérculo (norma técnica MIDAGRI) y protocolos de catación sensorial de café (estándar SCA). Incluye el visor público accesible mediante el escaneo del código QR para la auditoría de procedencia de los lotes.
+* **`Client State & Offline Store`:** Capa de almacenamiento transaccional local implementada con *IndexedDB* (mediante Dexie.js) coordinada con estados reactivos basados en `BehaviorSubject` de RxJS. Retiene las operaciones efectuadas en parcelas sin señal de red celular y orquesta la sincronización automática diferida en lote al detectar conectividad a internet.
+* **`Service Worker Cache Engine`:** Módulo de Progressive Web App provisto por `@vue/pwa`. Almacena en caché los artefactos estáticos compilados (HTML, CSS, JavaScript e iconografía vectorial), asegurando la operatividad continua de la interfaz web en entornos rurales sin conexión.
+* **`REST API Client Service`:** Servicio Vue centralizado (`@Injectable`) que encapsula la comunicación HTTPS con el backend mediante `HttpClient`. Emplea un `HttpInterceptor` que inyecta automáticamente el encabezado `Authorization: Bearer <JWT>` en cada solicitud saliente y unifica la gestión de excepciones HTTP de red.
 
-##### Relaciones entre Componentes:
-* **Usuarios:** el productor usa Field Management, Crop Health y Subscriptions and Payments; el directivo usa Profiles y Harvest Certification; el agrónomo usa Crop Health; y el visitante se registra en IAM o verifica un certificado en Harvest Certification. La Landing Page envía al visitante al registro en IAM.
-* **IAM:** los otros cinco componentes revisan la sesión y el rol del usuario con el *guard* de IAM antes de abrir sus rutas. Shared también lee el rol desde IAM para mostrar el menú que le corresponde a cada usuario.
-* **Shared:** todos los componentes usan su *layout* y sus clases base de API. Field Management y Crop Health, además, usan su sincronización sin conexión.
-* **RESTful API:** cada componente llama solo al componente de su mismo bounded context en el backend, con JSON sobre HTTPS.
+---
 
-#### 4.6.4.3. RESTful API Backend Container Components Diagram (Spring Boot)
+#### 4.6.4.3. RESTful API Backend Container Components Diagram (ASP.NET Core)
 
-El backend, desarrollado en **Java 21 con Spring Boot 3.x**, también se organiza por bounded context. Cada componente del diagrama es un bounded context y contiene sus propios controllers REST, servicios de Spring y repositorios de Spring Data JPA. El Shared Kernel agrupa lo que todos comparten.
+El contenedor transaccional de backend, desarrollado en **C# con ASP.NET Core 3.x**, implementa una arquitectura en capas desacopladas orientada al dominio (*Layered Architecture / DDD*), gobernando las reglas de negocio de los 7 Bounded Contexts y agregados de la solución.
 
-![C4 Model - Diagrama de Componentes del API Backend (Nivel 3)](assets/img/chapter-IV/c4/c4-components-backend-diagram.png)
+![C4 Model - Diagrama de Componentes del API Backend (Nivel 3)](assets/img/c4/c4-components-backend-diagram.png)
 
-##### Desglose de Componentes del Backend:
-* **`IAM Component`:** Registro, inicio de sesión, emisión del token JWT, roles y recuperación de contraseña.
-* **`Profiles Component`:** Perfiles de usuario, cooperativas, padrón de socios e invitación y asignación de agrónomos a las parcelas.
-* **`Subscriptions and Payments Component`:** Planes (Semilla, Cooperativa Pro y Asesor Técnico), cobros y cupo de parcelas de cada plan.
-* **`Field Management Component`:** Parcelas con su polígono GPS, campañas agrícolas, bitácora de costos y precio de equilibrio. También recibe los gastos registrados sin conexión.
-* **`Crop Health Component`:** Índices NDVI y NDWI, pronóstico del clima, alertas agroclimáticas, reportes de plagas, inspecciones y recetas técnicas.
-* **`Harvest Certification Component`:** Lotes de acopio, calificación de calibres de papa y catación de café, y emisión de certificados de calidad con código QR.
-* **`Shared Kernel Component`:** Clases base, value objects compartidos, manejo de excepciones, configuración de OpenAPI y el envío de notificaciones que usan los demás contextos.
+##### Desglose de Componentes del Backend por Capa Técnica:
 
-##### Relaciones entre Componentes:
-* **Domain events (políticas):**
-  * IAM publica `UserSignedUp` y Subscriptions and Payments asigna el plan Semilla (P1).
-  * Field Management publica `SowingDateRecorded` y Crop Health programa el monitoreo satelital (P4).
-  * Harvest Certification publica `DeliveredBatchWeighed` y Field Management registra el rendimiento real (P10).
-* **Consultas mediante ACL (facades):**
-  * Profiles asigna roles mediante IAM y valida las parcelas en Field Management.
-  * Field Management revisa el cupo de parcelas del plan en Subscriptions and Payments.
-  * Crop Health lee los polígonos de las parcelas en Field Management y busca el agrónomo asignado en Profiles.
-  * Harvest Certification valida los socios de la cooperativa en Profiles y lee el origen de la parcela en Field Management.
-* **Sistemas externos:**
-  * Subscriptions and Payments cobra con Niubiz, y Niubiz confirma cada pago llamando a un webhook.
-  * Field Management registra los polígonos de las parcelas en AgroMonitoring.
-  * Crop Health obtiene de AgroMonitoring las imágenes, los índices y el clima, y envía las alertas por SMS o WhatsApp con Twilio.
-  * IAM envía el correo de recuperación de contraseña y Profiles el de invitación al agrónomo, ambos con Brevo mediante SMTP.
-* **Shared Kernel y base de datos:** todos los componentes usan las clases base y los value objects del Shared Kernel, y leen y escriben en la base de datos MySQL mediante JDBC.
+* **Capa de Controladores REST (Inbound Controllers):**
+  Controladores anotados con `@RestController` que exponen los endpoints del sistema sobre HTTPS/JSON, interceptan las peticiones desde el cliente Vue, validan los DTOs de entrada mediante Bean Validation (`@Valid`) y delegan la ejecución hacia los servicios de aplicación:
+  * `IamController`: Expone `/api/v1/auth` y `/api/v1/users` para registro, inicio de sesión seguro, emisión de JWT y gestión de perfiles institucionales.
+  * `SubscriptionController`: Expone `/api/v1/subscriptions` para consulta de membresías y confirmación transaccional de planes comerciales.
+  * `PlotController`: Expone `/api/v1/plots` para catastro de coordenadas GPS, delimitación perimetral y calendarios de siembra.
+  * `MonitoringController`: Expone `/api/v1/monitoring` para mapas multiespectrales, series NDVI/NDWI y recetas agronómicas.
+  * `CostController`: Expone `/api/v1/finances` para la bitácora financiera, sincronización diferida de asientos y cálculo de punto de equilibrio.
+  * `QualityController`: Expone `/api/v1/harvests` para pesaje de acopio, catación SCA, graduación de calibres y certificados.
+  * `SettlementController`: Expone `/api/v1/settlements` para publicación comercial de lotes y liquidaciones de venta.
+
+* **Capa de Servicios de Aplicación (Domain Application Services):**
+  Servicios anotados con `@Service` que orquestan las transacciones atómicas, validan las reglas de invariante de cada Agregado y coordinan las llamadas hacia los adaptadores salientes:
+  * `UserAccountService`: Administra el ciclo de vida del agregado `UserAccount`, gestionando el hashing seguro de claves y la asignación de permisos.
+  * `SubscriptionService`: Gobierna el agregado `Subscription`, controlando la vigencia de membresías y cuotas de predios asignados.
+  * `FieldPlotService`: Administra el agregado `FieldPlot`, validando que los polígonos perimetrales no presenten autointersecciones.
+  * `VegetationAnalysisService`: Gestiona el agregado `VegetationAnalysis`, calculando algoritmos de reflectancia sobre bandas satelitales y despachando alertas preventivas de estrés foliar.
+  * `LotFinancialLedgerService`: Orquesta el agregado `LotFinancialLedger`, calculando la sumatoria de egresos operativos para deducir el costo unitario de producción y el precio de equilibrio.
+  * `HarvestBatchService`: Supervisa el agregado `HarvestBatch`, validando umbrales mínimos de calidad sensorial y física antes de autorizar la emisión de acreditaciones.
+  * `CommercialSettlementService`: Gobierna el agregado `CommercialSettlement`, protegiendo que la postura comercial aceptada cubra el margen mínimo de ganancia sobre el costo acumulado.
+
+* **Capa de Adaptadores de Infraestructura (Outbound Adapters):**
+  Componentes de integración desacoplados anotados con `@Component` que encapsulan la comunicación técnica con plataformas externas o compilan artefactos binarios:
+  * `StripeClientAdapter`: Consume mediante cliente REST la API de Stripe/Niubiz para la tokenización de cobros y facturación recurrente.
+  * `MidagriClientAdapter`: Consulta el servicio gubernamental del Padrón de Productores Agrarios (PPA) para verificar la titularidad catastral.
+  * `SatelliteClientAdapter`: Descarga baldosas ópticas multiespectrales (Bandas B4, B8 y B8A) desde la API abierta de Sentinel-2 (ESA).
+  * `WeatherClientAdapter`: Consume los pronósticos agroclimáticos y alertas meteorológicas de SENAMHI.
+  * `TwilioNotificationAdapter`: Invoca la API de Twilio para remitir notificaciones prioritarias de emergencia vía SMS y WhatsApp.
+  * `PdfQrGeneratorAdapter`: Compila dinámicamente constancias técnicas en formato PDF y codifica el código QR de validación criptográfica pública.
+
+* **Capa de Persistencia (ASP.NET Core Data Repositories):**
+  Interfaces que extienden de `IRepository` para mapear los agregados hacia las tablas de la base de datos MySQL 8.0 vía JDBC sobre el puerto TCP 3306:
+  * `UserAccountRepository`, `SubscriptionRepository`, `FieldPlotRepository`, `VegetationAnalysisRepository`, `CostLedgerRepository`, `HarvestBatchRepository` y `CommercialSettlementRepository`.
+---
 
 ## 4.7. Software Object-Oriented Design
 
-En esta sección se presenta el diseño orientado a objetos de SumaqAgro a nivel de clases. Los diagramas toman como base los 6 bounded contexts y el Shared Kernel definidos en el Design-Level EventStorming, y los llevan al código de los dos productos de software que los implementan: la **Web Application** en Angular y la **RESTful API** en Spring Boot.
+En este apartado bajamos el diseño de arquitectura a un nivel más concreto de implementación técnica, traduciendo lo definido en el Event Storming y los componentes de ASP.NET Core hacia diagramas de clases UML para cada Bounded Context. El objetivo es estructurar cómo se organizan internamente los paquetes, las entidades del dominio, las raíces de agregado (Aggregate Roots), los objetos de valor (Value Objects), los controladores REST, los servicios de aplicación y los repositorios de persistencia.
 
-Estos diagramas corresponden al nivel de código (nivel 4) del modelo C4. Cada uno amplía un componente del diagrama de componentes de la sección 4.6.4: hay un diagrama por bounded context, más el de Shared, para cada contenedor.
+Para mantener una arquitectura limpia y desacoplada, el diseño sigue los principios SOLID y las convenciones de Domain-Driven Design (DDD). De esta forma aseguramos que la lógica del negocio permanezca independiente de la infraestructura web o de la base de datos, facilitando el mantenimiento y las pruebas unitarias del software.
 
-Las principales características que se consideran en los diagramas son:
-
-* **Organización por bounded context:** cada contexto tiene su propio diagrama y sus clases se agrupan en paquetes que siguen la estructura de carpetas del proyecto. El componente aparece dentro de un marco con su paquete (por ejemplo, `com.sumaqagro.platform.fieldmanagement` en la API y `src/app/field-management` en la Web Application). Las clases que vienen de otro componente, como Shared o IAM, se dibujan fuera de ese marco.
-* **Capas de DDD:** en la RESTful API se separan las capas `domain` (agregados, entidades, value objects, commands y events), `application` (servicios de commands y queries, event handlers y servicios de ACL), `infrastructure` (repositorios JPA y assemblers hacia sistemas externos) e `interfaces` (controllers REST, assemblers de recursos y facades de ACL). En la Web Application se separan `domain/model`, `application` (store), `infrastructure` (API, endpoints, assemblers, requests y responses) y `presentation` (vistas y componentes).
-* **Principios SOLID:** cada servicio se define como interfaz y se implementa en una clase aparte, los controllers dependen de interfaces y no de implementaciones, y cada clase tiene una sola responsabilidad (por ejemplo, un assembler solo transforma datos).
-* **Comunicación entre contextos:** los contextos no se llaman directamente. Lo hacen mediante domain events, que activan las políticas P1 a P11 del EventStorming, o mediante facades de ACL.
-* **Notación:** los miembros indican su alcance (`-` privado, `+` público y `#` protegido), su tipo de dato y el tipo de retorno de los métodos. Las asociaciones entre clases del dominio muestran su nombre, su dirección y su multiplicidad. Las dependencias (`..>`), herencias e implementaciones muestran su dirección.
-
-**Herramienta utilizada:** PlantUML (*Diagrams as Code*).
+---
 
 ### 4.7.1. Class Diagrams
 
-A continuación se presentan los diagramas de clases de cada bounded context, primero para la Web Application y luego para la RESTful API. En la Web Application los nombres de archivo siguen la convención *kebab-case* de Angular (por ejemplo, `field-plot.entity.ts` o `field-management.store.ts`), y se muestran junto a cada clase. Cada contexto de la Web Application, salvo IAM, tiene su archivo de rutas (`*.routes.ts`), que usa `IamGuard` para revisar la sesión y el rol antes de abrir sus vistas.
+En esta sección se presentan y explican en detalle los Diagramas de Clases de UML para cada uno de los Bounded Contexts que conforman el backend transaccional de la plataforma **SumaqAgro**. Cada modelo detalla los modificadores de acceso estandarizados (`-` para miembros privados, `+` para miembros públicos y `#` para miembros protegidos), los tipos de datos en atributos y parámetros, los valores de retorno en métodos, las cardinalidades en ambos extremos de cada asociación y la semántica formal de las relaciones (composición para fronteras de agregación, asociación calificada, dependencia `<<use>>` e implementación de interfaces).
+
+---
+
+#### 4.7.1.1. Identity & Access Management (IAM) Context Class Diagram
+
+El Bounded Context de Identity & Access Management modela la gestión de identidades digitales, la autenticación sin estado mediante tokens criptográficos JWT y el control de accesos basado en roles institucionales (RBAC).
+
+![Diagrama de Clases - IAM Context](assets/img/class-diagrams/iam-class-diagram.png)
+
+##### Desglose Estructural de Clases y Componentes:
 
-#### 4.7.1.1. Shared Kernel
+* **`UserAccount` (Aggregate Root):**
+  Constituye la raíz de consistencia transaccional del contexto, protegiendo las invariantes asociadas al ciclo de vida de la cuenta.
+    * **Atributos privados:**
+        * `- id: Long`: Identificador único secuencial de la entidad dentro de la base de datos.
+        * `- fullName: String`: Nombre completo o razón social del titular registrado.
+        * `- isActive: Boolean`: Bandera booleana que determina si la cuenta se encuentra habilitada para iniciar sesión.
+        * `- registeredAt: LocalDateTime`: Marca temporal de auditoría que registra la fecha y hora de creación.
+        * `- email: Email`: Objeto de valor que resguarda la dirección de correo validada.
+        * `- password: PasswordHash`: Objeto de valor que almacena el hash criptográfico de la clave de acceso.
+    * **Métodos públicos:**
+        * `+ UserAccount(fullName: String, email: Email, password: PasswordHash)`: Constructor que inicializa una cuenta activa con fecha actual.
+        * `+ activate(): void`: Cambia el estado de `isActive` a verdadero.
+        * `+ deactivate(): void`: Inhabilita la cuenta para bloquear accesos transaccionales.
+        * `+ assignRole(role: Role): void`: Vincula un nuevo rol institucional a la colección interna del usuario.
+        * `+ removeRole(role: Role): void`: Remueve un rol previamente concedido garantizando que al menos quede un rol base.
+        * `+ updateProfile(fullName: String): void`: Muta el nombre del titular previa validación de longitud.
+        * `+ getId(): Long`, `+ getFullName(): String`, `+ getEmail(): Email`, `+ getRoles(): List<Role>`: Métodos de lectura de estado.
+
+* **`Role` (Entity) y `RoleType` (Enumeration):**
+  Representa el permiso concedido al usuario. `Role` contiene el atributo privado `- id: Long` y `- roleType: RoleType`. La enumeración `RoleType` tipifica estrictamente las etiquetas de autorización: `ROLE_PRODUCER` (productores familiares), `ROLE_COOPERATIVE` (directivos de acopio), `ROLE_AGRONOMIST` (asesores técnicos) y `ROLE_BUYER` (compradores mayoristas).
+
+* **`Email` y `PasswordHash` (Value Objects):**
+    * `Email`: Objeto inmutable con el atributo privado `- address: String`. Su constructor valida la conformidad con la expresión regular de correo electrónico estándar RFC 5322; expone `+ getAddress(): String` y sobrescribe `equals()` y `hashCode()`.
+    * `PasswordHash`: Contiene `- hashValue: String`. Encapsula el algoritmo de derivación de claves BCrypt; expone `+ verifyPassword(plainTextPassword: String): Boolean` para comparar credenciales sin exponer la contraseña en texto plano y `+ getHashValue(): String`.
+
+* **`UserAccountRepository` (Domain Repository Interface):**
+  Interfaz que abstrae las operaciones de persistencia mediante ASP.NET Core Data. Define los contratos `+ findById(id: Long): Optional<UserAccount>`, `+ findByEmail(email: Email): Optional<UserAccount>`, `+ existsByEmail(email: Email): Boolean`, `+ save(user: UserAccount): UserAccount` y `+ delete(user: UserAccount): void`.
+
+* **`UserAccountService` y `UserAccountServiceImpl` (Application Layer):**
+  Define y ejecuta la orquestación de casos de uso de seguridad. `UserAccountServiceImpl` posee dependencias privadas hacia `UserAccountRepository` y `JwtTokenService`; implementa `+ registerProducer(cmd: RegisterProducerCommand): Long`, `+ registerCooperative(cmd: RegisterCooperativeCommand): Long`, `+ authenticate(cmd: SignInCommand): String` y `+ findById(id: Long): Optional<UserAccount>`.
+
+* **`UserAccountResourceAssembler` (Assembler / Interface Layer):**
+  Componente encargado de la transformación desacoplada entre las cargas útiles de la API y las entidades del dominio. Expone `+ toResourceFromEntity(entity: UserAccount): UserAccountResource` para serializar las respuestas HTTP y `+ toEntityFromResource(resource: SignUpProducerResource): UserAccount` para reconstruir la raíz de agregación.
+
+* **`IamController` (REST Controller Interface Layer):**
+  Punto de entrada HTTP expuesto bajo `/api/v1/auth` y `/api/v1/users`. Inyecta `UserAccountService` y `UserAccountResourceAssembler`, exponiendo `+ signUpProducer(resource: SignUpProducerResource): ResponseEntity<Long>`, `+ signUpCooperative(resource: SignUpCooperativeResource): ResponseEntity<Long>` y `+ signIn(resource: SignInResource): ResponseEntity<AuthenticatedUserResource>`.
+
+##### Relaciones y Cardinalidades del Contexto:
+* **Composición (`UserAccount` "1" *-- "1..*" `Role`):** Una cuenta de usuario es dueña del ciclo de vida de sus roles asignados; no pueden existir roles huérfanos sin una cuenta asociada. Un usuario posee como mínimo un rol (`1..*`).
+* **Asociación dirigida (`Role` --> "1" `RoleType`):** Cada entidad `Role` referencia exactamente a un valor de la enumeración `RoleType`.
+* **Composición (`UserAccount` *-- "1" `Email` y `PasswordHash`):** La identidad y la seguridad son parte constituyente e inseparable del agregado.
+* **Dependencia de uso (`IamController` ..> `UserAccountService` y `UserAccountResourceAssembler`):** El controlador delega comandos hacia el servicio de aplicación y utiliza el ensamblador para mapear recursos externos.
+* **Dependencia de uso y gestión (`UserAccountServiceImpl` ..> `UserAccount` y `UserAccountRepository`):** El servicio gestiona la mutación del agregado e interactúa con el repositorio para persistir los cambios vía JDBC.
 
-El Shared Kernel reúne las clases comunes que reutilizan todos los bounded contexts. No tiene commands ni events propios.
+---
 
-##### Web Application (Angular)
+#### 4.7.1.2. Subscriptions & Payments Context Class Diagram
 
-![Diagrama de Clases - Shared Kernel - Web Application](assets/img/chapter-IV/class-diagrams/web-application/00-shared-web-class-diagram.png)
+Este contexto delimita el modelo de monetización SaaS, gobernando la activación comercial de planes, la cancelación de membresías, las cuotas de predios asignadas y la interoperabilidad con pasarelas de pago externas.
 
-* **`shared/domain/model`:**
-  * `BaseEntity`: clase base de todas las entidades. Guarda el identificador en `#_id: number | string` y lo expone con `get id()` y `set id()`.
-  * `Money`: value object con monto y moneda; permite sumar, multiplicar y dar formato a los montos.
-* **`shared/infrastructure`:**
-  * `BaseApiEndpoint<TEntity, TResource, TResponse, TAssembler>`: clase abstracta con las operaciones HTTP comunes (`getAll`, `getById`, `create`, `update` y `delete`). Hereda de `BaseApi`, que a su vez hereda de `ErrorHandlingEnabledBaseType` para manejar los errores HTTP en un solo lugar.
-  * `BaseAssembler`, `BaseResource` y `BaseResponse`: interfaces que definen cómo se convierten los recursos de la API en entidades y viceversa.
-  * `OfflineSyncService`: guarda en IndexedDB (Dexie) las operaciones hechas sin conexión, como gastos y reportes de plagas, y las envía al backend cuando vuelve la señal. Cada operación pendiente es un `PendingOperation`.
-  * `AppUpdateService`: usa el Service Worker (`SwUpdate`) para revisar si hay una versión nueva de la aplicación y activarla.
-* **`shared/presentation`:** `Layout` (estructura general con el menú), `LanguageSwitcher` (cambio entre español e inglés), `OfflineStatusBanner` (aviso de modo sin conexión) y `PageNotFound`.
+![Diagrama de Clases - Subscriptions Context](assets/img/class-diagrams/subscriptions-class-diagram.png)
 
-**Relaciones principales:**
-* `BaseApiEndpoint` "1" o-- "1" `BaseAssembler`: cada endpoint delega la transformación de datos en su assembler.
-* `OfflineSyncService` "1" *-- "0..*" `PendingOperation`: el servicio es dueño de la cola de operaciones pendientes.
-* `Layout` "1" *-- "1" `LanguageSwitcher` y `OfflineStatusBanner`: el layout contiene ambos componentes.
-* `Layout` --> "1" `IamStore`: el layout lee el rol del usuario desde IAM para mostrar el menú que le corresponde.
+##### Desglose Estructural de Clases y Componentes:
+
+* **`Subscription` (Aggregate Root):**
+  Controla los límites y la vigencia comercial del acceso al servicio.
+    * **Atributos privados:**
+        * `- id: Long`: Identificador de la suscripción.
+        * `- userId: Long`: Identificador del usuario o cooperativa titular (referencia por identidad hacia IAM).
+        * `- planTier: PlanTier`: Categoría del plan contratado.
+        * `- startDate: LocalDate`: Fecha inicial de vigencia.
+        * `- endDate: LocalDate`: Fecha de vencimiento de la membresía.
+        * `- isActive: Boolean`: Estado transaccional del servicio contratado.
+        * `- maxAllowedPlots: Integer`: Cuota máxima permitida de parcelas registrables.
+        * `- transactions: List<PaymentTransaction>`: Colección histórica de cobros asociados.
+    * **Métodos públicos:**
+        * `+ Subscription(userId: Long, planTier: PlanTier, months: Integer)`: Constructor que establece fechas y cuota base.
+        * `+ activate(): void`: Habilita la suscripción tras la confirmación del pago.
+        * `+ renew(months: Integer): void`: Extiende la fecha de término por el periodo pagado.
+        * `+ cancel(): void`: Inhabilita la renovación automática y actualiza `isActive` a falso, emitiendo la cancelación del contrato.
+        * `+ hasPlotQuotaAvailable(currentCount: Integer): Boolean`: Valida si el cliente aún puede registrar parcelas adicionales.
+
+* **`PaymentTransaction` (Entity):**
+  Registra cada evento de cobro monetario. Contiene `- id: Long`, `- externalTransactionId: String` (código devuelto por la pasarela), `- paymentDate: LocalDateTime`, `- amount: Money` y `- status: PaymentStatus`. Expone `+ markAsCompleted(): void` y `+ markAsFailed(reason: String): void`.
+
+* **`Money` (Value Object):**
+  Encapsula importes con precisión contable. Posee los atributos privados `- amount: BigDecimal` y `- currency: String`. Expone métodos inmutables como `+ add(other: Money): Money`, impidiendo operaciones aritméticas erróneas entre monedas distintas.
+
+* **`PlanTier` y `PaymentStatus` (Enumerations):**
+    * `PlanTier`: Define los niveles `FREE_SEED` (plan base individual), `COOPERATIVE_PRO` (gestión gremial multivariable) y `TECHNICAL_ADVISOR` (cartera agronómica).
+    * `PaymentStatus`: Fases de cobro `PENDING`, `COMPLETED` y `FAILED`.
+
+* **`StripeClientAssembler` (Infrastructure Layer):**
+  Componente de infraestructura y enlace con la pasarela de pagos externa. Encapsula las credenciales y llamadas seguras HTTPS/JSON mediante `+ chargeCard(token: String, amount: Money): String` y `+ toPaymentTransaction(stripeResponse: String): PaymentTransaction` para transformar la respuesta sin procesar de la API en la entidad de cobro del dominio.
+
+* **`SubscriptionRepository`, `SubscriptionService` y `SubscriptionController`:**
+  El repositorio declara `+ findByUserId(userId: Long): Optional<Subscription>`. El servicio orquesta `+ selectPlan(cmd: SelectPlanCommand): Long`, `+ processPayment(cmd: ProcessPaymentCommand): Boolean` y `+ cancelSubscription(cmd: CancelSubscriptionCommand): void`. El controlador atiende peticiones REST bajo `/api/v1/subscriptions`, exponiendo `+ subscribe()`, `+ pay()` y `+ cancel(subscriptionId: Long): ResponseEntity<Void>`.
+
+##### Relaciones y Cardinalidades del Contexto:
+* **Composición (`Subscription` "1" *-- "0..*" `PaymentTransaction`):** Las transacciones financieras están subordinadas al contrato de suscripción.
+* **Composición (`PaymentTransaction` *-- "1" `Money`):** El valor económico es intrínseco al comprobante de cobro.
+* **Asociación dirigida hacia Enums:** `Subscription` apunta a `PlanTier` (`1`), y `PaymentTransaction` apunta a `PaymentStatus` (`1`).
+* **Dependencias:** `SubscriptionController` consume `SubscriptionService`, el cual depende de `SubscriptionRepository` y de `StripeClientAssembler` para interactuar con la pasarela externa.
+
+---
+
+#### 4.7.1.3. Plot & Crop Management Context Class Diagram
+
+Gestiona la delimitación espacial y catastral de predios agrícolas, los atributos físico-químicos del suelo y las campañas fenológicas de cultivo instaladas.
+
+![Diagrama de Clases - Plot & Crop Context](assets/img/class-diagrams/plots-class-diagram.png)
+
+##### Desglose Estructural de Clases y Componentes:
+
+* **`FieldPlot` (Aggregate Root):**
+  Raíz de agregación que salvaguarda la integridad geográfica y el estado agronómico de la parcela.
+    * **Atributos privados:**
+        * `- id: Long`: Identificador único del predio.
+        * `- producerId: Long`: Vínculo referencial hacia el productor titular en IAM.
+        * `- plotName: String`: Nombre o denominación común del lote.
+        * `- calculatedAreaHectares: Double`: Superficie calculada de forma computacional en hectáreas.
+        * `- perimeter: PerimeterCoordinates`: Geometría vectorial cerrada del lote.
+        * `- soil: SoilBaseline`: Caracterización inicial de suelo.
+        * `- campaign: CropCampaign`: Campaña agrícola instalada en el terreno.
+    * **Métodos públicos:**
+        * `+ FieldPlot(producerId: Long, plotName: String, perimeter: PerimeterCoordinates)`: Inicializa la parcela validando topología.
+        * `+ updatePerimeter(newPerimeter: PerimeterCoordinates): void`: Recalcula el área y reemplaza las coordenadas perimetrales.
+        * `+ registerSoilAnalysis(soil: SoilBaseline): void`: Asocia los resultados de laboratorio del suelo.
+        * `+ startCropCampaign(campaign: CropCampaign): void`: Asigna una nueva campaña fenológica de siembra.
+
+* **`PerimeterCoordinates` y `GeoPoint` (Value Objects):**
+    * `GeoPoint`: Encapsula un vértice geográfico mediante `- latitude: Double` y `- longitude: Double`, validando los rangos estándar de latitud (-90 a 90) y longitud (-180 a 180).
+    * `PerimeterCoordinates`: Encapsula la lista privada `- points: List<GeoPoint>`. Su método `+ validatePolygonClosure(): Boolean` asegura que el vértice final coincida con el inicial, mientras que `+ computeAreaHectares(): Double` calcula el área utilizando el algoritmo de la fórmula de Shoelace proyectada.
+
+* **`SoilBaseline` y `CropCampaign` (Entities):**
+    * `SoilBaseline`: Contiene `- textureType: String`, `- phLevel: Double` y `- organicMatterPercentage: Double`.
+    * `CropCampaign`: Modela la campaña fenológica instalada en la parcela. Contiene los atributos privados `- id: Long`, `- cropType: CropType` (`SPECIALTY_COFFEE` o `ANDEAN_POTATO`), `- seedVariety: String` (ej. Typica, Caturra, Canchán, Yungay) y `- sowingDate: LocalDate`. Expone los métodos `+ updateSeedVariety(variety: String): void` y `+ recordSowingDate(date: LocalDate): void`, soportando los eventos de siembra.
+
+* **`MidagriClientAssembler` (Infrastructure Layer):**
+  Componente de infraestructura que consulta el Padrón de Productores Agrarios (PPA). Expone `+ validateProducerCadastralId(producerDni: String, cadastralCode: String): Boolean` y `+ toProducerProfile(ppaApiResponse: String): Object` para traducir las respuestas del padrón gubernamental hacia el dominio.
+
+##### Relaciones y Cardinalidades del Contexto:
+* **Composición (`FieldPlot` "1" *-- "1" `PerimeterCoordinates`):** Toda parcela posee obligatoriamente una frontera geométrica.
+* **Composición (`PerimeterCoordinates` "1" *-- "3..*" `GeoPoint`):** Un polígono válido requiere como mínimo tres vértices cerrados (`3..*`).
+* **Composición (`FieldPlot` "1" *-- "1" `SoilBaseline` y `FieldPlot` "1" *-- "0..1" `CropCampaign`):** La línea base de suelo es obligatoria, mientras que la campaña es opcional según el ciclo productivo.
+* **Dependencias:** `FieldPlotServiceImpl` orquesta el agregado utilizando `FieldPlotRepository` y valida la formalidad del predio mediante `MidagriClientAssembler`.
 
-##### RESTful API (Spring Boot)
+---
+
+#### 4.7.1.4. Satellite Analytics & Alerting Context Class Diagram
+
+Este contexto centraliza la captura de telemetría espectral provista por Sentinel-2, el cálculo de algoritmos biofísicos de salud vegetal y la emisión de diagnósticos y prescripciones técnicas.
+
+![Diagrama de Clases - Satellite Analytics Context](assets/img/class-diagrams/monitoring-class-diagram.png)
+
+##### Desglose Estructural de Clases y Componentes:
+
+* **`VegetationAnalysis` (Aggregate Root):**
+  Consolida el estado biofísico de un predio en un punto específico en el tiempo.
+    * **Atributos privados:**
+        * `- id: Long`: Identificador del registro analítico.
+        * `- plotId: Long`: Parcela evaluada.
+        * `- captureDate: LocalDate`: Fecha de adquisición de la baldosa satelital.
+        * `- cloudCoveragePercentage: Double`: Porcentaje de cobertura nubosa detectado.
+        * `- ndvi: NdviReading`: Valor computado del índice de vegetación normalizado.
+        * `- ndwi: NdwiReading`: Valor computado del índice diferencial de agua.
+        * `- alerts: List<AgroclimaticAlert>`: Alertas preventivas emitidas.
+        * `- prescriptions: List<TechnicalPrescription>`: Recetas técnicas registradas por agrónomos.
+    * **Métodos públicos:**
+        * `+ evaluateVegetativeHealth(): void`: Compara los índices contra umbrales basales para detectar estrés biótico o abiótico.
+        * `+ triggerAlert(alert: AgroclimaticAlert): void`: Anexa una advertencia ante caídas bruscas de reflectancia.
+        * `+ addPrescription(rx: TechnicalPrescription): void`: Incorpora la prescripción correctiva del asesor técnico.
+
+* **`NdviReading` y `NdwiReading` (Value Objects):**
+  Encapsulan los índices matemáticos mediante `- value: Double`, validando en sus constructores que el valor numérico se sitúe estrictamente en el intervalo $[-1.0, 1.0]$. `NdviReading` provee `+ isStressAnomaly(): Boolean` (activo si el valor cae por debajo de 0.40 en etapas clave), y `NdwiReading` expone `+ isWaterDeficit(): Boolean`.
+
+* **`AgroclimaticAlert` y `TechnicalPrescription` (Entities):**
+    * `AgroclimaticAlert`: Modela eventos de riesgo; posee `- alertType: String`, `- severity: AlertSeverity` (`LOW`, `MEDIUM`, `CRITICAL`), `- message: String` y `- emittedAt: LocalDateTime`.
+    * `TechnicalPrescription`: Receta de campo; posee `- advisorId: Long`, `- diagnosis: String`, `- correctiveTreatment: String`, `- dosage: String` y `- isApplied: Boolean`, exponiendo `+ markAsApplied(): void`.
+
+* **Componentes de Integración y Transformación (`SatelliteClientAssembler`, `WeatherClientAssembler`, `TwilioNotificationAssembler`):**
+    * `SatelliteClientAssembler`: Descarga bandas ópticas multiespectrales B4, B8 y B8A desde Sentinel-2 y ejecuta `+ toVegetationAnalysis(tileData: byte[]): VegetationAnalysis`.
+    * `WeatherClientAssembler`: Consume alertas meteorológicas y heladas de SENAMHI, traduciéndolas mediante `+ toAgroclimaticAlert(rawWeatherAlert: String): AgroclimaticAlert`.
+    * `TwilioNotificationAssembler`: Serializa la alerta en una carga útil de texto con `+ toSmsPayload(alert: AgroclimaticAlert): String` y despacha el mensaje SMS/WhatsApp a los productores.
+
+##### Relaciones y Cardinalidades del Contexto:
+* **Composición (`VegetationAnalysis` "1" *-- "1" `NdviReading` y `NdwiReading`):** Los índices satelitales son inseparables del informe espectral.
+* **Composición (`VegetationAnalysis` "1" *-- "0..*" `AgroclimaticAlert` y `TechnicalPrescription`):** El análisis de una fecha puede generar múltiples alertas y albergar varias prescripciones correctivas.
+* **Dependencias:** `VegetationAnalysisServiceImpl` consume los ensambladores satelitales, meteorológicos y de mensajería para orquestar la ingesta y respuesta agronómica.
 
-![Diagrama de Clases - Shared Kernel - RESTful API](assets/img/chapter-IV/class-diagrams/restful-api/00-shared-api-class-diagram.png)
-
-* **Clases base del dominio:** `AuditableAbstractAggregateRoot<T>`, de la que heredan todos los agregados, y `AuditableModel`, de la que heredan las entidades internas. Ambas guardan `id`, `createdAt` y `updatedAt` con la auditoría de JPA.
-* **Value objects compartidos:** `EmailAddress` y `Money`.
-* **Persistencia:** `SnakeCaseWithPluralizedTablePhysicalNamingStrategy` implementa `PhysicalNamingStrategy` para que las tablas y columnas se creen en *snake_case* y en plural.
-* **Notificaciones:** la interfaz `NotificationSender` tiene dos implementaciones: `TwilioNotificationAssembler`, que envía SMS y WhatsApp, y `BrevoEmailNotificationAssembler`, que envía correos. Ambas reciben un `NotificationRequest` y devuelven un `NotificationResult`.
-* **Configuración e interfaces:** `GlobalExceptionHandler` convierte las excepciones en un `ErrorResource`; `OpenApiConfiguration` documenta los endpoints en Swagger; `MessageSourceConfiguration` carga los mensajes en español e inglés.
-
-**Relaciones principales:**
-* `TwilioNotificationAssembler` y `BrevoEmailNotificationAssembler` ..|> `NotificationSender`: los demás contextos dependen solo de la interfaz, así se puede cambiar de proveedor sin tocar su código.
-* `NotificationRequest` --> "1" `NotificationChannel`: cada notificación sale por un canal (SMS, WhatsApp o correo).
-
-#### 4.7.1.2. Identity and Access Management (IAM) Context
-
-Este contexto registra a los usuarios, los autentica con JWT, maneja sus roles y la recuperación de contraseña.
-
-##### Web Application (Angular)
-
-![Diagrama de Clases - IAM - Web Application](assets/img/chapter-IV/class-diagrams/web-application/01-iam-web-class-diagram.png)
-
-* **Dominio:** `User` y `AuthenticatedUser` heredan de `BaseEntity`. `AuthenticatedUser` guarda el token de la sesión y expone `hasRole(role: UserRole)` para saber qué puede ver el usuario. `UserRole` tiene los valores `FARMER`, `COOPERATIVE_MANAGER` y `AGRONOMIST`. Los commands son `SignUpCommand`, `SignInCommand`, `RequestPasswordResetCommand` y `ResetPasswordCommand`.
-* **Aplicación:** `IamStore` guarda con *signals* si hay una sesión activa, el usuario actual y su token, y ofrece los métodos para registrarse, iniciar sesión, cerrarla y recuperar la contraseña.
-* **Infraestructura:** `IamApi` agrupa los endpoints `SignUpApiEndpoint`, `SignInApiEndpoint` y `PasswordRecoveryApiEndpoint`; cada uno usa su assembler para pasar de commands a requests y de responses a entidades. `IamGuard` protege las rutas privadas e `IamInterceptor` agrega el token a cada petición.
-* **Presentación:** formularios `SignUpForm`, `SignInForm`, `ForgotPasswordForm` y `ResetPasswordForm`, y el componente `LogoutMenuItem`.
-
-**Relaciones principales:**
-* `IamStore` "1" --> "0..1" `AuthenticatedUser`: el store mantiene como máximo una sesión.
-* `IamApi` "1" *-- "1" cada endpoint: la API es dueña de sus endpoints.
-* Cada formulario ..> su command: la vista crea el command y se lo pasa al store.
-
-##### RESTful API (Spring Boot)
-
-![Diagrama de Clases - IAM - RESTful API](assets/img/chapter-IV/class-diagrams/restful-api/01-iam-api-class-diagram.png)
-
-* **Dominio:** `User` es el agregado y hereda de `AuditableAbstractAggregateRoot`. Tiene un `EmailAddress`, su contraseña cifrada y un conjunto de `Role`. `Roles` define `ROLE_FARMER`, `ROLE_COOPERATIVE_MANAGER` y `ROLE_AGRONOMIST`. `PasswordResetToken` guarda el código temporal para cambiar la contraseña. Los events son `UserSignedUpEvent` y `UserSignedInEvent`.
-* **Servicios:** las interfaces `UserCommandService`, `UserQueryService` y `RoleCommandService` se implementan en `UserCommandServiceImpl`, `UserQueryServiceImpl` y `RoleCommandServiceImpl`. `HashingService` (BCrypt) y `TokenService` (JWT) son interfaces con su implementación en infraestructura. El correo de recuperación de contraseña se envía con `NotificationSender` del Shared Kernel (Brevo).
-* **Infraestructura:** repositorios `UserRepository`, `RoleRepository` y `PasswordResetTokenRepository`. `WebSecurityConfiguration` y `BearerAuthorizationRequestFilter` validan el token en cada petición.
-* **Interfaces:** `AuthenticationController` (registro, inicio de sesión y recuperación de contraseña) y `UsersController`. `IamContextFacade` permite que otros contextos, como Profiles, asignen roles sin conocer el modelo interno de IAM.
-
-**Relaciones principales:**
-* `User` "0..*" --> "1..*" `Role`: un usuario tiene al menos un rol.
-* `User` "1" --> "0..*" `PasswordResetToken`: un usuario puede pedir varios códigos de recuperación.
-* `UserCommandServiceImpl` "1" --> "1" `NotificationSender`: IAM depende solo de la interfaz para enviar el correo, sin conocer a Brevo.
-* `UserCommandServiceImpl` ..> `UserSignedUpEvent`: al registrarse un usuario se publica el evento que Subscriptions and Payments escucha para asignarle el plan Semilla (política P1).
-
-#### 4.7.1.3. Profiles Context
-
-Este contexto guarda los datos de contacto de cada usuario, registra las cooperativas con su padrón de socios y controla qué agrónomo atiende cada parcela.
-
-##### Web Application (Angular)
-
-![Diagrama de Clases - Profiles - Web Application](assets/img/chapter-IV/class-diagrams/web-application/02-profiles-web-class-diagram.png)
-
-* **Dominio:** `Profile`, `Cooperative`, `CooperativeMember`, `AgronomistInvitation` y `AgronomistAssignment` heredan de `BaseEntity`. `PreferredLanguage` indica el idioma del usuario e `InvitationStatus` el estado de una invitación. Los commands son `UpdateProfileCommand`, `RegisterCooperativeCommand`, `AddCooperativeMemberCommand`, `InviteAgronomistCommand` y `AssignAgronomistToPlotCommand`.
-* **Aplicación:** `ProfilesStore` guarda el perfil del usuario, la cooperativa, sus socios y las asignaciones, y ofrece los métodos para cada command.
-* **Infraestructura:** `ProfilesApi` agrupa los endpoints de perfiles, cooperativas, socios y asignaciones; cada endpoint usa su assembler para convertir los recursos de la API en entidades.
-* **Presentación:** `ProfileSettingsView`, `CooperativeRegistrationForm`, `MemberDirectoryView` y `AgronomistAssignmentView`.
-
-**Relaciones principales:**
-* `Cooperative` "1" *-- "0..*" `CooperativeMember`: la cooperativa registra a sus socios y es dueña de ellos.
-* `Cooperative` "1" *-- "0..*" `AgronomistInvitation`: la cooperativa envía invitaciones a los agrónomos.
-* `Cooperative` "1" --> "0..*" `AgronomistAssignment`: la cooperativa gestiona qué agrónomo atiende cada parcela.
-
-##### RESTful API (Spring Boot)
-
-![Diagrama de Clases - Profiles - RESTful API](assets/img/chapter-IV/class-diagrams/restful-api/02-profiles-api-class-diagram.png)
-
-* **Dominio:** los agregados son `Profile`, `Cooperative` y `AgronomistAssignment`. `CooperativeMember` y `AgronomistInvitation` son entidades internas de `Cooperative`. Los value objects `PersonName`, `PhoneNumber`, `Ruc` y `Dni` validan los datos de personas y empresas. Los events son `ProfileUpdatedEvent`, `CooperativeRegisteredEvent`, `CooperativeMemberAddedEvent`, `AgronomistInvitedEvent` y `AgronomistAssignedToPlotEvent`.
-* **Servicios:** `ProfileCommandService`, `CooperativeCommandService`, `AgronomistAssignmentCommandService` y `ProfilesQueryService`, cada uno con su implementación. La invitación al agrónomo se envía por correo con `NotificationSender`.
-* **Infraestructura:** repositorios `ProfileRepository`, `CooperativeRepository` y `AgronomistAssignmentRepository`.
-* **Interfaces:** `ProfilesController`, `CooperativesController` y `AgronomistAssignmentsController`. `ProfilesContextFacade` permite que Crop Health encuentre al agrónomo asignado a una parcela y que Harvest Certification valide si un socio pertenece a la cooperativa.
-* **ACL de salida:** `ExternalIamService` asigna el rol de agrónomo en IAM y `ExternalFieldManagementService` valida que la parcela exista en Field Management.
-
-**Relaciones principales:**
-* `Cooperative` "1" *-- "0..*" `CooperativeMember` y "1" *-- "0..*" `AgronomistInvitation`: ambas entidades solo existen dentro de la cooperativa.
-* `Profile` *-- "1" `PersonName` y `PhoneNumber`: el nombre y el teléfono forman parte del perfil.
-* `Cooperative` "1" --> "0..*" `AgronomistAssignment`: una cooperativa puede tener varias asignaciones activas.
-* `CooperativeCommandServiceImpl` "1" --> "1" `NotificationSender`: la invitación al agrónomo sale por correo mediante la interfaz del Shared Kernel (Brevo).
-
-#### 4.7.1.4. Subscriptions and Payments Context
-
-Este contexto maneja los planes (Semilla, Cooperativa Pro y Asesor Técnico), los pagos con Niubiz y la cuota de parcelas que permite cada plan.
-
-##### Web Application (Angular)
-
-![Diagrama de Clases - Subscriptions and Payments - Web Application](assets/img/chapter-IV/class-diagrams/web-application/03-subscriptions-web-class-diagram.png)
-
-* **Dominio:** `Plan`, `Subscription` y `Payment` heredan de `BaseEntity`; los enums `PlanCode`, `SubscriptionStatus`, `BillingCycle` y `PaymentStatus` describen su estado. Los commands son `SelectSubscriptionPlanCommand`, `SubmitPaymentCommand` y `CancelSubscriptionCommand`.
-* **Aplicación:** `SubscriptionsStore` guarda el catálogo de planes, la suscripción actual del usuario y su historial de pagos.
-* **Infraestructura:** `SubscriptionsApi` agrupa los endpoints `PlansApiEndpoint`, `SubscriptionsApiEndpoint` y `PaymentsApiEndpoint`, cada uno con su assembler.
-* **Presentación:** `PlansCatalogView`, `CheckoutView` y `BillingHistoryView`.
-
-**Relaciones principales:**
-* `Subscription` "0..*" --> "1" `Plan`: cada suscripción se basa en un plan.
-* `Subscription` "1" *-- "0..*" `Payment`: los pagos pertenecen a la suscripción.
-
-##### RESTful API (Spring Boot)
-
-![Diagrama de Clases - Subscriptions and Payments - RESTful API](assets/img/chapter-IV/class-diagrams/restful-api/03-subscriptions-api-class-diagram.png)
-
-* **Dominio:** `Subscription` es el agregado; `Plan` y `Payment` son entidades y `SubscriptionPeriod` es el value object con las fechas de vigencia. `canRegisterPlot()` responde si el usuario aún tiene cupo de parcelas. Los events son `SeedPlanAssignedEvent`, `SubscriptionPlanSelectedEvent`, `PaymentConfirmedEvent`, `SubscriptionActivatedEvent` y `SubscriptionCancelledEvent`.
-* **Servicios:** `SubscriptionCommandService` y `SubscriptionQueryService` con sus implementaciones. Los event handlers aplican dos políticas: `UserSignedUpEventHandler` (P1) asigna el plan Semilla al registrarse un usuario y `PaymentConfirmedEventHandler` (P2) activa la suscripción cuando el pago se confirma.
-* **Infraestructura:** `SubscriptionRepository`, `PlanRepository` y `NiubizClientAssembler`, que crea el cobro en Niubiz y verifica la firma del webhook.
-* **Interfaces:** `PlansController`, `SubscriptionsController` y `PaymentsWebhookController`, que recibe la confirmación de Niubiz. `SubscriptionsContextFacade` permite que Field Management consulte la cuota de parcelas del plan.
-
-**Relaciones principales:**
-* `Subscription` "1" *-- "0..*" `Payment` y *-- "1" `SubscriptionPeriod`: los pagos y el periodo forman parte del agregado.
-* `Plan` *-- "2" `Money`: cada plan tiene un precio mensual y uno anual.
-
-#### 4.7.1.5. Field Management Context
-
-Este contexto registra las parcelas con su polígono GPS, gestiona las campañas agrícolas y lleva el libro de costos de cada campaña para calcular el precio de equilibrio.
-
-##### Web Application (Angular)
-
-![Diagrama de Clases - Field Management - Web Application](assets/img/chapter-IV/class-diagrams/web-application/04-field-management-web-class-diagram.png)
-
-* **Dominio:** `FieldPlot`, `CropCampaign`, `CampaignLedger` y `ExpenseEntry` heredan de `BaseEntity`; `GeoCoordinate` y `SoilBaseline` describen el polígono y el análisis de suelo. Los commands siguen los pasos del EventStorming: registrar la parcela, delimitar el polígono, iniciar la campaña, elegir el cultivo y la variedad, registrar la siembra, registrar gastos de insumos, jornales y flete, fijar el rendimiento esperado y exportar el reporte de costos.
-* **Aplicación:** `FieldManagementStore` guarda las parcelas, las campañas y el libro de costos. Cuando no hay conexión, envía los gastos a `OfflineSyncService` para sincronizarlos después.
-* **Infraestructura:** `FieldManagementApi` agrupa los endpoints `FieldPlotsApiEndpoint`, `CropCampaignsApiEndpoint` y `CampaignLedgersApiEndpoint`, cada uno con su assembler.
-* **Presentación:** `MyPlotDashboardView`, `RegisteredPlotsView`, `PlotRegistrationForm`, `PlotBoundaryMapView`, `CampaignFinancesView` y `FieldExpenseForm`. `PlotBoundaryMapView` usa un mapa de Leaflet.js para marcar los vértices de la parcela.
-
-**Relaciones principales:**
-* `FieldPlot` "1" *-- "3..*" `GeoCoordinate`: un polígono necesita como mínimo tres vértices.
-* `FieldPlot` "1" --> "0..*" `CropCampaign`: una parcela puede tener varias campañas a lo largo del tiempo.
-* `CropCampaign` "1" --> "1" `CampaignLedger` y `CampaignLedger` "1" *-- "0..*" `ExpenseEntry`: cada campaña tiene un libro de costos con sus gastos.
-
-##### RESTful API (Spring Boot)
-
-![Diagrama de Clases - Field Management - RESTful API](assets/img/chapter-IV/class-diagrams/restful-api/04-field-management-api-class-diagram.png)
-
-* **Dominio:** los agregados son `FieldPlot`, `CropCampaign` y `CampaignLedger`; `ExpenseEntry` es una entidad del libro de costos. Los value objects `PlotBoundary` y `GeoCoordinate` validan que el polígono esté cerrado y no se cruce, y calculan el área en `Hectares`. `CampaignLedger` calcula la inversión total, el precio de equilibrio y el precio sugerido.
-* **Servicios:** `FieldPlotCommandService`, `CropCampaignCommandService`, `CampaignLedgerCommandService` y `FieldManagementQueryService`. Los event handlers aplican cuatro políticas: `PlotBoundaryDelineatedEventHandler` (P3) registra el polígono en AgroMonitoring, `CropCampaignStartedEventHandler` (P8) abre el libro de costos, `BreakevenRecalculationEventHandler` (P9) recalcula el precio de equilibrio con cada gasto y `DeliveredBatchWeighedEventHandler` (P10) registra el rendimiento real cuando Harvest Certification pesa el lote.
-* **Infraestructura:** repositorios de parcelas, campañas y libros de costos; `AgroMonitoringPolygonAssembler`, que crea el polígono en AgroMonitoring; y `CampaignCostReportGenerator`, que genera el reporte en PDF.
-* **Interfaces:** `FieldPlotsController`, `CropCampaignsController` y `FinancesController`. `FieldManagementContextFacade` entrega a otros contextos el polígono, la región, el origen de la parcela y la variedad sembrada. `ExternalSubscriptionService` consulta el cupo del plan antes de registrar una parcela.
-
-**Relaciones principales:**
-* `PlotBoundary` *-- "3..*" `GeoCoordinate`: el polígono está formado por sus vértices.
-* `CampaignLedger` "1" *-- "0..*" `ExpenseEntry`: los gastos solo existen dentro del libro de costos.
-* `CropCampaignCommandServiceImpl` ..> `SowingDateRecordedEvent`: al registrar la siembra se publica el evento que Crop Health usa para programar el monitoreo satelital (P4).
-
-#### 4.7.1.6. Crop Health Context
-
-Este contexto monitorea la salud del cultivo con imágenes satelitales y el clima, emite alertas y gestiona la asesoría del agrónomo: reportes de plagas, inspecciones y recetas técnicas.
-
-##### Web Application (Angular)
-
-![Diagrama de Clases - Crop Health - Web Application](assets/img/chapter-IV/class-diagrams/web-application/05-crop-health-web-class-diagram.png)
-
-* **Dominio:** las entidades `SatelliteObservation`, `ClimateForecast`, `AgroclimaticAlert`, `ActionStep`, `RegionalBulletin`, `PestReport`, `FieldInspection` y `TechnicalPrescription` heredan de `BaseEntity`. Los commands son los que ejecuta el usuario: subir la foto de una plaga, registrar la evaluación del daño, programar y completar una inspección, emitir la receta, confirmar el tratamiento, reportar la recuperación del follaje, evaluar la efectividad, completar un paso del plan de acción, cerrar la alerta y emitir un boletín regional.
-* **Aplicación:** `CropHealthStore` guarda las observaciones, el pronóstico, las alertas, los reportes de plagas y las recetas de la parcela seleccionada. Cuando no hay conexión, envía los reportes de plagas a `OfflineSyncService`; cada reporte lleva un `clientSyncId` para no duplicarse al sincronizar.
-* **Infraestructura:** `CropHealthApi` agrupa un endpoint por cada entidad, cada uno con su assembler.
-* **Presentación:** `CropHealthView` (mapa NDVI/NDWI con Leaflet.js), `AgriculturalAlertsView`, `AlertDetailView`, `AdvisorConsultationView`, `PestReportForm`, `DiagnosisInboxView`, `PrescriptionForm` y `RegionalBulletinForm`.
-
-**Relaciones principales:**
-* `AgroclimaticAlert` "1" *-- "1..*" `ActionStep`: cada alerta tiene al menos un paso en su plan de acción.
-* `PestReport` "1" --> "0..*" `FieldInspection` y "1" --> "0..1" `TechnicalPrescription`: un reporte de plaga puede tener varias inspecciones y como máximo una receta.
-
-##### RESTful API (Spring Boot)
-
-![Diagrama de Clases - Crop Health - RESTful API](assets/img/chapter-IV/class-diagrams/restful-api/05-crop-health-api-class-diagram.png)
-
-* **Dominio:** los agregados son `SatelliteObservation`, `ClimateForecast`, `AgroclimaticAlert`, `RegionalBulletin`, `PestReport`, `FieldInspection` y `TechnicalPrescription`. `SatelliteObservation` descarta las imágenes nubladas y detecta anomalías y estrés hídrico; `ClimateForecast` detecta el riesgo de helada. Los value objects son `VegetationIndexes` (NDVI y NDWI), `TemperatureRange`, `PhotoEvidence` y `Dosage`. `PestReport` guarda el `clientSyncId` del reporte hecho sin conexión, para no registrarlo dos veces.
-* **Servicios:** `SatelliteMonitoringCommandService`, `AgroclimaticAlertCommandService`, `AgronomicAdvisoryCommandService` y `CropHealthQueryService`. Los event handlers aplican cuatro políticas: `SowingDateRecordedEventHandler` (P4) programa el monitoreo, `CropRiskDetectedEventHandler` (P5) levanta la alerta ante anomalía, estrés hídrico o helada, `AgroclimaticAlertRaisedEventHandler` (P6) notifica al productor y al agrónomo, y `PestEvidencePhotoUploadedEventHandler` (P7) avisa al agrónomo asignado. `SatelliteMonitoringScheduler` descarga las imágenes cada cinco días y el pronóstico cada día.
-* **Infraestructura:** un repositorio por agregado, `AgroMonitoringClientAssembler`, que trae las imágenes, los índices y el clima, y `PhotoStorageService` para las fotos de plagas.
-* **Interfaces:** `MonitoringController`, `AlertsController` y `AdvisoryController`. Las notificaciones salen por `NotificationSender` (Twilio).
-* **ACL de salida:** `ExternalFieldManagementService` obtiene el polígono de la parcela y `ExternalProfilesService` obtiene el agrónomo asignado y su teléfono.
-
-**Relaciones principales:**
-* `AgroclimaticAlert` "1" *-- "1..*" `ActionStep`: los pasos solo existen dentro de la alerta.
-* `FieldInspection` "0..*" --> "1" `PestReport` y `TechnicalPrescription` "0..1" --> "1" `PestReport`: las inspecciones y la receta se refieren a un reporte de plaga.
-* `SatelliteObservation` *-- "1" `VegetationIndexes`: cada observación guarda sus índices.
-
-#### 4.7.1.7. Harvest Certification Context
-
-Este contexto registra los lotes que llegan al acopio, califica su calidad (calibres de papa según MIDAGRI y catación de café según SCA) y emite certificados con código QR que cualquier persona puede verificar.
-
-##### Web Application (Angular)
-
-![Diagrama de Clases - Harvest Certification - Web Application](assets/img/chapter-IV/class-diagrams/web-application/06-harvest-certification-web-class-diagram.png)
-
-* **Dominio:** `HarvestBatch`, `RepresentativeSample`, `PotatoCaliberGrading`, `CoffeeCuppingResult`, `QualityCertificate` y `PublicTraceabilityRecord` heredan de `BaseEntity`. Los commands son registrar el lote, pesarlo, extraer la muestra, calificar los calibres de papa, hacer la catación de café, emitir el certificado y verificarlo por QR.
-* **Aplicación:** `HarvestCertificationStore` guarda los lotes de la cooperativa, los certificados del socio y el resultado de la verificación pública.
-* **Infraestructura:** `HarvestCertificationApi` agrupa `HarvestBatchesApiEndpoint`, `QualityCertificatesApiEndpoint` y `PublicTraceabilityApiEndpoint`, cada uno con su assembler.
-* **Presentación:** `HarvestBatchRegistrationView`, `HarvestGradingSheetView`, `HarvestCertificatesView` y `PublicTraceabilityView`, que se abre al escanear el QR sin necesidad de cuenta.
-
-**Relaciones principales:**
-* `HarvestBatch` "1" *-- "0..1" `RepresentativeSample`, `PotatoCaliberGrading` y `CoffeeCuppingResult`: el lote tiene una muestra y, según el cultivo, una calificación de papa o una de café.
-* `HarvestBatch` "1" --> "0..1" `QualityCertificate`: un lote se certifica como máximo una vez.
-
-##### RESTful API (Spring Boot)
-
-![Diagrama de Clases - Harvest Certification - RESTful API](assets/img/chapter-IV/class-diagrams/restful-api/06-harvest-certification-api-class-diagram.png)
-
-* **Dominio:** los agregados son `HarvestBatch` y `QualityCertificate`; `RepresentativeSample` es una entidad del lote. Los value objects `BatchCode`, `BatchWeight`, `PotatoCaliberGrading`, `CoffeeCuppingResult` y `CertificateHash` guardan el código, el peso neto, las calificaciones y la firma del certificado. `QualityCategory` define el resultado: `PREMIUM_GOLD`, `STANDARD`, `B_GRADE_REQUIRES_SORTING`, `SPECIALTY_COFFEE` y `COMMERCIAL_COFFEE`.
-* **Servicios:** `HarvestBatchCommandService`, `QualityCertificateCommandService` y `HarvestCertificationQueryService`. `BatchGradedEventHandler` (P11) asigna el puntaje de calidad cuando termina la calificación de papa o la catación de café.
-* **Infraestructura:** `HarvestBatchRepository`, `QualityCertificateRepository` y `PdfQrGeneratorAssembler`, que genera el PDF del certificado, su código QR y su hash.
-* **Interfaces:** `HarvestBatchesController`, `QualityCertificatesController` y `PublicTraceabilityController`, que verifica el certificado con su número y su hash.
-* **ACL de salida:** `ExternalProfilesService` valida que el socio pertenezca a la cooperativa y `ExternalFieldManagementService` obtiene el origen de la parcela y la variedad sembrada para la vista pública.
-
-**Relaciones principales:**
-* `QualityCertificate` "0..1" --> "1" `HarvestBatch`: cada certificado corresponde a un lote.
-* `QualityCertificate` *-- "1" `CertificateHash`: el hash sella el contenido del certificado.
-* `HarvestBatchCommandServiceImpl` ..> `DeliveredBatchWeighedEvent`: al pesar el lote se publica el evento que Field Management usa para registrar el rendimiento real (P10).
+---
+
+#### 4.7.1.5. Field Cost Accounting Context Class Diagram
+
+Modela la contabilidad analítica de costos agrícolas, soportando la sincronización de bitácoras sin conexión (*offline-first*) y el cálculo computacional del punto de equilibrio financiero.
+
+![Diagrama de Clases - Field Cost Accounting Context](assets/img/class-diagrams/costs-class-diagram.png)
+
+##### Desglose Estructural de Clases y Componentes:
+
+* **`LotFinancialLedger` (Aggregate Root):**
+  Libro mayor contable que centraliza las inversiones operativas de una campaña productiva.
+    * **Atributos privados:**
+        * `- id: Long`: Identificador del libro financiero.
+        * `- plotId: Long`: Parcela vinculada a la campaña.
+        * `- campaignYear: Integer`: Año o ciclo agrícola correspondiente.
+        * `- totalInvested: Money`: Inversión acumulada consolidada.
+        * `- estimatedYieldUnits: Double`: Rendimiento estimado o real expresado en sacos o toneladas.
+        * `- breakeven: BreakevenPrice`: Objeto de valor con el umbral financiero mínimo.
+        * `- expenses: List<ExpenseEntry>`: Asientos contables individuales.
+    * **Métodos públicos:**
+        * `+ recordExpense(entry: ExpenseEntry): void`: Registra un gasto individual actualizando la sumatoria acumulada.
+        * `+ syncOfflineBatch(entries: List<ExpenseEntry>): void`: Procesa asientos diferidos provenientes del almacenamiento local del cliente.
+        * `+ consolidateFinances(finalYieldUnits: Double): void`: Cierra el ciclo contable calculando los costos unitarios definitivos.
+        * `+ calculateBreakeven(): BreakevenPrice`: Ejecuta la fórmula financiera dividiendo el total invertido entre el volumen cosechado.
+
+* **`ExpenseEntry` (Entity) y `ExpenseCategory` (Enumeration):**
+  Modela cada egreso operativo. Contiene `- id: Long`, `- category: ExpenseCategory`, `- concept: String`, `- expenseDate: LocalDate`, `- amount: Money` y `- isOfflineSync: Boolean`. `ExpenseCategory` clasifica el gasto en `AGROCHEMICALS` (fertilizantes y plaguicidas), `LABOR_PAYROLL` (jornales de campo), `FREIGHT_TRANSPORT` (flete rural) o `MACHINERY_SERVICES` (alquiler de maquinaria).
+
+* **`BreakevenPrice` (Value Object):**
+  Almacena de forma inmutable el resultado del costeo financiero mediante `- unitCostPerBag: BigDecimal` y `- suggestedSalePrice: BigDecimal` (precio con margen de utilidad proyectado).
+
+* **`ExpenseResourceAssembler` (Assembler / Interface Layer):**
+  Transformador de presentación desacoplado. Expone `+ toResourceFromEntity(entity: ExpenseEntry): ExpenseResource` y `+ toEntityFromResource(resource: AddExpenseResource): ExpenseEntry` para evitar que las entidades contables internas queden expuestas directamente sobre la red HTTP.
+
+* **`LotFinancialLedgerRepository`, `LotFinancialLedgerService` y `CostController`:**
+  El repositorio permite la consulta mediante `+ findByPlotIdAndCampaignYear(plotId: Long, year: Integer)`. El servicio orquesta `+ recordExpense()`, `+ syncOfflineLedger()` y `+ computeBreakeven()`. El controlador REST expone los endpoints en `/api/v1/finances` e inyecta `ExpenseResourceAssembler`.
+
+##### Relaciones y Cardinalidades del Contexto:
+* **Composición (`LotFinancialLedger` "1" *-- "1..*" `ExpenseEntry`):** Un libro contable se compone necesariamente de uno o más asientos de egreso.
+* **Composición (`LotFinancialLedger` *-- "1" `Money` y `0..1` `BreakevenPrice`):** El balance acumulado y el punto de equilibrio son partes integrales del estado del libro contable.
+* **Asociación dirigida (`ExpenseEntry` --> "1" `ExpenseCategory`):** Todo asiento está unívocamente tipificado por una categoría operativa.
+* **Dependencias:** `CostController` utiliza `LotFinancialLedgerService` y `ExpenseResourceAssembler` para procesar y presentar los asientos contables.
+
+---
+
+#### 4.7.1.6. Harvest Quality & Certification Context Class Diagram
+
+Este contexto delimita el pesaje formal de acopio, la graduación física de tubérculos de papa, la catación organoléptica de café bajo normas internacionales y la emisión del certificado inmutable avalado con código QR.
+
+![Diagrama de Clases - Harvest Quality Context](assets/img/class-diagrams/quality-class-diagram.png)
+
+##### Desglose Estructural de Clases y Componentes:
+
+* **`HarvestBatch` (Aggregate Root):**
+  Representa el lote material acopiado y sometido a verificación técnica.
+    * **Atributos privados:**
+        * `- id: Long`: Identificador del lote de cosecha.
+        * `- plotId: Long`: Referencia al predio de procedencia.
+        * `- harvestDate: LocalDate`: Fecha formal de recolección.
+        * `- netWeightKg: Double`: Masa neta recepcionada en balanza.
+        * `- cuppingSession: CoffeeCuppingSession`: Evaluación sensorial de café (si aplica).
+        * `- caliberGrading: PotatoCaliberGrading`: Graduación morfométrica de papa (si aplica).
+        * `- certificate: QualityCertificate`: Acreditación digital emitida.
+    * **Métodos públicos:**
+        * `+ recordDeliveryWeight(netWeightKg: Double): void`: Registra el pesaje oficial de entrega.
+        * `+ gradeCoffee(cupping: CoffeeCuppingSession): void`: Asocia los puntajes de cata sensorial.
+        * `+ gradePotato(caliber: PotatoCaliberGrading): void`: Asocia los calibres físicos clasificados.
+        * `+ issueDigitalCertificate(cert: QualityCertificate): void`: Emite el certificado inmutable con firma digital.
+
+* **`CoffeeCuppingSession` (Entity):**
+  Modela el protocolo de catación según el estándar SCA. Contiene `- fragranceAroma: Double`, `- acidity: Double`, `- body: Double`, `- balance: Double` y `- overallScore: Double`. Expone `+ computeTotalScaScore(): Double` y `+ isSpecialtyCoffee(): Boolean` (válido si el puntaje final supera los 80 puntos SCA).
+
+* **`PotatoCaliberGrading` (Entity) y `PotatoCaliberType` (Enumeration):**
+  Evalúa el tubérculo según la norma técnica peruana del MIDAGRI. Posee `- caliberType: PotatoCaliberType` (`FIRST_CLASS`, `SECOND_CLASS`, `THIRD_CLASS`), `- sampleWeightGrams: Double` y `- commercialSuitability: Boolean`.
+
+* **`QualityCertificate` (Value Object):**
+  Encapsula la acreditación inmutable mediante `- certificateCode: String`, `- digitalSignatureHash: String` (código hash SHA-256 generado sobre los atributos del lote), `- publicVerificationUrl: String` y `- issuedAt: LocalDateTime`.
+
+* **`PdfQrGeneratorAssembler` (Infrastructure Layer):**
+  Componente encargado del ensamblado técnico de comprobantes. Ejecuta `+ generateQualityReportPdf(batch: HarvestBatch): byte[]` para compilar el reporte formal en PDF y `+ createQrCodePng(publicUrl: String): byte[]` para renderizar la matriz visual del código QR auditable.
+
+##### Relaciones y Cardinalidades del Contexto:
+* **Composición (`HarvestBatch` "1" *-- "0..1" `CoffeeCuppingSession` / `PotatoCaliberGrading`):** La evaluación técnica depende del tipo botánico del cultivo cosechado en la parcela.
+* **Composición (`HarvestBatch` "1" *-- "0..1" `QualityCertificate`):** El certificado digital se expide únicamente tras concluir el pesaje y la calificación técnica.
+* **Dependencias:** `HarvestBatchServiceImpl` orquesta el agregado y delega en `PdfQrGeneratorAssembler` la construcción de los artefactos visuales de verificación.
+
+---
+
+#### 4.7.1.7. Commercial Settlement Context Class Diagram
+
+Gobierna la publicación en catálogo de los lotes certificados, la recepción de ofertas comerciales emitidas por compradores mayoristas y la liquidación transaccional asegurando el margen neto sobre el costo de producción.
+
+![Diagrama de Clases - Commercial Settlement Context](assets/img/class-diagrams/settlement-class-diagram.png)
+
+##### Desglose Estructural de Clases y Componentes:
+
+* **`CommercialSettlement` (Aggregate Root):**
+  Controla el acuerdo comercial y la liquidación financiera de la venta.
+    * **Atributos privados:**
+        * `- id: Long`: Identificador de la negociación.
+        * `- harvestBatchId: Long`: Referencia al lote certificado disponible.
+        * `- baseNegotiationPrice: Money`: Precio de apertura establecido para la venta.
+        * `- status: SettlementStatus`: Fase actual del ciclo de vida comercial.
+        * `- acceptedOffer: PurchaseOffer`: Oferta comercial formalmente aceptada por el productor o directivo.
+        * `- netMargin: NetMargin`: Margen de ganancia neta consolidado.
+        * `- offers: List<PurchaseOffer>`: Lista de propuestas de compra recibidas.
+    * **Métodos públicos:**
+        * `+ publishLot(): void`: Transiciona el estado a publicado en el catálogo mayorista tras verificar el punto de equilibrio.
+        * `+ receiveOffer(offer: PurchaseOffer): void`: Añade una propuesta de compra a la negociación.
+        * `+ acceptOfferAndLiquidate(offerId: Long, productionCost: Money): void`: Acepta la oferta seleccionada, calcula el margen neto resultante y cambia el estado a liquidado (`LIQUIDATED`).
+
+* **`PurchaseOffer` (Entity):**
+  Propuesta económica vinculada al lote. Contiene `- id: Long`, `- buyerId: Long`, `- offeredPrice: Money`, `- offeredAt: LocalDateTime` y `- isAccepted: Boolean`. Expone `+ accept(): void` y `+ reject(): void`.
+
+* **`SettlementStatus` (Enumeration) y `NetMargin` (Value Object):**
+    * `SettlementStatus`: Máquina de estados de la venta: `DRAFT`, `PUBLISHED`, `OFFER_RECEIVED`, `ACCEPTED` y `LIQUIDATED`.
+    * `NetMargin`: Objeto inmutable que almacena `- netProfitAmount: BigDecimal` y `- marginPercentage: Double`, garantizando que la liquidación visualice la rentabilidad final obtenida.
+
+* **`SettlementResourceAssembler` (Assembler / Interface Layer):**
+  Traduce las peticiones comerciales entre la web y el dominio. Implementa `+ toResourceFromEntity(entity: CommercialSettlement): SettlementResource` y `+ toEntityFromResource(resource: PublishLotResource): CommercialSettlement`.
+
+* **`CommercialSettlementRepository`, `CommercialSettlementService` y `SettlementController`:**
+  El repositorio declara `+ findByHarvestBatchId(batchId: Long): Optional<CommercialSettlement>`. El servicio orquesta `+ publishCertifiedLot(cmd: PublishLotCommand): Long`, `+ submitBidOffer()` y `+ settleCommercialSale()`. El controlador REST expone los endpoints bajo `/api/v1/settlements` e inyecta `SettlementResourceAssembler`.
+
+##### Relaciones y Cardinalidades del Contexto:
+* **Composición (`CommercialSettlement` "1" *-- "0..*" `PurchaseOffer`):** Un acuerdo comercial puede recibir múltiples ofertas mayoristas en competencia (`0..*`).
+* **Composición (`CommercialSettlement` *-- "1" `Money` y `0..1` `NetMargin`):** El precio base y el margen neto final son parte constituyente del agregado.
+* **Asociación dirigida (`CommercialSettlement` --> "1" `SettlementStatus`):** El ciclo de vida de la comercialización está regido por la enumeración de estados.
+* **Dependencias:** `SettlementController` utiliza `CommercialSettlementService` y `SettlementResourceAssembler`, el cual opera sobre el agregado `CommercialSettlement` y persiste su estado mediante `CommercialSettlementRepository`.
+
+---
 
 ## 4.8. Database Design
 
-En esta sección se presenta el diseño de la base de datos relacional de SumaqAgro. Los diagramas toman como base los agregados, entidades y value objects de los diagramas de clases de la RESTful API (sección 4.7) y los llevan a tablas de MySQL.
+En esta sección se presenta el diseño lógico y físico de la base de datos relacional para la plataforma **SumaqAgro**. El diseño de persistencia se ha estructurado utilizando **MySQL 8.0** como motor gestor de base de datos (RDBMS), garantizando cumplimiento de propiedades ACID, integridad referencial inmutable y soporte de datos espaciales (GIS) para los polígonos perimetrales GPS de las parcelas agrícolas.
 
-Las principales características que se consideran en los diagramas son:
+Para mantener una alineación estricta con la arquitectura de software basada en **Domain-Driven Design (DDD)** establecida en la sección 4.6 y los diagramas de clases orientados a objetos de la sección 4.7, el esquema de base de datos se encuentra completamente desacoplado y organizado por **Bounded Contexts**. Esta separación previene acoplamientos innecesarios entre dominios y facilita la evolución o eventual migración hacia una topología de microservicios con bases de datos independientes por servicio (*Database-per-Service Pattern*).
 
-* **Motor:** MySQL 8.0 con InnoDB y juego de caracteres `utf8mb4`. Todas las tablas viven en una sola base de datos, `sumaqagro_db`.
-* **Organización por bounded context:** las tablas se agrupan según los 6 bounded contexts: IAM, Profiles, Subscriptions and Payments, Field Management, Crop Health y Harvest Certification. El Shared Kernel no tiene tablas propias.
-* **Agregados y entidades:** cada agregado y cada entidad interna tiene su propia tabla. Los value objects se guardan como columnas de la tabla de su agregado (por ejemplo, el análisis de suelo en `field_plots` o la catación de café en `harvest_batches`).
-* **Nombres:** tablas y columnas en inglés, en minúsculas, en plural y en `snake_case`. Las restricciones llevan prefijo: `pk_` (primary key), `fk_` (foreign key) y `uk_` (unique).
-* **Claves:** todas las tablas usan `id BIGINT AUTO_INCREMENT` como primary key. Las foreign keys se nombran `<entidad>_id`.
-* **Relaciones entre contextos:** las relaciones dentro de un contexto se declaran junto con su tabla. Las relaciones hacia otro contexto (por ejemplo, `field_plots.owner_user_id` hacia `users`) se declaran al final del script; en el código estas consultas pasan por los facades de ACL.
-* **Tipos de datos:** `DECIMAL(10,2)` para montos y cantidades, `DECIMAL(10,8)` y `DECIMAL(11,8)` para latitud y longitud, `DECIMAL(5,4)` para los índices NDVI y NDWI, y `VARCHAR` para los estados, con los mismos valores de los enums del backend.
-* **Auditoría:** las tablas principales tienen `created_at` y `updated_at`, que MySQL llena de forma automática.
-* **Tablas por contexto:** para cada tabla se indica qué guarda cada columna y su tipo de dato. Las claves se marcan al inicio de la descripción: **PK** (primary key), **FK** (foreign key, con la tabla a la que apunta) y **UNIQUE** (valor que no se repite).
+#### Convenciones de Nomenclatura y Estándares de Diseño
+
+* **Idioma:** Todos los nombres de tablas, columnas, índices y restricciones se redactan estrictamente en **idioma inglés** (`lowercase`).
+* **Formato de Nombres de Tablas:** Nombres en plural utilizando `snake_case` (ej. `users`, `field_plots`, `quality_certificates`).
+* **Claves Primarias (Primary Keys - PK):** Identificador entero de 64 bits `id` de tipo `BIGINT AUTO_INCREMENT` en todas las tablas.
+* **Claves Foráneas (Foreign Keys - FK):** Formato `<entity_singular>_id` vinculado explícitamente a la clave primaria de la tabla referenciada (ej. `user_id`, `field_plot_id`).
+* **Auditoría y Trazabilidad:** Todas las tablas principales incluyen las columnas obligatorias de auditoría temporal:
+    * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP`
+    * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`
+* **Manejo de Estados:** Atributos de estado definidos mediante cadenas `VARCHAR` con restricciones `CHECK` o tipos enumerados implícitos en inglés (ej. `'ACTIVE'`, `'INACTIVE'`, `'PENDING'`, `'CERTIFIED'`).
+
+---
 
 ### 4.8.1. Database Diagrams
 
-El modelo se elaboró en **Hackolade Studio** a partir del script `SumaqAgro_db.sql`, y las pruebas de creación de tablas se hicieron en **DataGrip** conectado a MySQL 8.0. Primero se muestra el diagrama completo de la base de datos y luego el detalle de cada bounded context.
+En esta sección se define el diseño lógico y físico de la base de datos para la plataforma SumaqAgro de la startup Dymbia. Se utiliza MySQL 8.0 con el motor transaccional InnoDB, lo que garantiza transacciones seguras bajo estándares ACID, integridad referencial mediante claves foráneas y un manejo eficiente de accesos concurrentes.
 
-**Herramientas utilizadas:** Hackolade Studio y DataGrip.
+Para mantener la coherencia con el diseño guiado por el dominio (DDD) de la sección 4.6 y las clases de la sección 4.7, el esquema se organizó por Bounded Contexts. Esta separación evita acoplamientos entre módulos del sistema y deja la base de datos lista para una futura división por servicios (Database-per-Service).
 
-![Database Diagram - SumaqAgro](assets/img/chapter-IV/database/sumaqagro-db-diagram.png)
+#### Principales Decisiones y Estándares de Persistencia
 
-#### 4.8.1.1. Identity and Access Management (IAM) Context
+* **Herramientas Utilizadas:** El modelado entidad-relación (ERD) se realizó en **Hackolade Studio** siguiendo las herramientas autorizadas del curso. Para la administración, ejecución de scripts SQL y pruebas de persistencia se utilizó **DataGrip** conectado a una base de datos **MySQL 8.0**.
+* **Convenciones de Nombres:** Las tablas, columnas y restricciones se definieron en inglés, en minúsculas y usando `snake_case` (por ejemplo, `field_plots`, `crop_campaigns`, `quality_certificates`), manteniendo consistencia con los nombres de las entidades en el backend.
+* **Claves Primarias (PK):** Se utilizó un identificador subrogado `id` de tipo `BIGINT AUTO_INCREMENT` en todas las tablas para facilitar la indexación y optimizar las consultas en MySQL.
+* **Claves Foráneas (FK) e Integridad:** Las relaciones usan el formato `<entidad>_id` vinculado con restricciones `FOREIGN KEY` explícitas. En tablas dependientes (como las coordenadas perimetrales de una parcela) se aplica `ON DELETE CASCADE` para evitar registros huérfanos.
+* **Tipos de Datos y Precisión:**
+    * **Montos contables y costos:** Se utiliza `DECIMAL(10,2)` para registrar precios, jornales, compras y liquidaciones sin errores de redondeo.
+    * **Coordenadas GPS:** Se definieron como `DECIMAL(10,8)` para latitud y `DECIMAL(11,8)` para longitud, logrando precisión adecuada al trazar los polígonos de las parcelas.
+    * **Índices satelitales:** Los valores de reflectancia foliar (NDVI y NDWI) usan `DECIMAL(5,4)`, cubriendo el rango de trabajo de -1.0000 a +1.0000.
+* **Manejo de Estados:** Los estados de negocio se guardan como cadenas `VARCHAR(20)` asociadas a los enums del backend (como `'ACTIVE'`, `'IN_PROGRESS'`, `'PENDING'` o `'CERTIFIED'`).
+* **Campos de Auditoría:** Las tablas principales incluyen las columnas `created_at` y `updated_at` de tipo `TIMESTAMP` para registrar automáticamente cuándo se crea o modifica cada fila.
 
-Este contexto guarda las cuentas de usuario, sus roles y los códigos para recuperar la contraseña.
+---
 
-![Database Diagram - Identity and Access Management (IAM) Context](assets/img/chapter-IV/database/01-iam-db-diagram.png)
+### 4.8.1. Database Diagrams
+
+A continuación, se presentan y explican los Database Diagrams elaborados en **Hackolade Studio** para la base de datos relacional sobre **MySQL 8.0**, gestionada y desplegada mediante **DataGrip**, agrupados de forma modular por cada uno de los 7 **Bounded Contexts** del dominio de negocio de SumaqAgro.
+
+---
+
+#### 4.8.1.1. Identity & Access Management (IAM) Bounded Context Diagram
+
+Este contexto delimita la persistencia de usuarios, perfiles institucionales, roles y credenciales para la autenticación y autorización segura basada en tokens JWT.
+
+![Database Diagram - IAM Bounded Context](assets/img/database/iam-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
 
 ###### Tabla `users`
+Almacena las cuentas de usuario registradas en la plataforma (productores, directivos de cooperativa, asesores agrónomos y administradores).
 
-Cuentas de usuario de la plataforma. La contraseña se guarda cifrada con BCrypt.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `email` | `VARCHAR(150)` | **(UNIQUE)** Correo con el que el usuario inicia sesión. No se repite. |
-| `password` | `VARCHAR(255)` | Contraseña cifrada con BCrypt; nunca se guarda en texto plano. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador único del usuario.
+    * `first_name`: `VARCHAR(100) NOT NULL` - Nombres del usuario.
+    * `last_name`: `VARCHAR(100) NOT NULL` - Apellidos del usuario.
+    * `email`: `VARCHAR(150) NOT NULL UNIQUE` - Correo electrónico de inicio de sesión.
+    * `password_hash`: `VARCHAR(255) NOT NULL` - Contraseña encriptada con algoritmo BCrypt.
+    * `phone_number`: `VARCHAR(20) NULL` - Número de teléfono o WhatsApp para notificaciones rural/SMS.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado de la cuenta (`'ACTIVE'`, `'INACTIVE'`, `'BLOCKED'`).
+    * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de registro.
+    * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` - Fecha de última actualización.
 
 ###### Tabla `roles`
+Catálogo de roles del sistema para el control de acceso basado en roles (RBAC).
 
-Catálogo de roles: `ROLE_FARMER`, `ROLE_COOPERATIVE_MANAGER` y `ROLE_AGRONOMIST`.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `name` | `VARCHAR(30)` | **(UNIQUE)** Nombre del rol: `ROLE_FARMER`, `ROLE_COOPERATIVE_MANAGER` o `ROLE_AGRONOMIST`. |
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del rol.
+    * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre técnico del rol (`'ROLE_FARMER'`, `'ROLE_COOPERATIVE_DIRECTOR'`, `'ROLE_AGRONOMIST'`).
+    * `description`: `VARCHAR(255) NULL` - Descripción funcional del rol.
 
 ###### Tabla `user_roles`
+Tabla asociativa para la relación de muchos a muchos (N:M) entre usuarios y roles.
 
-Tabla intermedia que asigna uno o varios roles a cada usuario.
+* **Columnas y Restricciones:**
+    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` ON DELETE CASCADE.
+    * `role_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `roles(id)` ON DELETE CASCADE.
+    * **Primary Key Compuesta:** `PRIMARY KEY (user_id, role_id)`
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `user_id` | `BIGINT` | **(PK; FK → `users`)** Usuario al que se le asigna el rol. |
-| `role_id` | `BIGINT` | **(PK; FK → `roles`)** Rol asignado al usuario. |
+---
 
-Clave primaria compuesta: `(user_id, role_id)`.
+#### 4.8.1.2. Subscription & Billing Bounded Context Diagram
 
-###### Tabla `password_reset_tokens`
+Gestiona los planes comerciales (Semilla, Cooperativa Pro, Asesor Técnico), el historial de suscripciones activas y las transacciones de pago con pasarelas externas.
 
-Códigos temporales que se envían por correo (Brevo) para cambiar la contraseña.
+![Database Diagram - Subscription & Billing Bounded Context](assets/img/database/subscriptions-db-diagram.png)
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `user_id` | `BIGINT` | **(FK → `users`)** Usuario que pidió recuperar su contraseña. |
-| `token` | `VARCHAR(255)` | **(UNIQUE)** Código que se envía por correo (Brevo) para cambiar la contraseña. |
-| `expires_at` | `TIMESTAMP` | Fecha y hora en que el código deja de ser válido. |
-| `used` | `BOOLEAN` | Indica si el código ya se usó, para que no sirva dos veces. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+##### Especificación de Tablas y Relaciones
 
-**Relaciones principales:**
-* `users` 1 — N `user_roles` N — 1 `roles`: un usuario tiene uno o varios roles.
-* `users` 1 — N `password_reset_tokens`: un usuario puede pedir varios códigos de recuperación.
+###### Tabla `subscription_plans`
+Catálogo de planes comerciales habilitados.
 
-#### 4.8.1.2. Profiles Context
-
-Este contexto guarda el perfil de cada usuario, las cooperativas con su padrón de socios y la asignación de agrónomos a las parcelas.
-
-![Database Diagram - Profiles Context](assets/img/chapter-IV/database/02-profiles-db-diagram.png)
-
-###### Tabla `profiles`
-
-Datos de contacto de cada usuario. Hay un solo perfil por usuario.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `user_id` | `BIGINT` | **(FK → `users`, otro contexto; UNIQUE)** Cuenta de usuario a la que pertenece el perfil. |
-| `first_name` | `VARCHAR(100)` | Nombres del usuario. |
-| `last_name` | `VARCHAR(100)` | Apellidos del usuario. |
-| `phone_number` | `VARCHAR(20)` | Celular donde recibe las alertas por SMS o WhatsApp. |
-| `photo_url` | `VARCHAR(255)` | Dirección de la foto de perfil. |
-| `preferred_language` | `VARCHAR(2)` | Idioma de la interfaz: `ES` (español) o `EN` (inglés). |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
-
-###### Tabla `cooperatives`
-
-Cooperativas registradas, identificadas por su RUC.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `ruc` | `CHAR(11)` | **(UNIQUE)** RUC de la cooperativa (11 dígitos). |
-| `business_name` | `VARCHAR(150)` | Razón social de la cooperativa. |
-| `region` | `VARCHAR(100)` | Región donde trabaja la cooperativa. |
-| `manager_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Directivo que administra la cooperativa en la plataforma. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
-
-###### Tabla `cooperative_members`
-
-Padrón de socios de cada cooperativa. Un mismo DNI no se repite dentro de una cooperativa.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `cooperative_id` | `BIGINT` | **(FK → `cooperatives`)** Cooperativa a la que pertenece el socio. |
-| `dni` | `CHAR(8)` | DNI del socio (8 dígitos). |
-| `first_name` | `VARCHAR(100)` | Nombres del socio. |
-| `last_name` | `VARCHAR(100)` | Apellidos del socio. |
-| `community` | `VARCHAR(100)` | Comunidad o caserío donde vive el socio. |
-| `joined_at` | `DATE` | Fecha en que el socio entró a la cooperativa. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
-
-Restricción única compuesta: `(cooperative_id, dni)`.
-
-###### Tabla `agronomist_invitations`
-
-Invitaciones que la cooperativa envía por correo a los agrónomos.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `cooperative_id` | `BIGINT` | **(FK → `cooperatives`)** Cooperativa que envía la invitación. |
-| `email` | `VARCHAR(150)` | Correo del agrónomo invitado. |
-| `invitation_token` | `VARCHAR(255)` | **(UNIQUE)** Código del enlace de invitación que se envía por correo (Brevo). |
-| `status` | `VARCHAR(20)` | Estado de la invitación: `PENDING`, `ACCEPTED` o `EXPIRED`. |
-| `sent_at` | `TIMESTAMP` | Fecha y hora en que se envió la invitación. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
-
-###### Tabla `agronomist_assignments`
-
-Indica qué agrónomo atiende cada parcela de la cooperativa.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `cooperative_id` | `BIGINT` | **(FK → `cooperatives`)** Cooperativa que hace la asignación. |
-| `agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que atenderá la parcela. |
-| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela que se le asigna al agrónomo. |
-| `assigned_at` | `TIMESTAMP` | Fecha y hora de la asignación. |
-| `active` | `BOOLEAN` | Indica si la asignación sigue vigente. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
-
-**Relaciones principales:**
-* `cooperatives` 1 — N `cooperative_members`, `agronomist_invitations` y `agronomist_assignments`.
-* `profiles.user_id`, `cooperatives.manager_user_id` y `agronomist_assignments.agronomist_user_id` → `users` (IAM).
-* `agronomist_assignments.plot_id` → `field_plots` (Field Management).
-
-#### 4.8.1.3. Subscriptions and Payments Context
-
-Este contexto guarda los planes, la suscripción de cada usuario y los pagos hechos con Niubiz.
-
-![Database Diagram - Subscriptions and Payments Context](assets/img/chapter-IV/database/03-subscriptions-payments-db-diagram.png)
-
-###### Tabla `plans`
-
-Catálogo de planes (Semilla, Cooperativa Pro y Asesor Técnico) con su precio y su cupo de parcelas.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `code` | `VARCHAR(30)` | **(UNIQUE)** Código del plan: `SEED`, `COOPERATIVE_PRO` o `TECHNICAL_ADVISOR`. |
-| `name` | `VARCHAR(100)` | Nombre comercial del plan (Semilla, Cooperativa Pro o Asesor Técnico). |
-| `monthly_price_amount` | `DECIMAL(10,2)` | Precio del plan con pago mensual. |
-| `annual_price_amount` | `DECIMAL(10,2)` | Precio del plan con pago anual. |
-| `currency` | `CHAR(3)` | Moneda de los precios (por defecto `PEN`). |
-| `plot_quota` | `INT` | Cantidad máxima de parcelas que permite el plan. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del plan.
+    * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre del plan (`'SEED_FREE'`, `'COOPERATIVE_PRO'`, `'AGRONOMIST_TECH'`).
+    * `price_monthly`: `DECIMAL(10,2) NOT NULL` - Tarifa mensual en Soles (PEN).
+    * `max_plots_allowed`: `INT NOT NULL` - Límite máximo de parcelas georreferenciadas permitidas.
+    * `max_hectares_allowed`: `DECIMAL(10,2) NOT NULL` - Límite de hectáreas acumuladas.
 
 ###### Tabla `subscriptions`
+Registra la suscripción activa o histórica de un usuario/entidad.
 
-Suscripción vigente de cada usuario. Hay una sola suscripción por usuario.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `user_id` | `BIGINT` | **(FK → `users`, otro contexto; UNIQUE)** Usuario dueño de la suscripción. Cada usuario tiene una sola. |
-| `plan_id` | `BIGINT` | **(FK → `plans`)** Plan contratado. |
-| `status` | `VARCHAR(20)` | Estado de la suscripción: `ACTIVE` o `CANCELLED`. |
-| `billing_cycle` | `VARCHAR(10)` | Frecuencia de cobro: `MONTHLY` o `ANNUAL`. |
-| `start_date` | `DATE` | Fecha de inicio del periodo vigente. |
-| `end_date` | `DATE` | Fecha de fin del periodo vigente. Está vacía en el plan gratuito. |
-| `auto_renew` | `BOOLEAN` | Indica si la suscripción se renueva sola al terminar el periodo. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la suscripción.
+    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)`.
+    * `plan_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscription_plans(id)`.
+    * `start_date`: `DATE NOT NULL` - Fecha de inicio.
+    * `end_date`: `DATE NOT NULL` - Fecha de vencimiento.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado (`'ACTIVE'`, `'EXPIRED'`, `'CANCELLED'`).
 
 ###### Tabla `payments`
+Bitácora de cobros y facturación procesada mediante la pasarela de pagos.
 
-Pagos de cada suscripción con el token de transacción que devuelve Niubiz.
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del pago.
+    * `subscription_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscriptions(id)`.
+    * `amount`: `DECIMAL(10,2) NOT NULL` - Monto cobrado.
+    * `transaction_token`: `VARCHAR(255) NOT NULL` - Token de transacción retornado por Stripe/Niubiz.
+    * `payment_status`: `VARCHAR(20) NOT NULL` - Estado (`'COMPLETED'`, `'FAILED'`, `'REFUNDED'`).
+    * `paid_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora del pago.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `subscription_id` | `BIGINT` | **(FK → `subscriptions`)** Suscripción a la que corresponde el pago. |
-| `amount` | `DECIMAL(10,2)` | Monto cobrado. |
-| `currency` | `CHAR(3)` | Moneda del cobro (por defecto `PEN`). |
-| `transaction_token` | `VARCHAR(255)` | **(UNIQUE)** Token de la transacción que devuelve Niubiz. No se repite, así el webhook no registra dos veces el mismo pago. |
-| `status` | `VARCHAR(20)` | Estado del pago: `PENDING`, `COMPLETED` o `REJECTED`. |
-| `paid_at` | `TIMESTAMP` | Fecha y hora en que Niubiz confirmó el pago. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+---
 
-**Relaciones principales:**
-* `plans` 1 — N `subscriptions`: varios usuarios pueden tener el mismo plan.
-* `subscriptions` 1 — N `payments`: una suscripción acumula sus pagos.
-* `subscriptions.user_id` → `users` (IAM).
+#### 4.8.1.3. Plot & Crop Management Bounded Context Diagram
 
-#### 4.8.1.4. Field Management Context
+Modela las parcelas agrícolas georreferenciadas, los vértices de polígonos GPS y las campañas fenológicas de siembra.
 
-Este contexto guarda las parcelas con su polígono GPS, las campañas agrícolas y el libro de costos de cada campaña.
+![Database Diagram - Plot & Crop Management Bounded Context](assets/img/database/plots-db-diagram.png)
 
-![Database Diagram - Field Management Context](assets/img/chapter-IV/database/04-field-management-db-diagram.png)
+##### Especificación de Tablas y Relaciones
 
 ###### Tabla `field_plots`
+Almacena las parcelas registradas por los productores agrícolas.
 
-Parcelas registradas. El análisis de suelo (value object `SoilBaseline`) se guarda en las columnas `soil_*`.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `owner_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Productor dueño de la parcela. |
-| `name` | `VARCHAR(100)` | Nombre que el productor le da a la parcela. |
-| `region` | `VARCHAR(100)` | Región donde está la parcela. |
-| `area_hectares` | `DECIMAL(10,4)` | Área calculada a partir del polígono, en hectáreas. |
-| `status` | `VARCHAR(20)` | Estado de la parcela: `WITHOUT_POLYGON` (sin polígono) o `ACTIVE_MONITORING` (con monitoreo satelital). |
-| `agromonitoring_polygon_id` | `VARCHAR(50)` | Identificador del polígono registrado en AgroMonitoring. |
-| `soil_ph` | `DECIMAL(4,2)` | pH del suelo según el análisis inicial. |
-| `soil_texture` | `VARCHAR(50)` | Textura del suelo (por ejemplo, franco o arcilloso). |
-| `soil_organic_matter_percentage` | `DECIMAL(5,2)` | Porcentaje de materia orgánica del suelo. |
-| `soil_recorded_at` | `DATE` | Fecha del análisis de suelo. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la parcela.
+    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Propietario del predio).
+    * `plot_name`: `VARCHAR(100) NOT NULL` - Nombre o alias del fundo (ej. "Fundo La Libertad").
+    * `crop_type`: `VARCHAR(50) NOT NULL` - Tipo de cultivo (`'POTATO'`, `'COFFEE'`).
+    * `seed_variety`: `VARCHAR(100) NOT NULL` - Variedad botánica (ej. "Yungay", "Canchan", "Typica", "Geisha").
+    * `total_area_hectares`: `DECIMAL(10,2) NOT NULL` - Área calculada del polígono en hectáreas.
+    * `altitude_masl`: `INT NULL` - Altitud sobre el nivel del mar (m.s.n.m.).
+    * `soil_ph`: `DECIMAL(4,2) NULL` - Valor de pH del suelo registrado en la línea base.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado operacional.
 
 ###### Tabla `plot_coordinates`
+Guarda la secuencia ordenada de coordenadas GPS (latitud y longitud) que forman el perímetro de la parcela (Relación 1:N con `field_plots`).
 
-Vértices del polígono GPS de cada parcela, en orden.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `field_plot_id` | `BIGINT` | **(FK → `field_plots`)** Parcela a la que pertenece el vértice. |
-| `vertex_order` | `INT` | Posición del vértice dentro del polígono. |
-| `latitude` | `DECIMAL(10,8)` | Latitud GPS del vértice. |
-| `longitude` | `DECIMAL(11,8)` | Longitud GPS del vértice. |
-
-Restricción única compuesta: `(field_plot_id, vertex_order)`.
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del punto GPS.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)` ON DELETE CASCADE.
+    * `sequence_order`: `INT NOT NULL` - Orden consecutivo del vértice en el polígono (1, 2, 3...).
+    * `latitude`: `DECIMAL(10,8) NOT NULL` - Latitud decimal GPS.
+    * `longitude`: `DECIMAL(11,8) NOT NULL` - Longitud decimal GPS.
 
 ###### Tabla `crop_campaigns`
+Registra las campañas fenológicas de cultivo por año/temporada.
 
-Campañas agrícolas de cada parcela, con el cultivo, la variedad y la fecha de siembra.
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la campaña.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `campaign_name`: `VARCHAR(100) NOT NULL` - Nombre de la campaña (ej. "Campaña Chica 2026").
+    * `sowing_date`: `DATE NOT NULL` - Fecha de siembra.
+    * `estimated_harvest_date`: `DATE NOT NULL` - Fecha estimada de cosecha.
+    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'IN_PROGRESS'` - Estado (`'IN_PROGRESS'`, `'HARVESTED'`).
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `field_plot_id` | `BIGINT` | **(FK → `field_plots`)** Parcela donde se hace la campaña. |
-| `season` | `VARCHAR(20)` | Temporada agrícola (por ejemplo, 2026-A). |
-| `crop_type` | `VARCHAR(20)` | Cultivo: `ANDEAN_POTATO` (papa andina) o `SPECIALTY_COFFEE` (café de especialidad). |
-| `seed_variety_name` | `VARCHAR(100)` | Variedad sembrada. |
-| `seed_variety_custom` | `BOOLEAN` | Indica si la variedad la escribió el productor porque no estaba en la lista. |
-| `sowing_date` | `DATE` | Fecha de siembra. Al registrarla se programa el monitoreo satelital. |
-| `status` | `VARCHAR(20)` | Estado de la campaña: `IN_PROGRESS` o `FINISHED`. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+---
 
-###### Tabla `campaign_ledgers`
+#### 4.8.1.4. Satellite Analytics & Alerting Bounded Context Diagram
 
-Libro de costos de cada campaña, con el rendimiento esperado y el real.
+Guarda los registros de reflectancia multiespectral (NDVI y NDWI) extraídos periódicamente de las baldosas de Sentinel-2, así como las alertas agroclimáticas y recetas fitosanitarias.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `crop_campaign_id` | `BIGINT` | **(FK → `crop_campaigns`; UNIQUE)** Campaña a la que pertenece el libro de costos. Cada campaña tiene uno solo. |
-| `expected_yield_quantity` | `DECIMAL(10,2)` | Rendimiento que el productor espera cosechar. |
-| `expected_yield_unit` | `VARCHAR(10)` | Unidad del rendimiento esperado: `SACK` (saco) o `QUINTAL`. |
-| `actual_yield_quantity` | `DECIMAL(10,2)` | Rendimiento real, que se registra cuando se pesa el lote en el acopio. |
-| `actual_yield_unit` | `VARCHAR(10)` | Unidad del rendimiento real: `SACK` o `QUINTAL`. |
-| `frozen` | `BOOLEAN` | Indica si el libro está cerrado y ya no acepta gastos. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+![Database Diagram - Satellite Analytics & Alerting Bounded Context](assets/img/database/monitoring-db-diagram.png)
 
-###### Tabla `expense_entries`
+##### Especificación de Tablas y Relaciones
 
-Gastos del libro de costos: insumos, jornales y flete. `client_sync_id` evita duplicar los gastos registrados sin conexión.
+###### Tabla `satellite_readings`
+Almacena el historial de índices multiespectrales procesados por fecha y parcela.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `campaign_ledger_id` | `BIGINT` | **(FK → `campaign_ledgers`)** Libro de costos al que pertenece el gasto. |
-| `category` | `VARCHAR(10)` | Tipo de gasto: `INPUTS` (insumos), `LABOR` (jornales) o `FREIGHT` (flete). |
-| `description` | `VARCHAR(255)` | Detalle del gasto (por ejemplo, el nombre del insumo). |
-| `quantity` | `DECIMAL(10,2)` | Cantidad comprada o número de jornales. |
-| `unit_price_amount` | `DECIMAL(10,2)` | Precio por unidad. |
-| `currency` | `CHAR(3)` | Moneda del gasto (por defecto `PEN`). |
-| `expense_date` | `DATE` | Fecha en que se hizo el gasto. |
-| `notes` | `VARCHAR(255)` | Notas adicionales del productor. |
-| `client_sync_id` | `CHAR(36)` | **(UNIQUE)** Código generado en el celular cuando el gasto se registra sin conexión. No se repite, así el gasto no se duplica al sincronizar. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
-
-**Relaciones principales:**
-* `field_plots` 1 — N `plot_coordinates` y `crop_campaigns`.
-* `crop_campaigns` 1 — 1 `campaign_ledgers` 1 — N `expense_entries`.
-* `field_plots.owner_user_id` → `users` (IAM).
-
-#### 4.8.1.5. Crop Health Context
-
-Este contexto guarda las observaciones satelitales, el pronóstico del clima, las alertas y la asesoría del agrónomo.
-
-![Database Diagram - Crop Health Context](assets/img/chapter-IV/database/05-crop-health-db-diagram.png)
-
-###### Tabla `satellite_observations`
-
-Imágenes de AgroMonitoring con sus índices NDVI y NDWI. Las imágenes con mucha nubosidad se marcan como descartadas.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela observada. |
-| `polygon_id` | `VARCHAR(50)` | Identificador del polígono en AgroMonitoring. |
-| `captured_at` | `TIMESTAMP` | Fecha y hora en que el satélite tomó la imagen. |
-| `source` | `VARCHAR(15)` | Satélite de origen: `SENTINEL_2` o `LANDSAT_8`. |
-| `cloud_coverage` | `DECIMAL(5,2)` | Porcentaje de nubes en la imagen. |
-| `ndvi` | `DECIMAL(5,4)` | Índice de vigor de la vegetación (NDVI). |
-| `ndwi` | `DECIMAL(5,4)` | Índice de agua en la vegetación (NDWI). |
-| `discarded` | `BOOLEAN` | Indica si la imagen se descartó por tener demasiadas nubes. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
-
-###### Tabla `climate_forecasts`
-
-Pronóstico diario de cada parcela. Solo hay un pronóstico por parcela y fecha.
-
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela a la que corresponde el pronóstico. |
-| `forecast_date` | `DATE` | Día pronosticado. |
-| `min_celsius` | `DECIMAL(5,2)` | Temperatura mínima esperada, en °C. Sirve para detectar riesgo de helada. |
-| `max_celsius` | `DECIMAL(5,2)` | Temperatura máxima esperada, en °C. |
-| `precipitation_mm` | `DECIMAL(6,2)` | Lluvia esperada, en milímetros. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
-
-Restricción única compuesta: `(plot_id, forecast_date)`.
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la lectura.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `capture_date`: `DATE NOT NULL` - Fecha de la toma de imagen satelital por Sentinel-2.
+    * `ndvi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Vegetación de Diferencia Normalizada (-1.0000 a +1.0000).
+    * `ndwi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Humedad de Diferencia Normalizada.
+    * `tile_image_url`: `VARCHAR(255) NULL` - URL de la baldosa o mapa de calor generado en color falso.
+    * `anomaly_detected`: `BOOLEAN DEFAULT FALSE` - Flag que indica si el índice cayó por debajo del umbral mínimo.
 
 ###### Tabla `agroclimatic_alerts`
+Boletines de alerta por heladas, sequías o ataques de plagas despachados a los productores.
 
-Alertas por anomalía de vegetación, estrés hídrico o riesgo de helada.
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la alerta.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `alert_type`: `VARCHAR(50) NOT NULL` - Tipo (`'FROST_WARNING'`, `'WATER_STRESS'`, `'PEST_ANOMALY'`).
+    * `severity`: `VARCHAR(20) NOT NULL` - Gravedad (`'LOW'`, `'MEDIUM'`, `'HIGH'`, `'CRITICAL'`).
+    * `message`: `TEXT NOT NULL` - Descripción detallada del riesgo detectado.
+    * `dispatched_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de emisión.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela afectada. |
-| `type` | `VARCHAR(20)` | Tipo de alerta: `VEGETATION_ANOMALY`, `WATER_STRESS` o `FROST_RISK`. |
-| `severity` | `VARCHAR(10)` | Gravedad: `LOW`, `MEDIUM` o `CRITICAL`. |
-| `status` | `VARCHAR(10)` | Estado: `ACTIVE` o `MITIGATED`. |
-| `raised_at` | `TIMESTAMP` | Fecha y hora en que se generó la alerta. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+###### Tabla `agronomic_prescriptions`
+Recetas y prescripciones fitosanitarias emitidas por asesores agrónomos ante reportes de campo.
 
-###### Tabla `action_steps`
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la receta.
+    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+    * `agronomist_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Asesor emisor).
+    * `diagnosis`: `TEXT NOT NULL` - Diagnóstico de la afección o plaga.
+    * `recommended_treatment`: `TEXT NOT NULL` - Dosis y producto fitosanitario recomendado.
+    * `application_confirmed`: `BOOLEAN DEFAULT FALSE` - Confirmación del productor tras aplicar la receta.
 
-Pasos del plan de acción de cada alerta.
+---
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `agroclimatic_alert_id` | `BIGINT` | **(FK → `agroclimatic_alerts`)** Alerta a la que pertenece el paso. |
-| `description` | `VARCHAR(255)` | Acción que debe hacer el productor (por ejemplo, regar o cubrir el cultivo). |
-| `scheduled_at` | `TIMESTAMP` | Fecha y hora en que se debe hacer la acción. |
-| `completed` | `BOOLEAN` | Indica si el productor ya hizo la acción. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+#### 4.8.1.5. Field Cost Accounting Bounded Context Diagram
 
-###### Tabla `regional_bulletins`
+Contabilidad de costos operativos rurales con soporte de sincronización offline (compras de insumos, jornales y fletes), calculando el costo unitario total y el punto de equilibrio financiero.
 
-Boletines preventivos que el agrónomo emite para una región.
+![Database Diagram - Field Cost Accounting Bounded Context](assets/img/database/costs-db-diagram.png)
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que emite el boletín. |
-| `region` | `VARCHAR(100)` | Región a la que va dirigido el boletín. |
-| `title` | `VARCHAR(150)` | Título del boletín. |
-| `preventive_measures` | `TEXT` | Medidas preventivas que recomienda el agrónomo. |
-| `issued_at` | `TIMESTAMP` | Fecha y hora de publicación. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+##### Especificación de Tablas y Relaciones
 
-###### Tabla `pest_reports`
+###### Tabla `agrochemical_expenses`
+Registro de compras de fertilizantes, abonos y plaguicidas por parcela/campaña.
 
-Reportes de plaga con foto. `farmer_user_id` es quien reporta y `assigned_agronomist_user_id` es el agrónomo que lo revisa; las dos columnas apuntan a `users`. `client_sync_id` evita duplicar los reportes hechos sin conexión.
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `product_name`: `VARCHAR(100) NOT NULL` - Nombre del insumo/fertilizante.
+    * `quantity`: `DECIMAL(10,2) NOT NULL` - Cantidad comprada.
+    * `unit_of_measure`: `VARCHAR(20) NOT NULL` - Unidad (`'KG'`, `'LITER'`, `'SAC'`).
+    * `unit_cost`: `DECIMAL(10,2) NOT NULL` - Precio unitario (PEN).
+    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total del gasto.
+    * `purchase_date`: `DATE NOT NULL` - Fecha de compra.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela donde se encontró la plaga. |
-| `farmer_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Productor que hace el reporte. |
-| `assigned_agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que revisa el reporte. Puede estar vacío hasta que se asigne. |
-| `photo_url` | `VARCHAR(255)` | Dirección de la foto de la plaga. |
-| `photo_uploaded_at` | `TIMESTAMP` | Fecha y hora en que se subió la foto. |
-| `comments` | `VARCHAR(500)` | Comentarios del productor sobre lo que observó. |
-| `damage_assessment` | `VARCHAR(500)` | Evaluación del daño hecha por el agrónomo. |
-| `status` | `VARCHAR(15)` | Estado del reporte: `SUBMITTED`, `UNDER_REVIEW`, `PRESCRIBED`, `IN_FOLLOW_UP`, `RESOLVED` o `REOPENED`. |
-| `client_sync_id` | `CHAR(36)` | **(UNIQUE)** Código generado en el celular cuando el reporte se hace sin conexión. No se repite, así el reporte no se duplica al sincronizar. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+###### Tabla `labor_expenses`
+Registro de pago de jornales a trabajadores agrícolas para labores de siembra, deshierbe o cosecha.
 
-###### Tabla `field_inspections`
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto de mano de obra.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `activity_type`: `VARCHAR(100) NOT NULL` - Labor realizada (ej. "Deshierbe manual", "Cosecha").
+    * `workers_count`: `INT NOT NULL` - Número de peones contratados.
+    * `days_worked`: `DECIMAL(5,2) NOT NULL` - Número de días/jornales.
+    * `cost_per_day`: `DECIMAL(10,2) NOT NULL` - Pago por jornal diario (PEN).
+    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total de jornales.
+    * `work_date`: `DATE NOT NULL` - Fecha del trabajo.
 
-Visitas de campo programadas a partir de un reporte de plaga.
+###### Tabla `freight_expenses`
+Gastos de transporte y flete desde la parcela hacia el centro de acopio o almacén.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `pest_report_id` | `BIGINT` | **(FK → `pest_reports`)** Reporte de plaga que origina la visita. |
-| `agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que hace la visita. |
-| `scheduled_at` | `TIMESTAMP` | Fecha y hora programada de la visita. |
-| `completed_at` | `TIMESTAMP` | Fecha y hora en que se terminó la visita. |
-| `findings` | `VARCHAR(500)` | Lo que encontró el agrónomo en la parcela. |
-| `status` | `VARCHAR(10)` | Estado: `SCHEDULED` o `COMPLETED`. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del flete.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `driver_name`: `VARCHAR(100) NULL` - Nombre del transportista/camionero.
+    * `destination`: `VARCHAR(150) NOT NULL` - Almacén o destino del flete.
+    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Costo total del servicio de flete.
+    * `freight_date`: `DATE NOT NULL` - Fecha del traslado.
 
-###### Tabla `technical_prescriptions`
+###### Tabla `breakeven_calculations`
+Módulo de consolidación financiera que determina la inversión total y el costo mínimo de venta por unidad.
 
-Receta técnica emitida para un reporte de plaga. Hay como máximo una por reporte.
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del cálculo.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)` UNIQUE.
+    * `total_agrochemical_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de insumos.
+    * `total_labor_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de jornales.
+    * `total_freight_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de fletes.
+    * `total_investment`: `DECIMAL(10,2) NOT NULL` - Inversión total de la campaña.
+    * `estimated_yield_units`: `DECIMAL(10,2) NOT NULL` - Volumen cosechado estimado (en quintales/toneladas).
+    * `breakeven_price_per_unit`: `DECIMAL(10,2) NOT NULL` - **Punto de equilibrio:** Precio mínimo de venta por unidad para no generar pérdidas.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `pest_report_id` | `BIGINT` | **(FK → `pest_reports`; UNIQUE)** Reporte de plaga que se trata. Cada reporte tiene como máximo una receta. |
-| `agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que emite la receta. |
-| `product` | `VARCHAR(150)` | Producto recomendado. |
-| `dosage_quantity` | `DECIMAL(10,2)` | Cantidad del producto por aplicación. |
-| `dosage_unit` | `VARCHAR(20)` | Unidad de la dosis (por ejemplo, ml o g). |
-| `dosage_per` | `VARCHAR(20)` | Base de la dosis (por ejemplo, por litro o por mochila). |
-| `frequency` | `VARCHAR(100)` | Cada cuánto se aplica el producto. |
-| `waiting_period_days` | `INT` | Días que se deben esperar antes de cosechar. |
-| `status` | `VARCHAR(20)` | Estado: `PENDING_APPLICATION`, `APPLIED` o `EVALUATED`. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+---
 
-**Relaciones principales:**
-* `agroclimatic_alerts` 1 — N `action_steps`.
-* `pest_reports` 1 — N `field_inspections` y 1 — 0..1 `technical_prescriptions`.
-* `plot_id` → `field_plots` (Field Management) y las columnas `*_user_id` → `users` (IAM).
+#### 4.8.1.6. Harvest Quality & Certification Bounded Context Diagram
 
-#### 4.8.1.6. Harvest Certification Context
+Modelado de la cosecha recolectada, evaluaciones de calidad física por calibres (papa según norma MIDAGRI) y análisis sensorial de taza (café según protocolo SCA), emitiendo certificados digitales con código QR de verificación pública.
 
-Este contexto guarda los lotes que llegan al acopio, su calificación de calidad y los certificados con código QR.
+![Database Diagram - Harvest Quality & Certification Bounded Context](assets/img/database/quality-db-diagram.png)
 
-![Database Diagram - Harvest Certification Context](assets/img/chapter-IV/database/06-harvest-certification-db-diagram.png)
+##### Especificación de Tablas y Relaciones
 
 ###### Tabla `harvest_batches`
+Registro de lotes de cosecha ingresados a almacén/cooperativa.
 
-Lotes de cosecha. El peso, los calibres de papa y la catación de café (value objects) se guardan en sus columnas; solo se llenan las que corresponden al cultivo.
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del lote cosechado.
+    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+    * `batch_code`: `VARCHAR(50) NOT NULL UNIQUE` - Código de lote asignado (ej. "BATCH-2026-P01").
+    * `total_weight_kg`: `DECIMAL(10,2) NOT NULL` - Peso total cosechado en kilogramos.
+    * `harvest_date`: `DATE NOT NULL` - Fecha de recolección.
+    * `quality_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'EVALUATED'`, `'CERTIFIED'`).
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `code` | `VARCHAR(20)` | **(UNIQUE)** Código del lote. No se repite. |
-| `cooperative_id` | `BIGINT` | **(FK → `cooperatives`, otro contexto)** Cooperativa que recibe el lote. |
-| `member_id` | `BIGINT` | **(FK → `cooperative_members`, otro contexto)** Socio que entrega el lote. |
-| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela de donde viene la cosecha. |
-| `campaign_id` | `BIGINT` | **(FK → `crop_campaigns`, otro contexto)** Campaña en la que se cosechó. |
-| `crop_type` | `VARCHAR(20)` | Cultivo: `ANDEAN_POTATO` o `SPECIALTY_COFFEE`. |
-| `collected_at` | `DATE` | Fecha en que el lote llegó al acopio. |
-| `gross_kg` | `DECIMAL(10,2)` | Peso bruto del lote, en kg. |
-| `tare_kg` | `DECIMAL(10,2)` | Peso de los envases (tara), en kg. El peso neto es bruto menos tara. |
-| `potato_first_percentage` | `DECIMAL(5,2)` | Papa: porcentaje de primera calidad según el calibre (MIDAGRI). |
-| `potato_second_percentage` | `DECIMAL(5,2)` | Papa: porcentaje de segunda calidad. |
-| `potato_third_percentage` | `DECIMAL(5,2)` | Papa: porcentaje de tercera calidad. |
-| `potato_weevil_damage_pct` | `DECIMAL(5,2)` | Papa: porcentaje de tubérculos dañados por gorgojo. |
-| `coffee_aroma` | `DECIMAL(4,2)` | Café: puntaje de aroma en la catación (SCA). |
-| `coffee_flavor` | `DECIMAL(4,2)` | Café: puntaje de sabor. |
-| `coffee_acidity` | `DECIMAL(4,2)` | Café: puntaje de acidez. |
-| `coffee_body` | `DECIMAL(4,2)` | Café: puntaje de cuerpo. |
-| `quality_category` | `VARCHAR(30)` | Resultado de la calificación: `PREMIUM_GOLD`, `STANDARD`, `B_GRADE_REQUIRES_SORTING`, `SPECIALTY_COFFEE` o `COMMERCIAL_COFFEE`. |
-| `status` | `VARCHAR(20)` | Estado del lote: `PENDING_GRADING`, `GRADED` o `CERTIFIED`. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+###### Tabla `potato_caliber_evaluations`
+Clasificación de calibres de tubérculo para papa según estándar de pesaje/diámetro.
 
-###### Tabla `representative_samples`
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la evaluación de papa.
+    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+    * `first_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Primera (>120g / >6cm).
+    * `second_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Segunda (80g-120g).
+    * `third_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Tercera/Chanchera (<80g).
+    * `defective_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje con daños mecánicos o plagas.
 
-Muestra extraída de cada lote para calificarlo.
+###### Tabla `coffee_cupping_evaluations`
+Ficha de catación de café de especialidad según estándar SCA (Specialty Coffee Association).
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `harvest_batch_id` | `BIGINT` | **(FK → `harvest_batches`; UNIQUE)** Lote del que se extrajo la muestra. Cada lote tiene una sola. |
-| `weight_kg` | `DECIMAL(8,2)` | Peso de la muestra, en kg. |
-| `extracted_at` | `TIMESTAMP` | Fecha y hora en que se tomó la muestra. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la catación.
+    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+    * `fragrance_aroma_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Fragancia/Aroma (0-10).
+    * `flavor_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Sabor (0-10).
+    * `acidity_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Acidez (0-10).
+    * `body_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Cuerpo (0-10).
+    * `overall_score`: `DECIMAL(4,2) NOT NULL` - Puntaje General del catador (0-10).
+    * `total_sca_score`: `DECIMAL(5,2) NOT NULL` - **Puntaje Total Taza SCA** (ej. 85.50 pts -> Café de Especialidad).
 
 ###### Tabla `quality_certificates`
+Certificados digitales emitidos con código QR y archivo PDF firmado.
 
-Certificados de calidad. `sha256_hash` sella el contenido y permite verificarlo al escanear el QR.
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del certificado.
+    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+    * `certificate_number`: `VARCHAR(100) NOT NULL UNIQUE` - Código único de certificado (ej. "CERT-SUMAQ-2026-8841").
+    * `pdf_download_url`: `VARCHAR(255) NOT NULL` - Enlace de descarga del PDF generado.
+    * `qr_verification_code`: `VARCHAR(255) NOT NULL UNIQUE` - Token encriptado codificado en el código QR para verificación pública.
+    * `issued_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora de emisión.
 
-| Columna | Tipo | Descripción |
-|---|---|---|
-| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
-| `harvest_batch_id` | `BIGINT` | **(FK → `harvest_batches`; UNIQUE)** Lote certificado. Cada lote tiene como máximo un certificado. |
-| `certificate_number` | `VARCHAR(30)` | **(UNIQUE)** Número del certificado. No se repite. |
-| `sha256_hash` | `CHAR(64)` | Huella SHA-256 del contenido del certificado; permite comprobar que no fue alterado. |
-| `qr_code_url` | `VARCHAR(255)` | Enlace que abre el código QR hacia la vista pública del certificado. |
-| `issued_by_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Directivo que emitió el certificado. |
-| `issued_at` | `TIMESTAMP` | Fecha y hora de emisión. |
-| `status` | `VARCHAR(10)` | Estado: `ACTIVE` o `REVOKED`. |
-| `revoked_reason` | `VARCHAR(255)` | Motivo de la anulación, si el certificado fue revocado. |
-| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
-| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
+---
 
-**Relaciones principales:**
-* `harvest_batches` 1 — 0..1 `representative_samples` y 1 — 0..1 `quality_certificates`.
-* `cooperative_id` → `cooperatives`, `member_id` → `cooperative_members` (Profiles), `plot_id` → `field_plots` y `campaign_id` → `crop_campaigns` (Field Management).
-* `quality_certificates.issued_by_user_id` → `users` (IAM).
+#### 4.8.1.7. Commercial Settlement Context Diagram
 
+Gestión del catálogo de lotes certificados expuestos a compradores mayoristas, registro de ofertas comerciales y liquidación final de la transacción.
+
+![Database Diagram - Commercial Settlement Bounded Context](assets/img/database/settlement-db-diagram.png)
+
+##### Especificación de Tablas y Relaciones
+
+###### Tabla `certified_lot_publications`
+Publicaciones de lotes de cosecha certificados disponibles para la venta.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la publicación.
+    * `quality_certificate_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `quality_certificates(id)` UNIQUE.
+    * `asking_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio base pretendido por quintal/tonelada.
+    * `available_quantity`: `DECIMAL(10,2) NOT NULL` - Volumen disponible para venta.
+    * `publication_status`: `VARCHAR(20) NOT NULL DEFAULT 'PUBLISHED'` - Estado (`'PUBLISHED'`, `'NEGOTIATING'`, `'SOLD'`).
+    * `published_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de publicación.
+
+###### Tabla `purchase_offers`
+Ofertas comerciales enviadas por compradores mayoristas o empresas exportadoras.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la oferta.
+    * `publication_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `certified_lot_publications(id)`.
+    * `buyer_user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Comprador ofertante).
+    * `offered_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio por unidad ofertado.
+    * `offered_total_amount`: `DECIMAL(10,2) NOT NULL` - Monto total de la oferta.
+    * `offer_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'ACCEPTED'`, `'REJECTED'`).
+    * `offered_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de recepción de la oferta.
+
+###### Tabla `commercial_settlements`
+Liquidación comercial final que cierra la venta y calcula la ganancia neta.
+
+* **Columnas:**
+    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la liquidación.
+    * `purchase_offer_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `purchase_offers(id)` UNIQUE.
+    * `agreed_total_sale`: `DECIMAL(10,2) NOT NULL` - Ingreso bruto total acordado por la venta.
+    * `total_campaign_cost`: `DECIMAL(10,2) NOT NULL` - Costo total de inversión derivado del módulo financiero.
+    * `net_profit_margin`: `DECIMAL(10,2) NOT NULL` - **Ganancia Neta Real:** (`agreed_total_sale - total_campaign_cost`).
+    * `settlement_date`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de cierre y liquidación.

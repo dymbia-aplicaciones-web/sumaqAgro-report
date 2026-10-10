@@ -134,10 +134,10 @@ A continuación, se especifican la estructura de la organización en GitHub, las
 
 Todos los componentes de software y la documentación del proyecto están agrupados bajo una organización pública en GitHub. Se ha asignado un repositorio independiente para cada producto digital de la solución, incluyendo las suites de pruebas unitarias e integración en el caso de los servicios web:
 
-* **Organización Oficial en GitHub:** https://github.com/dymbia-opensource
+* **Organización Oficial en GitHub:** https://github.com/dymbia-aplicaciones-web
 
 
-* **Repositorio del Landing Page (Sitio Web Estático):** https://github.com/dymbia-opensource/sumaqAgro-landing-page
+* **Repositorio del Landing Page (Sitio Web Estático):** https://github.com/dymbia-aplicaciones-web/sumaqAgro-landing-page
 
 
 * **Repositorio de Web Services (RESTful API backend):**  *Próximamente*
@@ -146,7 +146,8 @@ Todos los componentes de software y la documentación del proyecto están agrupa
 * **Repositorio de Frontend Web Application:**  *Próximamente*
 
 
-* **Repositorio del Informe del Proyecto (Project Report):**  https://github.com/dymbia-opensource/sumaqAgro-report
+
+* **Repositorio del Informe del Proyecto (Project Report):**  https://github.com/dymbia-aplicaciones-web/sumaqAgro-report
 
 
 ---
