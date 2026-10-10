@@ -1291,8 +1291,6 @@ La orquestación entre los contextos delimitados se rige por políticas eventual
 
 ### 4.6.2. Software Architecture Context Diagram
 
-El modelo editable se conserva en [Structurizr DSL](architecture/workspace.dsl). Las imágenes C4 se exportan desde ese modelo con Structurizr y se renderizan mediante PlantUML; representan el diseño de arquitectura y no constituyen evidencia de despliegue.
-
 En este apartado se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
 
 ![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](assets/img/c4/c4-system-context-diagram.png)
