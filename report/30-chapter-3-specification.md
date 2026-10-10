@@ -108,7 +108,7 @@ En esta sección se explica y presenta el Impact Mapping desarrollado para el mo
 
 A continuación, se presenta la evidencia gráfica del Impact Mapping exportado en alta resolución desde UXPressia:
 
-![Impact Mapping del Sistema SumaqAgro](assets/img/chapter-3/impact-mapping.png)
+![Impact Mapping del Sistema SumaqAgro](assets/img/chapter-III/impact-mapping.png)
 
 ## 3.3. Product Backlog
 
@@ -116,7 +116,7 @@ La tabla siguiente muestra el Product Backlog unificado de **SumaqAgro**, ordena
 
 La columna de identificadores utiliza las nomenclaturas **US** (*User Story*) e **TS** (*Technical Story*) según la convención establecida en la sección 3.1, detallando la descripción de valor de negocio y el esfuerzo estimado adoptado por el equipo de la startup **Dymbia**.
 
-![Jira Product Backlog](assets/img/chapter-3/jira-product-backlog.png)
+![Jira Product Backlog](assets/img/chapter-III/jira-product-backlog.png)
 
 **Enlace al Tablero del Product Backlog (Jira):** [Tablero Jira - SumaqAgro](https://sumaq-agro.atlassian.net/jira/software/c/projects/DSB/boards/2/backlog?epics=visible)
 
