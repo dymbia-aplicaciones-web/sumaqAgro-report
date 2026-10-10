@@ -1291,6 +1291,8 @@ La orquestación entre los contextos delimitados se rige por políticas eventual
 
 ### 4.6.2. Software Architecture Context Diagram
 
+El modelo editable se conserva en [Structurizr DSL](architecture/workspace.dsl). Las imágenes C4 se exportan desde ese modelo con Structurizr y se renderizan mediante PlantUML; representan el diseño de arquitectura y no constituyen evidencia de despliegue.
+
 En este apartado se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
 
 ![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](assets/img/c4/c4-system-context-diagram.png)
@@ -1306,12 +1308,12 @@ El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distrib
 * **Wholesale Buyer (Comprador Mayorista / Exportador):** Usuario comercial que interactúa con la plataforma de forma abierta y sin necesidad de credenciales, escaneando el código QR público de los sacos o lotes para verificar en línea la procedencia geográfica, la variedad botánica y el perfil de calidad certificado.
 
 ##### 2. Sistemas Externos e Integraciones
-* **Sentinel-2 Open Access API (ESA):** Proveedor satelital que suministra de manera periódica baldosas ópticas multiespectrales. El sistema consume este servicio vía peticiones HTTPS/JSON para computar los índices biofísicos de reflectancia vegetal sin depender de sensores IoT instalados en campo.
+* **AgroMonitoring / Sentinel-2:** Proveedor satelital que suministra de manera periódica baldosas ópticas multiespectrales. El sistema consume este servicio vía peticiones HTTPS/JSON para computar los índices biofísicos de reflectancia vegetal sin depender de sensores IoT instalados en campo.
 * **SENAMHI Weather API:** Servicio meteorológico nacional consultado por HTTPS/JSON para sincronizar pronósticos climáticos y emitir advertencias tempranas ante eventos de heladas meteorológicas o sequías estacionales en los valles productivos.
 * **Twilio SMS / WhatsApp Gateway:** Pasarela de mensajería externa utilizada por SumaqAgro para remitir notificaciones prioritarias y alertas agroclimáticas urgentes a productores ubicados en zonas rurales con baja cobertura móvil de datos.
 * **Stripe / Niubiz Payment Gateway:** Pasarela de procesamiento de pagos electrónicos integrada mediante API REST (HTTPS/JSON) para la gestión y cobro transaccional de los planes de suscripción de cooperativas agrarias y asesores técnicos.
 * **MIDAGRI PPA API:** Servicio gubernamental del Padrón de Productores Agrarios consumido mediante HTTPS/JSON para validar la titularidad catastral de predios y la condición formal de los socios agrícolas.
-* **Public QR Verification Gateway:** Punto de acceso web público y liviano que resuelve las peticiones de validación iniciadas por los compradores mayoristas al escanear los códigos QR, certificando la autenticidad e inmutabilidad del lote evaluado.
+* **Public QR Verification Endpoint (interno):** Punto de acceso web público de la aplicación y la API propia que resuelve las peticiones de validación iniciadas por los compradores mayoristas al escanear los códigos QR, certificando la autenticidad e inmutabilidad del lote evaluado.
 
 ---
 ### 4.6.3. Software Architecture Container Diagrams
@@ -1328,7 +1330,7 @@ La topología de ejecución del sistema está conformada por cuatro contenedores
   Sitio web público estático desarrollado con HTML5, CSS3 y JavaScript vanilla, alojado en un servicio cloud de distribución estática. Diseñado con una carga ligera para garantizar un rendimiento óptimo en terminales móviles bajo redes rurales 3G/4G. Su propósito es exponer la propuesta de valor del producto, presentar los planes de suscripción comercial (Semilla, Cooperativa Pro y Asesor Técnico) y canalizar prospectos comerciales hacia el backend mediante llamadas asíncronas HTTPS/JSON.
 
 * **Web Application Container (Single Page Application - SPA):**
-  Aplicación web cliente desarrollada sobre el framework Vue, utilizando TypeScript y la biblioteca PrimeVue. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de jornales, compras e insumos en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un comprador escanea el código QR impreso.
+  Aplicación web cliente desarrollada sobre el framework Vue, utilizando JavaScript y la biblioteca PrimeVue. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de jornales, compras e insumos en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un comprador escanea el código QR impreso.
 
 * **RESTful API Backend Container:**
   Servidor de aplicaciones distribuido implementado en C# utilizando ASP.NET Core Framework con Entity Framework Core para el acceso y la persistencia de datos. Representa el núcleo transaccional del sistema y aloja la lógica de negocio basada en DDD para los 7 Bounded Contexts identificados. Sus responsabilidades abarcan la emisión y validación de tokens criptográficos JWT para el control de accesos, el cómputo de las matrices financieras de costo unitario y punto de equilibrio rural, el procesamiento de reflectancia satelital desacoplado y la exposición de endpoints documentados formalmente bajo OpenAPI 3.0 (Swagger UI).
@@ -1340,7 +1342,7 @@ La topología de ejecución del sistema está conformada por cuatro contenedores
 
 * **Acceso de Usuarios:** Los usuarios finales interactúan con los contenedores web (*Landing Page* y *Web Application*) mediante peticiones seguras sobre el protocolo HTTPS.
 * **Cliente Web a Backend:** La Single Page Application consume la lógica de negocio y envía datos locales sincronizados mediante llamadas asíncronas RESTful sobre HTTPS, transmitiendo datos estructurados en formato JSON protegidos con tokens de autorización Bearer JWT.
-* **Backend a Base de Datos:** Las operaciones transaccionales y de persistencia de los agregados se ejecutan directamente a través de una conexión TCP protegida sobre el puerto 3306 mediante el controlador JDBC de MySQL.
+* **Backend a Base de Datos:** Las operaciones transaccionales y de persistencia de los agregados se ejecutan directamente a través de una conexión TCP protegida sobre el puerto 3306 mediante Entity Framework Core y un proveedor de MySQL para .NET.
 * **Backend a Servicios Externos:** Las consultas salientes hacia Sentinel-2 API, SENAMHI Weather API, Twilio Gateway, Stripe/Niubiz y MIDAGRI PPA se realizan mediante clientes HTTP desacoplados bajo peticiones seguras HTTPS/JSON.
 ---
 
@@ -1414,7 +1416,7 @@ El contenedor transaccional de backend, desarrollado en **C# con ASP.NET Core**,
   Componentes de integración desacoplados registrados mediante la inyección de dependencias de ASP.NET Core que encapsulan la comunicación técnica con plataformas externas o compilan artefactos binarios:
   * `StripeClientAdapter`: Consume mediante cliente REST la API de Stripe/Niubiz para la tokenización de cobros y facturación recurrente.
   * `MidagriClientAdapter`: Consulta el servicio gubernamental del Padrón de Productores Agrarios (PPA) para verificar la titularidad catastral.
-  * `SatelliteClientAdapter`: Descarga baldosas ópticas multiespectrales (Bandas B4, B8 y B8A) desde la API abierta de Sentinel-2 (ESA).
+  * `SatelliteClientAdapter`: Descarga observaciones e índices satelitales disponibles mediante AgroMonitoring, utilizando Sentinel-2 como fuente de imágenes.
   * `WeatherClientAdapter`: Consume los pronósticos agroclimáticos y alertas meteorológicas de SENAMHI.
   * `TwilioNotificationAdapter`: Invoca la API de Twilio para remitir notificaciones prioritarias de emergencia vía SMS y WhatsApp.
   * `PdfQrGeneratorAdapter`: Compila dinámicamente constancias técnicas en formato PDF y codifica el código QR de validación criptográfica pública.
@@ -1449,46 +1451,46 @@ El Bounded Context de Identity & Access Management modela la gestión de identid
 * **`UserAccount` (Aggregate Root):**
   Constituye la raíz de consistencia transaccional del contexto, protegiendo las invariantes asociadas al ciclo de vida de la cuenta.
     * **Atributos privados:**
-        * `- id: Long`: Identificador único secuencial de la entidad dentro de la base de datos.
-        * `- fullName: String`: Nombre completo o razón social del titular registrado.
-        * `- isActive: Boolean`: Bandera booleana que determina si la cuenta se encuentra habilitada para iniciar sesión.
-        * `- registeredAt: LocalDateTime`: Marca temporal de auditoría que registra la fecha y hora de creación.
+        * `- id: long`: Identificador único secuencial de la entidad dentro de la base de datos.
+        * `- fullName: string`: Nombre completo o razón social del titular registrado.
+        * `- isActive: bool`: Bandera booleana que determina si la cuenta se encuentra habilitada para iniciar sesión.
+        * `- registeredAt: DateTimeOffset`: Marca temporal de auditoría que registra la fecha y hora de creación.
         * `- email: Email`: Objeto de valor que resguarda la dirección de correo validada.
         * `- password: PasswordHash`: Objeto de valor que almacena el hash criptográfico de la clave de acceso.
     * **Métodos públicos:**
-        * `+ UserAccount(fullName: String, email: Email, password: PasswordHash)`: Constructor que inicializa una cuenta activa con fecha actual.
+        * `+ UserAccount(fullName: string, email: Email, password: PasswordHash)`: Constructor que inicializa una cuenta activa con fecha actual.
         * `+ activate(): void`: Cambia el estado de `isActive` a verdadero.
         * `+ deactivate(): void`: Inhabilita la cuenta para bloquear accesos transaccionales.
         * `+ assignRole(role: Role): void`: Vincula un nuevo rol institucional a la colección interna del usuario.
         * `+ removeRole(role: Role): void`: Remueve un rol previamente concedido garantizando que al menos quede un rol base.
-        * `+ updateProfile(fullName: String): void`: Muta el nombre del titular previa validación de longitud.
-        * `+ getId(): Long`, `+ getFullName(): String`, `+ getEmail(): Email`, `+ getRoles(): List<Role>`: Métodos de lectura de estado.
+        * `+ updateProfile(fullName: string): void`: Muta el nombre del titular previa validación de longitud.
+        * `+ getId(): long`, `+ getFullName(): string`, `+ getEmail(): Email`, `+ getRoles(): List<Role>`: Métodos de lectura de estado.
 
 * **`Role` (Entity) y `RoleType` (Enumeration):**
-  Representa el permiso concedido al usuario. `Role` contiene el atributo privado `- id: Long` y `- roleType: RoleType`. La enumeración `RoleType` tipifica estrictamente las etiquetas de autorización: `ROLE_PRODUCER` (productores familiares), `ROLE_COOPERATIVE` (directivos de acopio), `ROLE_AGRONOMIST` (asesores técnicos) y `ROLE_BUYER` (compradores mayoristas).
+  Representa el permiso concedido al usuario. `Role` contiene el atributo privado `- id: long` y `- roleType: RoleType`. La enumeración `RoleType` tipifica estrictamente las etiquetas de autorización: `ROLE_PRODUCER` (productores familiares), `ROLE_COOPERATIVE` (directivos de acopio), `ROLE_AGRONOMIST` (asesores técnicos) y `ROLE_BUYER` (compradores mayoristas).
 
 * **`Email` y `PasswordHash` (Value Objects):**
-    * `Email`: Objeto inmutable con el atributo privado `- address: String`. Su constructor valida la conformidad con la expresión regular de correo electrónico estándar RFC 5322; expone `+ getAddress(): String` y sobrescribe `equals()` y `hashCode()`.
-    * `PasswordHash`: Contiene `- hashValue: String`. Encapsula el algoritmo de derivación de claves BCrypt; expone `+ verifyPassword(plainTextPassword: String): Boolean` para comparar credenciales sin exponer la contraseña en texto plano y `+ getHashValue(): String`.
+    * `Email`: Objeto inmutable con el atributo privado `- address: string`. Su constructor valida la conformidad con la expresión regular de correo electrónico estándar RFC 5322; expone `+ getAddress(): string` y sobrescribe `Equals()` y `GetHashCode()`.
+    * `PasswordHash`: Contiene `- hashValue: string`. Encapsula el algoritmo de derivación de claves BCrypt; expone `+ verifyPassword(plainTextPassword: string): bool` para comparar credenciales sin exponer la contraseña en texto plano y `+ getHashValue(): string`.
 
 * **`UserAccountRepository` (Domain Repository Interface):**
-  Interfaz que abstrae las operaciones de persistencia mediante ASP.NET Core Data. Define los contratos `+ findById(id: Long): Optional<UserAccount>`, `+ findByEmail(email: Email): Optional<UserAccount>`, `+ existsByEmail(email: Email): Boolean`, `+ save(user: UserAccount): UserAccount` y `+ delete(user: UserAccount): void`.
+  Interfaz que abstrae las operaciones de persistencia mediante Entity Framework Core mediante contratos de repositorio. Define los contratos `+ findById(id: long): UserAccount?`, `+ findByEmail(email: Email): UserAccount?`, `+ existsByEmail(email: Email): bool`, `+ save(user: UserAccount): UserAccount` y `+ delete(user: UserAccount): void`.
 
 * **`UserAccountService` y `UserAccountServiceImpl` (Application Layer):**
-  Define y ejecuta la orquestación de casos de uso de seguridad. `UserAccountServiceImpl` posee dependencias privadas hacia `UserAccountRepository` y `JwtTokenService`; implementa `+ registerProducer(cmd: RegisterProducerCommand): Long`, `+ registerCooperative(cmd: RegisterCooperativeCommand): Long`, `+ authenticate(cmd: SignInCommand): String` y `+ findById(id: Long): Optional<UserAccount>`.
+  Define y ejecuta la orquestación de casos de uso de seguridad. `UserAccountServiceImpl` posee dependencias privadas hacia `UserAccountRepository` y `JwtTokenService`; implementa `+ registerProducer(cmd: RegisterProducerCommand): long`, `+ registerCooperative(cmd: RegisterCooperativeCommand): long`, `+ authenticate(cmd: SignInCommand): string` y `+ findById(id: long): UserAccount?`.
 
 * **`UserAccountResourceAssembler` (Assembler / Interface Layer):**
   Componente encargado de la transformación desacoplada entre las cargas útiles de la API y las entidades del dominio. Expone `+ toResourceFromEntity(entity: UserAccount): UserAccountResource` para serializar las respuestas HTTP y `+ toEntityFromResource(resource: SignUpProducerResource): UserAccount` para reconstruir la raíz de agregación.
 
 * **`IamController` (REST Controller Interface Layer):**
-  Punto de entrada HTTP expuesto bajo `/api/v1/auth` y `/api/v1/users`. Inyecta `UserAccountService` y `UserAccountResourceAssembler`, exponiendo `+ signUpProducer(resource: SignUpProducerResource): ResponseEntity<Long>`, `+ signUpCooperative(resource: SignUpCooperativeResource): ResponseEntity<Long>` y `+ signIn(resource: SignInResource): ResponseEntity<AuthenticatedUserResource>`.
+  Punto de entrada HTTP expuesto bajo `/api/v1/auth` y `/api/v1/users`. Inyecta `UserAccountService` y `UserAccountResourceAssembler`, exponiendo `+ signUpProducer(resource: SignUpProducerResource): ActionResult<long>`, `+ signUpCooperative(resource: SignUpCooperativeResource): ActionResult<long>` y `+ signIn(resource: SignInResource): ActionResult<AuthenticatedUserResource>`.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`UserAccount` "1" *-- "1..*" `Role`):** Una cuenta de usuario es dueña del ciclo de vida de sus roles asignados; no pueden existir roles huérfanos sin una cuenta asociada. Un usuario posee como mínimo un rol (`1..*`).
 * **Asociación dirigida (`Role` --> "1" `RoleType`):** Cada entidad `Role` referencia exactamente a un valor de la enumeración `RoleType`.
 * **Composición (`UserAccount` *-- "1" `Email` y `PasswordHash`):** La identidad y la seguridad son parte constituyente e inseparable del agregado.
 * **Dependencia de uso (`IamController` ..> `UserAccountService` y `UserAccountResourceAssembler`):** El controlador delega comandos hacia el servicio de aplicación y utiliza el ensamblador para mapear recursos externos.
-* **Dependencia de uso y gestión (`UserAccountServiceImpl` ..> `UserAccount` y `UserAccountRepository`):** El servicio gestiona la mutación del agregado e interactúa con el repositorio para persistir los cambios vía JDBC.
+* **Dependencia de uso y gestión (`UserAccountServiceImpl` ..> `UserAccount` y `UserAccountRepository`):** El servicio gestiona la mutación del agregado e interactúa con el repositorio para persistir los cambios mediante Entity Framework Core.
 
 ---
 
@@ -1503,36 +1505,36 @@ Este contexto delimita el modelo de monetización SaaS, gobernando la activació
 * **`Subscription` (Aggregate Root):**
   Controla los límites y la vigencia comercial del acceso al servicio.
     * **Atributos privados:**
-        * `- id: Long`: Identificador de la suscripción.
-        * `- userId: Long`: Identificador del usuario o cooperativa titular (referencia por identidad hacia IAM).
+        * `- id: long`: Identificador de la suscripción.
+        * `- userId: long`: Identificador del usuario o cooperativa titular (referencia por identidad hacia IAM).
         * `- planTier: PlanTier`: Categoría del plan contratado.
-        * `- startDate: LocalDate`: Fecha inicial de vigencia.
-        * `- endDate: LocalDate`: Fecha de vencimiento de la membresía.
-        * `- isActive: Boolean`: Estado transaccional del servicio contratado.
-        * `- maxAllowedPlots: Integer`: Cuota máxima permitida de parcelas registrables.
+        * `- startDate: DateOnly`: Fecha inicial de vigencia.
+        * `- endDate: DateOnly`: Fecha de vencimiento de la membresía.
+        * `- isActive: bool`: Estado transaccional del servicio contratado.
+        * `- maxAllowedPlots: int`: Cuota máxima permitida de parcelas registrables.
         * `- transactions: List<PaymentTransaction>`: Colección histórica de cobros asociados.
     * **Métodos públicos:**
-        * `+ Subscription(userId: Long, planTier: PlanTier, months: Integer)`: Constructor que establece fechas y cuota base.
+        * `+ Subscription(userId: long, planTier: PlanTier, months: int)`: Constructor que establece fechas y cuota base.
         * `+ activate(): void`: Habilita la suscripción tras la confirmación del pago.
-        * `+ renew(months: Integer): void`: Extiende la fecha de término por el periodo pagado.
+        * `+ renew(months: int): void`: Extiende la fecha de término por el periodo pagado.
         * `+ cancel(): void`: Inhabilita la renovación automática y actualiza `isActive` a falso, emitiendo la cancelación del contrato.
-        * `+ hasPlotQuotaAvailable(currentCount: Integer): Boolean`: Valida si el cliente aún puede registrar parcelas adicionales.
+        * `+ hasPlotQuotaAvailable(currentCount: int): bool`: Valida si el cliente aún puede registrar parcelas adicionales.
 
 * **`PaymentTransaction` (Entity):**
-  Registra cada evento de cobro monetario. Contiene `- id: Long`, `- externalTransactionId: String` (código devuelto por la pasarela), `- paymentDate: LocalDateTime`, `- amount: Money` y `- status: PaymentStatus`. Expone `+ markAsCompleted(): void` y `+ markAsFailed(reason: String): void`.
+  Registra cada evento de cobro monetario. Contiene `- id: long`, `- externalTransactionId: string` (código devuelto por la pasarela), `- paymentDate: DateTimeOffset`, `- amount: Money` y `- status: PaymentStatus`. Expone `+ markAsCompleted(): void` y `+ markAsFailed(reason: string): void`.
 
-* **`Money` (Value Object):**
-  Encapsula importes con precisión contable. Posee los atributos privados `- amount: BigDecimal` y `- currency: String`. Expone métodos inmutables como `+ add(other: Money): Money`, impidiendo operaciones aritméticas erróneas entre monedas distintas.
+* **`Money` (Value object):**
+  Encapsula importes con precisión contable. Posee los atributos privados `- amount: decimal` y `- currency: string`. Expone métodos inmutables como `+ add(other: Money): Money`, impidiendo operaciones aritméticas erróneas entre monedas distintas.
 
 * **`PlanTier` y `PaymentStatus` (Enumerations):**
     * `PlanTier`: Define los niveles `FREE_SEED` (plan base individual), `COOPERATIVE_PRO` (gestión gremial multivariable) y `TECHNICAL_ADVISOR` (cartera agronómica).
     * `PaymentStatus`: Fases de cobro `PENDING`, `COMPLETED` y `FAILED`.
 
 * **`StripeClientAssembler` (Infrastructure Layer):**
-  Componente de infraestructura y enlace con la pasarela de pagos externa. Encapsula las credenciales y llamadas seguras HTTPS/JSON mediante `+ chargeCard(token: String, amount: Money): String` y `+ toPaymentTransaction(stripeResponse: String): PaymentTransaction` para transformar la respuesta sin procesar de la API en la entidad de cobro del dominio.
+  Componente de infraestructura y enlace con la pasarela de pagos externa. Encapsula las credenciales y llamadas seguras HTTPS/JSON mediante `+ chargeCard(token: string, amount: Money): string` y `+ toPaymentTransaction(stripeResponse: string): PaymentTransaction` para transformar la respuesta sin procesar de la API en la entidad de cobro del dominio.
 
 * **`SubscriptionRepository`, `SubscriptionService` y `SubscriptionController`:**
-  El repositorio declara `+ findByUserId(userId: Long): Optional<Subscription>`. El servicio orquesta `+ selectPlan(cmd: SelectPlanCommand): Long`, `+ processPayment(cmd: ProcessPaymentCommand): Boolean` y `+ cancelSubscription(cmd: CancelSubscriptionCommand): void`. El controlador atiende peticiones REST bajo `/api/v1/subscriptions`, exponiendo `+ subscribe()`, `+ pay()` y `+ cancel(subscriptionId: Long): ResponseEntity<Void>`.
+  El repositorio declara `+ findByUserId(userId: long): Subscription?`. El servicio orquesta `+ selectPlan(cmd: SelectPlanCommand): long`, `+ processPayment(cmd: ProcessPaymentCommand): bool` y `+ cancelSubscription(cmd: CancelSubscriptionCommand): void`. El controlador atiende peticiones REST bajo `/api/v1/subscriptions`, exponiendo `+ subscribe()`, `+ pay()` y `+ cancel(subscriptionId: long): IActionResult`.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`Subscription` "1" *-- "0..*" `PaymentTransaction`):** Las transacciones financieras están subordinadas al contrato de suscripción.
@@ -1553,29 +1555,29 @@ Gestiona la delimitación espacial y catastral de predios agrícolas, los atribu
 * **`FieldPlot` (Aggregate Root):**
   Raíz de agregación que salvaguarda la integridad geográfica y el estado agronómico de la parcela.
     * **Atributos privados:**
-        * `- id: Long`: Identificador único del predio.
-        * `- producerId: Long`: Vínculo referencial hacia el productor titular en IAM.
-        * `- plotName: String`: Nombre o denominación común del lote.
-        * `- calculatedAreaHectares: Double`: Superficie calculada de forma computacional en hectáreas.
+        * `- id: long`: Identificador único del predio.
+        * `- producerId: long`: Vínculo referencial hacia el productor titular en IAM.
+        * `- plotName: string`: Nombre o denominación común del lote.
+        * `- calculatedAreaHectares: double`: Superficie calculada de forma computacional en hectáreas.
         * `- perimeter: PerimeterCoordinates`: Geometría vectorial cerrada del lote.
         * `- soil: SoilBaseline`: Caracterización inicial de suelo.
         * `- campaign: CropCampaign`: Campaña agrícola instalada en el terreno.
     * **Métodos públicos:**
-        * `+ FieldPlot(producerId: Long, plotName: String, perimeter: PerimeterCoordinates)`: Inicializa la parcela validando topología.
+        * `+ FieldPlot(producerId: long, plotName: string, perimeter: PerimeterCoordinates)`: Inicializa la parcela validando topología.
         * `+ updatePerimeter(newPerimeter: PerimeterCoordinates): void`: Recalcula el área y reemplaza las coordenadas perimetrales.
         * `+ registerSoilAnalysis(soil: SoilBaseline): void`: Asocia los resultados de laboratorio del suelo.
         * `+ startCropCampaign(campaign: CropCampaign): void`: Asigna una nueva campaña fenológica de siembra.
 
 * **`PerimeterCoordinates` y `GeoPoint` (Value Objects):**
-    * `GeoPoint`: Encapsula un vértice geográfico mediante `- latitude: Double` y `- longitude: Double`, validando los rangos estándar de latitud (-90 a 90) y longitud (-180 a 180).
-    * `PerimeterCoordinates`: Encapsula la lista privada `- points: List<GeoPoint>`. Su método `+ validatePolygonClosure(): Boolean` asegura que el vértice final coincida con el inicial, mientras que `+ computeAreaHectares(): Double` calcula el área utilizando el algoritmo de la fórmula de Shoelace proyectada.
+    * `GeoPoint`: Encapsula un vértice geográfico mediante `- latitude: double` y `- longitude: double`, validando los rangos estándar de latitud (-90 a 90) y longitud (-180 a 180).
+    * `PerimeterCoordinates`: Encapsula la lista privada `- points: List<GeoPoint>`. Su método `+ validatePolygonClosure(): bool` asegura que el vértice final coincida con el inicial, mientras que `+ computeAreaHectares(): double` calcula el área utilizando el algoritmo de la fórmula de Shoelace proyectada.
 
 * **`SoilBaseline` y `CropCampaign` (Entities):**
-    * `SoilBaseline`: Contiene `- textureType: String`, `- phLevel: Double` y `- organicMatterPercentage: Double`.
-    * `CropCampaign`: Modela la campaña fenológica instalada en la parcela. Contiene los atributos privados `- id: Long`, `- cropType: CropType` (`SPECIALTY_COFFEE` o `ANDEAN_POTATO`), `- seedVariety: String` (ej. Typica, Caturra, Canchán, Yungay) y `- sowingDate: LocalDate`. Expone los métodos `+ updateSeedVariety(variety: String): void` y `+ recordSowingDate(date: LocalDate): void`, soportando los eventos de siembra.
+    * `SoilBaseline`: Contiene `- textureType: string`, `- phLevel: double` y `- organicMatterPercentage: double`.
+    * `CropCampaign`: Modela la campaña fenológica instalada en la parcela. Contiene los atributos privados `- id: long`, `- cropType: CropType` (`SPECIALTY_COFFEE` o `ANDEAN_POTATO`), `- seedVariety: string` (ej. Typica, Caturra, Canchán, Yungay) y `- sowingDate: DateOnly`. Expone los métodos `+ updateSeedVariety(variety: string): void` y `+ recordSowingDate(date: DateOnly): void`, soportando los eventos de siembra.
 
 * **`MidagriClientAssembler` (Infrastructure Layer):**
-  Componente de infraestructura que consulta el Padrón de Productores Agrarios (PPA). Expone `+ validateProducerCadastralId(producerDni: String, cadastralCode: String): Boolean` y `+ toProducerProfile(ppaApiResponse: String): Object` para traducir las respuestas del padrón gubernamental hacia el dominio.
+  Componente de infraestructura que consulta el Padrón de Productores Agrarios (PPA). Expone `+ validateProducerCadastralId(producerDni: string, cadastralCode: string): bool` y `+ toProducerProfile(ppaApiResponse: string): object` para traducir las respuestas del padrón gubernamental hacia el dominio.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`FieldPlot` "1" *-- "1" `PerimeterCoordinates`):** Toda parcela posee obligatoriamente una frontera geométrica.
@@ -1596,10 +1598,10 @@ Este contexto centraliza la captura de telemetría espectral provista por Sentin
 * **`VegetationAnalysis` (Aggregate Root):**
   Consolida el estado biofísico de un predio en un punto específico en el tiempo.
     * **Atributos privados:**
-        * `- id: Long`: Identificador del registro analítico.
-        * `- plotId: Long`: Parcela evaluada.
-        * `- captureDate: LocalDate`: Fecha de adquisición de la baldosa satelital.
-        * `- cloudCoveragePercentage: Double`: Porcentaje de cobertura nubosa detectado.
+        * `- id: long`: Identificador del registro analítico.
+        * `- plotId: long`: Parcela evaluada.
+        * `- captureDate: DateOnly`: Fecha de adquisición de la baldosa satelital.
+        * `- cloudCoveragePercentage: double`: Porcentaje de cobertura nubosa detectado.
         * `- ndvi: NdviReading`: Valor computado del índice de vegetación normalizado.
         * `- ndwi: NdwiReading`: Valor computado del índice diferencial de agua.
         * `- alerts: List<AgroclimaticAlert>`: Alertas preventivas emitidas.
@@ -1610,16 +1612,16 @@ Este contexto centraliza la captura de telemetría espectral provista por Sentin
         * `+ addPrescription(rx: TechnicalPrescription): void`: Incorpora la prescripción correctiva del asesor técnico.
 
 * **`NdviReading` y `NdwiReading` (Value Objects):**
-  Encapsulan los índices matemáticos mediante `- value: Double`, validando en sus constructores que el valor numérico se sitúe estrictamente en el intervalo $[-1.0, 1.0]$. `NdviReading` provee `+ isStressAnomaly(): Boolean` (activo si el valor cae por debajo de 0.40 en etapas clave), y `NdwiReading` expone `+ isWaterDeficit(): Boolean`.
+  Encapsulan los índices matemáticos mediante `- value: double`, validando en sus constructores que el valor numérico se sitúe estrictamente en el intervalo $[-1.0, 1.0]$. `NdviReading` provee `+ isStressAnomaly(): bool` (activo si el valor cae por debajo de 0.40 en etapas clave), y `NdwiReading` expone `+ isWaterDeficit(): bool`.
 
 * **`AgroclimaticAlert` y `TechnicalPrescription` (Entities):**
-    * `AgroclimaticAlert`: Modela eventos de riesgo; posee `- alertType: String`, `- severity: AlertSeverity` (`LOW`, `MEDIUM`, `CRITICAL`), `- message: String` y `- emittedAt: LocalDateTime`.
-    * `TechnicalPrescription`: Receta de campo; posee `- advisorId: Long`, `- diagnosis: String`, `- correctiveTreatment: String`, `- dosage: String` y `- isApplied: Boolean`, exponiendo `+ markAsApplied(): void`.
+    * `AgroclimaticAlert`: Modela eventos de riesgo; posee `- alertType: string`, `- severity: AlertSeverity` (`LOW`, `MEDIUM`, `CRITICAL`), `- message: string` y `- emittedAt: DateTimeOffset`.
+    * `TechnicalPrescription`: Receta de campo; posee `- advisorId: long`, `- diagnosis: string`, `- correctiveTreatment: string`, `- dosage: string` y `- isApplied: bool`, exponiendo `+ markAsApplied(): void`.
 
 * **Componentes de Integración y Transformación (`SatelliteClientAssembler`, `WeatherClientAssembler`, `TwilioNotificationAssembler`):**
     * `SatelliteClientAssembler`: Descarga bandas ópticas multiespectrales B4, B8 y B8A desde Sentinel-2 y ejecuta `+ toVegetationAnalysis(tileData: byte[]): VegetationAnalysis`.
-    * `WeatherClientAssembler`: Consume alertas meteorológicas y heladas de SENAMHI, traduciéndolas mediante `+ toAgroclimaticAlert(rawWeatherAlert: String): AgroclimaticAlert`.
-    * `TwilioNotificationAssembler`: Serializa la alerta en una carga útil de texto con `+ toSmsPayload(alert: AgroclimaticAlert): String` y despacha el mensaje SMS/WhatsApp a los productores.
+    * `WeatherClientAssembler`: Consume alertas meteorológicas y heladas de SENAMHI, traduciéndolas mediante `+ toAgroclimaticAlert(rawWeatherAlert: string): AgroclimaticAlert`.
+    * `TwilioNotificationAssembler`: Serializa la alerta en una carga útil de texto con `+ toSmsPayload(alert: AgroclimaticAlert): string` y despacha el mensaje SMS/WhatsApp a los productores.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`VegetationAnalysis` "1" *-- "1" `NdviReading` y `NdwiReading`):** Los índices satelitales son inseparables del informe espectral.
@@ -1639,30 +1641,30 @@ Modela la contabilidad analítica de costos agrícolas, soportando la sincroniza
 * **`LotFinancialLedger` (Aggregate Root):**
   Libro mayor contable que centraliza las inversiones operativas de una campaña productiva.
     * **Atributos privados:**
-        * `- id: Long`: Identificador del libro financiero.
-        * `- plotId: Long`: Parcela vinculada a la campaña.
-        * `- campaignYear: Integer`: Año o ciclo agrícola correspondiente.
+        * `- id: long`: Identificador del libro financiero.
+        * `- plotId: long`: Parcela vinculada a la campaña.
+        * `- campaignYear: int`: Año o ciclo agrícola correspondiente.
         * `- totalInvested: Money`: Inversión acumulada consolidada.
-        * `- estimatedYieldUnits: Double`: Rendimiento estimado o real expresado en sacos o toneladas.
+        * `- estimatedYieldUnits: double`: Rendimiento estimado o real expresado en sacos o toneladas.
         * `- breakeven: BreakevenPrice`: Objeto de valor con el umbral financiero mínimo.
         * `- expenses: List<ExpenseEntry>`: Asientos contables individuales.
     * **Métodos públicos:**
         * `+ recordExpense(entry: ExpenseEntry): void`: Registra un gasto individual actualizando la sumatoria acumulada.
         * `+ syncOfflineBatch(entries: List<ExpenseEntry>): void`: Procesa asientos diferidos provenientes del almacenamiento local del cliente.
-        * `+ consolidateFinances(finalYieldUnits: Double): void`: Cierra el ciclo contable calculando los costos unitarios definitivos.
+        * `+ consolidateFinances(finalYieldUnits: double): void`: Cierra el ciclo contable calculando los costos unitarios definitivos.
         * `+ calculateBreakeven(): BreakevenPrice`: Ejecuta la fórmula financiera dividiendo el total invertido entre el volumen cosechado.
 
 * **`ExpenseEntry` (Entity) y `ExpenseCategory` (Enumeration):**
-  Modela cada egreso operativo. Contiene `- id: Long`, `- category: ExpenseCategory`, `- concept: String`, `- expenseDate: LocalDate`, `- amount: Money` y `- isOfflineSync: Boolean`. `ExpenseCategory` clasifica el gasto en `AGROCHEMICALS` (fertilizantes y plaguicidas), `LABOR_PAYROLL` (jornales de campo), `FREIGHT_TRANSPORT` (flete rural) o `MACHINERY_SERVICES` (alquiler de maquinaria).
+  Modela cada egreso operativo. Contiene `- id: long`, `- category: ExpenseCategory`, `- concept: string`, `- expenseDate: DateOnly`, `- amount: Money` y `- isOfflineSync: bool`. `ExpenseCategory` clasifica el gasto en `AGROCHEMICALS` (fertilizantes y plaguicidas), `LABOR_PAYROLL` (jornales de campo), `FREIGHT_TRANSPORT` (flete rural) o `MACHINERY_SERVICES` (alquiler de maquinaria).
 
-* **`BreakevenPrice` (Value Object):**
-  Almacena de forma inmutable el resultado del costeo financiero mediante `- unitCostPerBag: BigDecimal` y `- suggestedSalePrice: BigDecimal` (precio con margen de utilidad proyectado).
+* **`BreakevenPrice` (Value object):**
+  Almacena de forma inmutable el resultado del costeo financiero mediante `- unitCostPerBag: decimal` y `- suggestedSalePrice: decimal` (precio con margen de utilidad proyectado).
 
 * **`ExpenseResourceAssembler` (Assembler / Interface Layer):**
   Transformador de presentación desacoplado. Expone `+ toResourceFromEntity(entity: ExpenseEntry): ExpenseResource` y `+ toEntityFromResource(resource: AddExpenseResource): ExpenseEntry` para evitar que las entidades contables internas queden expuestas directamente sobre la red HTTP.
 
 * **`LotFinancialLedgerRepository`, `LotFinancialLedgerService` y `CostController`:**
-  El repositorio permite la consulta mediante `+ findByPlotIdAndCampaignYear(plotId: Long, year: Integer)`. El servicio orquesta `+ recordExpense()`, `+ syncOfflineLedger()` y `+ computeBreakeven()`. El controlador REST expone los endpoints en `/api/v1/finances` e inyecta `ExpenseResourceAssembler`.
+  El repositorio permite la consulta mediante `+ findByPlotIdAndCampaignYear(plotId: long, year: int)`. El servicio orquesta `+ recordExpense()`, `+ syncOfflineLedger()` y `+ computeBreakeven()`. El controlador REST expone los endpoints en `/api/v1/finances` e inyecta `ExpenseResourceAssembler`.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`LotFinancialLedger` "1" *-- "1..*" `ExpenseEntry`):** Un libro contable se compone necesariamente de uno o más asientos de egreso.
@@ -1683,30 +1685,30 @@ Este contexto delimita el pesaje formal de acopio, la graduación física de tub
 * **`HarvestBatch` (Aggregate Root):**
   Representa el lote material acopiado y sometido a verificación técnica.
     * **Atributos privados:**
-        * `- id: Long`: Identificador del lote de cosecha.
-        * `- plotId: Long`: Referencia al predio de procedencia.
-        * `- harvestDate: LocalDate`: Fecha formal de recolección.
-        * `- netWeightKg: Double`: Masa neta recepcionada en balanza.
+        * `- id: long`: Identificador del lote de cosecha.
+        * `- plotId: long`: Referencia al predio de procedencia.
+        * `- harvestDate: DateOnly`: Fecha formal de recolección.
+        * `- netWeightKg: double`: Masa neta recepcionada en balanza.
         * `- cuppingSession: CoffeeCuppingSession`: Evaluación sensorial de café (si aplica).
         * `- caliberGrading: PotatoCaliberGrading`: Graduación morfométrica de papa (si aplica).
         * `- certificate: QualityCertificate`: Acreditación digital emitida.
     * **Métodos públicos:**
-        * `+ recordDeliveryWeight(netWeightKg: Double): void`: Registra el pesaje oficial de entrega.
+        * `+ recordDeliveryWeight(netWeightKg: double): void`: Registra el pesaje oficial de entrega.
         * `+ gradeCoffee(cupping: CoffeeCuppingSession): void`: Asocia los puntajes de cata sensorial.
         * `+ gradePotato(caliber: PotatoCaliberGrading): void`: Asocia los calibres físicos clasificados.
         * `+ issueDigitalCertificate(cert: QualityCertificate): void`: Emite el certificado inmutable con firma digital.
 
 * **`CoffeeCuppingSession` (Entity):**
-  Modela el protocolo de catación según el estándar SCA. Contiene `- fragranceAroma: Double`, `- acidity: Double`, `- body: Double`, `- balance: Double` y `- overallScore: Double`. Expone `+ computeTotalScaScore(): Double` y `+ isSpecialtyCoffee(): Boolean` (válido si el puntaje final supera los 80 puntos SCA).
+  Modela el protocolo de catación según el estándar SCA. Contiene `- fragranceAroma: double`, `- acidity: double`, `- body: double`, `- balance: double` y `- overallScore: double`. Expone `+ computeTotalScaScore(): double` y `+ isSpecialtyCoffee(): bool` (válido si el puntaje final supera los 80 puntos SCA).
 
 * **`PotatoCaliberGrading` (Entity) y `PotatoCaliberType` (Enumeration):**
-  Evalúa el tubérculo según la norma técnica peruana del MIDAGRI. Posee `- caliberType: PotatoCaliberType` (`FIRST_CLASS`, `SECOND_CLASS`, `THIRD_CLASS`), `- sampleWeightGrams: Double` y `- commercialSuitability: Boolean`.
+  Evalúa el tubérculo según la norma técnica peruana del MIDAGRI. Posee `- caliberType: PotatoCaliberType` (`FIRST_CLASS`, `SECOND_CLASS`, `THIRD_CLASS`), `- sampleWeightGrams: double` y `- commercialSuitability: bool`.
 
-* **`QualityCertificate` (Value Object):**
-  Encapsula la acreditación inmutable mediante `- certificateCode: String`, `- digitalSignatureHash: String` (código hash SHA-256 generado sobre los atributos del lote), `- publicVerificationUrl: String` y `- issuedAt: LocalDateTime`.
+* **`QualityCertificate` (Value object):**
+  Encapsula la acreditación inmutable mediante `- certificateCode: string`, `- digitalSignatureHash: string` (código hash SHA-256 generado sobre los atributos del lote), `- publicVerificationUrl: string` y `- issuedAt: DateTimeOffset`.
 
 * **`PdfQrGeneratorAssembler` (Infrastructure Layer):**
-  Componente encargado del ensamblado técnico de comprobantes. Ejecuta `+ generateQualityReportPdf(batch: HarvestBatch): byte[]` para compilar el reporte formal en PDF y `+ createQrCodePng(publicUrl: String): byte[]` para renderizar la matriz visual del código QR auditable.
+  Componente encargado del ensamblado técnico de comprobantes. Ejecuta `+ generateQualityReportPdf(batch: HarvestBatch): byte[]` para compilar el reporte formal en PDF y `+ createQrCodePng(publicUrl: string): byte[]` para renderizar la matriz visual del código QR auditable.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`HarvestBatch` "1" *-- "0..1" `CoffeeCuppingSession` / `PotatoCaliberGrading`):** La evaluación técnica depende del tipo botánico del cultivo cosechado en la parcela.
@@ -1726,8 +1728,8 @@ Gobierna la publicación en catálogo de los lotes certificados, la recepción d
 * **`CommercialSettlement` (Aggregate Root):**
   Controla el acuerdo comercial y la liquidación financiera de la venta.
     * **Atributos privados:**
-        * `- id: Long`: Identificador de la negociación.
-        * `- harvestBatchId: Long`: Referencia al lote certificado disponible.
+        * `- id: long`: Identificador de la negociación.
+        * `- harvestBatchId: long`: Referencia al lote certificado disponible.
         * `- baseNegotiationPrice: Money`: Precio de apertura establecido para la venta.
         * `- status: SettlementStatus`: Fase actual del ciclo de vida comercial.
         * `- acceptedOffer: PurchaseOffer`: Oferta comercial formalmente aceptada por el productor o directivo.
@@ -1736,20 +1738,20 @@ Gobierna la publicación en catálogo de los lotes certificados, la recepción d
     * **Métodos públicos:**
         * `+ publishLot(): void`: Transiciona el estado a publicado en el catálogo mayorista tras verificar el punto de equilibrio.
         * `+ receiveOffer(offer: PurchaseOffer): void`: Añade una propuesta de compra a la negociación.
-        * `+ acceptOfferAndLiquidate(offerId: Long, productionCost: Money): void`: Acepta la oferta seleccionada, calcula el margen neto resultante y cambia el estado a liquidado (`LIQUIDATED`).
+        * `+ acceptOfferAndLiquidate(offerId: long, productionCost: Money): void`: Acepta la oferta seleccionada, calcula el margen neto resultante y cambia el estado a liquidado (`LIQUIDATED`).
 
 * **`PurchaseOffer` (Entity):**
-  Propuesta económica vinculada al lote. Contiene `- id: Long`, `- buyerId: Long`, `- offeredPrice: Money`, `- offeredAt: LocalDateTime` y `- isAccepted: Boolean`. Expone `+ accept(): void` y `+ reject(): void`.
+  Propuesta económica vinculada al lote. Contiene `- id: long`, `- buyerId: long`, `- offeredPrice: Money`, `- offeredAt: DateTimeOffset` y `- isAccepted: bool`. Expone `+ accept(): void` y `+ reject(): void`.
 
-* **`SettlementStatus` (Enumeration) y `NetMargin` (Value Object):**
+* **`SettlementStatus` (Enumeration) y `NetMargin` (Value object):**
     * `SettlementStatus`: Máquina de estados de la venta: `DRAFT`, `PUBLISHED`, `OFFER_RECEIVED`, `ACCEPTED` y `LIQUIDATED`.
-    * `NetMargin`: Objeto inmutable que almacena `- netProfitAmount: BigDecimal` y `- marginPercentage: Double`, garantizando que la liquidación visualice la rentabilidad final obtenida.
+    * `NetMargin`: Objeto inmutable que almacena `- netProfitAmount: decimal` y `- marginPercentage: double`, garantizando que la liquidación visualice la rentabilidad final obtenida.
 
 * **`SettlementResourceAssembler` (Assembler / Interface Layer):**
   Traduce las peticiones comerciales entre la web y el dominio. Implementa `+ toResourceFromEntity(entity: CommercialSettlement): SettlementResource` y `+ toEntityFromResource(resource: PublishLotResource): CommercialSettlement`.
 
 * **`CommercialSettlementRepository`, `CommercialSettlementService` y `SettlementController`:**
-  El repositorio declara `+ findByHarvestBatchId(batchId: Long): Optional<CommercialSettlement>`. El servicio orquesta `+ publishCertifiedLot(cmd: PublishLotCommand): Long`, `+ submitBidOffer()` y `+ settleCommercialSale()`. El controlador REST expone los endpoints bajo `/api/v1/settlements` e inyecta `SettlementResourceAssembler`.
+  El repositorio declara `+ findByHarvestBatchId(batchId: long): CommercialSettlement?`. El servicio orquesta `+ publishCertifiedLot(cmd: PublishLotCommand): long`, `+ submitBidOffer()` y `+ settleCommercialSale()`. El controlador REST expone los endpoints bajo `/api/v1/settlements` e inyecta `SettlementResourceAssembler`.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`CommercialSettlement` "1" *-- "0..*" `PurchaseOffer`):** Un acuerdo comercial puede recibir múltiples ofertas mayoristas en competencia (`0..*`).
