@@ -29,7 +29,7 @@ resource-path:
   - "assets"
   - "annexes"
 
-output-file: dist/upc-pre-202620-1asi0730-dymbia-report-tb1.pdf
+output-file: dist/upc-pre-202620-1asi0730-8130-dymbia-report-tb1.pdf
 pdf-engine: xelatex
 number-sections: true
 toc: true

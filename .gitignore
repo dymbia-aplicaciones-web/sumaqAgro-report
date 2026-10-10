@@ -11,6 +11,7 @@ Thumbs.db
 # Directorios de salida y compilación (Pandoc / PDF)
 dist/
 build/
+tmp/
 
 # Archivos temporales de XeLaTeX / TeX
 *.aux
